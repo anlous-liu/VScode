@@ -14,11 +14,11 @@
 
 \section*{Problem 1}
     
-    a) There is a \(x\in A\) such that for all \(b \in B\), there is \(b \le x\)\\
-    b) For all \(x \in A\) there is a \(b\in B\) satisfies \(b \le x\)\\
-    c) There is a pair of \(x,y \in \mathbb{R}\) such that \(x\neq y\), satisfies \(f(x)=f(y)\)\\
-    d) There is a \(\varepsilon \in P\), that all \(\delta \in P\) satisfies the
-    statement that exist a pair of \(x,y \in \mathbb{R}\) that \(|x-y| < \delta\) and \(|f(x)-f(y)|\geq \varepsilon\)
+    a) \( \exists \ x\in A\) such that \(\forall \ b \in B\), satisfies \(b \le x\)\\
+    b) \( \forall \ x \in A\) there \( \exists \ b\in B\) satisfies \(b \le x\)\\
+    c) \( \exists x,y \in \mathbb{R}\) such that \(x\neq y\), satisfies \(f(x)=f(y)\)\\
+    d) \( \exists \ \varepsilon \in P\), that \( \forall \ \delta \in P\) satisfies the
+    statement that \(\exists \ x,y \in \mathbb{R}\) satisfies \(|x-y| < \delta\) and \(|f(x)-f(y)|\geq \varepsilon\)
 \section*{problem 2}
     The negation of the statement is: \\
     There is a group of sets \(A\), \(B\) and \(C\) that satisfies \(A\nsubseteq B\), \(B \subseteq C\) and \(A \subseteq C\).
@@ -49,14 +49,45 @@
         If the statement:" If \(A-B=B-A\), then \(A\neq B\)." is true, then there should be a pair of \(a=b\).\\
         There is \(a \in A, b \notin A\). Therefore \(a\neq b\). Thus, the statement is false.\\
         The statement is the negation of the statemen:"If \(A-B=B-A\), then \(A = B\)".\\
-        Therefore, the statement is true.
-\subsection*{Thus, the original statement is true}
+        Therefore, the statement is true.\\
+        
+        Thus, the original statement is true
 
 \section*{Problem 5}
-    There is \(0\) times every other real number equals zero. \\
-    Therefore, If \(x ={a_1}\),\((x-a_1)(x-a_2)\cdots(x-a_n)=0\). Therefore, \(x\neq a_1\).\\
-    Similarly,\(x\neq a_1, a_2, a_3, \cdots, a_n\).
-    \(A = (a_n,a_{n-1})\cap (a_{n-2},a_{n-3})\cap (a_{n-4},a_{n-5})
-    \cap \dots \cap odd \ and \ even \ selection\)
+    There is, \(0\) times every other real number equals zero. \\
+    Therefore, If \(x ={a_1}\), \((x-a_1)(x-a_2)\cdots(x-a_n)=0\). Therefore, \(x\neq a_1\).\\
+    Similarly,\(x\neq a_1, a_2, a_3, \cdots, a_n\). There is that odd number of negative numbers times together results in a negative number and even numbers of them gives a positive number.
+    Therefore, for the inequality to be negative, there shall be odd numbers of terms that are negative.
+    When \(a_{n-1}<x<a_n\), there will be \(n-1\) terms being positive and 1 term being negative which is the last term. 
+    Similarly, if \(a_{n-2}<x<a_{n-1}\), there will be two terms being negative resulting the inequality to be false.
+    Following the same pattern, the answer will be different considering different property of \(n\).
+
+    \subsection*{When n is an odd number}
+        There is \(n\) is odd. Therefore, \(\forall \ i\in (\mathbb{N}\cup \{0\})
+        ,\ n-2i \) is still odd, but \\ 
+        \(n-1-2i\) is even.
+        Therfore, when \(a_1<x<a_2\), there are \(n-1\) therms that are negative resulting in the expression to be positive.
+        Similarly, intervals \((a_3,a_4),(a_5,a_6),\ \dots, \ (a_{n-2},a_{n-1})\) will result in similar effact.
+        Therefore, the other interval will result in odd numbers of negative numbers timing each other, wich will satisfy the inequality.
+        Therefore the answer shall be a set \(A = (-\infty,a_1)\cup (a_2,a_3)\cup (a_4,a_5)\cup \dots \cup (a_{n-1},a_n)\).
+
+    \subsection*{When n is an even number}
+        There is \(n\) is even. Therefore, \(\forall \ i\in (\mathbb{N}\cup \{0\})
+        ,\ n-2i \) is still even, but \\
+        \(n-1-2i\) is odd.
+        Therfore, when \(-\infty <x<a_1\), there are \(n\) therms that are negative resulting in the expression to be positive.
+        Similarly, intervals \((a_2,a_3),(a_4,a_5),\ \dots, \ (a_{n-1},a_{n})\) will result in similar effact.
+        Therefore, the other interval will result in odd numbers of negative numbers timing each other, wich will satisfy the inequality.
+        Therefore the answer shall be a set \(A = (a_1,a_2)\cup (a_3,a_4)\cup (a_5,a_6)\cup \dots \cup (a_{n-1},a_n)\).
+    \\
+    
+    Therefore the answer shall be: 
+    \begin{equation*}
+        A = 
+        \begin{cases}
+            (-\infty,a_1)\cup (a_2,a_3)\cup (a_4,a_5)\cup \dots \cup (a_{n-1},a_n), \text{If}\  \frac{n}{2} \in \mathbb{Z}\\
+            (a_1,a_2)\cup (a_3,a_4)\cup (a_5,a_6)\cup \dots \cup (a_{n-1},a_n), \text{If}\  \frac{n}{2} \notin \mathbb{Z}
+        \end{cases}
+    \end{equation*}
 
 \end{document}
