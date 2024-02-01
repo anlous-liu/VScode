@@ -60,11 +60,25 @@
         Therefore \(-1 \times f(x)< -1 \times f(y)\) which is \(-f(x)<-f(y)\) under \(x<y\). Therefore, \(-f\) is not decreasing.
 \section*{Problem 3}
     \subsection*{a)}
+    It is true.
         Because \(f,g\) are both odd, there is \(\forall x\in \mathbb{R}, \ f(-x)=-f(x)\) and \(g(-x)=-g(x)\). 
         Adding them will give \(f(-x)+g(-x)=-\left(f(x)+g(x)\right)\). Suppose \(h=f+g\), then the expression 
         turns \(h(-x)=-h(x)\) under \(\forall x \in \mathbb{R}\). Therefore, \(f+g\) is odd.
     \subsection*{b)}
-        For \(f\) to be bounded, \(M\in \mathbb{R}, \ \text{ and} \ \exists M > 0\) so that \(\forall x \in A, \ \left | f(x) \right | < M\)
-        
-
+    It is true.
+        For \(f\) to be bounded, \(M\in \mathbb{R}, \ \text{ and} \ \exists M > 0\) so that \(\forall x \in \mathbb{R}, \ \left | f(x) \right | < M\)
+        Similarly, for \(N\in \mathbb{R}\), and \(\exists N>0\) so that \(\forall x\in \mathbb{R}, \ |g(x)|<N\).
+        Because \(M>0,\ N>0,\ |f(x)|\geqslant 0,\ |g(x)| \geqslant 0\), then multiply them together will give \(|f(x)|\cdot |g(x)|<N\cdot M\) Which is 
+        equivalent to \(|f(x)\cdot g(x)|<N\cdot M\). Because \(N\) and \(M\) are all finite numbers, \(N\cdot M\) will also be finite number. Thus, \(f\cdot g\) is still bounded.
+    \subsection*{c)}
+    It is false.
+        For example, if \(f(x)=e^x\) and \(g(x)=\frac x {e^x}\). \(f\cdot g = x\). \(\forall a \in \mathbb{R}, \ 
+        -x = -x \). Thereofre, \(f\cdot g\) is an odd function. However, for example, take\(take x=1, \ and x=-1\). 
+        \(f(1)=e^1\), and \(f(-1)=e^{-1}\). Because \(-e^1 \neq e^{-1}\), \(f(x)\) is not odd. Similarly, \(g(-1)=-e\)
+        , and \(g(1)=\frac 1 e\). Because \(\frac 1 e \neq -e\), \(g(x)\) is also not odd.
+    \subsection*{d)}
+    It is false.
+        For example, if \(f(x)=e^x\) and \(g(x) = \frac 1 {e^x}\), \(f(x)\cdot g(x) = 1\) which is bounded. While  \(e^x\) and \(\frac 1 {e^x}\) are all unbounded.
+        Therefore, the statement is false.
+\section*{Problem 4}
 \end{document}
