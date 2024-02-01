@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[a4paper,fleqn]{article}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{array}
@@ -6,6 +6,56 @@
 \usepackage{tabularx}
 \usepackage{amssymb}
 
+
+\title{\textbf{Homework \#2 }}
+\author{James Liu}
+\date{\ }
+
+
 \begin{document}
+
+\maketitle
+
+
+\section*{Problem 1}
+    
+    \[
+        \left |\frac{x}{x+1} \right |\leqslant 1 
+    \]\[
+        -1 \leqslant \frac{x}{x+1} \leqslant 1 
+    \]
+    1. suppose \(x+1 > 0\)
+    \[
+    -x-1 \leqslant x \leqslant x+1    
+    \]\[
+    -1 \leqslant 2x \leqslant 2x+1    
+    \]\[
+    - \frac {1} {2} \leqslant x\leqslant x+\frac1 2
+    \]
+    Because 
+    \(\forall x \in \mathbb{R},\  x \leqslant x + \frac 1 2\)
+    Therefore, solution set will be \(x\geqslant -\frac 1 2\) \\
+    which is \(\left[-\frac 1 2, \infty\right)\)\\
+    2. suppose \(x+1 < 0\)
+    \[
+    -x-1 \geqslant x \geqslant x+1    
+    \]\[
+    -1 \geqslant 2x \geqslant 2x+1    
+    \]\[
+    - \frac {1} {2} \geqslant x\geqslant x+\frac1 2
+    \]
+    Because
+    \(\forall x \in \mathbb{R},\  x \leqslant x + \frac 1 2\). Therefore, there are no solution in this region.
+    Therefore, the solution set is \(\left[-\frac 1 2, \infty\right)\).
+
+\section*{Problem 2}
+    \subsection*{a)}
+        Because that \(f\) is increasing and \(g\) is decreasing, \(\forall x,y, \ x\in A, \text{and } y\in A \),
+        if \(x<y, \ \text{then }f(x)\leqslant f(y)\). Similarly, if \( x<y, \ \text{then } g(x)\geqslant g(y)\), then \(-g(x)\leqslant -g(y)\).
+        \(\forall x \in A, f-g \text{ at }x \ \text{equals to } f(x)-g(x)\), similarly, \(f-g \text{ at }y \ \text{equals to } f(y)-g(y)\).
+        Recall previous inequalities of \(f(x)\leqslant f(y)\ \text{and } -g(x)\leqslant -g(y) \). Adding them will give
+        \(f(x)-g(x) \leqslant f(y)-g(y)\) under that \(x<y\). Therefore, \(f-g\) is increasing.
+    
+
 
 \end{document}
