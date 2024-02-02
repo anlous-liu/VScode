@@ -1,6 +1,6 @@
 \documentclass[a4paper,fleqn]{article}
 \usepackage{graphicx}
-\usepackage{amsmath}
+\usepackage[fleqn]{amsmath}
 \usepackage{array}
 \usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
 \usepackage{tabularx}
@@ -89,5 +89,40 @@
     Suppose \(x\in A\), then \(x\in A\cup B\). Because \(A\cap B = A\cup B\), \(x\in A\cap B\). Thus, \(x\in B\) which means 
     \(A \subseteq B\). Similarly , if \(y\in B\), then \(y\in A\cup B\), then \(y\in A\cap B\), and \(y\in B\) meaning \(B\subseteq A\). Thus, \(A=B\)
 \section*{Problem 5}
-    
+    \subsection*{a)}
+        Noting the compliment of a set \(A\) as \(A^X\). \(A-B\) gives a set that all element in \(A-B\) is in set \(A\)
+        and not in set \(B\). Therefore \(B^X\) gives a set does not contain any element from set \(B\). 
+        Thus, \(A-B\) can be noted as \(A\cap B^X\). \\
+        Therefore,
+
+        \begin{align*}
+            A \triangle (B \triangle C) &=A\triangle ((B\cap C^X) \cup (C\cap B^X))             \\
+                                        &=(A\cap((B\cap C^X) \cup (C\cap B^X))^X) \cup (A^X\cap((B\cap C^X) \cup (C\cap B^X)))\\
+                                        &\text {using De Morgan's Law }\\
+                                        &=(A\cap((B\cap C^X)^X \cap (C\cap B^X)^X)) \cup ((A^X\cap (B\cap C^X)) \cup (A^X\cap (C\cap B^X)))\\
+                                        &=\mathbf{(A\cap (B^X\cup C)\cap (B \cup C^X))}\cup ((A^X \cap B\cap C^X)\cup (A^X\cap B^X \cap C))\\
+                                        &=\mathbf{(((A\cap B)\cup (A\cap C^X)) \cap (B^X\cup C))}\cup ((A^X \cap B\cap C^X)\cup (A^X\cap B^X \cap C))\\
+                                        &=((A\cap B)\cap (B^X\cup C)) \cup \mathbf{((A\cap C^X) \cap (B^X\cup C))}\cup ((A^X \cap B\cap C^X)\cup (A^X\cap B^X \cap C))\\
+                                        &=((A\cap B)\cap (B^X\cup C)) \cup ((A\cap C^X \cap B^X)\cup \\ & \ \ \ \ \ \mathbf{(A\cap C^X \cap C)})\cup ((A^X \cap B\cap C^X)\cup (A^X\cap B^X \cap C))\\
+                                        &=\mathbf{((A\cap B)\cap (B^X\cup C))} \cup ((A\cap C^X \cap B^X)\cup \mathbf{\varnothing})\cup ((A^X \cap B\cap C^X)\cup (A^X\cap B^X \cap C))\\
+                                        &=((A\cap B \cap B^X)\cup (A \cap B \cap C))\cup\\ & \ \ \ \ \  ((A\cap C^X \cap B^X))\cup ((A^X \cap B\cap C^X)\cup (A^X\cap B^X \cap C))\\
+                                        &=(A \cap B \cap C)\cup ((A\cap C^X \cap B^X))\cup ((A^X \cap B\cap C^X)\cup (A^X\cap B^X \cap C))\\
+            (A \triangle B) \triangle C &=C\triangle ((B\cap A^X) \cup (A\cap B^X))             \\
+                                        &=(C\cap((B\cap A^X) \cup (A\cap B^X))^X) \cup (C^X\cap((B\cap A^X) \cup (A\cap B^X)))\\
+                                        &\text {using Ce Morgan's Law }\\
+                                        &=(C\cap((B\cap A^X)^X \cap (A\cap B^X)^X)) \cup ((C^X\cap (B\cap A^X)) \cup (C^X\cap (A\cap B^X)))\\
+                                        &=\mathbf{(C\cap (B^X\cup A)\cap (B \cup A^X))}\cup ((C^X \cap B\cap A^X)\cup (C^X\cap B^X \cap A))\\
+                                        &=\mathbf{(((C\cap B)\cup (C\cap A^X)) \cap (B^X\cup A))}\cup ((C^X \cap B\cap A^X)\cup (C^X\cap B^X \cap A))\\
+                                        &=((C\cap B)\cap (B^X\cup A)) \cup \mathbf{((C\cap A^X) \cap (B^X\cup A))}\cup ((C^X \cap B\cap A^X)\cup (C^X\cap B^X \cap A))\\
+                                        &=((C\cap B)\cap (B^X\cup A)) \cup ((C\cap A^X \cap B^X)\cup \\ & \ \ \ \ \ \mathbf{(C\cap A^X \cap A)})\cup ((C^X \cap B\cap A^X)\cup (C^X\cap B^X \cap A))\\
+                                        &=\mathbf{((C\cap B)\cap (B^X\cup A))} \cup ((C\cap A^X \cap B^X)\cup \mathbf{\varnothing})\cup ((C^X \cap B\cap A^X)\cup (C^X\cap B^X \cap A))\\
+                                        &=((C\cap B \cap B^X)\cup (C \cap B \cap A))\cup\\ & \ \ \ \ \  ((C\cap A^X \cap B^X))\cup ((C^X \cap B\cap A^X)\cup (C^X\cap B^X \cap A))\\
+                                        &=(C \cap B \cap A)\cup ((C\cap A^X \cap B^X))\cup ((C^X \cap B\cap A^X)\cup (C^X\cap B^X \cap A))\\
+        \end{align*}
+        Therefore, \(A \triangle (B \triangle C)=(A \triangle B) \triangle C\)
+    \subsection*{b)}
+        The statement proofing will here be: \(A\triangle B \triangle C\) can be characterize as the set of element belonging exactlly one or all of three of the sets A,B,C.
 \end{document}
+
+Suppose \(x\in A\cap B\), then \(x \notin A-B\) and \(x\notin B-A\). Therefore, \(x\notin A \triangle B\). Because there is no
+extra element introduced in \(A \triangle B\), \(A\triangle B \in A+B\)
