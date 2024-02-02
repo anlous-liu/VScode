@@ -121,7 +121,25 @@
         \end{align*}
         Therefore, \(A \triangle (B \triangle C)=(A \triangle B) \triangle C\)
     \subsection*{b)}
-        The statement proofing will here be: \(A\triangle B \triangle C\) can be characterize as the set of element belonging exactlly one or all of three of the sets A,B,C.
+        The statement proofing will here be: \(A\triangle B \triangle C\) 
+        can be characterize as the set of element belonging exactlly one or all of three of the sets A,B,C, which is the shaded area of figure 1.
+        \begin{figure}[h]
+            \centering
+            \includegraphics*[scale = 0.5]{image/Venn.png}
+            \caption{}
+        \end{figure}
+        
+        from the previous answer, the solution set of \(A\triangle B \triangle C\) is:\\
+        \[(A \cap B \cap C)\cup ((A\cap C^X \cap B^X))\cup ((A^X \cap B\cap C^X)\cup (A^X\cap B^X \cap C))\]
+            1. \((A \cap B \cap C)\)\\
+                Suppose \(x\in (A \cap B \cap C)\), then \(x\in A, \ x\in B, \ x \in C\)\\
+            2. \((A\cap C^X \cap B^X)\)\\
+                Suppose \(x\in (A\cap C^X \cap B^X)\), it means that \(x\in A\), and \(x\notin B\), and \(x\notin C\).
+            Similarly, for \((C^X \cap B\cap A^X)\) and \((C^X\cap B^X \cap A)\), they means that \(x\in B, \ x\notin A, \ x \notin C\), \
+            and \(x\in C, \ x\notin A, \ x \notin B\)
+        Therefore, \(A\triangle B \triangle C\) 
+        can be characterize as the set of element belonging exactlly one or all of three of the sets A,B,C.
+
 \end{document}
 
 Suppose \(x\in A\cap B\), then \(x \notin A-B\) and \(x\notin B-A\). Therefore, \(x\notin A \triangle B\). Because there is no
