@@ -1,0 +1,64 @@
+\documentclass[a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\title{\textbf{Homework \#3 }}
+\author{James Liu}
+\date{\ }
+
+
+\begin{document}
+\maketitle
+
+\section*{Problem 1}
+    The negation of statement:"\\
+    \(\forall x,y\in \mathbb{R}\) and \(x>0,\ y>0\), there is \(\dfrac{2}{1/x+1/y} \leqslant \sqrt{xy}\)"\\
+    is:"\(\forall x,y\in \mathbb{R}\) and \(x>0,\ y>0\), there is \(\dfrac{2}{1/x+1/y} >\sqrt{xy}\)"
+    \\
+    Let \(x,y\in \mathbb{R}\) and \(x>0,\ y>0\), suppose\(\dfrac {2}{1/x+1/y}> \sqrt{xy}\). Then:
+
+    \begin{align*}
+        %
+        \dfrac {2}{1/x+1/y}&> \sqrt{xy}\\
+        \dfrac{2xy}{x+y}&>\sqrt{xy}\\
+        \left( \dfrac{2xy}{x+y}\right)^2 &>xy\\
+        \dfrac{4x^2y^2}{x^2+2xy+y^2}&>xy\\
+        4x^2y^2&>x^3y+xy^3+2x^2y^2\\
+        0&>x^3y+xy^3-2x^2y^2\\
+        0&>xy(x^2+y^2-2xy)\\
+        0&>xy(x-y)^2
+        %
+    \end{align*}
+    However, \(x>0\), and \(y>0\), \(xy>0\) and \((x-y)^2\geqslant 0\),\\
+    therefore, \(xy(x-y)^2\geqslant 0\). Thus, the negation is false and the orginal statement is true.
+    \\
+    \\
+    Let \(x=y\), then\(\dfrac{2}{1/x+1/y} = \dfrac{2}{1/x+1/x}=x\),\\
+    and \(\sqrt{xy}=\sqrt{x^2}\) due to \(x>0\), \(\sqrt{x^2}=x=\dfrac{2}{1/x+1/y}\)
+    \\
+    \\
+    Let \(\dfrac{2}{1/x+1/y} = \sqrt{xy}\):
+    \begin{align*}
+        %
+        \dfrac {2}{1/x+1/y}&= \sqrt{xy}\\
+        \dfrac{2xy}{x+y}&=\sqrt{xy}\\
+        \left( \dfrac{2xy}{x+y}\right)^2 &=xy\\
+        \dfrac{4x^2y^2}{x^2+2xy+y^2}&=xy\\
+        4x^2y^2&=x^3y+xy^3+2x^2y^2\\
+        0&=x^3y+xy^3-2x^2y^2\\
+        0&=xy(x^2+y^2-2xy)\\
+        0&=xy(x-y)^2
+        %
+    \end{align*}
+    Because \(x>0\text{, and }y>0\), \(xy>0\), and \((x-y)^2\geqslant 0\). Therefore, for \(xy(x-y)^2\) to be \(0\)
+    it must be \((x-y)^2=0\). Thus, \(x-y=0\) and \(x=y\)\\
+    \\
+    Therefore, the harmonic mean of x, y is always less than or equal to the geometric
+    mean of x and y, and that equality occurs if and only if x = y.
+\section*{Problem 2}
+    
+
+\end{document}
