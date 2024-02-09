@@ -19,9 +19,7 @@
     is:"\(\forall x,y\in \mathbb{R}\) and \(x>0,\ y>0\), there is \(\dfrac{2}{1/x+1/y} >\sqrt{xy}\)"
     \\
     Let \(x,y\in \mathbb{R}\) and \(x>0,\ y>0\), suppose\(\dfrac {2}{1/x+1/y}> \sqrt{xy}\). Then:
-
     \begin{align*}
-        %
         \dfrac {2}{1/x+1/y}&> \sqrt{xy}\\
         \dfrac{2xy}{x+y}&>\sqrt{xy}\\
         \left( \dfrac{2xy}{x+y}\right)^2 &>xy\\
@@ -30,7 +28,6 @@
         0&>x^3y+xy^3-2x^2y^2\\
         0&>xy(x^2+y^2-2xy)\\
         0&>xy(x-y)^2
-        %
     \end{align*}
     However, \(x>0\), and \(y>0\), \(xy>0\) and \((x-y)^2\geqslant 0\),\\
     therefore, \(xy(x-y)^2\geqslant 0\). Thus, the negation is false and the orginal statement is true.
@@ -105,30 +102,52 @@
     \end{align*}    
     Therefore, the negation is false, and, therefore, \(\displaystyle{\prod ^{n+1}_{i=2}\left(1-\dfrac{1}{i^2}\right) = \frac{(n+1)+1}{2(n+1)}}\) is true.
     Therefore, by induction, \(\forall n\in \mathbb{N},\ n\geqslant2,\ \displaystyle {\prod ^n_{i=2}\left(1-\dfrac{1}{i^2}\right)=\frac{n+1}{2n}}\)
+\newpage
 \section*{Problem 4}
-    The solution is \(\displaystyle{a_n =\sum ^{n}_{i=1} 3^{i-1}}\)
+    The solution is \(\displaystyle{a_n =\sum ^{n}_{i=1} 3^{i-1}}\)\\
+    Base step:
 
-    Incomplet!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    When \(n=1\), \(a_{n+1}=a_2=3\times 1+1=4\), There is also, \(\displaystyle{\sum_{i=1}^{n} 3^{i-1}=3^0+3^1=1+3=4}\).
+    
+    Similarly, when \(n=2\), there is:
 
-        n=1 right\\
-        suppose it is right
+    \(a_{2+1}=3\times a_2+1=13 = 1+3+9= 3^0+3^1+3^2=\displaystyle {\sum ^3_{i=1}3^{i-1}}\)
+    \\
+    Induction step:
+
+    Assume \(\displaystyle{\sum^n_{i=1}3^{i-1}=a_n}\), then for \(a_{n+1}\), if the patter does not work, there will be:
+
+
     \begin{align*}
         %
-        \sum^{n+1}_{i=1} 3^{i-1}=3\cdot a_n +1\\
-        \sum^{n+1}_{i=1} 3^{i-1}=3\sum^{n}_{i=1} 3^{i-1}+1\\
-        \sum^{n+1}_{i=1} 3^{i-1}=\sum^{n+1}_{i=2} 3^{i-1}+1\\
+        \sum^{n+1}_{i=1} 3^{i-1}\neq3\cdot a_n +1\\
+        \sum^{n+1}_{i=1} 3^{i-1}\neq3\sum^{n}_{i=1} 3^{i-1}+1\\
+        \sum^{n+1}_{i=1} 3^{i-1}\neq \sum^{n+1}_{i=2} 3^{i-1}+1\\
         \text{When } i =1\text{,} \   3^{i-1}=3^0=1\\
-        \therefore \sum^{n+1}_{i=1} 3^{i-1}=\sum^{n+1}_{i=1} 3^{i-1}\\
+        \therefore \sum^{n+1}_{i=1} 3^{i-1}\neq \sum^{n+1}_{i=1} 3^{i-1}\\
         %
     \end{align*}
-        Therefore, they do equal and throgh induction \dots
-        
+    Therefore, the negation is false and \(\displaystyle{\sum^{n+1}_{i=1} 3^{i-1}=3\cdot a_n +1}\).
+    Thus, by induction, it is safe to conclude that \(\displaystyle{a_n =\sum ^{n}_{i=1} 3^{i-1}}\).
 
 
 
 
-
-    Incomplet!!!!!!!!!!!!!!!!!!!!!!!!!!!
+\newpage
 \section*{Problem 5}
-    trying to prof that \(\displaystyle{\sum^k_{i=1}M_k<\infty}\)
+    Base step: 
+
+    when \(k=2\), if \(f_1\) is bounded and \(f_2\) is bounded, then \(\exists M\in \mathbb{R},\ M>0\) and \(\exists N\in \mathbb{N},\ N>0\)
+    that \(\forall x\in A\), \(|f_1(x)|<M\) and \(|f_2(x)|<N\). Therefore, \(|f_1|+|f_2|<M+N\). Therefore, \(f_1+f_2\) is bounded.\\
+    Induction step:
+
+    Assume that \(f_1+f_2+f_3+\cdots +f_k\) is bounded, then we get that \\\(\exists O\in \mathbb{R}, \text{ and }O>0\), such that \(|f_1+f_2+f_3+\cdots +f_k|<O\)
+    Due to that \(f_{k+1}\) is also bounded, \(\exists P\in \mathbb{R}, \ \text{and } P>0\), such that \(f_{k+1}<P\). Therefore, \(|f_1+f_2+f_3+\cdots +f_k|+|f_{k+1}|<O+P\).
+    Therefore, if \(f_1+f_2+f_3+\cdots +f_k\) is bounded, then \(f_1+f_2+f_3+\cdots +f_k+f_{k+1}\) is also bounded. 
+    \\
+    Thus, by induction, for \(k\geqslant 2\), \(f_1+f_2+f_3+\cdots +f_k\) is bounded.
+
+
+
+    %trying to prof that \(\displaystyle{\sum^k_{i=1}M_k<\infty}\)
 \end{document}
