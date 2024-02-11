@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\title{\textbf{Homework \#1 }}
+\author{James Liu}
+\date{\ }
+
+\begin{document}
+\maketitle
+
+\section*{Problem 1}
+    Macroscopic cross-section follows that:\\
+    \(\Sigma = N\cdot \sigma= 
+    (\rho \cdot V)\cdot \sigma=(0.048\times 10^{24}) \times (1\times 0.1)\times 4.5 \times 10^{-24}
+    = 0.0216\ \text{cm}^{-1}\).
+\section*{Problem 2}
+    \(\displaystyle{\sigma_{D_2O}=2\sigma_D+\sigma_O=2\times 2.6+1.6=6.8\ \text{barn}}\)\\
+    \(\Sigma = N\cdot \sigma_{D_2O}=0.3323\times 10^{24}\times 6.8\times 10^{-24}=2.259\ \text{cm}^{-1}\)
+\section*{Problem 3}
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{c c c c c}
+            \multicolumn{5}{c}{Used Microscopic Abosoption Cross Section}\\ \hline \hline
+            Element&C&Cr&Ni&Fe\\\hline
+            $\sigma(barn)$ &3.530(mb)&15.38&4.505&2.463\\ \hline
+        \end{tabular}
+    \end{table}
+
+    \begin{align*}
+    N_C &=\displaystyle{\frac {\rho \cdot N_A}{M_C}=\frac{0.08\% \cdot 7.86 \cdot 6.023\times 10^{23}}{12.011}=3.153\times 10^{20}\ \frac {\text{atom}}{\text{cm}^{3}}}\\
+    N_{Cr}&=\displaystyle{\frac{19\% \cdot 7.86 \cdot 6.023\times 10^{23}}{51.996}=1.89\times 10^{21}}\ \frac {\text{atom}}{\text{cm}^{3}}\\
+    N_{Ni}&=\displaystyle{\frac{10\% \cdot 7.86 \cdot 6.023\times 10^{23}}{58.71}=8.823\times 10^{20}}\ \frac {\text{atom}}{\text{cm}^{3}}\\
+    N_{Fe}&=\displaystyle{\frac{70.92\% \cdot 7.86 \cdot 6.023\times 10^{23}}{55.847}=6.5\times 10^{21}}\ \frac {\text{atom}}{\text{cm}^{3}}\\
+        %
+        \Sigma_a    &= \displaystyle {\sum N\cdot \sigma_a}=N_{C}\cdot \sigma_{C}+N_{Cr}\cdot \sigma_{Cr}+N_{Ni}\cdot \sigma_{Ni}+N_{Fe}\cdot \sigma_{Fe}\\
+                    &=3.153\cdot 3.530\times 10^{-3} \times 10^{-4}+15.38\cdot 1.89\times 10^{-3}+4.505\cdot 8.823\times 10^{-4}+2.463\cdot 6.5\times 10^{-3}\\
+                    &=0.0491 \ \text{cm}^{-1}                    
+        %
+    \end{align*}
+\section*{Problem 4}
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{c c c c}
+            \multicolumn{4}{c}{Used Microscopic Abosoption Cross Section}\\ \hline \hline
+            Element&$U_{235}$ & $U_{238}$& O               \\\hline
+            $\sigma(barn)$ & 683.81&   2.683&189.9($\mu$b)                         \\ \hline
+        \end{tabular}
+    \end{table}
+    \begin{align}
+        \sigma_U    &= e\cdot \sigma_{U_{235}}+(1-e)\cdot \sigma_{U_{238}} \\
+                    &=3\% \times 683.81+97\% 2.683\\
+                    &=23.1168\  (barn)                                                  \\
+        \sigma_{UO_2}&=2\times \sigma_O + \sigma_U\\\
+                    &= 2\times 189.9\times 10^{-6}+ 23.1168\\
+                    &=23.1172\ \text{barn}\\
+        \Sigma_{UO_2}&=N \cdot \sigma = \frac{\rho_{UO_2} \cdot N_A}{M_{UO_2}}\cdot \sigma_{UO_2}\\
+                    &=\frac{10.5\times 6.023\times 10^{23}}{2\cdot15.999+(3\%\cdot 235+97\%\cdot 238)}\times 23.1172\times 10^{-24}\\
+                    &=0.5417\ \text{cm}^{-1}
+    \end{align}
+\section*{Problem 5}
+    
+\end{document}
