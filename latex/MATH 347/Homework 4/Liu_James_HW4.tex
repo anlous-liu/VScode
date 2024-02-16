@@ -64,7 +64,7 @@
     \subsection*{a)}
         Base step:\\
         As said, \(a_1\) and \(a_2\) are odd, and \(a_3=2a_{2}+3a_n{1}\), \(2\times a_{2}\) will be even and \(3 \times a_1\) will be odd as \(a_1\) is odd.
-        Therfore, a odd number plus a even number is odd and thus \(a_3\) is odd.
+        Therfore, a odd number plus a even number is odd and thus \(a_3\) is odd.\\
         Induction step:\\
         Assume that \(a_k,\ \forall n,k\in \mathbb{N}, \text{ and } n\geqslant 3, k\leqslant n\) is odd. For \(a_{n+1}\),
         there is that \(a_{n+1}=2a_n+3a_{n-1}\), \(2\) is even and thus \(2\times a_{n}\) is even. As
@@ -90,7 +90,34 @@
             \text{Because }(-1)^{n-1}=(-1)^{n+1}, \ &=\frac{1}{2}(3^n-(-1)^{n+1})=a_{n+1}
         \end{align*}
         Thus, by induction, \(a_n=\frac{1}{2}(3^{n-1}-(-1)^n)\) for all \(n\in \mathbb{N}\)
-
-
-
+\section*{Problem 4} 
+    \subsection*{a)}
+        Base step:\\
+        \(F_1=1\), \(F_2=1, F_3=2\), \(2|F_3\). Also, for \(k=0\), there is \(0\div 2 =0\in \mathbb{Z}\), therefore, \(2|F_{3\times 0}\)\\
+        Induction step:\\
+        \(k\in \mathbb{N}\) Assume that \(2|F_{3k}\), therefore, for \(F_{3(k+1)}=F_{3k+3}\) there is:
+        \begin{align*}
+            F_{3k+3}&=F_{3k+2}+F_{3k+1}\\
+                    &=F_{3k+1}+F_{3k}+F_{3k}+F_{3k-1}\\
+                    &=F_{3k}+F_{3k-1}+F_{3k}+F_{3k}+F_{3k-1}\\
+                    &=3\cdot F_{3k}+2\cdot F_{3k-1}\\
+        \end{align*}
+        As \(2|F_{3k}\), \(\displaystyle{\frac{F_{3k}}{2}\in \mathbb{Z}}\), therefore, \(3F_{3k} \div 2=3\times \frac{F_{3k}}{2}\in \mathbb{Z}\).
+        Therefore, \(2|(3 F_{3k})\). Because \(2\cdot F_{3k-1} \div 2 = F_{3k-1}\in \mathbb{Z}\), \(2|(2 F_{3k-1})\).
+        Thus, \(2|F_{3(k+1)}\).\\Therefore, by induction, there is \(2|F_{3k}\) for every \(k\geqslant 0\)
+    \subsection*{b)}
+    Base step:\\
+        \(F_1=1\), \(F_2=1,\  F_3=2,\ F_4=3\), \(3|F_4\). Also, for \(k=0\), there is \(0\div 3 =0\in \mathbb{Z}\), therefore, \(3|F_{4\times 0}\)\\
+        Induction step:\\
+        \(k\in \mathbb{N}\) Assume that \(3|F_{4k}\), therefore, for \(F_{4(k+1)}=F_{4k+4}\) there is:\\
+        \begin{align*}
+            F_{4k+4}&=F_{4k+3}+F_{4k+2}\\
+                    &=F_{4k+2}+F_{4k+1}+F_{4k+1}+F_{4k}\\
+                    &=F_{4k+1}+F_{4k}+F_{4k+1}+F_{4k+1}+F_{4k}\\
+                    &=2\times F_{4k}+3\times F_{4k+1}\\
+        \end{align*}
+        As \(3|F_{4k}\), \(\displaystyle{\frac{F_{4k}}{3}\in \mathbb{Z}}\), therefore, \(2F_{4k} \div 3=2\times \frac{F_{4k}}{3}\in \mathbb{Z}\).
+        Therefore, \(3|(2 F_{4k})\). Because \(3\cdot F_{4k+1} \div 3 = F_{4k+1}\in \mathbb{Z}\), \(3|(3 F_{4k+1})\).
+        Thus, \(3|F_{3(k+1)}\).\\Therefore, by induction, there is \(3|F_{4k}\) for every \(k\geqslant 0\)
+        
 \end{document}
