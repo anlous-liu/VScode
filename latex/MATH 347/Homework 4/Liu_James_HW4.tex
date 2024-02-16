@@ -76,7 +76,21 @@
         Base step:\\
         \(a_1=1=\frac{1}{2} (3^0-(-1))\) and \(a_2=\frac{1}{2} (3^1-(-1)^2)\)\\
         Induction step:\\
-        Assume that \(a_k=\frac{1}{2}(3^{n-1}-(-1)^n)\), for \(a_{n+1}\), there is:\\
+        Assume that \(a_n=\frac{1}{2}(3^{n-1}-(-1)^n)\), and \(a_{n-1}=\frac{1}{2}(3^{n-2}-(-1)^{n-1})\).\\
+        Therefore, for \(a_{n+1}\), there is:\\
+        \begin{center}
             \(a_{n+1}=2a_n+3a_{n-1}\) and \(a_{n+1}=\frac{1}{2}(3^{n}-(-1)^{n+1})\)
+        \end{center}
+        \begin{align*}
+            2a_n+3a_{n+1}&=2\times\frac{1}{2}(3^{n-1}-(-1)^n)+3\times \frac{1}{2}(3^{n-2}-(-1)^{n-1})\\
+            &=3^{n-1}-(-1)^n+\frac{3}{2}(3^{n-2}-(-1)^{n-1})\\
+            &=\frac{2\cdot 3^{n-1}+3\cdot3^{n-2}}{2}-\left((-1)^{n}+\frac{3}{2}(-1)^{n-1}\right)\\
+            &=\frac{1}{2}(2+1)3^{n-1}-((-1)^{n-1}(-1+\frac{3}{2}))\\
+            &=\frac{1}{2}(3^n-(-1)^{n-1})\\
+            \text{Because }(-1)^{n-1}=(-1)^{n+1}, \ &=\frac{1}{2}(3^n-(-1)^{n+1})=a_{n+1}
+        \end{align*}
+        Thus, by induction, \(a_n=\frac{1}{2}(3^{n-1}-(-1)^n)\) for all \(n\in \mathbb{N}\)
+
+
 
 \end{document}
