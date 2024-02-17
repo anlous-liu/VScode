@@ -15,7 +15,26 @@
 
 \section*{Problem 1}
     \subsection*{a)}
-
+        1. For \(n\geqslant0\):\\
+        Base step:\\
+        \(P(0)\) is true.\\
+        Induction step:\\
+        \(P(n)\) do imply \(P(n+1)\).\\
+        Thus,by induction, \(\forall n\in \mathbb{Z}, \ n\geqslant 0\) the statement \(P(n)\)is true.\\
+        2. for \(n<0\)\\
+        Suppose statement \(Q(m)\) means that:the statement\(P(-m)\) is true.
+        Then the statement: the statement\(P(m)\) is true. is equivelent to \(Q(-m)\).\\
+        Base step:\\
+        \(P(0)\) is true, then \(Q(-0)\) is ture. Then, as implied, \(P(0-1)=P(-1)\) is true and thus \(Q(1)\) is true.\\
+        Induction step:\\
+        Assume that \(Q(m),\ m\in\mathbb{N},\ m\geqslant 1\) is true, equivelently, \(P(-m)\) is true. Then, \(Q(m+1)\) is true if \(P(-m-1)\) is true.
+        Because, when \(P(n)\) is true, it implies \(P(n-1)\) is also true, when \(n=-m\), it means that when \(p(-m)\) is ture, \\
+        \(P(-m-1)\) is also true. Which means that \(Q(m)\) implies \(Q(m+1)\).\\
+        Thus, by induction, \(\forall m\in \mathbb{N}, m\geqslant 1\), \(Q(m)\) is ture.\\
+        Meaning that \(\forall m\in \mathbb{N}, m\geqslant 1\), \(P(-m)\) is true.\\
+        Meaning that \(\forall n\in \mathbb{Z}, n\leqslant -1\), \(P(n)\) is true.\\
+        \\
+        Thus, because \(n\in\mathbb{Z}\) and \(P(n)\) is ture for \(n<0\), and \(n\geqslant 0\), \(P(n)\) is true for all integers \(n\).
     \subsection*{b)}
         Base step:\newline 
         Because that $P(1)$ is true, $P(2\times 1)$ and $P(2\times 1+1)$ are also true\\
@@ -60,6 +79,7 @@
     \end{align*}
     
     Therefore, by induction, every integer greater than or equal to 6 satisfies \(2^n\geqslant(n+1)^2\)
+\newpage
 \section*{Problem 3}
     \subsection*{a)}
         Base step:\\
@@ -71,7 +91,6 @@
         \(a_{n-1}\) is also odd as assumed, \(3\times a_{n-1}\) is odd. Thus, \(a_{n+1}\) equals to the sum
         of a even and a odd number. Therefore, \(a_{n+1}\) is also odd.\\
         Thus, by induction, if \(a_1,a_2\) are odd,\(\forall b\in \mathbb{N}\), \(a_n\) is also odd.
-    \newpage
     \subsection*{b)}
         Base step:\\
         \(a_1=1=\frac{1}{2} (3^0-(-1))\) and \(a_2=\frac{1}{2} (3^1-(-1)^2)\)\\
@@ -87,9 +106,12 @@
             &=\frac{2\cdot 3^{n-1}+3\cdot3^{n-2}}{2}-\left((-1)^{n}+\frac{3}{2}(-1)^{n-1}\right)\\
             &=\frac{1}{2}(2+1)3^{n-1}-((-1)^{n-1}(-1+\frac{3}{2}))\\
             &=\frac{1}{2}(3^n-(-1)^{n-1})\\
-            \text{Because }(-1)^{n-1}=(-1)^{n+1}, \ &=\frac{1}{2}(3^n-(-1)^{n+1})=a_{n+1}
+            \\
+            \text{Because }(-1)^{n+1}=(-1)^2(-1)^{n-1}&=(-1)^{n-1}, \\
+            \text{original function}&=\frac{1}{2}(3^n-(-1)^{n+1})=a_{n+1}
         \end{align*}
         Thus, by induction, \(a_n=\frac{1}{2}(3^{n-1}-(-1)^n)\) for all \(n\in \mathbb{N}\)
+\newpage
 \section*{Problem 4} 
     \subsection*{a)}
         Base step:\\
@@ -119,5 +141,88 @@
         As \(3|F_{4k}\), \(\displaystyle{\frac{F_{4k}}{3}\in \mathbb{Z}}\), therefore, \(2F_{4k} \div 3=2\times \frac{F_{4k}}{3}\in \mathbb{Z}\).
         Therefore, \(3|(2 F_{4k})\). Because \(3\cdot F_{4k+1} \div 3 = F_{4k+1}\in \mathbb{Z}\), \(3|(3 F_{4k+1})\).
         Thus, \(3|F_{3(k+1)}\).\\Therefore, by induction, there is \(3|F_{4k}\) for every \(k\geqslant 0\)
+\newpage
+\section*{Problem 5}
+        Base step:\\
+        \(P(24)\) is true as \(2\times 5+2\times 7=24\)\\
+        \(P(25)\) is true as \(5\times 5=25\)\\
+        \(P(26)\) is true as \(5+3\times 7=26\)\\
+        \(P(27)\) is true as \(4\times 5 + 7 = 27\)\\
+        \(P(28)\) is true as \(4\times 7=28\)\\
+        \(P(29)\) is true as \(3\times 5 + 2\times 7 = 29\)\\
+        Induction step:\\
+        \(\forall k,n\in \mathbb{N}\) and \(24\leqslant k\leqslant n ,\ n\geqslant 29\) 
+        Assume that \(P(k)\) are all true, and thus \(P(n)\) is also true, then, \(P(n+1-5)\) is true
+        as \(n-4<n \text{ for }n\in \mathbb{N}\). That means that \(\exists a,b\in \mathbb{N}\) that satisfies \(a\cdot 5 + b\cdot 7 = n-4\).
+        Therefore, \((a+1)\cdot 5+b\cdot 7=n+1\). Thus, it is possible to make \(n\) cents postage with 5-cent and 7-cent stamps for all \(n\geqslant 24\).
+        \\  \\
+        If \(P(23)\) is true, it means that \(\exists a,b\in \mathbb{N}\) that makes \(a\cdot 5+b\cdot 7=23\):
+
+        \begin{align*}
+            a&=\frac {23-7b}{5}\\
+        \end{align*}
+        If \(a\) is an integer, then \(\exists b\in \mathbb{N},\ \text{making } (23-7b)\geqslant0,\ \text{and }5|23-7b\)
+        \begin{align*}
+            \text{for }b=1&, \ 5\nmid 16=23-7\\
+            \text{for }b=2&, \ 5\nmid 9=23-14\\
+            \text{for }b=3&, \ 5\nmid 2=23-21\\
+            \text{for }b=4&, \ 23-28=-5<0\\
+        \end{align*}
+
+        Therefore, \(P(23)\) is false.
+\newpage
+\section*{Problem 6}
+        First proof that for every shape that is a quare of \(2^{k-1}\) side length subtracted from \(2^k\) side length square from a corner. The discribed shape is similar to figure \ref{first}.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.25\textwidth]{figures/demonstration of first idea.png}
+            \caption{the blue region is the intended region the red region is the removed square}
+            \label{first}
+        \end{figure}
+        The statement is: \(\forall n\in \mathbb{N},\ n\geqslant 1\), the shape mentioned above with side length (the side length of a complete square, similar when mentioned below)\(2^n\)
+        can be tiled use L-shapes.\\
+        Base step:\\
+        For \(n=1\), there is a following way shown below in figure \ref{n=1}:\\
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.25\textwidth]{figures/for n=1.png}
+            \caption{A way to tile when \(n=1\)}
+            \label{n=1}
+        \end{figure}\\
         
+        Induction step:
+        Assume that for a shape with side length of \(2^n\) can still be tiled with L-shape. Then, for shape with side length of \(2^{n+1}\), there is the following way to tile it with 
+        shapes of length \(2^n\) in figure \ref{n=n}.\\ 
+        
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.25\textwidth]{figures/for induction.png}
+            \caption{A way to tile while each \(2\times2\) square have a side length of \(2^n\)}
+            \label{n=n}
+        \end{figure}\newpage
+        As the \(2^n\) shape is tileable with L-shapes, the \(2^{n+1}\) is also tileable. Therfore, by induction, \(\forall n\in \mathbb{N},\ n\geqslant 1\),
+        the shape mentioned above with side length \(2^n\) can be tiled use L-shapes.
+        \\ \\
+        Secondly, the statemnet need to proof is: \(\forall m\in\mathbb{N},\ m\geqslant 1\), shape that is a \(1\times 1\) square subtracted from a corner of a square with side length of \(2^m\) can be tiled with L-shapes.\\
+        Base step:\\
+        For \(m=1\), there is a tiling way similar to figure \ref{m=1}.
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.25\textwidth]{figures/for n=1.png}
+            \caption{A way to tile when \(m=1\)}
+            \label{m=1}
+        \end{figure}\\
+        Induction step:\\
+        Assume tha for a square with sidelength \(2^n\) can be tiled with then for a square having side length of \(2^{n+1}\), a corner of a \(2^n\times 2^n\) can be tiled,
+        lefting a shape identical to the shape discribed in the first part which is profed to be tileable. 
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.25\textwidth]{figures/for second prof.png}
+            \caption{Blue part profed to be tileable in the first part and red part is assumed to be tileable}
+            \label{p2}
+        \end{figure}\\
+        Therefore, as it is like in figure \ref{p2}, the if the red region is 
+        tileable, the shape is tileable.\\
+        Thus, by induction, \(\forall m\in\mathbb{N},\ m\geqslant 1\), shape that is a \(1\times 1\) square subtracted from a corner of a square with side length of \(2^m\) can be tiled with L-shapes.
 \end{document}
