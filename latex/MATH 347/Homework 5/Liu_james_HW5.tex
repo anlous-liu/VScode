@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\title{\textbf{Homework \#5 }}
+\author{James Liu}
+\date{\ }
+
+\begin{document}
+\maketitle
+
+\section*{Problem 1}
+\subsection*{c)}
+    \(f(a,b)=ab(b+1)/2\)\\
+    It is a surjection\\
+    Base step:\\
+    When \(a=b=1\), \(f(1,1)=1\)\\
+    Induction step:\\
+    Assume that \(n\in \mathbb{N}, \ f(n,1)=n\), then for \(f(n+1,1)\)
+    there is \(f(n+1,1)=\frac{(n+1)\times 1 \times (1+1)}{2}=n+1\)\\
+    Thus, \(\forall n\in \mathbb{N}\), \(f(n,1)=n\), therefore, \(f(a,b)=ab(b+1)/2\) is a surjection form  \(\mathbb{N}\times \mathbb{N}\) to \(\mathbb{N}\)
+\subsection*{d)}
+    \(f(a,b)=(a+1)b(b+1)/2\)\\
+    No it is not a surjection as is does not contain \(f(a,b)=1\).
+    Assume that there is a pair of \(a,b\in \mathbb{N}\) such that \(f(a,b)=1=(a+1)b(b+1)/2\). 
+    As \(a\geqslant 1, \ b\geqslant 1\), \((a+1)b(b+1)/2\geqslant 2\). Therefore, it is not a surjection.
+\subsection*{e)}
+    \(f(a,b)=ab(a+b)/2\)\\
+    No it is not surjection.\\
+    When \(f(a,b)=5\), there is \(ab(a+b)=10\). If \(c\in \mathbb{N}, d\in \mathbb{N}\) and \(c\cdot d =10\)
+    There is \((c,d)=(1,10),(2,5)\). \\
+    \(\forall a,b\in \mathbb{N}\), \(a+b\neq 1\) as \(a\geqslant 1\) and \(b\geqslant 1\).
+    When \(ab=1\), there is \(a=b=1\) and \(1(1+1)\neq 10\).\\
+    When \(ab=2\), there is \(a=2,b=1\)or \(a=1,b=2\), in both cases, \(ab(a+b)\neq 10\).\\
+    When \((a+b)=2\), there is \(a=b=1\), and \(ab(a+b)\neq 10\).\\
+    Therefore, there is no such pair of natural numbers \(a,b\) that gives \(f(a,b)=5\) Therefore, it is not a surjection.
+\section*{Problem 2}
+    As \(f\) is a bijection, there is \(f^{-1}\) is also a bijection. As \(f\) is increasing, there shall be 
+    \(\forall x,y\in A\) and \(x\leqslant y\), there is \(f(x)\leqslant f(y)\). For \(f^{-1}\), there is \(f^{-1}(f(x))=x\).
+    \(\forall x,y\in A\) and \(x\leqslant y\), and as \(f\) is a bijection, there is also \(\forall f(x)<f(y)\), \(x<y\). Thus, there is \(f(x)\leqslant f(y)\), and \(f^{-1}(f(x))=x\leqslant y=f^{-1}(f(y))\).
+    Therefore, the statement is right.
+\section*{Problem 3}
+\subsection*{a)}
+    Suppose that \(f(x)\) is not injective. Then, \(\exists x,y \in A\), that \(f(x)=f(y)\). As \(h(x)=g(f(x))\), there is 
+    \(\exists x,y \in A\), that \(g(f(x))\neq g(f(y))\). However, as \(f(x)=f(y)\), and \(h(x)=g(f(x))\), and \(h(x)\) is 
+    a injection. It raised a contradiction.\\
+    Thus, if \(h\) is injective, then f is injective.
+\subsection*{b)}
+    It is false. Suppose that \(f(x)=e^x\) and \(g(x)=x^2\). \(g(x)\) is not a injection while 
+    \(h(x)=g(f(x))=(e^x)^2=e^{2x}\). \(e^2x\) is injective, thus the original statement is false.
+\section*{Problem 4}
+    Base step:\\
+    if \( A_1, A_2\) are countable sets, then \(A_1 \cup A_2\) is still countable as it is profed in class.
+    Induction step:\\
+    Assume that \(\displaystyle{N= \bigcup_{i=1}^{n}A_i}\) is countable, then
+    \(\displaystyle{\bigcup_{i=1}^{n+1}A_i} = N\cup A_{n+1}\). As \(N,\ A_{n+1}\) are countable,
+    \(A\cup A_{n+1}\) shall also be countable as profed in class.
+    Therefore, the statement it true.
+\section*{Problem 5}
+    Base step:\\
+    \(\mathbb{Z}\) is countable. Therefore, \(\mathbb{Z}^2=\mathbb{Z}\times \mathbb{Z}\) shall also be countable as profed in class.
+    Induction step:\\
+    \(n\in \mathbb{N}\). Assume that \(\mathbb{Z}^n\) is countable, then \(\mathbb{Z}^{n+1}=\mathbb{Z}^n\times \mathbb{Z}\)
+    As \( \mathbb{Z}^n\) and \(\mathbb{Z}\) are all countable, then \(\mathbb{Z}^{n+1}\) is also countable as profed in class.
+\end{document}
