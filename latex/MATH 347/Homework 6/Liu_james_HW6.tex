@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{bm}
+\title{\textbf{Homework \#6 }}
+\author{James Liu}
+\date{\today }
+
+\begin{document}
+
+\maketitle
+
+\section*{Problem 1}
+\subsection*{a)}
+\subsection*{b)}
+\section*{Problem 2}
+\newpage
+\section*{Problem 3}
+\textbf{statement 1: the set \(A\) that contains all $n\in\mathbb{N}$ that has a facterization containing $a$, equals the set \(B\) containing \(m\in\mathbb{N}\) that $a|m$.}\\
+proof: Assume that the facterization of $n$ contains $a$, then $\exists i\in \mathbb{N}$ that $n=ia$, \(B\subseteq A\).
+Assume that $a|n$, then $\exists i\in \mathbb{N}$ that $n=ia$, thus, \(A\subseteq B\).\\
+\textbf{statement 2: if \(m_k\in \mathbb{Z}\ n,p^k\in \mathbb{N},\ m_k=\displaystyle{\left\lfloor \frac{n}{p^k}\right\rfloor}\), then there are \(m_k\) elements in the set \(\{a:a\in \mathbb{N},\ 0<a\leqslant n,\ p^k|a\}\)}\\
+proof: According to the quotient-remainder theorem, there is \(l\in\mathbb{Z}, r\in \mathbb{N}\) that \(n=lp^k+r,\ 0\leqslant r<n\). 
+Thus, \(n-r=lp^k\geqslant0\), therefore \(lp^k\leqslant n\), \(l\geqslant 0\). \(\underbrace{p^k|1 p^k,\ p^k|2 p^k,\ p^k|3 p^k\ \dots\ p^k|l p^k }_{l \ \text{expressions}}\)
+Thus, \(p^k\) divides \(l\)  natural numbers between 0 and \(n\). As \(\displaystyle{\left\lfloor \frac{n}{p^k}\right\rfloor}=l=m_k\), the statement is true.\\
+\textbf{statement 3: \(\forall a, p,k\in \mathbb{N}\), if \(p^k|a\), then \(\forall l\in \mathbb{N},\ 0<l\leqslant k\) there is \(p^l|a\)}\\
+proof: Base step:\\
+\(p|a\) as \(p^k=p\times p^{k-1}\).\\
+Induction step:\\
+Assume that \(n\in\mathbb{N},\ 0<n< k\), \(p^n|a\). Then, \(p^{n+1}=p\times p^n\). Thus, \(p^{n+1}|a\).
+Thus, by induction, the statement is true.\\ \newline
+\(\exists a,p,l,n\in \mathbb{N},\ a<n, \  p^l|a\) and \(k\in\mathbb{N},\ l<k,\ p^k\nmid a\) for example \(p^l|p^l\) and \(p^l<p^k\). Then also due to statement 3, for
+\(a,b,p,k,l\in\mathbb{N},\ l<k\ \{a:p^k|a\}\subseteq\{b:p^l|b\} \). Therefore, \(\{a:p^k|a\}\subseteq\{a:p^{k-1}|a\}\subseteq\dots\subseteq\{a:p^2|a\}\subseteq\{a:p^1|a\}\).
+Therefore, for \(l,h\in \mathbb{N},\ 0<l<h,\ \{a:p^l|a\}-\{a:p^{l+1}|a\}\) give a set \(T\), that \(T\subseteq\{a:p^l|a\}\)and \(T\nsubseteq\{a:p^h|a\}\). 
+According to statement 2, \(\displaystyle{\sum^\infty_{k=1}\left\lfloor \frac{n}{p^k}\right\rfloor=\sum^\infty_{k=1}m_k}\).
+Thus, \(m_l - m_{l+1}\) give the number of elements in set \(T\) mentioned above. Also, \(m_k\), represents how many numbers smaller than \(n\) 
+divides \(p^k\). Therefore, due to statement 1, there are \(m_1\) possible numbers that have a prime facterization containing prime \(p\).
+Therefore, the power of \(p\) in the facterization \(a_p\) would have following property.
+\begin{align*}
+    a_p&=1(m_1-m_2)+2(m_2-m_3)+\dots+(k-1)(m_{k-1}-m_k)+k(m_k)\\
+        &=m_1+(-1+2)m_2+(-2+3)m_3+\dots+(-(k-1)+k)m_k\\
+        &=\sum_{k=1}^i m_k (p^i\leqslant n)
+\end{align*}
+For \(j>i\), \(\left\lfloor \frac{n}{p^k}\right\rfloor = 0\), therefore, \(\displaystyle{a_p = \sum_{k=1}^\infty m_k=\sum^\infty_{k=1} \left\lfloor \frac{n}{p^k}\right\rfloor}\)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section*{Problem 4}
+\subsection*{a)}
+\subsection*{b)}
+\section*{Problem 5}
+
+
+
+
+
+\end{document}
