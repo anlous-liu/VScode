@@ -13,13 +13,133 @@
 \begin{document}
 \maketitle
 \section*{Problem 1}
-% \(R_X =\overline{\Sigma}_x\phi=N\overline{\sigma}_x\phi \). Therefore,\\ 
-% \(\displaystyle{\overline{\sigma}_x=\frac{R_x}{N\phi}=\frac{R_x}{N\int^\infty_0\varphi(E)dE}}\)
+% \(R_f =\overline{\Sigma}_f\phi=N\overline{\sigma}_f\phi \). Therefore,\\ 
+% \(\displaystyle{\overline{\sigma}_f=\frac{R_f}{N\phi}=\frac{R_f}{N\int^\infty_0\varphi(E)dE}}\)
 
-\(R_x = \overline{\Sigma}_x\phi =\displaystyle{{\int^\infty_0 \Sigma_x(E)\varphi(E)dE}}\)\\
-Substitude \(N\sigma \) for \(\Sigma\), there is \(R_x = N\overline{\sigma}_x \phi=N\displaystyle{{\int^\infty_0 \sigma_x(E)\varphi(E)dE}}\).\\
-Therefore, there is \(\overline{\sigma}_x=\displaystyle{\frac{\int^\infty_0 \sigma_x(E)\varphi(E)dE}{\int^\infty_0\varphi(E)dE}}\)
+\(R_f = \overline{\Sigma}_f\phi =\displaystyle{{\int^\infty_0 \Sigma_f(E)\varphi(E)dE}}\)\\
+Substitude \(N\sigma \) for \(\Sigma\), there is \(R_f = N\overline{\sigma}_f \phi=N\displaystyle{{\int^\infty_0 \sigma_f(E)\varphi(E)dE}}\).\\
+Therefore, there is \(\overline{\sigma}_f=\displaystyle{\frac{\int^\infty_0 \sigma_f(E)\varphi(E)dE}{\int^\infty_0\varphi(E)dE}}\)
 \section*{problem 2}
+Assumptions:\\
+1. Neutron flux \(\phi\) is approximatly same in coolant and fuel.\\
+2. \(\sigma_{a}^{Pu} = 1017 \ barn\) The total absorbtion crossection of Pu-239.\\
+3. \(\sigma_a^{Na} = 0.53 \ barn \) The total absorbtion crossection of Sodium-23.\\
+4. \(\nu_{Pu}=3.16\) That every fission give approximatly 3.16 neutrons.
+\subsection*{Fuel Utilization}
+\(\displaystyle f=\frac{\Sigma_{a}}{\Sigma_a}=
+\frac{\Sigma_{a}^{Pu}}{\Sigma_a^{Pu}+\Sigma_a^{Na}}=
+\frac{N_{Pu}\sigma_{a}^{Pu}}{N_{Pu}\sigma_a^{Pu}+N_{Na}\sigma_a^{Na}} \)\\
+\(\displaystyle N_{Pu}=\frac{0.03\times 1\times 6.023\times 10^{23}}{244}=7.56\times 10^{19}\)\\
+\(\displaystyle N_{Na}=\frac{0.97\times 1\times 6.023\times 10^{23}}{23}=2.54\times 10^{22}\)\\
+\begin{align*}
+    f&=\frac{7.56\times 10^{19}\times 1017\times 10^{-24}}{7.56\times 10^{19}\times 1017\times 10^{-24}+2.54\times 10^{22}\times 0.53\times 10^{-24}}
+    \\&=\frac{0.077}{0.077+0.013}\\&=85\%
+\end{align*}
+
+\subsection*{Infinite Multiplication Factor \(k_\infty\)}
+\(\displaystyle k_\infty =\frac{\nu \Sigma_{a}^{Pu}\phi_f}{\Sigma_a^{Pu}\phi_f+\Sigma_a^{Na}\phi_c}\) As it is a fast reactor, assume \(\phi_f = \phi_c\), then there is
+\(\displaystyle k_\infty =\frac{\nu \Sigma_{a}^{Pu}}{\Sigma_a^{Pu}+\Sigma_a^{Na}}=\nu f=3.16\times 0.85 = 2.686\)
+\section*{Problem 3}
+\subsection*{a)}
+\(I = 4.45+84.1\sqrt{\frac{4}{\rho D}}=4.45+84.1\sqrt{\frac{4}{11000\times 0.01}}=20.49 \ barn \)\\
+\(\displaystyle N_M= \frac{1000}{0.018}\times A_L=55555.6\times A_L\), \(\displaystyle N_F = \frac{11000}{0.027}\times A_L=407407.4\times A_L\)\\
+\(\displaystyle \frac {N_M}{N_F}=\frac{55555.6}{407407.4}=1.3636\)\\
+\(\displaystyle \frac{V_MN_M}{V_FN_F}= \frac{V_M}{V_F}\cdot \frac{N_M}{N_F}=2\times 1.3636=2.7272\)
+\\\(\displaystyle p =\frac{(1-e)}{(V_MN_M/V_FN_F)\xi^M\sigma^M_s }\ 
+I=\frac{1-0.03}{2.7272\times 0.93\times 99.52}\times 20.49=0.921\)\\
+Then the probability of neutrons being captured is \(1-p=0.079=7.9\%\)
+\subsection*{b)}
+\(k_\infty=\varepsilon \eta p f\)\\
+\(\varepsilon = 1.024\)\\
+\(\displaystyle N^{235}=\frac{3\%\times 0.011}{0.27}\times A_L=0.0012A_L (cm^{-3})\)\\
+\(\displaystyle N^{238}=\frac{97\%\times 0.011}{0.27}\times A_L=0.0395A_L (cm^{-3})\)\\
+\(\displaystyle \eta = \frac {\nu N^{235} \sigma^{235}_{f}}{N^{235}\sigma_{a}^{235}+N^{238}\sigma_{a}^{238}}
+=\frac{2.43\times 0.0012\times 580}{0.0012\times (580+107)+0.0395\times 2.75}=1.812\)\\
+\(p=92.1\%\)\\
+\(N_a^f=\displaystyle \frac{0.011}{0.27}\times A_L=0.0407A_L\)\\
+\(N_a^m=\displaystyle \frac{0.001}{0.018}\times A_L=0.0556 A_L\)\\
+\(\sigma_a^f=3\%\times (580+107)+97\%\times 2.75=23.278\)\\
+\begin{align*}
+f&=\frac{V_f \Sigma_a^f \phi^f}{V_f \Sigma_a^f \phi^f + V_m \Sigma^m_a\phi^m}\\
+&=\frac{V_f \Sigma_a^f}{V_f \Sigma_a^f+ V_m \Sigma^m_a\frac{\phi^m}{\phi^f}}\\
+&=\frac{1}{1+\frac{V_mN_m}{V_fN_f}\cdot\frac{\sigma_a^m}{\sigma_a^f}\times \varsigma }\\
+&=\frac{1}{1+2\cdot \frac{0.0556}{0.0407}\cdot \frac{0.5896}{23.278}\times 1.16}\\
+&=0.92569
+\end{align*}
+Thus, \(k_\infty = \varepsilon \eta p f = 1.024\times 1.812\times 0.91\times 0.92569=1.58192\)\\
+\(k_\infty=\displaystyle \frac{k}{P_{NL}}\\ P_{NL}=\frac{k}{k_\infty}=\frac{1.1}{1.58192}=0.69536\)
+\section*{Problem 4}
+
+\(X^f\) means the parameter \(X\) belongs to \(fuel\)\\
+\(X^m\) means the parameter \(X\) belongs to \(moderator\)\\
+\(X_f\) means the parameter \(X\) belongs to \(fission\)\\
+\(X_a\) means the parameter \(X\) belongs to \(absorption\)\\
+Thus, \(\sigma^{fe}_a\) means the microscopic absorption corss-section of fertile materials.\\ 
+\begin{align*}
+     k_\infty &= \frac{V^f\int^\infty_0 \nu^f(E)\Sigma^f_f(E)\varphi^f(E)dE}{V^f\int^\infty_0\Sigma_a^f(E)\varphi^f(E)dE+V^m\int^\infty_0\Sigma_a^m(E)\varphi^m(E)dE }
+\end{align*}
+As fission occurs in the thermal range with a small contribution from fast fission in fertile, There is:\\
+\[V^f\int^\infty_0 \nu^f(E)\Sigma^f_f(E)\varphi^f(E)dE=V^f\left(\int_T \nu^f(E)\Sigma^f_f(E)\varphi^f(E)dE+\int_F \nu^f(E)\Sigma^f_f(E)\varphi^f(E)dE\right)\]
+As moderators have significant absorption cross-sections for thermal neutrons, there is:\\
+\[V^m\int^\infty_0\Sigma_a^m(E)\varphi^m(E)dE=V^m\int_T\Sigma_a^m(E)\varphi^m(E)dE\] 
+As absorption of neutrons in the fuel is negligible in the fast range of the spectrum, there is:\\
+\[V^f\int^\infty_0\Sigma_a^f(E)\varphi^f(E)dE=V^f\left(\int_T\Sigma_a^f(E)\varphi^f(E)dE+\int_I\Sigma_a^f(E)\varphi^f(E)dE\right)\]
+Thus, as \(\varphi^f(E)=\varphi^m(E)\) the complete equation is:\\
+\[k_\infty = \frac{V^f\left(\int_T \nu^f(E)\Sigma^f_f(E)\varphi(E)dE+\int_F \nu^f(E)\Sigma^f_f(E)\varphi(E)dE\right)}{V^f\left(\int_T\Sigma_a^f(E)\varphi(E) dE+\int_I\Sigma_a^f(E)\varphi(E) dE\right)+V^m\int_T\Sigma_a^m(E)\varphi (E)dE}\]
+\section*{Problem 5}
+\subsection*{a)}
+\[k_\infty = \frac{V^f\int^\infty_0 \nu^f(E)\Sigma^f_f(E)\varphi^f(E)dE}{V^f\int^\infty_0\Sigma_a^f(E)\varphi^fdE+V^c\int^\infty_0\Sigma_a^c(E)\varphi^c(E)dE+V^{St}\int^\infty_0\Sigma_a^{St}(E)\varphi^{St}(E)dE}\]
+As \(\varphi^f(E)=\varphi^c(E)=\varphi^{St}(E)=\varphi(E)\), there is:
+\[k_\infty = \frac{V^f\int^\infty_0 \nu^f(E)\Sigma^f_f(E)\varphi(E)dE}{V^f\int^\infty_0\Sigma_a^f(E)\varphi(E)dE+V^c\int^\infty_0\Sigma_a^c(E)\varphi(E)dE+V^{St}\int^\infty_0\Sigma_a^{St}(E)\varphi(E)dE}\]
+\subsection*{b)}
+\[k_\infty = \frac{V^f \nu^f \overline{\Sigma}^f_f\phi}{V^f\overline{\Sigma}_a^f\phi+V^c\overline{\Sigma}_a^c\phi+V^{St}\overline{\Sigma}_a^{St}\phi}=\frac{V^f \nu^f \overline{\Sigma}^f_f}{V^f\overline{\Sigma}_a^f+V^c\overline{\Sigma}_a^c+V^{St}\overline{\Sigma}_a^{St}}\]
+\subsection*{c)}
+\(X^{fi}\) means the parameter \(X\) belongs to \(fissile\)\\
+\(X^{fe}\) means the parameter \(X\) belongs to \(fertile\)\\
+\begin{align*}
+    k_\infty&=\frac{V^f \nu \overline{\Sigma}^f_f}{V^f\overline{\Sigma}_a^f+V^c\overline{\Sigma}_a^c+V^{St}\overline{\Sigma}_a^{St}}\\
+            &=\frac{V^f \nu \left( eN^{f}\overline{\sigma}^{fi}_f+(1-e)N^f\overline{\sigma}^{fe}_f\right)}{V^fN^f\overline{\sigma}_a^f+V^cN^c\overline{\sigma}_a^c+V^{St}N^{St}\overline{\sigma}_a^{St}}\\
+            &=\frac{\nu\left(e\overline{\sigma}^{fi}_f+(1-e)\overline{\sigma}^{fe}_f\right)}{\overline{\sigma}_a^f+\frac{V^cN^c}{V^fN^f}\overline{\sigma}_a^c+\frac{V^{St}N^{St}}{V^fN^f}\overline{\sigma}_a^{St}}
+\end{align*}\newpage
+\section*{Problem 6}
+Following the definition, and negelecting intermediate range fissions, there is:\\
+\(\varepsilon = \displaystyle \frac {\int_T\Sigma^f_f(E)\varphi(E)dE+\int_F\Sigma^f_f(E)\varphi(E)dE}{\int_T\Sigma^f_f(E)\varphi(E)dE}\)\\
+As there is no fast fission, then there is:\\
+\(\varepsilon = \displaystyle \frac {\int_T\Sigma^f_f(E)\varphi(E)dE+0}{\int_T\Sigma^f_f(E)\varphi(E)dE}=1\)
+\section*{Problem 7}
+Number of resonance neutron absorbed in fuel:\\
+\(\displaystyle V^f\int_I \Sigma_a^f(E)\varphi^f(E)dE\)\\
+Number of thermal neutron absorbed in fuel:\\
+\(\displaystyle V^f\int_T \Sigma_a^f(E)\varphi^f(E)dE\)\\
+Number of thermal neutron absorbed in moderator:\\
+\(\displaystyle V^m\int_T \Sigma_a^m(E)\varphi^m(E)dE\)\\
+Divide total number of slowed down neuton by the number of neutron escaped resonance range:\\
+\[p=\frac{ \displaystyle {V^f\int_T \Sigma_a^f(E)\varphi^f(E)dE+ V^m\int_T \Sigma_a^m(E)\varphi^m(E)dE}}{\displaystyle {V^f\int_I \Sigma_a^f(E)\varphi^f(E)dE+V^f\int_T \Sigma_a^f(E)\varphi^f(E)dE+V^m\int_T \Sigma_a^m(E)\varphi^m(E)dE}}\]
+\section*{Problem 8}
+\begin{tabular}{ c c }
+    a)  &A\\
+    b)  &C\\
+    c)  &C\\
+    d)  &B\\
+    e)  &B\\
+    f)  &B\\
+    g)  &B\\
+    h)  &C\\
+    i)  &A\\
+    j)  &C
+\end{tabular}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
