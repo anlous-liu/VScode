@@ -1,0 +1,9 @@
+{
+    "Half_life_A": 2.53,
+    "Half_life_B": 11.05,
+    "Initial_Partical_Number_A": 100,
+    "Initial_Partical_Number_B": 0,
+    "Initial_Partical_Number_C": 0,
+    "delta_t": 0.05,
+    "Tfinal": 60
+}

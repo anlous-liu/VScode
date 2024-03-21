@@ -1,0 +1,8 @@
+{ 
+    "DecayConstant_A": 0.2739712176126266045127399689558, 
+    "DecayConstant_B": 0.0627282516343841908974870698152, 
+    "Initial_Partical_Number_A":100,
+    "Initial_Partical_Number_B":0,
+    "Initial_Partical_Number_C":0,
+    "Tfinal": 60
+}
