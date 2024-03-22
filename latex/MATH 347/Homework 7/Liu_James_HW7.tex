@@ -1,0 +1,113 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\title{\textbf{Homework \#7 }}
+\author{James Liu}
+\date{\ }
+
+\begin{document}
+\maketitle
+\section*{Problem 1}
+\subsection*{(i)}
+Yes it is a equivalence relationship.\\
+\(\forall x\in\mathbb{R}, x\sim x\) as there is always \(x=2^0x\)\\
+\(\forall x,y\in\mathbb{R}\), there is if \(x=2^ny\), then \(y=2^{-n}y\).\\
+\(\forall x,y,z\in \mathbb{R}\), there is if \(x=2^ny\), and \(y=2^nz\), then \(x=2^n\times 2^nz=2^{2n}z\)
+\subsection*{(ii)}
+No, it does not obey the following characteristic:\\
+when\(x\sim y\), and  \(y\sim z\), \(\exists x \not\sim z\). Take \(x=1,\ y=2,\ z=3\) for example. \(x-y = -1\), 
+\(y-z=-1\), however, \(x-z=-2\), \(-2<-1\). Thus, it is not a equivalence relation.
+\section*{Problem 2}
+\subsection*{a)}
+As there is \(a^2\equiv b^2 (\text{mod }p)\), then there is \(p|(a^2-b^2)\). Thus, there is \(p|(a+b)(a-b)\).
+Therefore, as \(p\) is a prime, there is either \(p|(a+b)\) or \(p|(a-b)\). In other word, \(a\equiv -b (\text{mod }p)\) or \(a\equiv b (\text{mod }p)\)
+\subsection*{b)}
+
+\section*{Problem 3}
+\subsection*{a)}
+As \(n\) and \(24\) are relatively prime, and \(24=3\cdot 2^3\), \(n\) shall also be relatively prime with \(3\) and \(2\). 
+Thus, by Fermat's theorem, there is \(n^2\equiv 1 (\text{mod }3)\) and \(n\equiv 1 (\text{mod }2)\). Thus, \(3|n^2-1\), and 
+\(2|n-1\) and \(2|n-1+2=n+1\). Also, as \(3|n^2-1\), \(3|(n-1)(n+1)\), also as \(3\) is a prime, 
+then there is\(3|n-1\) or \(3|n+1\). As \(2|n+1\) and \(2|n-1\), there is \(6|n-1\) or \(6|n+1\).\\
+If \(6|n-1\),then \(2|n+1\) and \(n\) is odd. Then \(\exists k\in \mathbb{Z}\) that \(6k=n-1\).Thus, \(6k+2=n+1\). Then \(n^2-1=12k(3k+1)\).As \(k\) is odd,
+then there is \(k\equiv 1 (\text{mod }2)\). Thus, \(3k\equiv 1 (\text{mod }2)\) and \(2|3k+1\). Thus, \(\exists j\in \mathbb{Z}\) that 
+\(3k+1=2j\).Thus, \(n^2-1=24jk\) which divides 24.\\
+If \(6|n+1\), then \(2|n+1\) and \(n\) is odd. Then \(\exists k\in\mathbb{Z}\) that \(6k=n+1\). Then \(6k-2=n-1\) and \(n^2-1=12k(3k-1)\).
+As \(k\) is odd, there is \(3k\equiv 1 (\text{mod }2)\) and \(2|3k-1\). Thus, \(\exists j \in \mathbb{Z}\) and \(n^2-1=24jk\), which divides \(24\).\\
+Therefore, the statement is true.
+\subsection*{b)}
+As \(p\nmid a\) and \(p\) is a prime, \(a\) and \(p\) are relatively prime. Also, as prime \(p>2\), there is \(p-1>0\) and as 
+\(p\) is odd, there is \(2|p-1\). According to fermat's little theorem, there is \(a^{p-1}\equiv 1 (\text{mod }p)\). In other words
+\(p|(a^{p-1}-1)\). As proved, \(p-1\) is even, there is \(a^{p-1}-1=(a^{(p-1)/2}+1)(a^{(p-1)/2}-1)\)
+Thus, as \(p\) is a prime, there is either \(p|a^{(p-1)/2}+1\) or \(a^{(p-1)/2}-1\). In other words, 
+\(a^{(p-1)/2}\equiv 1 (\text{mod }p)\) or \(a^{(p-1)/2}\equiv -1(\text{mod }p)\)
+
+\section*{Problem 4}
+\subsection*{a)}
+As given, there is \(m|x-1\) and \(n|x-1\). As \(m,n\) are relatively prime, there is \(mn|x-1\) which means \(x\equiv 1 (\text{mod }mn)\).
+\subsection*{b)}
+As given, there is \(aa'\equiv 1 (\text{mod }m)\) and \(bb' \equiv 1 (\text{mod }m)\). Whic is 
+\(m|aa'-1\) and \(m|bb'-1\). Thus, there is \(m|(aa'-1)(bb'-1)\). Thus, there is:
+\begin{align*}
+    m&|(aa'-1)(bb'-1)\\
+    m&|aba'b'-bb'-aa'+1
+\end{align*}
+Thus, there is:
+\begin{align*}
+    aba'b'-bb'-aa' &\equiv -1 &(\text{mod }m)\\
+    aba'b'-bb'-aa'+aa'+bb'&\equiv -1+1+1 &(\text{mod }m)\\
+    aba'b'&\equiv 1 &(\text{mod }m)\\
+\end{align*}
+Thus, a inverse of \(ab\) is \(a'b'\)
+\section*{Problem 5}
+\subsection*{a)}
+\(f(x)=x(34x+2\sin(x)-1)+12\). And as \(1\leqslant x\), there is \(34x\geqslant 34\), \\ \(-2\leqslant2\sin(x)\leqslant 2\).
+Thus, \(31\leqslant x(34x+2\sin(x)-1)\) and \(0<46 \leqslant f(x)\). Thus, there is  \(|f(x)| = f(x)\).
+\begin{align*}
+    \frac{f(x)}{x^2}&=\frac{34x^2+2x\sin(x)-x+12}{x^2}\\
+                    &=34+\frac{2}{x}\sin(x)-\frac{1}{x}+\frac{12}{x^2}
+\end{align*}
+\(2\geqslant\frac{2}{x}\sin(x)\), \(1\geqslant\frac{1}{x}\), and \(12\geqslant \frac{12}{x^2}\) due to \(1\leqslant x\). Thus, 
+\(f(x)/x^2\leqslant 34+2-1+12=47\) Thus, \(f(x)=O(x^2)\).
+\subsection*{b)}
+\(|f_1-f_1|=0\) and \(0/g(x)=0<1\), Thus, \(\forall f:A\to \mathbb{R}\), \(f_1\sim f_1\)\\
+\(\forall f:A\to \mathbb{R}\), there is \(|f_1(x)-f_2(x)|=|f_2(x)-f_1(x)|\). Thus, if \(f_1 \sim f_2 \), which means 
+\(\exists C>0\) that \(|f_1(x)-f_2(x)|\leqslant Cg(x)\), \(f_2\sim f_1\).\\
+If\(|f_1(x)-f_2(x)|\leqslant C_1g(x)\), and \(|f_2(x)-f_3(x)|\leqslant C_2g(x)\), there is:\\
+\(|f_1(x)-f_2(x)+f_2(x)-f_3(x)|\leqslant|f_1(x)-f_2(x)|+|f_2(x)-f_3(x)|\leqslant C_1g(x)+C_2g(x)\).\\
+Thus, there is \(|f_1(x)-f_3(x)|\leqslant (C_1+C_2)g(x)\). Thus, if \(f_1\sim f_2\) and \(f_2\sim f_3\), there is also 
+\(f_1 \sim f_3\). Thus, it is a equivalence relation.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
