@@ -1,0 +1,196 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\title{\textbf{Computer Projcet \#1 }}
+\author{James Liu}
+\date{\today }
+\pagenumbering{gobble}
+\begin{document}
+% \maketitle
+% \newpage
+\pagenumbering{arabic}
+\section{Theory}
+\subsection{Analytical}
+From the book, there is the basic formula given
+\begin{align}
+    \frac{dN}{dt} = -\lambda N(t) \label{base}
+\end{align}
+Therefore, by substituting parameters, we have the defferential equation for substance A's atom number with respect to time.
+\begin{align}
+    \frac{dN_A}{dt} &= -\lambda_AN_A(t)\label{NAtd}
+\end{align}
+\begin{align*}
+    (D+\lambda_A)N_A(t)&=0\\
+    N_A(t)&=C\cdot e^{-\lambda_A t}
+\end{align*}
+Introducing initial values \(N_A(t)=N_{0_A}\)
+\begin{align*}
+    c\cdot 1 = N_{0_A}
+\end{align*}
+Thus, \(N_A(t)=N_{0_A}\cdot e^{-\lambda_A t}\)\\
+Thus, given that \(\lambda_A\) and \(N_A\) are going to be positive,
+the number of atom of substance A will be decreasing, and the amount of decreased 
+atom of substance a becomes atoms of substance B. While substance B also decays, we have a new differencial euqation.
+\begin{align}
+    \frac{dN_B}{dt} = \lambda_AN_A(t)-\lambda_BN_B(t)\label{NBtd}
+\end{align}
+Puluging in \(N_A(t)\), it gives:
+\begin{align*}
+    (D+\lambda_B)N_B(t)=\lambda_A \cdot N_{0_A}\cdot e^{-\lambda_A t}
+\end{align*}
+There whould be a general solution for the homogenous equation:
+\begin{align*}
+    N_{B_c} = C e^{-\lambda _B t}
+\end{align*}
+Assuming that there are 2 terms in a particular solution, we have:
+\begin{align*}
+    N_{B_p}=C_1\cdot e^{-\lambda _B t}+C_2\cdot e^{-\lambda _A t}
+\end{align*}
+Plug it back in equation \ref{NBtd}, and solve for \(C_1\) and \(C_2\) gives \(C_1 = 0\) and \(C_2 = \displaystyle \frac{\lambda_A N_{0_A}}{\lambda_B-\lambda_A}\).
+Thus the general solution will be \(N_{B_c}+N_{B_p}\) which is \(N_B(t)=\frac{\lambda_A N_{0_A}}{\lambda_B-\lambda_A}e^{-\lambda_At}+C\cdot e^{-\lambda_Bt}\). 
+Appling initial value of \(N_B(0)=N_{0_B}\), we have \(C=N_{0_B}-\frac{\lambda_A N_{0_A}}{\lambda_B-\lambda_A}\). Thus, for \(N_B(t)\) we have solution:
+\begin{align}
+    N_B(t)=\frac{\lambda_A N_{0_A}}{\lambda_B-\lambda_A}e^{-\lambda_At}+\left(N_{0_B}-\frac{\lambda_A N_{0_A}}{\lambda_B-\lambda_A}\right)e^{-\lambda_Bt} \label{NBt}
+\end{align}
+While that substance C is not decaying, we have:
+\begin{align}
+    \frac{dN_C}{dt}=-\frac{dN_B(t)}{dt}=\lambda_BN_B(t) \label{NCtd}
+\end{align}
+Plugging in equation \ref{NBt}, there is:
+\begin{align*}
+    \frac{dN_C}{dt} = \lambda_B\left(\frac{\lambda_A N_{0_A}}{\lambda_B-\lambda_A}e^{-\lambda_At}+\left(N_{0_B}-\frac{\lambda_A N_{0_A}}{\lambda_B-\lambda_A}\right)e^{-\lambda_Bt}\right)
+\end{align*}
+Integrating both side give:
+\begin{align*}
+    N_C(t)&=\frac{\lambda_B\lambda_A N_{0_A}}{\lambda_B-\lambda_A} \int e^{-\lambda_A t}dt +(\lambda_BN_{0_B}-\frac{\lambda_B\lambda_A N_{0_A}}{\lambda_B-\lambda_A})\int e^{-\lambda_Bt}dt\\
+    N_C(t)&=\left[-\frac{\lambda_B}{\lambda_A}\frac{\lambda_A N_{0_A}}{\lambda_B-\lambda_A}e^{-\lambda_At}-\left(N_{0_B}-\frac{\lambda_A N_{0_A}}{\lambda_B-\lambda_A}\right)e^{-\lambda_Bt}\right]+C
+\end{align*}
+Applying initial condition \(N_C(0)=N_{0_C}\) gives:
+\begin{align*}
+    \left[\frac{-\lambda_B N_{0_A}}{\lambda_B-\lambda_A}-N_{0_B}+\frac{\lambda_A N_{0_A}}{\lambda_B-\lambda_A}\right]+C&=N_{0_C}\\
+    -\frac{(\lambda_B-\lambda_A)\cdot N_{0_A}}{\lambda_B-\lambda_A} +C&= N_{0_C}+N_{0_B}\\
+    C&=N_{0_C}+N_{0_B}+N_{0_A}
+\end{align*}
+Thus, there is:
+\begin{align}
+    N_C(t)=\left[-\frac{\lambda_B N_{0_A}}{\lambda_B-\lambda_A}e^{-\lambda_At}-\left(N_{0_B}-\frac{\lambda_A N_{0_A}}{\lambda_B-\lambda_A}\right)e^{-\lambda_Bt}\right]+N_{0_A}+N_{0_B}+N_{0_C} \label{NCt}
+\end{align}
+Substituting equation \ref{NBt} back into equation \ref{NBtd}, the full equation of \(N_B(t)'\). Thus, the maximum of \(N_B(t)\) accours when \(N_B(t)'=0\).
+\begin{align}
+    N_B(t)'= \lambda_AN_{0_A}e^{-\lambda_At}-\lambda_B\left[\frac{\lambda_A N_{0_A}}{\lambda_B-\lambda_A}e^{-\lambda_At}+\left(N_{0_B}-\frac{\lambda_A N_{0_A}}{\lambda_B-\lambda_A}\right)e^{-\lambda_Bt}\right] \label{Nb'}
+\end{align}
+\begin{align*}
+    0&= \lambda_AN_{0_A}e^{-\lambda_At}-\lambda_B\left[\frac{\lambda_A N_{0_A}}{\lambda_B-\lambda_A}e^{-\lambda_At}+\left(N_{0_B}-\frac{\lambda_A N_{0_A}}{\lambda_B-\lambda_A}\right)e^{-\lambda_Bt}\right]
+    \\0&=\lambda_AN_{0_A}e^{-\lambda_At} +\left[-\frac{\lambda_B\lambda_A N_{0_A}}{\lambda_B-\lambda_A}e^{-\lambda_At}-\lambda_BN_{0_B}e^{-\lambda_Bt}+\frac{\lambda_B\lambda_A N_{0_A}}{\lambda_B-\lambda_A}e^{-\lambda_Bt}\right]\\
+    0&=\left(\lambda_AN_{0_A}-\frac{\lambda_B\lambda_A N_{0_A}}{\lambda_B-\lambda_A}\right)e^{-\lambda_At}-\left(\lambda_BN_{0_B}-\frac{\lambda_B\lambda_A N_{0_A}}{\lambda_B-\lambda_A}\right)e^{-\lambda_Bt}
+    \\ \frac{e^{-\lambda_At}}{e^{-\lambda_Bt}}&=\frac{\lambda_BN_{0_B}-\displaystyle \frac{\lambda_B\lambda_AN_{0_A}}{\lambda_B-\lambda_A}}{\lambda_AN_{0_A}-\displaystyle \frac{\lambda_B\lambda_AN_{0_A}}{\lambda_B-\lambda_A}}\\
+    \\ e^{(\lambda_B-\lambda_A)t}&=\frac{\lambda_BN_{0_B}-\displaystyle \frac{\lambda_B\lambda_AN_{0_A}}{\lambda_B-\lambda_A}}{\lambda_AN_{0_A}-\displaystyle \frac{\lambda_B\lambda_AN_{0_A}}{\lambda_B-\lambda_A}}
+\end{align*}
+Thus, there is:
+\begin{align}
+    t_{max_{N_B}}=\frac{ln\left(\displaystyle \frac{\lambda_BN_{0_B}-\displaystyle \frac{\lambda_B\lambda_AN_{0_A}}{\lambda_B-\lambda_A}}{\lambda_AN_{0_A}-\displaystyle \frac{\lambda_B\lambda_AN_{0_A}}{\lambda_B-\lambda_A}}\right)}{\lambda_B-\lambda_A}
+\end{align}
+\subsection{Numerical}
+Based on equation \ref{base}, there is:
+\begin{align}
+    \frac{dN(t_0)}{dt}= \lim_{h\to  0} \frac{N(t_0+h)-N(t_0)}{h} = -\lambda N (t)
+\end{align}
+Thus, when modifying \(h\) there gives a numerical solution step by step, which gives:
+\begin{align}
+    N(t_0+\Delta t)=N(t_0)-\lambda N(t_0)\Delta t
+\end{align}
+\newpage
+\section{Results}
+
+\begin{table}[h]
+    \centering
+    \caption{Parameters Used in This Section} \label{parameters}
+    \begin{tabular}{c c}
+        \hline
+        \(t_{A,1/2}\)&2.53h\\
+        \(t_{B,1/2}\)&11.05h\\
+        \(t_{C,1/2}\)&stable\\
+        \(N_{0_A}\)&100\\
+        \(N_{0_B}\)&0\\
+        \(N_{0_C}\)&0\\
+        \(t_{\text{final}}\)&60h\\
+        \hline        
+    \end{tabular}
+\end{table}
+\begin{align}
+    \lambda = \frac{\ln (2)}{t_{1/2}}\label{halflife conversion}
+\end{align}
+Also, by using equation \ref{halflife conversion}, the halflife mentioned here can be converted into decay constants.
+
+
+\subsection{}
+
+
+\begin{table*}[h]
+    \centering
+    \caption*{$\Delta t$ used}
+\begin{tabular}{c c}
+    \hline 
+    Type& \(\Delta t\)(h)\\
+    Coarse& 3\\
+    Medium& 1.5\\
+    Fine& 0.75\\ \hline
+\end{tabular}
+
+\end{table*}
+\begin{figure}[h]
+    \centering
+    \includegraphics{figures/result_2.2.1.png}
+    \caption{} \label{1}
+\end{figure}
+From figure \ref{1}, it there is a clear pattern that the smaller \(\Delta t\) used in performing analytical solutions, the better the output curve fits the analytical curve.
+\newpage
+\subsection{}
+\begin{figure}[h]
+    \centering
+    \includegraphics{figures/result_2.2.2.png}
+    \caption{Numerical Solution with \(\Delta t = 0.05 h\)} \label{2}
+\end{figure}
+From figure \ref{2}, there is a clear pattern that the \(N_A\) dropes expotentially with \(N_B\) first increase  then decrease. All in all, the total number of particles stays unchanged and euqals to the sum of initial
+values. Here, as displayed in table \ref{parameters}, the system starts with 100 particles in total giving the total number of particles staying the same 
+thoughout the time range displayed to be 100.
+\subsection{}
+\begin{table}[h]
+    \centering
+    \caption{\(\Delta t\) used in section 2.2.3} 
+    \begin{tabular}{c c c c c c}
+        \hline
+        \(\Delta t(h)\)&4&1&0.6&0.4&0.1\\
+        \hline
+    \end{tabular}
+\end{table}
+\begin{figure}[h]
+    \centering
+    
+    
+    \includegraphics{figures/result_2.2.3.png}
+    \caption{}
+    \label{1/dt}
+\end{figure}
+From figure \ref{1/dt}, there is a clear pattern that, the lower \(\Delta t\) used in the numerical solution, the closer that results of the time \(N_B\) gets maximized will be compared to the analytical true value.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
