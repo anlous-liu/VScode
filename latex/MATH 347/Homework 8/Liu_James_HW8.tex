@@ -48,24 +48,49 @@ It failes closure as \(3\times 1 + 3\times 3=10\) and \(3\nmid 10\)
 \subsection*{b)}
 It failes closure as \(\displaystyle \frac{3}{5}\times \frac{7}{5}= \frac{21}{25}\) and \(\displaystyle \frac{21}{25}\notin \frac{1}{5}\mathbb{Z}\)
 \subsection*{c)}
-It failes multiplicative communitivity.\\
-\(\left<1,1,1\right>\times \left<0,0,1  \right>= \)
-$\begin{bmatrix}
-    \hat{i}&\hat{j}&\hat{k}\\
-    1&1&1\\
-    0&0&1\\
-\end{bmatrix}$
-\(=\left<1,-1,0\right>\)\\
-\(\left<0,0,1\right>\times \left<1,1,1  \right>= \)
-$\begin{bmatrix}
-    \hat{i}&\hat{j}&\hat{k}\\
-    0&0&1\\
-    1&1&1\\
-\end{bmatrix}$
-\(=\left<-1,1,0\right>\)
+It failes associative law that:\\
+\(\left(\left<1,2,3\right>\times\left<3,2,1\right>\right)\times\left<2,3,1\right>=\left<20,-4,-28\right>\)\\
+\(\left<1,2,3\right>\times \left(\left<3,2,1\right>\times \left<2,3,1\right>\right)=\left<13,-8,1\right>\)
+\section*{Problem 4}
+\subsection*{a)}
+No as not all \(x\in S\) have a multiplicative inverse. For example, for \(\frac{4}{3}\)
+there does not exists \(x\in S\) that \(\frac{4}{3}\times x = 1\).
 
-%%% it is NOT finished, i should point out every xiom it does not satisfy.
+Suppose it does, then  \(\exists a,b\in \mathbb{Z}\) and \(b\) being odd and 
+\(\frac{4a}{3b}=1\) then \(4a=3b\), given that \(2\nmid b\) and \(2\nmid 3\), which means that both of them do not
+have 2 as a prime factor. Thus, \(2\nmid 3b\) while \(4\) do have a prime factor of 2, thus there is a contradiction.
 
+\subsection*{b)}
+No, it failed to be closure. For example: \(\frac{3}{7}+\frac{1}{7}=\frac{4}{7}\) while \(4\) is clearly not odd, and thus \(\frac{3}{7}+\frac{1}{7}\notin T\)
+
+\section*{Problem 5}
+\subsection*{a)}
+\begin{align*}
+    (1+(-1))(-1)&=(0)(-1)=0\\
+    (1+(-1))(-1)&=(-1)(-1)+(-1)
+\end{align*}
+Thus, \((-1)(-1)+(-1)=0\), thus \((-1)(-1)=1\)
+\subsection*{b)}
+\begin{align*}
+    (x+(-x))(x)&=0\\
+    (x+(-x))(x)&=x\cdot x+x(-x)\\
+    x\cdot x+x(-x)&=0\\
+    x(-x)&=-(x\cdot x)
+\end{align*}
+And:\\
+\begin{align*}
+    (x+(-x))(-x)&=0\\
+    (x+(-x))(-x)&=(-x)\cdot x+(-x)(-x)\\
+    (-x)\cdot x+(-x)(-x)&=0\\
+    -(x\cdot x)+(-x)(-x)&=0\\
+    (-x)(-x)&=-(-(x\cdot x))\\
+\end{align*}
+Because that \(x\cdot x +(-(x\cdot x))=0\), \(-(-(x\cdot x))=x\cdot x\).
+Thus, \((-x)(-x)=x\cdot x\)
+\subsection*{c)}
+Suppose that one of \(a,b\) do have a multiplicative inverse, then:\\
+ \(a\cdot b \cdot b^{-1}=0\cdot b^{-1}\) or \(a\cdot a^{-1} \cdot b=0\cdot a^{-1}\).
+ Thus, it gives \(a\cdot 1=a=0\) or \(b\cdot 1 = b=0\) which raises a contradiction.
 
 
 
