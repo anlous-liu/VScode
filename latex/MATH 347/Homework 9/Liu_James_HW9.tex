@@ -1,0 +1,138 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\title{\textbf{Homework \#8 }}
+\author{James Liu}
+\date{\ }
+
+\begin{document}
+
+\maketitle
+\section*{Problem 1}
+\subsection*{a)}
+First, suppose that the function is not a injection. Then, \(\exists x_1,x_2\) that\\ \(x_1\not\equiv x_2 (\text{mod }M)\) and  \(f(x_1)=f(x_2)\) 
+Thus, there will be 
+\begin{align*}
+    x_1\equiv x_2 &\equiv r_1 (\text{mod }m_1)\\
+    x_1\equiv x_2 &\equiv r_2 (\text{mod }m_2)\\
+    &\vdots\\
+    x_1\equiv x_2 &\equiv r_k (\text{mod }m_k)\\
+\end{align*}
+As \(m_1,m_2\cdots m_k\) are all relatively prime, we have:
+\begin{align*}
+    x_1\equiv x_2 (\text{mod }M)
+\end{align*}
+Which raised a contradiction. Thus, the function is a injection.\\
+In the set\(\mathbb{Z}_M\) there are in total of \(M\) elements composite of integers from \(0\) to \(M-1\). In the set of \(f(x)\),
+there is \(m_1\times m_2\times \cdots \times m_k=M\) elements. As the input set and the output set have similar amount of elements, while 
+the function is a injection, it is also a bijection.
+\subsection*{b)}
+1. If \(\text{gcd}(a,M)=1\), as \(M = \prod_{i=1}^k m_i \), there will be \(\text{gcd}(a,m_i)=1\) for every \(1\leqslant i \leqslant k\).
+Also, \(a=km_j+a_j\) for some integer \(k\) and \(1\leqslant j \leqslant k\).
+\begin{align*}
+    a&=km_j+a_j\\
+    a_j&=km_j+a\\
+\end{align*}
+Thus, as gcd\((m_j,a_j)|km_j+a_j\) and thus, it also divides \(a\). Similarly, gcd\((m_j,a)\) also divides \(a_j\).
+As \(a_j\leqslant a\), thus, gcd\((m_j,a_j)\leqslant \text{gcd}(m_j,a)\). Also, gcd\((m_j,a)\) being both a divisor of 
+\(a_j\) and \(m_j\), gcd\((m_j,a)\leqslant \text{gcd}(m_j,a_j)\). Thus, gcd\((m_j,a_j)= \text{gcd}(m_j,a)=1\)
+\\2. If for all \(1\leqslant i \leqslant k\), gcd\((a_i,m_i)=1\), as profed above, for all i, 
+gcd\((a,m_i)=1\). Thus, if \(a\) is coprime with every divisor of \(M\), then \(a\) is coprime with \(M\) or \(\)
+gcd\((a,M)=1\)
+\subsection*{c)}
+
+
+
+
+\section*{Probelm 2}
+
+
+\subsection*{i)}
+Assume that \(x_1\neq 0,\ x_2\neq0,\ \dots x_n\neq0\). As all of them are in a field, 
+\(\exists x_1^{-1},\ x_2^{-1},\cdots x_n^{-1}\). Thus:
+\begin{align*}
+    x_1\times \cdots \times x_n&=0\\
+    x_1\times \cdots \times x_n\times x^{-1}_1\times \cdots \times x_n^{-1}&=0\times x^{-1}_1\times \cdots \times x_n^{-1}\\
+    1=0
+\end{align*}
+Thus, there is a contradition. Thus, at least one of them does equal to zero.
+\subsection*{ii)}
+\begin{align*}
+    1+(-1)&=0\\
+    x(1+(-1))&=0\cdot x\\
+    x+(-1)x &= 0
+\end{align*}
+Thus, \(-x = -1\cdot x\)\\
+Note \(a+(-b)\) as \(a-b\)
+In the feild:
+\begin{align*}
+    (a-b)(a+b)&=a\cdot b-a\cdot b +b\cdot a -b\cdot b\\
+    (a-b)(a+b)&=a\cdot a - b\cdot b\\
+    (a-b)(a+b)&=0
+\end{align*}
+Thus, there is either \(a+b=0\) or \(a-b = 0\).
+\begin{align*}
+    a+b&=0&a-b &= 0\\
+    a+b+(-b)&=0+(-b)&a+(-b)+b&=0+b\\
+    a&=-b&a&=b
+\end{align*}
+Therefore, \(a=b\) or \(a=-b\)
+\subsection*{iii)}
+
+\section*{Problem 3}
+\subsection*{a)}
+As, \(x\in S\) and \(y \in S\) and \((S,+,\cdot)\) is a field, then the additive identity is unique.
+Thus, \(x\neq 0\), \(y\neq 0\), and \(xy\neq 0\). Also suppose \(x=1\) or \(y=1\), then \(xy=x\) or \(xy=y\).
+However, \(x\cdot x^{-1}\cdot y = x\cdot x^{-1}\), thus, \(y=1\) which gives a contradiction. Similarly for \(xy=y\).Therefore, \(x\neq1\) and \(y\neq 1\).
+Thus, \(xy\neq x\), \(xy\neq y\), \(xy\neq 0\). Due to all calculations shall be with in the feild. There leaves only one solution. Thus
+\(xy = 1\). As \(x\neq1,\ x\neq 0\), There is \(x\cdot x \neq 0, x\cdot x \neq x, x\cdot x \neq 1\). Thus, \(x\cdot x = y\), similarly, \(y\cdot y = x\)
+
+\begin{table*}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \(\times\)&0&1&x&y\\ \hline
+        0&0&0&0&0\\ \hline
+        1&0&1&x&y\\ \hline
+        x&0&x&y&1\\ \hline
+        y&0&y&1&x\\ \hline
+    \end{tabular}
+\end{table*}
+\subsection*{b)}
+As \(x\neq 0\), \(y\neq 0\), thus \(x+y\neq x\), \(x+y\neq y\). If \(x+y=0\), then there is
+\(x(x+y)=0\) while \(x\cdot x + x\cdot y = y+1\), meaning that \(y=-1\) while \(y=-x\). Thus, \(x=1\), while profed that \(x\neq 1\)
+Thus, there is a contradiction and \(x+y\neq 0\). Thus, \(x+y=1\).\\
+\(x+y=1\), \(x(x+y)=x=x\cdot x + x\cdot y = y+1\), Thus \(y+1=x\) and similarly \( x+1 = y\).\\
+If \(1+1 = x\), then, as \(y+1=x\), \(y=1\) as profed above \(y\neq1\), thus \(1+1\neq x\) and similarly \(1+1\neq y\). As \(1\neq 0\), \(1+1\neq 1\),
+thus, \(1+1=0\).\\
+\(y\cdot(x+x)=xy+xy=1+1=0\), as \(y\neq0\), there must be \((x+x)=0\), similarly, \(y+y=0\).
+\begin{table*}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        +&0&1&x&y\\ \hline
+        0&0&1&x&y\\ \hline
+        1&1&0&y&x\\ \hline
+        x&x&y&0&1\\ \hline
+        y&y&x&1&0\\ \hline
+    \end{tabular}
+\end{table*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
