@@ -44,10 +44,10 @@ As \(a_j\leqslant a\), thus, gcd\((m_j,a_j)\leqslant \text{gcd}(m_j,a)\). Also, 
 gcd\((a,m_i)=1\). Thus, if \(a\) is coprime with every divisor of \(M\), then \(a\) is coprime with \(M\) or \(\)
 gcd\((a,M)=1\)
 \subsection*{c)}
-
-
-
-
+\(\phi(M)=|A|,\ A = \{x:1\leqslant x\leqslant M-1,\ \text{gcd}(x,M)=1\}\). Suppose \(a\in A\), then there is
+gcd\((a,M)=1\), as proved in b), there will also be \(\forall i\) that \(0\leqslant i \leqslant k\) gcd\((a,m_i)=1\).
+Let \(a_i\in A_i\), \(A_i = \{x:1\leqslant x\leqslant m_i-1,\ \text{gcd}(x,m_i)=1\}\), then \(\phi(M)\) would equal to combinations of \(a_i\)s in \(f(x)\) which
+equals to \(|A_1|\times |A_2|\times \cdots \times |A_k|=\phi(m_1)\times \phi(m_2)\times \cdots \times \phi(m_k)\).
 \section*{Probelm 2}
 
 
@@ -82,7 +82,17 @@ Thus, there is either \(a+b=0\) or \(a-b = 0\).
 \end{align*}
 Therefore, \(a=b\) or \(a=-b\)
 \subsection*{iii)}
-
+Due to Fermat's Theorem, \(a^{p-1}\equiv 1 (\text{mod }p)\), as \(p\equiv 2 (\text{mod }3)\), \(p=3n+3\) and \(p-1=3n+1\).
+Thus, as \(\mathbb{Z}_p\) are all feilds, \(\exists a^{-1}\). Suppose that different \(a\) give same \(a^3\), then there is:
+\begin{align*}
+    a_1^{3n+1}&\equiv 1 &(\text{mod }p)&&a_2^{3n+1}&\equiv 1 &(\text{mod }p)\\
+    a_1^{3n+1}\cdot a_1^{-1}&\equiv 1\cdot a_1^{-1} &(\text{mod }p)&&a_2^{3n+1}\cdot a_2^{-1}&\equiv 1\cdot a_2^{-1} &(\text{mod }p)\\
+    a_1^{3n}&\equiv a_1^{-1} &(\text{mod }p)&&a_2^{3n}&\equiv a_2^{-1} &(\text{mod }p)\\
+    a_1^{3}&\equiv a_1^{-1\cdot(1+n)} &(\text{mod }p)&&a_2^{3}&\equiv a_2^{-1\cdot(1+n)} &(\text{mod }p)
+\end{align*}
+As \(a^3_1\equiv a_2^3 \ (\text{mod }p)\), \(a_1^{-1\cdot(1+n)}\equiv a_2^{-1\cdot(1+n)}\ (\text{mod }p)\), meaning that
+\\ \(a_1^{-1}\equiv a_2^{-1}\ (\text{mod }p)\), as it is in a field, we have \(a_1\equiv a_2 (\text{mod }p)\) which raises a contradiction, meaning that the 
+function is an injection. Also, as stated in the question, it is maping between two sets with same size, it is a bijection.
 \section*{Problem 3}
 \subsection*{a)}
 As, \(x\in S\) and \(y \in S\) and \((S,+,\cdot)\) is a field, then the additive identity is unique.
@@ -102,6 +112,7 @@ Thus, \(xy\neq x\), \(xy\neq y\), \(xy\neq 0\). Due to all calculations shall be
         y&0&y&1&x\\ \hline
     \end{tabular}
 \end{table*}
+\newpage
 \subsection*{b)}
 As \(x\neq 0\), \(y\neq 0\), thus \(x+y\neq x\), \(x+y\neq y\). If \(x+y=0\), then there is
 \(x(x+y)=0\) while \(x\cdot x + x\cdot y = y+1\), meaning that \(y=-1\) while \(y=-x\). Thus, \(x=1\), while profed that \(x\neq 1\)
