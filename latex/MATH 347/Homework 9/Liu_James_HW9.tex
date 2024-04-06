@@ -70,7 +70,7 @@ Thus, \(-x = -1\cdot x\)\\
 Note \(a+(-b)\) as \(a-b\)
 In the feild:
 \begin{align*}
-    (a-b)(a+b)&=a\cdot b-a\cdot b +b\cdot a -b\cdot b\\
+    (a-b)(a+b)&=a\cdot a-a\cdot b +b\cdot a -b\cdot b\\
     (a-b)(a+b)&=a\cdot a - b\cdot b\\
     (a-b)(a+b)&=0
 \end{align*}
@@ -82,17 +82,27 @@ Thus, there is either \(a+b=0\) or \(a-b = 0\).
 \end{align*}
 Therefore, \(a=b\) or \(a=-b\)
 \subsection*{iii)}
-Due to Fermat's Theorem, \(a^{p-1}\equiv 1 (\text{mod }p)\), as \(p\equiv 2 (\text{mod }3)\), \(p=3n+3\) and \(p-1=3n+1\).
-Thus, as \(\mathbb{Z}_p\) are all feilds, \(\exists a^{-1}\). Suppose that different \(a\) give same \(a^3\), then there is:
+Suppose that \(a^3\equiv b^3 (\text{mod }p)\) and \(a\not\equiv b (\text{mod }p)\).\\
+Thus there will be \(a^{p-1}\equiv 1 (\text{mod }p )\) and \(b^{p-1}\equiv 1(\text{mod }p)\)
 \begin{align*}
-    a_1^{3n+1}&\equiv 1 &(\text{mod }p)&&a_2^{3n+1}&\equiv 1 &(\text{mod }p)\\
-    a_1^{3n+1}\cdot a_1^{-1}&\equiv 1\cdot a_1^{-1} &(\text{mod }p)&&a_2^{3n+1}\cdot a_2^{-1}&\equiv 1\cdot a_2^{-1} &(\text{mod }p)\\
-    a_1^{3n}&\equiv a_1^{-1} &(\text{mod }p)&&a_2^{3n}&\equiv a_2^{-1} &(\text{mod }p)\\
-    a_1^{3}&\equiv a_1^{-1\cdot(1+n)} &(\text{mod }p)&&a_2^{3}&\equiv a_2^{-1\cdot(1+n)} &(\text{mod }p)
+    a^{p-1}&\equiv 1 &(\text{mod }p)\\
+    a^{2p-2}&\equiv 1 &(\text{mod }p)\\
+    a^{2p-1}&\equiv a &(\text{mod }p)\\
 \end{align*}
-As \(a^3_1\equiv a_2^3 \ (\text{mod }p)\), \(a_1^{-1\cdot(1+n)}\equiv a_2^{-1\cdot(1+n)}\ (\text{mod }p)\), meaning that
-\\ \(a_1^{-1}\equiv a_2^{-1}\ (\text{mod }p)\), as it is in a field, we have \(a_1\equiv a_2 (\text{mod }p)\) which raises a contradiction, meaning that the 
-function is an injection. Also, as stated in the question, it is maping between two sets with same size, it is a bijection.
+While \(p\equiv 2 (\text{mod }3)\):
+\begin{align*}
+    p&\equiv 2 &(\text{mod }3)\\
+    2p&\equiv 1 &(\text{mod }3)\\
+    2p-1&\equiv 0 &(\text{mod }3)
+\end{align*}
+Thus \(\exists k\in \mathbb{N}\)that \(a^{3n} \equiv a (\text{mod }p)\), and similarly \(b^{3n} \equiv b (\text{mod }p\).\\
+As \(a^3\equiv b^3\), there is also \(a^{3n}\equiv b^{3n} (\text{mod }p)\) as it is just multiplies \(n-1\) times of \(a^3\) and \(b^3\) on both sides, and they are in same congruence group.
+\\ Thus:
+\[a \equiv a^{3n} \equiv b^{3n} \equiv b (\text{mod }p)\]
+Thus, \(a\equiv b (\text{mod }p)\), which raised a contradiction. \\
+Thus, the funciton is injective.\\
+Thus, every element in \(\mathbb{Z}_p\) where \(3|p-2\) does have a unique cube, means that the domain and codomain has the same size, thus, the function is also surjective and therefore bijective. 
+\newpage
 \section*{Problem 3}
 \subsection*{a)}
 As, \(x\in S\) and \(y \in S\) and \((S,+,\cdot)\) is a field, then the additive identity is unique.
