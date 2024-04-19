@@ -1,0 +1,127 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\title{\textbf{Homework \#10 }}
+\author{James Liu}
+\date{\ }
+
+\begin{document}
+
+\maketitle
+
+\section*{Problem 1}
+\subsection*{a) \(S = (0,1)\)}
+\subsubsection*{infimum}
+\(a_n = 0+\frac{1}{n}\), \(\forall n \in \mathbb{N}\)
+\subsubsection*{supremum}
+\(a_n = 1 - \frac{1}{n}\), \(\forall n \in \mathbb{N}\)
+\subsection*{b) \(S = \left\{\frac{2+(-1)^n}{n}:n\in\mathbb{N}\right\}\)}
+\subsubsection*{infimum}
+\(a_n = \frac{2+(-1)^n}{n}\), \(\forall n\in\mathbb{N}\)
+\subsubsection*{supremum}
+\(b_n = \frac{3}{2}\)
+\subsection*{c) \(S =\mathbb{R}-\mathbb{Q}\cap (0,1)\)}
+\subsubsection*{infimum}
+\(a_n = \frac{1}{\sqrt 2 n}\), \(\forall n \in \mathbb{N}\), and \(a_n\in S\), prof given below.
+\subsubsection*{supremum}
+\(a_n = \frac{\sqrt 2 n -1}{\sqrt 2 n}\), \(\forall n \in \mathbb{N}\), and \(a_n\in S\), prof given below.
+\subsubsection*{extra}
+As profed in class \(\sqrt 2\) is irrational.\\
+1. $\frac{1}{\sqrt 2 n}$ is irrational:\\
+Suppose $\frac{1}{\sqrt 2 n}$ is rational, then \(\exists a,b \in \mathbb{Z}\) that \(\frac{1}{\sqrt 2 n}=\frac{a}{b}\). Thus, \(\sqrt 2 n = \frac{b}{a}\), 
+and \(\sqrt{2}=\frac{b}{an}\) while \(a,b,n\in\mathbb{Z}\) which raised a contradiction. Thus \(\frac{1}{\sqrt 2 n}\) is irrational.\\
+2. \(\frac{\sqrt 2 n -1}{\sqrt 2 n}\) is irrational:\\
+Suppose \(\frac{\sqrt 2 n -1}{\sqrt 2 n}\) it is rational, then \(\exists a,b \in \mathbb{Z}\) that \(\frac{\sqrt 2 n -1}{\sqrt 2 n}= \frac{a}{b}\)
+\begin{align*}
+    \frac{\sqrt 2 n -1}{\sqrt 2 n}&=\frac{a}{b}\\
+    1-\frac{1}{\sqrt 2 n}&=\frac{a}{b}\\
+    \frac{1}{\sqrt 2 n}&=1-\frac{a}{b}=\frac{b-a}{b}\\
+\end{align*}
+While \(a,b\in\mathbb{Z}\), \(\frac{b-a}{b}\) is rational. However, as profed above, $\frac{1}{\sqrt 2 n}$ is irrational which raised a contradiction and 
+thus, \(\frac{\sqrt 2 n -1}{\sqrt 2 n}\) is irrational.
+\\
+\\
+Therefore, both sequence are in set \(S\)
+
+
+
+
+
+
+
+\newpage
+\section*{Problem 2}
+As there exists sup \(A\) and sup \(B\), meaning that \(A\) and \(B\) are all bounded above.
+Thus, there exists a upperbound of \(A\) note as \(\alpha\), and a upper bound of \(B\) noted as 
+\(\beta\), that \(\forall a\in A\), \(a<\alpha\) and \(\forall b \in B\), \(b<\beta\). Therefore, \(a+b<\alpha + \beta\).
+Thus, \(a+b\) is also bounded above, and thus exists a smallest upperbound thus sup \(C\) exists.\\
+\(\forall a\in A,\ \forall b\in B\) , \(c=a+b\leqslant \text{sup}A+\text{sup}B\). Thus, \(\forall c \in C\), \(c\leqslant \text{sup}A+\text{sup}B\).
+Therefore, \(\text{sup}A+\text{sup}B\) is a upperbound for \(C\). Therefore, sup\(C\leqslant\text{sup}A+\text{sup}B\).\\
+\\
+From a theorem profed in class, \(\exists \left<a\right>, \left<b\right>\) that \(\forall a_n\in A\) and \(\forall b_n \in B\), and 
+\(\displaystyle \lim_{n\rightarrow\infty}a_n =\text{sup}A, \lim_{n\rightarrow\infty}b_n =\text{sup}B\). Therefore, \(\displaystyle\lim_{n\rightarrow \infty}{a_n+b_n} = \text{sup}A+\text{sup}B\)
+Also, as \(a_n\in A\) and \(b_n\in B\), \(a_n+b_n=c_i=\text{sup}A+\text{sup}B\) and \(c_i\in C\). Therefore, \(\text{sup}C\geqslant\text{sup}A+\text{sup}B\)
+\\ \\
+Thus, \(\text{sup}C=\text{sup}A+\text{sup}B\)
+
+
+
+\section*{Problem 3}
+\(\lim_{n\rightarrow\infty}\sqrt{1+1/n}=1\).\\
+Prof: take \(N=\left\lceil \frac{1}{\varepsilon^2+2\varepsilon}\right\rceil+1\), \(n\geqslant N\)
+\begin{align*}
+    n&\geqslant \left\lceil \frac{1}{\varepsilon^2+2\varepsilon}\right\rceil+1\\
+    \frac{1}{n}&\leqslant \frac{1}{\left\lceil \frac{1}{\varepsilon^2+2\varepsilon}\right\rceil+1}\\
+    1+\frac{1}{n}&\leqslant1+ \frac{1}{\left\lceil \frac{1}{\varepsilon^2+2\varepsilon}\right\rceil+1}\\
+    \sqrt{1+\frac{1}{n}}-1&\leqslant\sqrt{1+ \frac{1}{\left\lceil \frac{1}{\varepsilon^2+2\varepsilon}\right\rceil+1}}-1
+\end{align*}
+Also, there is \(\left\lceil \frac{1}{\varepsilon^2+2\varepsilon}\right\rceil\geqslant\frac{1}{\varepsilon^2+2\varepsilon}\) for \(\varepsilon>0\):
+\begin{align*}
+    \left\lceil \frac{1}{\varepsilon^2+2\varepsilon}\right\rceil&\geqslant\frac{1}{\varepsilon^2+2\varepsilon}\\
+    \left\lceil \frac{1}{\varepsilon^2+2\varepsilon}\right\rceil+1&\geqslant\frac{1}{\varepsilon^2+2\varepsilon}+1\\
+    \frac{1}{\left\lceil \frac{1}{\varepsilon^2+2\varepsilon}\right\rceil+1}&\leqslant\frac{1}{\frac{1}{\varepsilon^2+2\varepsilon}+1}=\frac{\varepsilon^2+2\varepsilon}{(\varepsilon+1)^2}\\
+    \sqrt{\frac{1}{\left\lceil \frac{1}{\varepsilon^2+2\varepsilon}\right\rceil+1}}&\leqslant \frac{\sqrt{\varepsilon^2+2\varepsilon}}{\varepsilon+1}\\
+    \sqrt{\frac{1}{\left\lceil \frac{1}{\varepsilon^2+2\varepsilon}\right\rceil+1}}-1&\leqslant \frac{\sqrt{\varepsilon^2+2\varepsilon}}{\varepsilon+1}-1=\frac{\sqrt{(\varepsilon+1)^2-1}}{\varepsilon+1}-1=\sqrt{1-\frac{1}{(\varepsilon+1)^2}}-1\\
+\end{align*}
+Suppose \(\sqrt{1-\frac{1}{(\varepsilon+1)^2}}-1\geqslant \varepsilon\), as both sides are positive then:
+\begin{align*}
+    \sqrt{1-\frac{1}{(\varepsilon+1)^2}}-1&\geqslant \varepsilon\\
+    \sqrt{1-\frac{1}{(\varepsilon+1)^2}}&\geqslant \varepsilon+1\\
+    1-\frac{1}{(\varepsilon+1)^2}&\geqslant \varepsilon^2+2\varepsilon+1\\
+    -\frac{1}{(\varepsilon+1)^2}&\geqslant \varepsilon^2+2\varepsilon
+\end{align*}
+While \(\varepsilon>0\), and it raised a contradiction and thus \(\sqrt{1-\frac{1}{(\varepsilon+1)^2}}-1 < \varepsilon\).
+Thus, \(\sqrt{1+\frac{1}{n}}-1<\varepsilon\) for \(n\geqslant N\), as \(n\geqslant N>0\), \(\frac{1}{n}>0\) and \(\sqrt{1+\frac{1}{n}}>1\) and \(\sqrt{1+\frac{1}{n}}-1>0\).
+Thus, \(\sqrt{1+\frac{1}{n}}-1 = \left|\sqrt{1+\frac{1}{n}}-1\right|\).\\
+Therefore, \(\left|\sqrt{1+\frac{1}{n}}-1\right|<\varepsilon\) for \(n\geqslant N = \left\lceil \frac{1}{\varepsilon^2+2\varepsilon}\right\rceil+1\). \\
+Thus,\(\lim_{n\rightarrow\infty}\sqrt{1+1/n}=1\).\\ 
+\section*{Problem 4}
+\subsection*{a)}
+It is true.\\
+Prof:\\
+As \(\displaystyle \lim_{n\rightarrow\infty}a_n<\lim_{n\rightarrow\infty}b_n\), then \(\displaystyle \lim_{n\rightarrow\infty}b_n-\lim_{n\rightarrow\infty}a_n=k>0\).
+Note that \(\displaystyle\lim_{n\rightarrow\infty}a_n=\alpha\) and \(\displaystyle\lim_{n\rightarrow\infty}b_n=\beta\)
+By the definition of convergence of a sequence, \(\exists N_a\in \mathbb{N}\) that \(\forall n_a>N_a\), \(\varepsilon>0\), \(\left|a_{n_a}-\alpha\right|<\varepsilon\).
+Take \(\varepsilon<\frac{k}{2}\), then similarly for sequence \(\left<b\right>\), \(\exists N_a,N_b\in\mathbb{N}\), that \(\forall n_a>N_a\), and \(\forall n_b>N_b\)
+that \(\left|a_{n_a}-\alpha\right|<\frac{k}{2}\) and \(\left|b_{n_b}-\beta\right|<\frac{k}{2}\). Thus take \(N=\text{max}(N_a,N_b)\), then \(\forall n>N\),
+\(b_n>a_n\).
+\subsection*{b)}
+It is false.\\
+For example, for \(a_n=0\) and \(b_n = \frac{1}{n}\times \sin(n)\), \(\left<b\right>\) will be alternating up and down crossing 0 forever leaving no possible
+values of N to give \(a_n\leqslant b_n\)
+\section*{Problem 5}
+\subsection*{a)}
+\(a_n=\frac{1}{n^2}\)\\
+\(b_n = n\)
+\subsection*{b)}
+\(a_n=\frac{1}{n}\)\\
+\(b_n = n\)
+\subsection*{c)}
+\(a_n=\frac{1}{n}\)\\
+\(b_n = n^2\)
+\end{document}
+
