@@ -1,0 +1,187 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\title{\textbf{Homework \#2 }}
+\author{James Liu}
+\date{\ }
+
+\begin{document}
+\maketitle
+\section*{Problem 1}
+\subsection*{a)}
+
+The resonance escape probability will increase.\\
+\[p=\text{exp}\left[-\left(\frac{V_f}{V_m}\right)\frac{N_f}{\xi \Sigma_s}I\right]\]
+Changing moderator from heavy water to light water only increasing \(\xi \Sigma_s\) and the exponent 
+increases and thus the resonance escape probability increases.
+\subsection*{b)}
+The thermal utilization decraeses.\\
+\[f = \frac{1}{1+\varsigma (V_m/V_f)(N_m/N_f)(\bar{\sigma}_{aT}^m/\bar{\sigma}_{aT}^f)}\]\\
+Switching moderator from heavy water to light water increase \(\bar{\sigma}_{aT}^m\) and thus increases the denominator
+. Therefore, the thermal utilization facotr decraeses.
+\subsection*{c)}
+\(k_\infty\) will decrease.\\
+\[k_\infty = \frac{\nu \overline{\Sigma}_f}{\overline{\Sigma}_a}\]
+While changing moderator will not affact fuel therefore the numerator will remain the same.
+However, as the absorption crossection for moderator is increased and thus the absorption crossectionfor all 
+component in the system increases, resulting the denominator to increase and thus the fraction decreases as well as 
+\(k_\infty\).
+\section*{Problem 2}
+Here, as we are talking about pressurized water reactor, water is both coolant and moderator.
+\subsection*{a)}
+The fast fission factor will remain unchanged.\\
+\[\varepsilon=1+\frac{1-e}{e}\times \frac{\nu^{fe}\overline{\sigma}_{fF}^{fe}}{\nu^{fi}\overline{\sigma}^{fi}_{fT}}\]
+It is clear that fuel-moderator (fuel-coolant) ratio is not in the calculation of fast fission factor which means that it remains unchange.
+\subsection*{b)}
+The resonance escape probability will increase.\\
+\[p=\text{exp}\left[-\left(\frac{V_f}{V_m}\right)\frac{N_f}{\xi \Sigma_s}I\right]\]
+Here, the increase in volume ratio of coolant and fuel \(\left(\displaystyle\frac{V_m}{V_f}\right)\) will decrease \(\left(\displaystyle\frac{V_f}{V_m}\right)\) abd thus increase the 
+exponent which will finally increase the escape probability.
+\subsection*{c)}
+The thermal utilization factor decraeses.\\
+\[f = \frac{1}{1+\varsigma (V_m/V_f)(N_m/N_f)(\bar{\sigma}_{aT}^m/\bar{\sigma}_{aT}^f)}\]\\
+ere, the increase in volume ratio of coolant and fuel \(\left(\displaystyle\frac{V_m}{V_f}\right)\) will cause the denominator to become larger and the fraction to become smaller as well as 
+the thermal utilization factor.
+\subsection*{d)}
+It will remain the same.\\
+\[\eta =\frac{\nu\sigma^f_f}{\sigma^f_a}\]
+\(\eta \) means how many neutrons are produced if one neutron is absorbed by fuel, while all of the properties are only related to fuel and thus changing fuel-moderator ratio will not change it.
+\section*{Problem 3}
+\subsection*{a)}
+
+\begin{table*}[h]
+    \caption*{Table 4.3 in the text book:}
+    \centering
+    \begin{tabular}{l l}
+        \hline \hline
+        \(I=2.95+25.8\cdot \sqrt{4/\rho D}\)& for U metal\\
+        \(I=4.45+26.6\cdot \sqrt{4/\rho D}\)& for \(\text{UO}_2\)\\
+        \hline \hline        
+    \end{tabular}
+\end{table*}
+Resonance escape probability will be increasing.\\ 
+According to table 4.3 in the text book and preduced above, the resonance integral for UO\(_2\) is larger than the integral for U, also, as 
+extra oxygen in included in the fuel, the density will also d
+ecrease. Thus, the resonance integral will decrease after the modification.
+\[p=\text{exp}\left[-\left(\frac{V_f}{V_m}\right)\frac{N_f}{\xi \Sigma_s}I\right]\]
+According to the formula above, while all other variables remains the same except the resonance integral. While the resonance integral is increasing for UO\(_2\) the 
+resonance escape probability shall also increase.
+\subsection*{b)}
+Neutron utilization factor will decrease.
+\[f = \frac{1}{1+\varsigma (V_m/V_f)(N_m/N_f)(\bar{\sigma}_{aT}^m/\bar{\sigma}_{aT}^f)}\]\\
+The change will affect \(N_f\) and \(\overline{\sigma}^f_{aT}\). However, \(\overline{\sigma}^f_{aT}\) according to Table E.3 of the text book, is similar for 
+\(U\) and \(UO_2\) of 6.623 \(barns\). According to same table of E.3, the density of \(UO_2\) is 10.0 \(g/cm^3\) while for \(U\) it is \(18.9\ g/cm^3\). Thus, \(N_f\)
+would decrease after the change, resulting a bigger denominator and a decreased utilization factor.
+\newpage
+\subsection*{c)}
+\(\eta\) decreases.
+\[\eta =\frac{\nu\sigma^f_f}{\sigma^f_a}\]
+\begin{table*}[h]
+    \caption*{crossection used, from Table 3.2 and Table E.3 in the text book}
+    \centering
+    \begin{tabular}{c c}
+        \hline \hline
+        &(barns)\\
+        \(\sigma_a^{235}\)& 591\\
+        \(\sigma_a^{238}\)& 2.42\\
+        \(\sigma_a^O\)& \(2\times 10^{-4}\)\\
+        \hline \hline
+    \end{tabular}
+\end{table*}
+
+For fission crossection (\(\sigma_f^f\)), as the enrichment is unchanged, is unchanged.\\
+For absorption crossection:
+\begin{align*}
+    \sigma_a^f(U)&=e \cdot \sigma_a^{235}+(1-e)\sigma_a^{238}\\
+    \sigma_a^f(UO_2)&=e \cdot \sigma_a^{235}+(1-e)\sigma_a^{238}+2\cdot \sigma_a^O
+\end{align*}
+As shown, the absorption crossection will increase due to presence of oxygen, and thus the fraction decreases together with \(\eta\)
+\section*{Problem 4}
+\subsection*{a)}
+\[P_{abs}^{300K}=\frac{2\Delta E}{(1-\alpha)E}\frac{200}{200+40}=1.667\]
+\subsection*{b)}
+\[P_{abs}^{600K}=\frac{4\Delta E}{(1-\alpha)E}\frac{100}{100+40}=2.857\]
+\subsection*{c)}
+Yes, clearly \(2.857>1.667\)  meaning that as temperature increase, neutrons are more likly to be absorbed meaning that the escaped portion is lesser.Thus, increase in temperature will lead to decreased resonance escape probability.
+\newpage
+\section*{Problem 5}
+
+\[p=\text{exp}\left[-\left(\frac{V_f}{V_m}\right)\frac{N_f}{\xi \Sigma_s}I\right]\]
+Here increasing moderator is increasing \(\displaystyle \frac{V_m}{V_f}\), decreasing \(\displaystyle \frac{V_f}{V_m}\), thus, 
+the resonance escape probability increases meaning less neutrons captured in ransonance.
+
+\section*{Problem 6}
+\begin{figure}[h]
+    \includegraphics*[scale = 0.5]{figures/Figure_1.png}
+\end{figure}
+\newpage
+\section*{Problem 7}
+Take the density of \(UO_2\) to be 270 \(g/cm^3\)\\
+\(\xi_{_{H_2O}}\) to be 0.93\\
+\(\sigma_s^{^{H_2O}}\) to be 99.52 barns\\
+\(\nu\) to be 2.43\\
+\(\displaystyle N^{235}=\frac{3\%\times 11}{270}\times A_L=0.0012A_L (cm^{-3})\)\\
+\(\displaystyle N^{238}=\frac{97\%\times 11}{270}\times A_L=0.0395A_L (cm^{-3})\)\\
+\(\displaystyle \eta = \frac {\nu N^{235} \sigma^{235}_{f}}{N^{235}\sigma_{a}^{235}+N^{238}\sigma_{a}^{238}}
+=\frac{2.43\times 0.0012\times 580}{0.0012\times (580+107)+0.0395\times 2.75}=1.812\)\\
+
+\(I = 4.45+26.6\sqrt{\frac{4}{\rho D}}=4.45+26.6\sqrt{\frac{4}{11\times 1}}=20.49 \ barn \)\\
+\(\displaystyle N_M= \frac{1}{18}\times A_L=0.055556\times A_L\), \(\displaystyle N_F = \frac{11}{270}\times A_L=0.0407407\times A_L\)\\
+\(\displaystyle \frac {N_M}{N_F}=\frac{0.0555556}{0.04074074}=1.3636\)\\
+\(\displaystyle \frac{V_MN_M}{V_FN_F}= \frac{V_M}{V_F}\cdot \frac{N_M}{N_F}=2\times 1.3636=2.7272\)
+\\\(\displaystyle p =\frac{(1-e)}{(V_MN_M/V_FN_F)\xi^M\sigma^M_s }\ 
+I=\frac{1-0.03}{2.7272\times 0.93\times 99.52}\times 20.49=0.921\)\\
+\(N_a^f=\displaystyle \frac{11}{270}\times A_L=0.0407A_L\)\\
+\(N_a^m=\displaystyle \frac{1}{18}\times A_L=0.0556 A_L\)\\
+\(\sigma_a^f=3\%\times (580+107)+97\%\times 2.75=23.278\)\\
+\begin{align*}
+f&=\frac{V_f \Sigma_a^f \phi^f}{V_f \Sigma_a^f \phi^f + V_m \Sigma^m_a\phi^m}\\
+&=\frac{V_f \Sigma_a^f}{V_f \Sigma_a^f+ V_m \Sigma^m_a\frac{\phi^m}{\phi^f}}\\
+&=\frac{1}{1+\frac{V_mN_m}{V_fN_f}\cdot\frac{\sigma_a^m}{\sigma_a^f}\times \varsigma }\\
+&=\frac{1}{1+2\cdot \frac{0.0556}{0.0407}\cdot \frac{0.5896}{23.278}\times 1.16}\\
+&=0.92569
+\end{align*}
+Thus, \(k_\infty = \varepsilon \eta p f = 1.24\times 1.812\times 0.921\times 0.92569=1.9156\)\\
+\newpage
+\section*{Problem 8}
+\subsection*{a)}
+
+\(\displaystyle N_M= \frac{1.1}{20}\times A_L=0.055\times A_L\), \(\displaystyle N_F = \frac{11}{270}\times A_L=0.0407407\times A_L\)\\
+\(\displaystyle \frac {N_M}{N_F}=\frac{0.055}{0.04074074}=1.35\)\\
+\(\displaystyle p =\frac{(1-e)}{(V_MN_M/V_FN_F)\xi^M\sigma^M_s }I=0.921=\frac{0.97}{\frac{V_M}{V_F} \cdot 1.35\cdot 0.51
+\cdot14.765}\cdot 20.49\)\\
+Therefore: \(\displaystyle \frac{V_M}{V_F}=\frac{0.97}{0.921 \cdot 1.35\cdot 0.51\cdot 14.765}\cdot 20.49=2.12\)\\
+\subsection*{b)}
+
+\(N_a^f=\displaystyle \frac{11}{270}\times A_L=0.0407A_L\)\\
+\(N_a^m=\displaystyle \frac{1.1}{20}\times A_L=0.055 A_L\)\\
+\(\sigma_a^f=3\%\times (580+107)+97\%\times 2.75=23.278\)\\
+\begin{align*}
+f&=\frac{V_f \Sigma_a^f \phi^f}{V_f \Sigma_a^f \phi^f + V_m \Sigma^m_a\phi^m}=0.92569\\
+&=\frac{V_f \Sigma_a^f}{V_f \Sigma_a^f+ V_m \Sigma^m_a\frac{\phi^m}{\phi^f}}\\
+&=\frac{1}{1+\frac{V_mN_m}{V_fN_f}\cdot\frac{\sigma_a^m}{\sigma_a^f}\times \varsigma }\\
+0.92569&=\frac{1}{1+\frac{V_m}{V_f}\cdot \frac{0.05}{0.0407}\cdot \frac{0.0013}{23.278}\times 1.16}\\
+1+\frac{V_m}{V_f}\cdot \frac{0.05}{0.0407}\cdot \frac{0.0013}{23.278}\times 1.16&=\frac{1}{0.92569}\\
+\frac{V_m}{V_f} &=\frac{\frac{1}{0.92569}-1}{\frac{0.05}{0.0407}\cdot \frac{0.0013}{23.278}\times 1.16}=1008.67
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
