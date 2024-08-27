@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Edit: \today, Class: Aug 26}
+\title{MATH 461 Lecture 1 Note}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+
+\subsection*{multiplication rule}
+suppose 2 experiments are to be performed, if experiment 1 can result in \(m\) possible out comes,
+and for each outcomes in experiment 1, experiment 2 can result in \(n\) outcomes. Together, there will be \(m\times n \) total possible
+out comes for this 2 experiment. Similarly, it can be easily generalized into \(n\) experiments: \(\prod_1^n m_k \).
+\subsubsection*{Examples}
+1. Suppose we need a 6 digit series number with first 3 digit being numbers and last 3 being letters. then how many series number we can make in total?
+\\ \\
+\(10^3\times 26^3\)
+\\ \\
+2. A mother want to give her son a total of 14 cards in a 7 day period, suppose she only gives her son cards once a day, how many ways
+that she can choose to give her son all 14 cards?
+\\ \\
+\(7^{14}\) see each card as a seperate experiment then each card can be given in one of the seven days
+\\ \\
+\newpage
+\subsection*{Permutaion}
+suppose we have \(n\) distinct objects we can put them in a ordinal arrangement, each of their arrangements is called a permutaion,
+if there are \(n\) objects, then there will be \(n!\) numbers of permutaions.
+\subsubsection*{Examples}
+1. John have 12 different books to be sorted on a shelf. 3 of them are math books, 3 of them are cs books, 4 of them are physics books and 2 of them are fictions.
+how many different ways he have to sort all these books on shelf if he want books with similar topic sit together?
+\\ \\
+\begin{align*}
+    4!&\cdot(3!\cdot3!\cdot4!\cdot2!)\\
+    \text{permutaion of subjects }&\text{ permutaion of books}
+\end{align*}
+2. In how many ways can 6 people were to sit in a row and a,b needs to sit together?
+\\ \\ 
+\(2! \times 5!\)
+\\ \\ 
+3. In howmany ways can 4 male and 4 female be sitting in a role with no 2 people with similar gender sitting next to each other?
+\\ \\ 
+\(2!\cdot 4!\times 4!\)
+\\ \\
+4. Consider the word PEPPER, how many new words can such letter make including this one?
+\\ \\
+\(\frac{6!}{3!2!1!}\)
+as p and p are similar and overcountings must be illiminated.
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

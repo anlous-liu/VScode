@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Edit: \today, Class: Aug 26}
+\title{MATH 416H Lecture 1 Note}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+
+\subsection*{Matrix}
+\subsubsection*{Definition}
+A \(m\times n\) Matrix \(A\) is an array of numbers (integers, rationals, real, complex)
+\subsection*{Linearity}
+We say a function (map) is linear when: 
+\[F(\lambda \overrightarrow{x} + \mu \overrightarrow{y} ) = \lambda F(\overrightarrow{x})+\mu F(\overrightarrow{y})\]
+Note that linear in calculus is not nessesarily linear in linear algebra!
+\\e.g. 
+\begin{align*}
+    f(x)&=2x+3\\
+    f(x+y)&=2(x+y)+3\\
+    f(x)+f(y)&=2x+3+2y+3 \neq 2(x+y)+3
+\end{align*}
+\subsection*{examples}
+Try prof that if \(\exists f(\overrightarrow{x}):\mathbb{R}^n \rightarrow \mathbb{R}^m\) is linear, then \(\exists A\) that \(A\) is a matrix and \(f(\overrightarrow{x})=A\times\overrightarrow{x}\).
+\\ \\
+Say \(\overrightarrow{x}\) is a \(n\) dimensional vector, then \(\overrightarrow{x}=\sum_{1}^{n} \overrightarrow{e_i}\times x_i\) where \(e_i\) are base vectors like:
+
+\(\begin{bmatrix}
+    1\\0\\0\\0\\ \vdots \\ 0
+\end{bmatrix} 
+\),
+\(\begin{bmatrix}
+    0\\1\\0\\0\\ \vdots \\ 0
+\end{bmatrix} 
+\)\dots\(\begin{bmatrix}
+    0\\0\\0\\0\\ \vdots \\ 1
+\end{bmatrix} 
+\)
+and \(x_i\) are respect value at the direction of base vectors
+therefore, as \(f(\overrightarrow{x})\) is linear, there is:
+\begin{align*}
+    f(\overrightarrow{x})&=f\left(\sum_1^n \overrightarrow{e_i}x_i\right)\\
+    &=\sum_1^n x_i f(\overrightarrow{e_i})
+\end{align*}
+thus, 
+\begin{align*}
+    A = 
+    \begin{bmatrix}
+        f(\overrightarrow{e_1})&f(\overrightarrow{e_2})&\cdots&f(\overrightarrow{e_n})
+    \end{bmatrix}
+\end{align*}
+therefore such matrix exist.
+\end{document}
