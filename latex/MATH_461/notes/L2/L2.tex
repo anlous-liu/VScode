@@ -1,0 +1,113 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Edit: \today, Class: Aug 28}
+\title{MATH 461 Lecture 2 Note}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\section*{Combination}
+\subsection*{notation}
+\(\displaystyle\begin{pmatrix}
+    n\\r
+\end{pmatrix}=\frac{1}{r!}\times \frac{n!}{(n-r)!}\)
+   As \(\displaystyle\frac{n!}{(n-r)!}\) shows howmany ways of selecting \(r\) items from \(n\) items considering sequence. Divied by \(r!\) gives the total ways not considering order.
+\subsection*{Examples}
+\begin{itemize}
+    \item [1.]From a group of 5 women, 7 men, how many different committes of 5 people (2 women, 3 men) can be formed?\\
+    \\
+    \(\begin{pmatrix}
+        5\\2
+    \end{pmatrix}\cdot\begin{pmatrix}
+        7\\3
+    \end{pmatrix}\)\\ \\
+    \\
+    What if 2 men do not want to stay together?\\ \\ \\
+
+
+\begin{itemize}
+    \item [a.]\[\begin{pmatrix}
+        5\\2
+    \end{pmatrix}\cdot\left( \begin{pmatrix}
+        5\\3
+    \end{pmatrix}+\begin{pmatrix}
+        2\\1
+    \end{pmatrix}\cdot \begin{pmatrix}
+        5\\2
+    \end{pmatrix}\right)
+\]
+    \item[b.]\[\begin{pmatrix}
+        5\\2
+    \end{pmatrix}\cdot\left(\begin{pmatrix}
+        7\\3
+    \end{pmatrix}-\begin{pmatrix}
+        2\\2
+    \end{pmatrix}\cdot \begin{pmatrix}
+        5\\1
+    \end{pmatrix}\right)\]
+    
+\end{itemize}
+
+a. is correct because of is choose the approch to add the special case , as \(\begin{pmatrix}5\\3\end{pmatrix}\)
+is the combination number without the 2 special people. and the rest accounted for having only one of the 2 special ones chosed.
+\\ b. is as it removes the unsatisfied ones by removing the amount similar with chossing only one from the normal men group.
+    \item [2.] If there are \(n\) antenna with \(m\) of them defacted, which is \(m\leq n-m+1\), how many ways to arrange it that no 
+    2 defacted antenna are sitting next to each other?
+    \\ \\ \\
+    \(\begin{pmatrix}
+        n-m+1\\
+        m
+    \end{pmatrix}\)
+    as there are \(n-m\) working antenna, there are \(n-m+1\) places we can put defacting ones in between. and wee need to put in total m 
+    defacting ones in these positions.
+
+\end{itemize}
+\subsubsection*{Useful Identity}
+
+\[
+\begin{pmatrix}
+    n\\r
+\end{pmatrix}=
+\begin{pmatrix}
+    n-1\\r-1
+\end{pmatrix}+
+\begin{pmatrix}
+    n-1\\r
+\end{pmatrix}
+\]
+\[(x+y)^n=\sum_{k=0}^n \binom{n}{k}x^ky^{n-k}\]
+\subsubsection*{Intuitive Prof}
+\begin{align*}
+    (x_1+y_1)(x_2+y_2)(x_3+y_3)\times\cdots\times(x_n+y_n)\\
+    =\underbrace{\overbrace{x_1x_2x_3\cdots x_n}^{n \text{ terms}}+y_1x_2x_3x_4\cdots x_n+\cdots+y_1y_2y_3\cdots y_n}_{2^n \text{terms}}
+\end{align*}
+The terms that have \(k\) numbers of \(x_i\) is \(\binom{n}{k}\).
+\subsection*{Multinomial Coefficient}
+\[(x_1+x_2+x_3+x_4)^n=\sum\binom{n}{p_1,p_2,p_3,p_4}x_1^{p_1}x_2^{p_2}x_3^{p_3}x_4^{p_4}\]
+
+where \(\displaystyle\binom{n}{p_1,p_2,p_3,p_4} \)means \(\displaystyle\binom{n}{p_1}\binom{n-p_1}{p_2}\binom{n-p_1-p_2}{p_1}\binom{n-p_1-p_2-p_3}{p_4}=\frac{n!}{p_1!p_2!p_3!p_4!}\)
+\newpage
+\subsection*{Examples}
+suppose there are n balls to be put into r boxes, and no boxes are empty, how many ways?\\
+consider there are \(n-1\) possible divider place that gives no empty boxes:
+\[\Box _\land \Box _\land\Box _\land\Box _\land\Box _\land\Box _\land\Box _\land\Box \]
+and we need to put \(r-1\) dividers inside to divide the 8 balls into \(r\) groups.
+Therefore it is straight forward that th answer is \(\binom{n-1}{r-1}\)
+\\
+\\
+what if allows empty?
+\\
+\\
+we add extra \(r\) balls to be the one ball that fills every empty boxes, thus, the answer goes \(\binom{n+r-1}{r-1}\)
+
+
+
+\end{document}
