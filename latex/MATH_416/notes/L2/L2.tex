@@ -1,0 +1,107 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Edit: \today, Class: Aug 28}
+\title{MATH 416H Lecture 2 Note}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\section*{Vector Space}
+\subsection*{Def}
+\begin{itemize}
+    \item [1.] Close under these 2 calcualtions
+    \begin{itemize}
+        \item [a)]
+        \begin{align}
+            \mathbb{R}\times V&\longrightarrow V \text{  Scaler Multiplication}\\
+            (\lambda,\overrightarrow{v})&\longmapsto \lambda \overrightarrow{v}
+        \end{align}
+        \item [b)]
+        \begin{align}
+            V\times V &\longrightarrow V \text{ Vector Addition}\\
+            (\overrightarrow{v_1},\overrightarrow{v_2})&\longmapsto \overrightarrow{v_1}+\overrightarrow{v_2}
+        \end{align}
+    \end{itemize}
+    \item [2.] Holds following 8 property
+    \begin{itemize}
+        \item [a.] + is communitive, \(\overrightarrow{x}+\overrightarrow{y}=\overrightarrow{y}+\overrightarrow{x}\)
+        \item [b.] + is associative, \(\overrightarrow{x}+(\overrightarrow{y}+\overrightarrow{z})=(\overrightarrow{x}+\overrightarrow{y})+\overrightarrow{z}\)
+        \item [c.] \(\exists \overrightarrow{0}\in V\) such that \(\forall \overrightarrow{v}\in V,\ \overrightarrow{0}+\overrightarrow{v}=\overrightarrow{v}\)
+        \item [d.] \(\forall \overrightarrow{v}\in V, \exists -\overrightarrow{v}\)
+        \item [e.] \(\forall v\in V, \ 1\times \overrightarrow{v}=\overrightarrow{v}\)
+        \item [f.] \(\forall \lambda,\mu\in\mathbb{R},\ \lambda(\mu\cdot\overrightarrow{v})=(\lambda\mu)\cdot \overrightarrow{v}\)
+        \item [g.] \(\forall \lambda\in\mathbb{R},\ \lambda(\overrightarrow{v}+\overrightarrow{w})=\lambda \overrightarrow{v}+\lambda\overrightarrow{w}\)
+        \item [h.] \(\forall \lambda,\mu\in\mathbb{R},\ (\lambda+\mu)\overrightarrow{v}=\lambda\overrightarrow{v}+\mu\overrightarrow{v}\)
+    \end{itemize}
+\end{itemize}
+Any set that have all properties above is called a vector space and the elements are called vectors.
+\subsection*{Examples}
+\begin{itemize}
+    \item [1.] \(\forall n \geq 0,\ \mathbb{R}^n\) is a vector space, note that \(\mathbb{R}^0=\{0\}\)
+    \item [2.] \(\mathbb{R}[x]\) is a set of all polynomials having one variable \(x\in\mathbb{R}\), such as: \(\mathbb{R}[x]=\{a_0+a_1x_1+\cdots+a_nx_n|^{n\geq0}_{a_i\in\mathbb{R}}\}\). Note it is a infinitly large verctor space.
+    \item [3.] \(C[0,1]\equiv C^0[0,1]=\{f:[0,1]\rightarrow\mathbb{R}|f\text{ continuous}\}\) where \(C^0\) means the function is continuous.
+    \item [4.] WRONG EXAMPLE: \(v\in \left\{ \begin{pmatrix}x_1\\x_2\end{pmatrix}\in\mathbb{R}^2\left|x_1,x_2\geq0\right.\right\}\) which is the 1 quadrant with axises, while it is not close under scaler Multiplication.
+\end{itemize}
+\section*{Properties}
+\subsection*{lemma 2.1}
+For any vector space \(V\) there is a unique \(\overrightarrow{0}\)
+\subsubsection*{Prof}
+if \(\exists \overrightarrow{0}'\neq \overrightarrow{0}\) then:
+\begin{align*}
+    \overrightarrow{0}' &=\overrightarrow{0}+\overrightarrow{0}' =\overrightarrow{0}
+\end{align*}
+\subsection*{lemma 2.2}
+If \(V\) is a vector space, then \(\forall \overrightarrow{v} \in V, \ 0\cdot v = \overrightarrow{0}\)
+\subsubsection*{Prof}
+\begin{align*}
+    0\cdot \overrightarrow{v}&=(0+0)\cdot \overrightarrow{v}=0\cdot  \overrightarrow{v}+0\cdot \overrightarrow{v}\\
+    \forall \overrightarrow{w}&\in V,\ \exists -\overrightarrow{w} \text{ that } \overrightarrow{w}-\overrightarrow{w}=0\\
+    0\cdot  \overrightarrow{v}&-0\cdot  \overrightarrow{v}=0\cdot  \overrightarrow{v}+0\cdot \overrightarrow{v}-0\cdot  \overrightarrow{v}\\
+    &\overrightarrow{0}=0\cdot\overrightarrow{v}
+\end{align*}
+\newpage
+\subsection*{lemma 2.3}
+For any vector space \(V\)
+\begin{itemize}
+    \item [1.] Additive inverse is unique
+    \item [2.] \(-1\cdot\overrightarrow{v}=-\overrightarrow{v}\)
+\end{itemize}
+\subsubsection*{Prof}
+\begin{itemize}
+    \item [1.] Suppose \(\overrightarrow{u}+\overrightarrow{v}=0\)
+    \begin{align*}
+        -\overrightarrow{v}&=\overrightarrow{0}+(-\overrightarrow{v})=(\overrightarrow{u}+\overrightarrow{v})-\overrightarrow{v}\\
+        &=\overrightarrow{u}+\overrightarrow{0}
+    \end{align*}
+    \item [2.] 
+    \begin{align*}
+        -1\cdot \overrightarrow{v} +\overrightarrow{v}&=-1\cdot\overrightarrow{v}+1\cdot\overrightarrow{v}\\
+        &=(1-1)\cdot \overrightarrow{v}\\
+        &=\overrightarrow{0}
+    \end{align*}
+\end{itemize}
+\section*{Subspace}
+\subsection*{Definition}
+Let \(V\) be a real(\(\mathbb{R}\)) vector space, a nonempty subset \(W\) of \(V\) is a subsapce of V if \(W\) is also a vector space with definition of the 2 operations same with \(V\).
+\subsection*{Properties}
+\begin{itemize}
+    \item [1.] \(\overrightarrow{0}\in W\)
+    \item [2.] \(\forall \overrightarrow{w} \in W, -\overrightarrow{w}\in W\)
+\end{itemize}
+(Both of the properties are esay to prof)
+\section*{Linear Maps between Vector Space}
+\subsubsection*{Definition}
+Define a map \(T:V\longrightarrow W\), if \(\forall \overrightarrow{v_1},\overrightarrow{v_2}\in V,\ \lambda_1,\lambda_2\in\mathbb{R}\), if 
+\\\(T(\lambda_1\overrightarrow{v}_1+\lambda_2\overrightarrow{v}_2)=\lambda_1T(\overrightarrow{v_1})+\lambda_2T(\overrightarrow{v_2})\)\\
+Then \(T\) is a linear map between vector spaces.
+
+
+\end{document}
