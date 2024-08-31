@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Edit: \today, Class: Aug 28}
+\title{MATH 461 Lecture 2 Note}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\section{Probability}
+\subsection{Definitions}
+\begin{itemize}
+    \item [\textbf{Sample Space:}] A sample space is a set containing all possible out come of a experiment.
+    \item [\textbf{Event:}] A event is a subspace of the Sample space
+\end{itemize}
+\subsection{Axioms of probabilities}
+\(E\): Event set, \(S\): Sample Space, \(P(x)\): a map between a set to probability 
+\begin{itemize}
+    \item [1)]\(E\subseteq S\), \(0\leqslant P(E)\leqslant1\)
+    \item [2)]\(P(S)=1\)
+    \item [3)] For any sequence of \(E_1,E_2,E_3,\cdots,E_n\) of events that are disjoint
+        \\ \(P(\bigcup _{i=1}^\infty E_i)=\sum_{i=1}^\infty P(E_i)\). Or, the probability of combined disjoint event equals to the sum of the probabilities when they are seperate.
+\end{itemize}
+\subsubsection*{Exaples}
+Say we measure the liftime of a light builb. Assume that \(P(A) = \int_A e^{-t} \text{d}t\),
+where the \(A\) is a time interval \([0,\infty)\) as \(\int_{0}^{\infty}e^{-t}\text{d}t=1\), also other 
+function \(P\) can be chosed.
+\subsection{properties}
+\begin{itemize}
+    \item [1.] \(P(\varnothing )=0\)
+    \item [2.] If \(E_1,E_2,E_3,\cdots,E_n\) are disjoint then \(P(\bigcup _{i=1}^n E_i)=\sum_{i=1}^\infty P(E_i)\)
+    \item [3.] If \(E\subseteq F\), then \(P(E)\leqslant P(F)\)
+    \item [4.] \(P(E^c)=1-P(E)\)
+    \item [5.] \(P(\bigcup _{i=1}^n E^c_i)=1-P(\bigcup _{i=1}^n E_i)\)
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

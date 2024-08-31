@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Edit: \today, Class: Aug 30}
+\title{MATH 416H Lecture 3 Note}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\(F=\mathbb{C}\) or \(F=\mathbb{R}\) distinguish by context.
+\section{Linear maps}
+\(A=\begin{bmatrix}
+    a_{11}&a_{12}&a_{13}&\cdots&a_{1n}\\
+    a_{21}&a_{22}&a_{23}&\cdots&a_{2n}\\
+    a_{31}&a_{32}&a_{33}&\cdots&a_{3n}\\
+    \vdots&\vdots&\vdots&\ddots&\vdots\\
+    a_{m1}&a_{m2}&a_{m3}&\cdots&a_{mn}\\
+\end{bmatrix}\)
+\\
+Claim that for a linear map \(L_A:F^n\rightarrow F^m\)  \(\exists A \) that \(L_A(\overrightarrow{x})=A\overrightarrow{x}\)
+prof is similar with the ones in L1 note.
+\section{Vector Space}
+\subsection{Linear Combinations}
+Let \(V\) be a Vector space,  \(\{\overrightarrow{v_1},\overrightarrow{v_2},\cdots,\overrightarrow{v_k}\}\subseteq V\)
+A linear combination of \(v_1,\cdots,v_k\) is a vector of the form \(\overrightarrow{u}=\lambda_1\overrightarrow{v_1}+\lambda_2\overrightarrow{v_2}+\lambda_3\overrightarrow{v_3}+\cdots+\lambda_k\overrightarrow{v_k}\)
+for some \(\lambda_i \in F\)
+\subsubsection{Example}
+In \(\mathbb{R}^2\), \(\overrightarrow{u}=\binom{1}{3}\) is a linear combination from \(\overrightarrow{v_1}=\binom{1}{1}\) and \(\overrightarrow{v_2}=\binom{0}{1}\),
+as \(\overrightarrow{u}=1\times \overrightarrow{v_1}+2\times \overrightarrow{v_2}\)
+\subsection{Span}
+A set of vectors \(\{\overrightarrow{v_1},\overrightarrow{v_2},\cdots,\overrightarrow{v_k}\}\subseteq V\)
+in a vector space \(V\) span \(V\) if \(\forall \overrightarrow{u}\in V\), \(\exists\lambda_1\cdots\lambda_k\in F\) that 
+\(\overrightarrow{u}=\lambda_1\overrightarrow{v_1}+\lambda_2\overrightarrow{v_2}+\lambda_3\overrightarrow{v_3}+\cdots+\lambda_k\overrightarrow{v_k}\)
+\subsubsection{Example}
+in \(\mathbb{R}^2\), \(\binom{1}{0},\binom{1}{1}\) spans the vector space of \(\mathbb{R}^2\) while \(\binom{1}{0},\binom{2}{0}\) does not.
+\subsection{Linear dependency}
+A set of vectors \(\{\overrightarrow{v_1},\overrightarrow{v_2},\cdots,\overrightarrow{v_k}\}\subseteq V\) in vector space \(V\) is \textbf{linearly dependent} if
+\(\exists \lambda_1,\lambda_2,\lambda_3,\cdots,\lambda_k\in F\) not all being zeros while \(\lambda_1\overrightarrow{v_1}+\lambda_2\overrightarrow{v_2}+\cdots+\lambda_k\overrightarrow{v_k}=\overrightarrow{0}\)
+\\
+And if a set of vectors are not linearly dependent then it is linear independent.
+\subsection{Basis}
+Let \(V\) be a vector space over \(F\), A set of vectors \(\{\overrightarrow{v_1},\overrightarrow{v_2},\cdots,\overrightarrow{v_k}\}\subseteq V\)
+is a basis if it is linearly independent and spans \(V\).
+
+\subsubsection{Definition}
+Suppose \(V\) is a vector space, \(\{\overrightarrow{v_1},\overrightarrow{v_2},\cdots,\overrightarrow{v_k}\}\subseteq V\).
+\(\forall v\in V\), \(\exists\{\lambda_1,\lambda_2,\lambda_2,\cdots,\lambda_k\}, \\ \lambda_i\in F\)
+that \(v=\lambda_1\overrightarrow{v_1}+\lambda_2\overrightarrow{v_2}+\lambda_3\overrightarrow{v_3}+\cdots+\lambda_k\overrightarrow{v_k}\)
+then the set of vectors is a set of basis of \(V\)
+\subsection{Examples}
+\begin{itemize}
+\item [1.] NO-EXAMPLE\\
+\(\displaystyle\left\{\binom{1}{0},\binom{0}{1},\binom{1}{1}\right\}\) is not a set of basis for \(\mathbb{R}^2\)
+
+
+\item [2.]
+
+
+\end{itemize}
+
+\end{document}
