@@ -1,0 +1,96 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due: Sep 4  Edit: \today}
+\title{ME 200 Homework 1}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [\textbf{1.}] A spring compresses in length by 0.14 in. for every 1lbf of applied force. Determine the mas of an object, in pounds mass that causes a sping deflection of 1.8 in. The local acceleration of gravity = 31 ft/\(s^2\)
+    \\
+    \\
+    \(F = 1.8\div0.14 = 12.857\) lbf\\
+    \(M = \fbox{\textbf{12.857 \text{lb}}}\)
+    \\
+    \item [\textbf{2.}] \ 
+    \\
+    \begin{itemize}
+        \item [a.] Property as it is a pressure
+        \item [b.] State
+        \item [c.] Processes as it is a transfermation between two State
+        \item [d.] Property as it is a pressure
+        \item [e.] State
+        \item [f.] Property as it is a volume
+        \item [g.] Property as it is a volume
+    \end{itemize}
+    \item [\textbf{3.}]a storage tank holding natural
+    gas. In an adjacent instrument room, a U-tube mercury manometer in communication with the storage tank reads L= 1.0 m. If the atmospheric pressure is 101 kPa, the density of the mercury is 13.59 g/cm3, and g = 9.81 m/s2, determine the pressure of the natural gas, in kPa.
+    \\
+    \\
+    \(13.59 \ g/\text{cm}^3=1.359\times 10^4  \text{kg/m}^3\)\\
+    \(P_{Hg}=\rho g L = 1.359\times 10^4 \times 9.81 \times 1 = 1.33\times10^5 \ \text{Pa}=133.32\ \text{kPa}\) \\
+    \(P_{gas} = P_{atm}+P_{Hg}=101+133.32=\fbox{\textbf{234.32\ \text{kPa}}}\)
+    \newpage
+    \item [\textbf{4.}]Air is contained in a vertical pistoncylinder assembly such that the piston is in static equilibrium. The atmosphere exerts a pressure of 101 kPa on top of the 0.5-m-diameter piston. The gage pressure of the air inside the cylinder is 1.2 kPa. The local acceleration of gravity is g = 9.81 m/s2. Subsequently, a weight is placed on top of the piston causing the piston to fall until reaching a new static equilibrium position. At this position, the gage pressure of the air inside the cylinder is 2.8 kPa.
+    \begin{itemize}
+        \item [a)] Determine the mass of the piston, in kg.\\
+        \(A = \pi r^2 = \frac{1}{16}\pi \ \text{m}^2\)\\
+        \(F = PA = 1200 \times \frac{1}{16} \pi=75\pi N\)\\
+        \(M = F/a = 75\pi \div 9.81 = \fbox{\textbf{24.02 \text{kg}}} \)
+        \item [b)] Determine the mass of the added weight, in kg.\\
+        \(F=\Delta P \cdot A=(2.8-1.2)\times1000\times 0.25\pi=400\pi N\)\\
+        \(M = F/a = 100\pi \div 9.81 = \fbox{\textbf{32.024 \text{kg}}} \)
+    \end{itemize}
+    \item[\textbf{5.}] 1.38 As shown in Figure P1.38, an inclined manometer is used to measure the pressure of the
+    gas within the reservoir. 
+    \begin{itemize}
+        \item [(a)] Using data on the figure, determine the gas pressure, in lbf/in\(^2\)
+        \\ \\
+        \(h = sin(\theta)\times l = \text{sin}(40^{\circ})\times 15 = 9.64\  \text{in}\)\\
+        \(\rho_{f} = \rho_{m}\times g=54.2\times32.2 = 1745.24\text{ lbf/ft}^3 = 1.009 \text { lbf/in}^3\)\\
+        \(g = 32.2 \text{ ft/s}^2=386.4 \text{ in/s}^2\)\\
+        \(P_{gas} = \rho_f h = 1.009\times9.64 = \fbox{\textbf{9.727\ \text{lbf/in\(^2\)}}}\) as in gage pressure
+        \item [(b)] Express the pressure as a gage or a vacuum pressure, as appropriate, in lbf/in\(^2\)
+        \\ \\
+        \(P_{vac}= P_{gage} + P_{atm} = 9.727 + 14.7 =\fbox{\textbf{24.427\ \text{lbf/in\(^2\)}}} \) as in vaccum pressure
+        \item [(c)] What advantage does an inclined manometer have over the U-tube manometer shown in Figure 1.7?
+        \\ \\ 
+        For one thing, the inclined one is easier to read due to the larger surface area of the liquid. For another, it is more precise as fo the same amount of pressure increase the surface of liquid will need to go longer in the tube to reach the same elevation.
+    \end{itemize}
+    \newpage
+    \item [\textbf{6.}] a spherical buoy, having a diameter of 1.5 m and weighing 8500 N, anchored to the floor of a lake by a cable. Determine the force exerted by the cable, in N. The density of
+    the lake water is 103 kg/m3 and g = 9.81 m/s2.
+    \\ \\
+    \(V = \frac{4}{3}\pi r^3 = \frac{4}{3}\pi \frac{3}{2\times 2}^3=\frac{9}{16}\pi \ \text{m}^3\)\\
+    \(F_{buoy} = \rho g V = 10^3\times 9.81\times 0.5625 \times 3.14159 = 17335.1 \text{N}\)\\
+    \(F_{cord} = F_{bouy} - F_g = 17335.1 - 8500 =\fbox{\textbf{8835.13\text{ N}}}\)
+    \item [\textbf{7.}] Air temperature rises from a morning low of 42°F to
+    an afternoon high of 70°F.
+    \begin{itemize}
+        \item [a)]
+        \begin{itemize}
+            \item [\(^\circ\)C:] \(42^\circ\text{F}=5.556^\circ\)C, \(70^\circ\text{F}=21.11^\circ\)C
+            \item [K:] \(42^\circ\text{F}=278.7\) K, \(70^\circ\text{F}=294.2\) K
+            \item [\(^\circ\)R:] \(42^\circ\text{F}=501.67^\circ\)R, \(70^\circ\text{F}=529.67^\circ\)R
+        \end{itemize}
+        \item [b)]
+        \begin{itemize}
+            \item [\(^\circ\)F:] \(70-42 = 28^\circ\)F
+            \item [\(^\circ\)C:] \(21.11-5.556 = 15.5^\circ\)C
+            \item [K:] \(294.2-278.7=15.5\) K
+            \item [\(^\circ\)R:] \(529.67-501.67 = 28^\circ\)R
+        \end{itemize}
+        \item [c)] \(^\circ\)F and \(^\circ\)R have the same scales with a different origin.
+        \item [d)] \(^\circ\)C and K have the same scales with a different origin.
+    \end{itemize}
+\end{itemize}
+\end{document}
