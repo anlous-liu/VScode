@@ -21,38 +21,33 @@
     C travel so that she sees both A and B approaching her at the same speed? 
     \\ \\ 
     Set the speed of C as \(v_c\), the direction to B is positive and B's position is origin. Therefore, we have:
+    and the velocity of B and A approaching C in C's reference frame is \(u\).
+    Therefore, in C's reference frame, there is B moving toward C at \(u\) and in B's reference frame, A is moving toward B at \(0.8c\), thus in C's reference frame, the speed of A to C need to apply relativistic addition.
     \begin{align*}
-        \frac{\frac{4}{5}c-v_c}{1+\frac{0.8c\times v_c}{c^2}}&=v_c\\
-        0.8c-v_c &=v_c+\frac{0.8\times v_c^2}{c}\\
-        0.8c^2-v_cc &=v_cc+0.8\times v_c^2\\
-        -0.8v_c^2-2v_cc&=-0.8c^2\\
-        v_c^2+2.5v_cc&=c^2\\
-        v_c&=0.3507 c
+        u = \frac{-u+\frac{4}{5}c}{1+\frac{-\frac{5}{4}uc}{c^2}}\\
+        u = \frac{1}{2}c
     \end{align*}
+    \(u=v_c\) Therefore, \(\fbox{\(v_c =\frac{1}{2}c\)}\)
     \newpage
     \item [\textbf{3.}] \textbf{Relative speeds in different frames.}
     \begin{itemize}
-        \item [a)]
-        \(\displaystyle v_t = \frac{v_t'+v_d}{1+\frac{v_t'v_d}{c^2}}=\frac{\frac{5}{6}c}{1+\frac{\frac{c}{6}}{c^2}}=\frac{5c^2}{6c+1}\)
-        Thus, the difference is:
-        \[\frac{v_c-v_t}{1+\frac{v_cv_t}{c^2}}=\frac{\frac{3}{4}c-\frac{5c^2}{6c+1}}{1+\frac{\frac{3}{4}c\cdot\frac{5c^2}{6c+1}}{c^2}}=-\frac{c(2c-3)}{39c+4}\]
-        \item [b)]
+        \item [a)]\(v_t\) as the torpedo's velocity in my reference frame and \(v'_t\) as the velocity of torpedo in star destroyer's reference frame.
         \begin{align*}
-            v_c &= \frac{v_d+v_c'}{1+\frac{v_dv_c'}{c^2}}\\
-            \frac{3}{4}c &= \frac{0.5c+v_c'}{1+\frac{0.5c\cdot v_c'}{c^2}}\\
-            \frac{3}{4}c &= \frac{0.5c+v_c'}{1+\frac{0.5\cdot v_c'}{c}}\\
-            \frac{3}{4}c + \frac{3v_c'}{8c}&= 0.5c+v_c'\\
-            \frac{1}{4}c &= \frac{8v_c'c-3v_c'}{8c}\\
-            2c^2 &= 8v_c'c-3v_c'\\
-            2c^2 &= v_c'(8c-3)\\
-            v_c' &= \frac{2c^2}{8c-3} 
+            v_t &= \frac{v_d+v_t'}{1+\frac{v_dv_t'}{c^2}}\\
+                &= \frac{\frac{5}{6}c}{1+\frac{c^2}{6c^2}}\\
+                &= \frac{\frac{5}{6}c}{1+\frac{1}{6}}\\
+                &= \frac{5}{7}c
         \end{align*}
-        Thus, difference in the Destroyer's reference frame is:\\
+        \[v_c-v_t = \frac{3}{4}c-\frac{5}{7}c=\fbox{\(\frac{1}{28}c\)}>0\]
+        Thus the Corvette does escape.
+        \item [b)] See the reference frame moving at \(-v_d\) toward the Star destroyer. Thus:
         \begin{align*}
-            v_{dif}' &= \frac{v_c'-v_t'}{1+\frac{v_t'v_c'}{c^2}}\\
-            v_c'-v_t'&= \frac{2c^2}{8c-3} - \frac{1}{3}c <0
+            v_c' &= \frac{-v_d+v_c}{1+\frac{-v_dv_c}{c^2}}\\
+                &= \frac{\frac{1}{4}c}{1-\frac{3}{8}}\\
+                &= \frac{2}{5}c
         \end{align*}
-        Thus, \(v_{diff}'<0\) and the Corvette cannot escape.
+        \[v_c'-v_t'=\frac{2}{5}c-\frac{1}{3}c=\fbox{\(\frac{1}{15}c\)}>0\]
+        Therefore, the Corvette does escape.
     \end{itemize}
 \end{itemize}
 
