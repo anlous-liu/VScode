@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due: Sep 13  Edit: \today}
+\title{ME 200 Homework 2}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] 
+    \begin{itemize}
+        \item [a)] 3.613 bar
+        \item [b)] \(1.029\times 10^{-3}\)m\(^3/\)kg
+        \item [c)] \(b = \frac {0.03394-0.03160}{520-480}=0.000059\), Thus \(v=(485-480)\times0.000059+0.03160=0.031893 \text{m}^3/\text{kg}\)
+        \item [d)] \(v = (1-x)v_f+xv_g=0.25\times1.0291\times10^{-3}+0.75\times3.407=2.55551 \text{m}^3/\text{kg}\)
+        \\ p = 0.4739 bar
+        \begin{figure}[h]
+            \centering
+            \includegraphics*[scale=0.05]{image/fig1.jpeg}
+        \end{figure}
+    \end{itemize}
+    \item [2.] The specific volume of CO\(_2\) gas and liquid is given together with the quality, thus, there exists the following equation sets:
+    (Mark specific volumes as \(\nu\))
+    \begin{align*}
+        \left\{
+        \begin{matrix}
+            \frac{1}{\nu_f}V_f+\frac{1}{\nu_g}V_g &= &m\\
+            0.7m&=&\frac{1}{\nu_g}V_g\\
+            V_g+V_f &=&1
+        \end{matrix}
+        \right.
+    \end{align*} 
+    plug in and solve for \(V_g,V_f,m\) gives:
+    \[
+    \left\{
+    \begin{matrix}
+    V_f &=&0.023422\ \text{m}^3\\
+    V_g &=&0.976578\ \text{m}^3\\
+    m   &=& 79.4482 \ \text{kg}
+    \end{matrix}
+    \right.
+    \]
+    \(\displaystyle \frac{V_g}{1} = 2.34\%\), \(m_v = \frac{1}{\nu_v}\times V_v = 55.6138\text{ kg},
+     m_f=\frac{1}{\nu_f}\times V_f=23.7348\text{ kg}\)
+    Thus, fluid mass is \(23.7348\) kg, vapor mass is \(55.6138\) kg, volume of fluid is 2.34\% of the container.
+    \item [3.] 
+    \[\frac{T_1}{T_2}=\frac{P_1}{P_2}=\frac{6}{3}=\frac{40+273}{T_2}\]
+    \(T_2 = -116.5^\circ C\)
+    \begin{figure}[h]
+        \centering
+        \includegraphics*[scale=0.25]{image/fig2.jpeg}
+    \end{figure}
+    \item [4.]
+    \[\frac{T_1}{T_2}=\frac{P_1}{P_2}=\frac{520+173}{270+173}=\frac{100}{P_2}\]
+    Thus, \(P_2 = 63.925\) bar.
+    \begin{figure}[h]
+        \centering
+        \includegraphics*[scale=0.17]{image/fig3_1.jpeg}
+    \end{figure}
+    \newpage
+    \item [5.] \(p_{ini}=300+101 = 401\) kPa, \(p_{aft}=367+101=468\) kPa
+    \[\frac{T_1}{T_2}=\frac{P_1}{P_2}=\frac{401}{468}=\frac{27+173}{T_2}\]
+    \(T_2 = 233.416\) K\(=60.41^\circ\)C
+    \item[6.] \(m_{pis} = 2240\)lb, \(F_{g(pis)} = m_{pis}\times g=2240\) lbf, 
+    \(\displaystyle p_{gag}=\frac{F_{g(pis)}}{A}=\frac{2240}{2.5^2\times\pi}=114.082\) lbf/ft\(^2\)
+    \(p = p_{gag}+p_{atm}=114.082+2116.22 = 2230.3\) lbf/ft\(^2\)\\
+    \(\displaystyle v = \frac{nRT}{p}=\frac{600\div 17.031\times1.987\times 504.67}{2230.3}=\fbox{\(15.8399 \ \text{ft}^3\)}\)\\
+    No it is unessesary as the liquid it self is providing enough pressure on the piston which generates enough force to keep it in equalibrium state.
+\end{itemize}
+\end{document}
