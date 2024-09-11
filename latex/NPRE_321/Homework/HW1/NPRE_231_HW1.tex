@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{esint}
+
+
+\date{Due: Sep 11 Edit: \today}
+\title{NPRE 321 HW 1}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+\item[1.] Plasma is one of the four fundamental states of matter, alongside solid, liquid, and gas. It is composed of ionized particles—atoms that have lost or gained electrons—resulting in a mixture of free electrons and ions. Despite being charged, plasma as a whole remains quasi-neutral because the positive and negative charges balance each other out. Plasma is often extremely hot, with temperatures ranging from 1-2 electron volts (eV) in near-vacuum environments to around 10 kiloelectron volts (keV) in high-energy fusion reactors. These temperatures are necessary to overcome the forces that hold atomic nuclei together, allowing fusion reactions to take place.
+
+On Earth, plasma has various applications. It is integral in the production of semiconductors and microchips, where it is used in processes like etching and deposition. Plasma is also utilized for surface treatments, such as coating materials with protective layers, and for disinfection, as it can kill bacteria and other microorganisms without the use of chemicals. In everyday life, plasma is present in devices like fluorescent lights and plasma TVs, where it produces visible light. One of the most ambitious uses of plasma is in fusion reactors, where scientists aim to replicate the processes that power stars, generating clean and almost limitless energy.
+
+In the universe, plasma is by far the most abundant state of matter. It makes up 99\% of the visible universe and serves as the building block of stars, including our Sun, and other celestial bodies like nebulas. These massive clouds of ionized gas are the nurseries of stars, where new stars are born. Plasma also exists in the space between stars, in regions called the interstellar medium. This cosmic plasma plays a vital role in the formation of galaxies and the dynamics of astrophysical processes across the universe.
+
+\newpage
+\item[2.] set the lower left corner as the origin, then the upper left corner have a position of \((0,0.05)\), and lower right having \((0.05,0)\) with upper right \((0.05,0.05)\). 
+\\\(F_{ul} = -k\frac{-q\times3q}{0.05^2}=-\frac{1}{4\pi\varepsilon_0}\frac{-q\times3q}{0.05^2}=-8.98774\times10^9\times\frac{-3\times10^{-12}}{2.5\times10^-3}=10.7853\)N
+\\\(F_{lr} = -k\frac{-q\times q}{0.05^2}=-\frac{1}{4\pi\varepsilon_0}\frac{-q\times q}{0.05^2}=-8.98774\times10^9\times\frac{-1\times10^{-12}}{2.5\times10^-3}=3.5951\)N
+\\\(F_{ur} = -k\frac{-q\times-2q}{2\times0.05^2}=-\frac{1}{4\pi\varepsilon_0}\frac{-q\times-2q}{0.05^2}=-8.99\times10^9\times\frac{-2\times10^{-12}}{5\times10^-3}=-3.5951\)N
+\\\(|F_{ur}| = 3.5951\), \(\sqrt{2x^2} = |F_{ur}|\), \(x=2.54212\)N, \\Thus, \(F_{ur} = -2.542 i+-2.542 j\)
+\\ Thus, \(F = (10.7853-2.542)i + (3.5951-2.542)j = 8.24317i+1.05298j\),
+\\ Thus, \(|F| = \sqrt{8.24317^2+1.05298^2}=8.31015\)N
+\item[3.]
+\begin{itemize}
+    \item [a)]
+    \[\Phi = \frac{Q}{\varepsilon_0}=\oiint_{}^{} E\text{d}A\]
+    \begin{align*}
+        Q = V\rho &= \frac{4}{3}\pi r^3\times2.4\\
+                    &= \frac{4}{3}\pi \times 0.005^3\times 2.4\\
+                    &=1.2566 \times 10^{-6} \text{C}
+    \end{align*}
+    Thus, \(\Phi = 1.005\times10^{-5}\div(8.854\times10^{-12}) =141928.7 \)\\
+    Thus, \(E = \Phi\div A = 141928.7 \div (4\times\pi\times0.01^2)=4.51773\times10^{8}\)
+    \item [b)]
+    \begin{align*}
+        Q = V\rho &= \frac{4}{3}\pi r^3\times2.4\\
+                    &= \frac{4}{3}\pi \times 0.01^3\times 2.4\\
+                    &=1.005 \times 10^{-5} \text{C}
+    \end{align*}
+    Thus, \(\Phi = 1.005 \times10^{-5}\div(8.854\times10^{-12}) =1.13543 \times 10^{6} \)\\
+    Thus, \(E = \Phi\div A = 1.13543 \times 10^{6} \div (4\times\pi\times0.01^2)=9.03546\times10^{8}\)
+    \item [c)] \(Q\) is the same with question 3,b), \(Q = 1.005 \times 10^{-5}\).\\Thus, \(\Phi = 1.13543 \times 10^{6}\)
+    \\Thus, \(E = \Phi\div (4\pi r^2 ) = 1.13543 \times 10^{6}\div(4\pi 0.06^2)=2.50985 \times 10^7\)
+\end{itemize}
+\newpage
+\item[4.] \(E = k_BT = 1.38\times10^{-23}\times 1\times10^5 = 1.38\times10^{-18}\)J,\\
+\(v = \sqrt{\frac{2E}{m}} = \sqrt{2\times1.38\times10^{-18}\div9.11\times10^{-31}}=1.74059\times 10^{6}\)m/s
+\begin{itemize}
+    \item [a)] It will start to do circular motion in the surface perpendicular to the magnetic field line's.
+    \item [b)] \(F = vB = 1.74059\times 10^{6}\times 1 = 1.74059\times 10^{6}\)N\\
+                \(a=F\div m = 1.74059\times 10^{6}\div 9.11\times 10^{-31} = 1.91063\times 10^{36}\) m/s\(^2\)
+                \(r = v^2 \div a = (1.74059\times 10^{6})^2\div 1.91063\times 10^{36} = 1.58567\times 10^{-24}\) m
+            \\  \(C = 2\pi r = 2\pi\times1.58567\times 10^{-24}=9.96308\times 10^{-24}\) m
+            \\  \(T = C/V = 9.96308\times 10^{-24}\div1.74059\times 10^{6}=5.72398 \times 10^{-30}\)s 
+            \\  \(\frac{1}{T}=1.74704\times 10^{29}\) s\(^{-1}\).
+            \\  Thus, \(\omega = 1.74704\times 10^{29}\times 2\pi = (3.49407\times 10^{29})\times \pi\) rad/s
+    \item [c)]\(r = 1.58567\times 10^{-24}\) m
+\end{itemize}
+\item[5.]
+\end{itemize}
+\end{document}

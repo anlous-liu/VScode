@@ -71,8 +71,13 @@
     and \(\exists \mu_1,\cdots,\mu_n\in F\) that \(-v=\mu_1v_1+\cdots+\mu_nv_n\).\\ Thus, \(v+\mu_1v_1+\cdots+\mu_nv_n=0\) and it is linear dependent with the set of basis. Thus, the maximum numebr of elements is \(n\).
 
 \end{itemize}
-    \item [7.] 
-    \item [8.] As \(v\in \text{span}  \ S\), \(\text{span } S = \text{span }S\cup \{v\}\)
+    \item [7.] \(s' \in \text{span }S\), thus, \(\exists \lambda_i\in F\) that \(s' = \sum_i\lambda_i s'_i\) where \(s'_i\in S\). Also, as \(S'\subset S'\), there is \(\forall s'_i\in S'\), \(s'_i\in S\), thus, as \(s'\)
+    can be expressed in \(s' = \sum_i\lambda_i s'_i\), \(s'\in \text{span }S\), thus \(\text{span }S'\subset\text{span }S\)
+    \item [8.] As \(v\in \text{span}  \ S\), \(\exists \lambda_i\in F,\ \forall s_i \in S\) that \(v = \sum_i \lambda_is_i\)
+    \(\forall w\in \text{span } (S\cup \{v\})\), \(\exists \lambda_i,\lambda'_i,\mu\in F\), \\
+    that \(w=\sum_i\lambda_is_i + \mu  = \sum_i\lambda_is_i+\mu\sum_i\lambda'_is_i=\sum_i(\lambda_i+\mu\lambda'_i)s_i\)
+    , \((\lambda_i+\mu\lambda'_i)\in F\) thus, set \(\lambda_i+\mu\lambda'_i=\alpha_i\), then \(w = \sum_i \alpha_is_i\) Thus, span \(S=\)span \((S\cup \{v\})\)
+    
     \item [9.] \(\forall \lambda_i,\mu_i,a,b\in F\):
     \begin{align*}
         F(a\lambda_1+b\mu_1,\cdots,a\lambda_n+b\mu_n)&=a\lambda_1v_1+b\mu_1v_1+\cdots+a\lambda_nv_n+b\mu_nv_n\\
@@ -80,6 +85,6 @@
         &=a(\lambda_1v_1+\cdots+\lambda_nv_n) + b(\mu_1v_1+\mu_nv_n)\\
         &=aF(\lambda_1,\cdots,\lambda_n) + bF(\mu_1,\cdots,\mu_n)
     \end{align*}
-    Therefore it is a linear map
+    Therefore it is a linear map.
 \end{itemize}
 \end{document}
