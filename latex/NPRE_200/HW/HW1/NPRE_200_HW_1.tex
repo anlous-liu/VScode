@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due:Sep 13 Edit: \today}
+\title{NPRE200 HW 1}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] \(\displaystyle P_f = \frac{800}{800+300}=\fbox{72.73\%}\)
+    
+    \item [2.] \(\displaystyle \Sigma_f^{235} = \sigma_{f}^{235}N^{235}=582\times10^{-24}\times5\times10^{21}=2.91 \)\\
+                \(\displaystyle \Sigma_a^{235}= \sigma_{a}^{235}N^{235}=700\times10^{-24}\times5\times10^{21}=3.5 \)\\
+                \(\displaystyle \Sigma_a^{238}= \sigma_{a}^{238}N^{238}=2.71\times10^{-24}\times4.35\times10^{22}=0.117885 \)\\
+    \(\displaystyle \eta = \frac{\nu \Sigma_f}{\Sigma_a}=\nu\frac{\Sigma_f^{235}}{\Sigma_a^{235}+\Sigma_a^{238}}=2.42\times\frac{2.91}{3.5+0.117885}=\fbox{1.9465}\)
+    \item [3.] 
+    \begin{itemize}
+        \item [a)] \(3.5 \times 20^{-24}\times 4.2\times10^{23}=\fbox{\(1.47\text\ {cm}^{-1}\)}\)
+        \item [b)] \(\lambda = 1/\Sigma = \fbox{0.680272cm}\) 
+    \end{itemize}
+    \item [4.] \(\rho_{atm} = \frac{\rho_{mas}A}{m}=\frac{0.79\times6.023\times10^{23}}{22.99}=\fbox{\(2.6967\times10^{22} \text{atom/cm}^3\)}\)
+    \item [5.] 
+    \begin{itemize}
+        \item [a)] \(1500 \times 0.2 = \fbox{300 kg}\)
+        \item [b)] \(^{235}U:\)  \(\frac{19.1\times0.2\times6.023\times10^23}{235}=  \fbox{\(9.79058\times 10^{21}\text{ cm}^{-3}\)}\)\\
+                    \(^{238}U:\)  \(\frac{19.1\times0.8\times6.023\times10^23}{235}= \fbox{\(3.86687\times 10^{22}\text{ cm}^{-3}\)}\)\\
+                    \(9.79058\times 10^{21}\div(9.79058\times 10^{21}+3.86687\times 10^{22})=20.2037\%\)
+    \end{itemize}
+    \item [6.]  \(m = 0.025 \times 235 + 0.975 \times 238 = 237.925 \)\\
+                \(n = 19.0\div237.925 \times 6.023\times10^{23} =4.80979\times 10^{22} \)\\
+                \(n_{235} = n\times 0.025 = \fbox{\(1.20245\times 10^{21} \text{ cm}^{-3}\)}\)
+    \item [7.]  
+    \begin{itemize}
+        \item [a)] \(m_u = 0.25\times 235 + 0.75 \times 238 = \fbox{237.25 g/mol}\) 
+        \item [b)] \(m = m_u + m_c = 237.25+12 = 249.25 \)\\
+                    \(n = \frac{\rho A}{m} = 13.6\times6.023\times10^{23}\div 249.25 = 3.28637\times 10^{22}\)\\
+                    \(M_u = n_u\div A\times m_u = 12.9452\) g/cm\(^3\)\\
+                    \(m_{235} = 0.25 m_u = 3.23631\)\\
+                    \(n_{235} = 3.23631\div 235 \times 6.023 \times 10^{23} = \fbox{\(8.29459 \times 10^{21}\)}\)
+    \end{itemize}
+    \newpage
+    \item [8.] \(m_u = 0.035\times 235 + 0.965 \times 238 = 237.895\)  g/mol\\
+                \(m = m_u +2m_o = 237.895+2\times16=269.895\) g/mol\\
+                \(n = \rho \div m = 0.040016\) mol/cm\(^3\)\\
+                \(M_u = n\times m_u = 0.040016\times 237.895=10.8\) g/cm\(^3\)\\
+                \(M_{235} = M_u\times 0.035 = 10.8\times 0.035 = 0.378\) g/cm\(^3\)\\
+                \(n_{235} = M_{235}\div m_{235}\times A = \fbox{\(9.68806\times10^{20} \text{cm}^{-3}\)}\)\\
+                \(n_{238} = M_{238}\div m_{238}\times A = \fbox{\(2.63747\times10^{22} \text{cm}^{-3}\)}\)
+    \item [9.]  QUESTION REMOVED
+    
+    \item [10.] \(n_{Al} = M_{Al}\div m_{Al} = 0.55 \times 2.66 \div26.9815 = 0.05422\) mol\\
+                \(n_{Si} = M_{Si}\div m_{Si} = 0.45 \times 2.66 \div28.0855 = 0.04262\) mol\\
+                \(\Sigma = \sigma_{Al}N_{Al} + \sigma_{Si}N_{Si} \\ =  6.023\times 10^{23}\times (0.23\times0.05422 + 0.16 \times0.04262)\times10^{-24}\\= 0.011618\) cm\(^{-1}\)
+                \(\lambda = \frac{1}{\Sigma} = \fbox{86.0715 cm}\) 
+    \item [11.] \(\frac{1.3}{1.3-1.2} = \fbox{7.6923\%}\)
+    \item [12.] \(\sigma = e\sigma^{235}+(1-e)\sigma^{238}+2\times \sigma_O \\= 0.2\times607.5+0.8\times11.8+2\times 3.8 = 138.54\) barn \\
+                \(m = 0.2\times m^{235}+0.8\times m^{238}+2\times 16 = 269.4\) g/mol\\
+                \(n = M/m = 10.5\div 269.4 \times 6.023\times10^{23}= 2.34749\times 10^{22}\)\\
+                \(\Sigma = mn = 138.54\times 10^{-24}\times 2.34749\times 10^{22} = \fbox{3.2522 cm\(^{-1}\)}\)
+
+
+\end{itemize}
+\end{document}
+
+
+
