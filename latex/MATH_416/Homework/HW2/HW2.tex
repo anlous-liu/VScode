@@ -24,12 +24,18 @@
         \\ &= \lambda \overrightarrow{v}+\mu\overrightarrow{v}
     \end{align*}
     Thus, as it is not a vector space.
-    \item [2.] No it is not a vector space, as:
-    \begin{align*}
-        \exists \lambda,\mu \in \mathbb{R},\ (\lambda+\mu)\overrightarrow{v}&= a^{\lambda+\mu}\\
-        & = a^\lambda\times a^\mu \neq a^\lambda+a^\mu\\
-        & = \lambda\overrightarrow{v}+\mu\overrightarrow{v}
-    \end{align*}
+    \item [2.] Yes it is a vecotr space, as:
+    \begin{itemize}
+        \item [a)] addition is communitive as \(ab = ba\)
+        \item [b)] addition is associative as \(a(bc)=(ab)c\)
+        \item [c)] For \(a=1\), \(\forall b\in V\), \(ab = b\), thus \(1=\overrightarrow{0}\)
+        \item [d)] \(\forall a\in V\), \(-a + a=a^{-1}\times a^1 = a^0 = 1 = \overrightarrow{0} \)
+        \item [e)] \(\forall a\in V\), \(a^1 = a\)
+        \item [f)] \(\lambda(\mu a) = (a^{\mu})^\lambda = a^{\mu\lambda} = (\lambda\mu)a\)
+        \item [g)] \(\lambda(a+b) = (ab)^\lambda = a^\lambda b^\lambda = \lambda a+\lambda b\)
+        \item [h)] \((\lambda+\mu)a = a^{\lambda+\mu}=a^{\lambda}\cdot a^{\mu}=\lambda a+\mu a\)
+        \item [i)] It is also closed onder vector multiplication and addition as any power of a positive realnumber will stay positive and thus any multiple is also still positive thus remains in the \((0,\infty)\) range.
+    \end{itemize}
     For example: \(\lambda=2,\mu=1,a=2,\) as \(2^{(1+2)}=8\neq6=2^1+2^2\)
     Thus, it is not a vector space.
     \item [3.] No it is not in the span. Suppose it is then \(\exists a_1,a_2\in\mathbb{R}\) such that \(a_1(3, 4, 2)^T + a_2(1, 3, 3)^T =(-1,2,3)^T\)
@@ -55,7 +61,6 @@
     \item[4.] as \(v\) is in span of the subspace, then:\(\exists {a_1,\cdot,a_n}, a_i\in\mathbb{R}\) that \\
     \(v = a_1\overrightarrow{v}_1+\cdots +a_n\overrightarrow{v}_n \)
     Thus, \(-1v+a_1\overrightarrow{v}_1+\cdots +a_n\overrightarrow{v}_n=0\) thus, the set is linear dependent.
-    \newpage
     \item [5.] As \(U,W\) are subspace of \(V\), then \(\overrightarrow{0}\in U,W\) thus \(\overrightarrow{0}\in U\cap W\)
     Also, consider that \(x,y\in U\cap W\), then  \(x,y\in W\) and \(x,y\in U\), Thus, \(x+y\in U\) as \(U\) is a subspace, 
     similarly, \(x+y\in W\) therefore. \(x+y\in U\cap W\) similarly, \(\forall \lambda \in \mathbb{R}\), \(\lambda x \in U\), and \(\lambda x \in V\), therefore, the addition

@@ -56,15 +56,35 @@ In the universe, plasma is by far the most abundant state of matter. It makes up
 \(v = \sqrt{\frac{2E}{m}} = \sqrt{2\times1.38\times10^{-18}\div9.11\times10^{-31}}=1.74059\times 10^{6}\)m/s
 \begin{itemize}
     \item [a)] It will start to do circular motion in the surface perpendicular to the magnetic field line's.
-    \item [b)] \(F = vB = 1.74059\times 10^{6}\times 1 = 1.74059\times 10^{6}\)N\\
-                \(a=F\div m = 1.74059\times 10^{6}\div 9.11\times 10^{-31} = 1.91063\times 10^{36}\) m/s\(^2\)
-                \(r = v^2 \div a = (1.74059\times 10^{6})^2\div 1.91063\times 10^{36} = 1.58567\times 10^{-24}\) m
-            \\  \(C = 2\pi r = 2\pi\times1.58567\times 10^{-24}=9.96308\times 10^{-24}\) m
-            \\  \(T = C/V = 9.96308\times 10^{-24}\div1.74059\times 10^{6}=5.72398 \times 10^{-30}\)s 
-            \\  \(\frac{1}{T}=1.74704\times 10^{29}\) s\(^{-1}\).
+    \item [b)] \(F = qvB = 1.6\times 10^{-19}\times1.74059\times 10^{6}\times 1 = 2.78494\times10^{-13}\)N\\
+                \(a=F\div m = 2.78494\times10^{-13}\div 9.11\times 10^{-31} = 3.057\times 10^{17}\) m/s\(^2\)
+                \(r = v^2 \div a = (1.74059\times 10^{6})^2\div 3.057\times 10^{17} = 9.9105\times 10^{-6}\) m
+            \\  \(C = 2\pi r = 2\pi\times9.9105\times 10^{-6}=6.226\times10^{-5}\) m
+            \\  \(T = C/V = 6.226\times10^{-5}\div1.74059\times 10^{6}=3.57751\times10^{-11}\)s 
+            \\  \(\frac{1}{T}=2.79524\times10^{10}\) s\(^{-1}\).
             \\  Thus, \(\omega = 1.74704\times 10^{29}\times 2\pi = (3.49407\times 10^{29})\times \pi\) rad/s
-    \item [c)]\(r = 1.58567\times 10^{-24}\) m
+    \item [c)]\(r = 9.9105\times 10^{-6}\) m
 \end{itemize}
-\item[5.]
+\item[5.]setting the plasma in equalibrium with 0 electric field:
+\begin{align*}
+    F &= qv\times B, \ \nabla \times B = \mu_0 J\\
+    J &=\frac{\nabla \times B}{\mu_0}
+\end{align*}
+Let the pressure force be as \(-\nabla P\),
+\begin{align*}
+    F = q(v\times B)-\nabla P = J\times B- \nabla P\\
+    \nabla P = \frac{(\nabla \times B)\times B}{\mu_0}\\
+\end{align*}
+using the given relationship:
+\begin{align*}
+    (B\cdot \nabla)B &= \nabla \left(\frac{1}{2}B^2\right)-B\times(\nabla\times B)\\
+    \nabla \left(\frac{1}{2}B^2\right) &=(B\cdot \nabla)B-(\nabla \times B)\times B
+\end{align*}
+Using the Maxwell's equation \(\nabla\cdot B = 0\), we have:
+\begin{align*}
+    \nabla \left(\frac{1}{2}B^2\right) &=0\cdot B-(\nabla \times B)\times B\\
+    \nabla \left(\frac{1}{2}B^2\right) &=-\mu_0\nabla P\\
+    P &= \left|\frac{B^2}{2\mu_0}\right|
+\end{align*}
 \end{itemize}
 \end{document}
