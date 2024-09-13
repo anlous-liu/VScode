@@ -1,0 +1,199 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due: Sep 13  Edit: \today}
+\title{MATH 461 Homework 2}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\section*{Part 1}
+\begin{itemize}
+    \item [17.] \(\displaystyle\frac{8!}{\binom{64}{8}}\)
+    \item [18.] \(\displaystyle\frac{\binom{4}{1}\binom{16}{1}}{\binom{52}{2}}\)
+    \item [20.] \(\displaystyle n_{tot} = \binom{52}{2}\binom{50}{2}=1624350\), \\ 
+    \(\displaystyle n_{both} = \binom{4}{1}\binom{16}{1}\binom{3}{1}\binom{15}{1}=2880\)\\
+    \(\displaystyle n_{1} = 2\times \binom{4}{1}\binom{16}{1}\left(\binom{3}{2}+\binom{3}{1}\binom{32}{1}+\binom{47}{2}\right)=151040\)\\
+    \(\displaystyle P =1 -  \frac{n_1+n_{both}}{n_{tot}} = 1-\frac{151040+2880}{1624350} = 90.5242\%\)
+    \item [21.]
+    \begin{itemize}
+        \item [a)] \(P(i=1) = \frac{4}{20} = 20\%,\ P(i=2)= \frac{8}{20} = 40\%,\\ 
+        P(i=3) = \frac{5}{20} = 25\%,\ P(i=4) = \frac{2}{20} = 10\%, \\
+        P(i=5) = \frac{1}{20} = 5\%\)
+        \item [b)] \(n_{c} = 4+2\times 8 +3\times 5 + 4\times2 + 5\times 1 = 48 \)\\
+        \(P(i = 1) = \frac{4}{48}=8.33\%,\ P(i = 2) = \frac{16}{48}=33.3\%\\
+        P(i = 3) = \frac{15}{48}=31.25\%, P(i = 4) = \frac{8}{48}=16.7\%\\
+        P(i = 5) = \frac{5}{48}=10.4\%\)
+    \end{itemize}
+    \item [25.] \(n_5 = |\{(1,4),(2,3),(3,2),(4,1)\}| = 4\)\\
+                \(n_7 = |\{(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\}| = 6\)\\
+                Thus, for rolling a sum of 5 at the n\(^{\text{th}}\) turn while not rolling any sum of 7 before is \(\displaystyle \frac{4}{36}\left(\frac{36-4-6}{36}\right)^{n-1}\).
+                \\ \(\displaystyle P(\text{5 before 7}) = \sum_{n=1}^\infty \frac{4}{36}\left(\frac{26}{36}\right)^{n-1}= \frac{4}{36}\sum_{n=1}^\infty\left(\frac{26}{36}\right)^{n-1} \\= \frac{1}{9}\times\left(\frac{\frac{26}{36}^\infty-1}{\frac{26}{36}-1}\right)=\frac{1}{9}\times \frac{18}{5} =40\%\)
+                \\ By getting the simulations going to infinity, the series should be the probability we want.
+    \item [27.] \( \displaystyle 
+    P(\text{A's first ball is red})=\frac{3}{10} = 0.3\\
+    P(\text{A's second ball is red})= \frac{7}{10}\frac{6}{9}\frac{3}{8}=0.175\\
+    P(\text{A's third ball is red})= \frac{7}{10}\frac{6}{9}\frac{5}{8}\frac{4}{7}\frac{3}{6}=0.08333\\
+    P(\text{A's fourth ball is red})= \frac{7}{10}\frac{6}{9}\frac{5}{8}\frac{4}{7}\frac{3}{6}\frac{2}{5}\frac{3}{4}=0.025\\
+    P(\text{A gets red ball}) = 58.33\%
+    \)
+    \item [28.]
+    \begin{itemize}
+        \item [a)]
+        \(\displaystyle 
+        P(\text{get 3 red}) = \left(\frac{5}{19}\right)^{3}\\
+        P(\text{get 3 blue}) = \left(\frac{6}{19}\right)^{3}\\
+        P(\text{get 3 green}) = \left(\frac{8}{19}\right)^{3}\\
+        P(\text{3 same color}) = \left(\frac{5}{19}\right)^{3}+\left(\frac{6}{19}\right)^{3}+\left(\frac{8}{19}\right)^{3}=12.4362\%
+        \)
+        \item [b)]
+        \(\displaystyle
+        P = 3! \times \left(\frac{8}{19}\cdot\frac{6}{19}\cdot\frac{5}{19}\right) = 20.99\%
+        \)
+    \end{itemize}
+    \item [32.]since each girl is different, then to first put a girl on the i\(^{\text{th}}\) location there will be \(g\) ways, then permute the rest people we have a answer of:\\
+    \(\displaystyle \frac{g(g+b-1)!}{(g+b)!}\)
+    \item [37.] 
+    \begin{itemize}
+        \item [a)] \(\frac{\binom{7}{5}}{\binom{10}{5}}=8.33\%\)
+        \item [b)] \(\frac{\binom74\binom31+\binom{7}{5}}{\binom{10}{5}} = 50\%\)
+    \end{itemize}
+    \item [43.]
+    \begin{itemize}
+        \item [a)] \(\frac{2\times(N-1!)}{N!}\)
+        \item [b)] \(\frac{2\times (n-1-1)!}{(n-1)!}\)
+    \end{itemize}
+    \item [50.]\(\displaystyle
+    P = \frac{\binom{13}{5}\binom{39}{8}\binom{31}{5}\binom{8}{8}}{\binom{52}{13}\binom{31}{13}}
+    \)
+    \newpage
+    \item [53.]\(\displaystyle
+    P(A) = P(\text{At least 1 couple together})=\frac{\binom{4}{1}\times (8-1)!\times2}{8!} = \\
+    P(B) = P(\text{At least 2 couple together})=\frac{\binom{4}{2}\times (8-2)!\times4}{8!} = \\
+    P(C) = P(\text{At least 3 couple together})=\frac{\binom{4}{3}\times (8-3)!\times8}{8!} = \\
+    P(D) = P(\text{At least 4 couple together})=\frac{\binom{4}{4}\times (8-4)!\times16}{8!}= \\
+    P(\text{no couple together})= \\ 1-\frac{\binom{4}{1}\times (8-1)!\times2-\binom{4}{2}\times (8-2)!\times4+\binom{4}{3}\times (8-3)!\times8-\binom{4}{4}\times (8-4)!\times16}{8!}
+    \\= \frac{12}{35}
+    \)
+    \item [54.] \(\displaystyle
+    N(\text{void in one}) = 4\times \frac{\binom{39}{13}}{\binom{52}{13}}-6\times \frac{\binom{26}{13}}{\binom{52}{13}}+4\times\frac{\binom{13}{13}}{\binom{52}{13}}-0 = 5.11\%
+    \)
+\end{itemize}
+\section*{Part 2}
+\begin{itemize}
+    \item [3.1]\(\displaystyle
+    P(\text{diff}) = \frac{36-6}{36}\\
+    P(\text{diff}\cap\text{one 6}) = \frac{10}{36}\\
+    P(\text{one 6}|\text{diff}) = \frac{P(\text{diff}\cap\text{one 6})}{P(\text{diff})} = \frac{1}{3}
+    \)
+    \item [3.5]\(\displaystyle
+    P = \frac{6}{15}\frac{5}{14}\frac{9}{13}\frac{8}{12} = \frac{6}{91} = 6.59\%
+    \)
+    \item [3.6]
+    \begin{itemize}
+        \item [a)] \textbf{Without} replacement: 50\%
+            % \(\displaystyle
+            % P(\text{3 white balls}) = \frac{\binom{8}{3}\binom{4}{1}}{\binom{12}{4}}= 45.25\%\\
+            % P(\text{3 white balls}\cap\text{1,3,slot white}) = \frac{2}{\binom{12}{4}}\\
+            % P = \frac{2}{\binom{8}{3}\binom{4}{1}}=0.89\%
+            % \)
+        \item [b)] \textbf{With} replacement:50\%
+        % \(\displaystyle
+        % P(\text{3 white balls}) = \binom{4}{3}\times\left(\frac{8}{12}\right)^3\left(\frac{4}{12}\right) = 39.51\%\\
+        % P(\text{3 white balls}\cap\text{1,3,slot white}) = \frac{2}{12^4}
+        % P = \frac{\frac{2}{12^4}}{\binom{4}{3}\times\left(\frac{8}{12}\right)^3\left(\frac{4}{12}\right)}=0.02\%
+        % \)
+    \end{itemize}
+    \item [3.9]\(\displaystyle
+    P(2W) = \frac{1}{3}\frac{2}{3}\frac{3}{4}+\frac{2}{3}\frac{2}{3}\frac{1}{4}+\frac{1}{3}\frac{1}{3}\frac{1}{4} = \frac{11}{36}=30.56\%\\
+    P(2W\cap AW) = \frac{1}{3}\frac{2}{3}\frac{3}{4}+\frac{1}{3}\frac{1}{3}\frac{1}{4} = \frac{7}{36} = 19.44\%\\
+    P = P(2W\cap AW)/P(2W) = \frac{7}{11} = 63.64\%
+    \)
+    \item [3.10]\(\displaystyle
+    P(L2S) = \frac{13\times12\times11+39\times13\times12}{\binom{52}{3}}=\frac{6}{17} = 35.29\%\\
+    P(F1S\cap L2S) = \frac{13\times12\times11}{\binom{52}{3}}=\frac{33}{425} = 7.76\%\\
+    P = \frac{33}{425}/\frac{6}{17}=22\%
+    \)
+\end{itemize}
+\newpage
+\section*{Part 3}
+\begin{itemize}
+    \item [3.57]
+    \begin{itemize}
+        \item [a)] \(\displaystyle
+        P(2S) = 2\times p(1-p)
+        \)
+        \item [b)]\(\displaystyle
+        P(3I) = 3\times p^2(1-p)
+        \)
+        \item [c)]\(\displaystyle
+        P = \frac{2p^2(1-p)}{3p^2(1-p)}=\frac{2}{3}
+        \)
+    \end{itemize}
+    \item [3.59]
+    \begin{itemize}
+        \item [a)]\(\displaystyle
+        P = p^4
+        \)
+        \item [b)]\(\displaystyle
+        P = p^3(1-p)
+        \)
+        \item [c)]\(\displaystyle
+        1-p^4
+        \) as something else appear in first 4 toses which means at least a T is produced
+    \end{itemize}
+    \item [3.64]
+    \begin{itemize}
+        \item [a)]\(\displaystyle
+        P_1 = P(C) = p
+        \)
+        \item [b)]\(\displaystyle
+        P_2 = P(C) = p^2+0.5\times 2p(1-p)
+        \)
+    \end{itemize}
+    \(P_2-P_1 = p^2+p(1-p)-p=0\), thus both strategy shall have same probability of wining.
+    \item [3.66]
+    \begin{itemize}
+        \item [a)]\(P = P(C1C2C\cup C3C4C5) = (p_1p_2+p_3p_3-p_1p_2p_3p_4)p_5\) 
+        \item [b)]\begin{align*}
+P(E) &= P(C_1C_4 \cup C_2C_5 \cup C_3C_1C_5 \cup C_3C_2C_4)\\
+&= P\left[C_3^c(C_1C_4 \cup C_2C_5) \cup C_3(C_1C_4 \cup C_2C_5 \cup C_1C_5 \cup C_2C_4)\right]\\
+&= P(C_3^c)P(C_1C_4 \cup C_2C_5) + P(C_3)P(C_1C_4 \cup C_2C_5 \cup C_1C_5 \cup C_2C_4)\\
+&=p_1p_4 + p_2p_5 + p_3(p_1p_5 + p_2p_4) - (p_1p_2p_3p_4 + p_1p_2p_3p_5 \\&+ p_1p_3p_4p_5 + p_2p_3p_4p_5) + 2p_1p_2p_3p_4p_5
+\end{align*}
+    \end{itemize}
+    \item [3.78]
+    \begin{itemize}
+        \item [a)] \(P = 2\times p^3(1-p)+2\times p(1-p)^3\)
+        \item [b)] \(P = \frac{p^2}{p^2+(1-p)^2}\)
+    \end{itemize}
+    \item [3.81]\(\displaystyle
+    P = \frac{0.55^{15}}{0.45^{15}+0.55^{15}} = 95.30\%
+    \)
+    \item [3.83]\begin{itemize}
+        \item [a)]\(P = 0.5\times \frac{4}{6}+0.5\times\frac{2}{6}=\frac{3}{6}=\frac{1}{2}\)
+        \item [b)]\(P = \frac{3}{5}\)
+        \item [c)]\(P = \frac{4}{5}\)
+    \end{itemize}
+    \item [3.84]
+    \begin{itemize}
+        \item [a)]\(\displaystyle P(A) = \frac{1}{3}\sum_{i=1}^{\infty} \left(\frac{2}{3}\right)^{3(i-1)} = \frac{1}{3}\times\frac{-1}{\frac{8}{27}-1}=\frac{9}{19} \\
+        P(B) = \frac{2}{9}\sum_{i=1}^{\infty} \left(\frac{2}{3}\right)^{3(i-1)} = \frac{2}{9}\times\frac{-1}{\frac{8}{27}-1}=\frac{6}{19}\\
+        P(C) = \frac{19-9-6}{19} = \frac{4}{19} 
+        \)
+        
+        \item [b)]\(\displaystyle
+        P(A) =  P(A1)+P(A2)+P(A3) = \frac{7}{15}\\
+        P(B) =  P(B1)+P(B2)+P(A3) = \frac{68}{165}\\
+        P(C) =  1-P(A)-P(B)= \frac{4}{33}
+        \)
+    \end{itemize}
+\end{itemize}
+\end{document}
