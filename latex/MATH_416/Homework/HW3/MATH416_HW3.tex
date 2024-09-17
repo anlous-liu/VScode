@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due: Sep 18 Edit: \today}
+\title{MATH 416H HW 3}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+
+\begin{itemize}
+    \item [1.] \(\forall W \subseteq V\) that \(W\) is a subspace containing \(S\), (span \(S)\subseteq W\) as 
+    \(W\) is itself a vector space. Thus, \((\text{span }S)\subseteq\bigcap_i W_i\). Suppose it exisist such \(v\in V\), that \(v\notin \text{span }S\), while \(v\in \bigcap_iW_i\). Consider a subspace span \(S\subseteq V\) while S\(\subseteq\)span \(S\). Thus, span \(S=W_i\) for some \(i\). Thus, by definition of intersections, such vector does not exist, thus, \(\bigcap_iW_i\subseteq\text{span }S\)
+    Thus, the span of \(S\) equals the intersection of all
+    the subspaces of \( V\) containing \(S\).
+    \item [2.] For the 2 vectors to be linear independent, the only solution to \(\left\{\begin{matrix}
+    \lambda_1+\lambda_2 = 0\\
+    x\lambda_1+y\lambda_2 = 0
+    \end{matrix}\right.\) 
+    should be \(\left\{\begin{matrix}
+        \lambda_1=0\\\lambda_2 = 0
+    \end{matrix}\right.\).
+    for \(\lambda_1+\lambda_2 = 0\), there could be \(\lambda_1=\lambda_2=0\) or \(\lambda_1=-\lambda_2\) As the vectors should  be linear independent, then, \(-\lambda_1x+\lambda_2y\neq0\), thus \(x\neq y\).\\
+
+    For vectors with \(x\neq y\), there is \(\left\{\begin{matrix}
+    \lambda_1+\lambda_2 = 0\\
+    x\lambda_1+y\lambda_2 = 0
+    \end{matrix}\right.\) 
+    with only one set of solution of \(\lambda_1=\lambda_2 = 0\), Thus they are linearly independent with condition \(x\neq y\).
+    \item [3.]
+    \begin{itemize}
+        \item [i:]\(\displaystyle \begin{pmatrix}
+            1\\2\\1
+        \end{pmatrix}\) is one of the vectors that can form a basis. suppose they are linear dependent, then exisist \(\lambda_1,\lambda_2,\lambda_3\in\mathbb{R}\), \\that \(\lambda_1\begin{pmatrix}
+            0\\0\\1
+        \end{pmatrix} +\lambda_2 \begin{pmatrix}
+        1\\1\\0
+        \end{pmatrix} + \lambda_3 \begin{pmatrix}
+            1\\2\\1
+            \end{pmatrix} = \begin{pmatrix}
+                0\\0\\0
+            \end{pmatrix}\)\\
+        while \(\exists\lambda_i\neq0\) however \(\left\{\begin{matrix}
+            \lambda_2+2\times\lambda_3=0\\
+            \lambda_2+\lambda_3 = 0
+        \end{matrix}\right.\) Showing that \(\lambda_2=\lambda_3 = 0\) and thus, as \(\lambda_1+0+0=0\)
+        \(\lambda_1 = 0\), Thus they are linear independent, as there are 3 elements while the dimension of \(\mathbb{R}^3\) is also 3, it is a basis.
+        \item[ii:]\(\displaystyle \begin{pmatrix}
+            1\\0\\1
+        \end{pmatrix}\) is one of the vectors that can form a basis. suppose they are linear dependent, then exisist \(\lambda_1,\lambda_2,\lambda_3\in\mathbb{R}\), \\that \(\lambda_1\begin{pmatrix}
+            0\\0\\1
+        \end{pmatrix} +\lambda_2 \begin{pmatrix}
+        1\\1\\0
+        \end{pmatrix} + \lambda_3 \begin{pmatrix}
+            1\\0\\1
+            \end{pmatrix} = \begin{pmatrix}
+                0\\0\\0
+            \end{pmatrix}\)\\
+        while \(\exists\lambda_i\neq0\) however \(\left\{\begin{matrix}
+            \lambda_2+\lambda_3=0\\
+            \lambda_2= 0
+        \end{matrix}\right.\) Showing that \(\lambda_2=\lambda_3 = 0\) and thus, as \(\lambda_1+0+0=0\)
+        \(\lambda_1 = 0\), Thus they are linear independent, as there are 3 elements while the dimension of \(\mathbb{R}^3\) is also 3, it is a basis.
+        
+    \end{itemize}
+    \item[4.] As \(x+y+z = \overrightarrow{0}\), thus, \(z = -x-y\). In \(\forall v\in\)span \(\{y,z\}\)
+    \(\exists \lambda_1,\lambda_2\in F\) that \(v=\lambda_1y+\lambda_2z=\lambda_1y+\lambda_2(-x-y)=(\lambda_1-\lambda_2)y-\lambda_2x\), \((\lambda_1-\lambda_2 \in F)\), Thus \(v\) is also in 
+    span \(\{x,y\}\). Thus, span \(\{x,y\}=\)span \(\{y,z\}\)
+    \item[5.] 
+    \item[6.] \(\forall w\in R(T)\), \(\exists\lambda_i\in F\) that \(w = T(\sum_i^n\lambda_i v_i)\). As the map is linear,
+    there is \(T(\sum_i^n\lambda_i v_i)=\sum_i^n \lambda_i(T(v_i))\), Thus, \(w\in\)span \(T(v_i)\), Also, as profed in class, \(T(\overrightarrow{0}) = \overrightarrow{0}\) for linear transformations, and as \(T(v)\) is ,
+    then \(T(\sum_i^n\lambda_i v_i)=\overrightarrow{0}\) only when \(\sum_i^n\lambda_i v_i = \overrightarrow{0}\) which is that all \(\lambda_i = 0\).
+    Therefore, \(\sum_i^n \lambda_i(T(v_i))=\overrightarrow{0}\) only when all \(\lambda_i = 0\). Thus, \(T(v_i)\) is linear independent. Thus it is one of the basis of \(R(T)\). If the mapping not injective,
+    meaning that \(T(v_i)\) is not nessesarily linear independent as there might be some other vectors in the null space of \(T\), leading to a set of \(\lambda_i\) not all equal to 0 that gives \(\sum_i^n \lambda_i(T(v_i))=\overrightarrow{0}\).
+    \item[7.]
+    \begin{itemize}
+        \item [a)] these two operations are closed under the set of all maps between \(X\) and \(W\). 
+        \begin{itemize}
+            \item [i.] \((f+g)(x)=f(x)+g(x)=g(x)+f(x)=(g+f)(x)\) addition is communitivitive.
+            \item [ii.] \((f+(g+h))(x)=f(x)+(g(x)+h(x))=(f(x)+g(x))+h(x)=((f+g)+h)(x)\) addition is associative.
+            \item [iii.] Consider \(f(x)=0\), \((f+g)(x) = f(x)+g(x)=0+g(x)=g(x)\) zero vector do exisist.
+            \item [iv.] \(\forall f \in \)MAP\((X,W)\), \(-f(x)+f(x) = \overrightarrow{0}\) for all vector do exist a negative vecotr.
+            \item [v.] Consider \(\lambda = 1\) \(1f(x) = f(x)\), multiplicative identity exists.
+            \item [vi.] \(\lambda,\mu\in\mathbb{R}\), \(\lambda(\mu f(x))=(\mu\lambda)f(x)\)
+            \item [vii.] \(\lambda\in\mathbb{R}\), \(\lambda(f+g)(x) = \lambda(f(x)+g(x))=\lambda f(x)+\lambda g(x) = (\lambda f+\lambda g)(x)\)
+            \item [viii.] \(\lambda,\mu\in\mathbb{R}\), \((\lambda+\mu)f(x) = \lambda f(x)+\mu f(x)= (\lambda f +\mu f)(x)\)
+        \end{itemize}
+        Thus it is a vector space.
+        \item [b)] \(\forall\) linear maps \(f(x),g(x)\), \((f+g)(\lambda x) = f(\lambda x)+g(\lambda x)= \lambda f(x)+\lambda g(x) = \lambda (f+g)(x)\), thus, addition is closed.
+        Consider \(\lambda,\mu\in\mathbb{R}\), \((\lambda f)(\mu x) = \lambda f(\mu x)= \mu\lambda f(x)\). Thus scaler multiplication is also closed.
+        The other eight properties were checked in part \(a)\), thus, it is subspace.
+    \end{itemize}
+    \item [8.] \(\forall f \in \)Hom \((\mathbb{R}^3,\mathbb{R})\), \(\)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{itemize}
+\end{document}
