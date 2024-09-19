@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due:Sep 19 Edit: \today}
+\title{PHYS 225 HW 3}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item[1.]
+    \begin{itemize}
+        \item [a)]
+        \[\begin{bmatrix}
+            1&0&4\\0&1&2\\0&0&1
+        \end{bmatrix}\times\begin{bmatrix}
+            -1\\3\\1
+        \end{bmatrix}=\begin{bmatrix}
+            -1\cdot1+3\cdot0+1\cdot4\\
+            -1\cdot0+3\cdot1+1\cdot2\\
+            -1\cdot0+3\cdot0+1\cdot1
+        \end{bmatrix}=\begin{bmatrix}
+            3\\5\\1
+        \end{bmatrix}\]
+        
+        \item [b)]
+        \[\begin{bmatrix}
+            1&0&a_1\\0&1&a_2\\0&0&1
+        \end{bmatrix}\times\begin{bmatrix}
+            b_1\\b_2\\1
+        \end{bmatrix}=\begin{bmatrix}
+            b_1\cdot1+b_2\cdot0+1\cdot a_1\\
+            b_1\cdot0+b_2\cdot1+1\cdot a_2\\
+            b_1\cdot0+b_2\cdot0+1\cdot1
+        \end{bmatrix}=\begin{bmatrix}
+            b_1+a_1\\b_2+a_2\\1
+        \end{bmatrix}\]
+        
+        \item [c)]
+        \[\begin{bmatrix}
+            \text{cos}\theta&-\text{sin}\theta&x^0\\
+            \text{sin}\theta&\text{cos}\theta&y^0\\
+            0&0&1
+        \end{bmatrix}\times \begin{bmatrix}
+            x\\y\\1
+        \end{bmatrix}= \begin{bmatrix}
+            \text{cos}\theta \cdot x-\text{sin}\theta\cdot y+x^0\\
+            \text{sin}\theta \cdot x+\text{cos}\theta\cdot y+y^0\\
+            1
+        \end{bmatrix}\]
+
+        \item [d)] It is turing \(\overrightarrow{v}\) conter clockwise with degree of \(\theta\) and shifting its space's origin into \((x^0,y^0)\)
+        \begin{figure}[h]
+            \centering
+            \includegraphics*[scale=0.10]{image/image1.jpeg}
+        \end{figure}
+    \end{itemize}
+    \item[2.]
+    \begin{itemize}
+        \item [a)] \(M^i_i = 1-3+5 = 3\)
+        \item [b)] \(\delta^i_i =n\)
+        \item [c)] \(M^i_j\delta^j_i = \sum_{i}^{n}\sum_{j}^{n}M^i_j\delta^j_i = \{\sum_{i}^{n}\sum_{j}^{n}M^i_j|i=j\} = M^i_i\)
+    \end{itemize}
+\end{itemize}
+
+
+\end{document}
