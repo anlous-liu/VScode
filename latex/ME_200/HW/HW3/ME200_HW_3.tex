@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due: Sep 20  Edit: \today}
+\title{ME 200 Homework 3}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.]
+    \begin{itemize}
+        \item [a)]
+        \(P_{ini} = P_{final} = \fbox{\(2\text{ bar}\)}\), \\ \(W = p\times \Delta V = 2\times(0.04-0.1)\times10^5=\fbox{\(-12000\text{ J}\)}\) 
+        \item [b)]
+         \(P_{ini}V_{ini} = P_{final}V_{final}\), \(P_{ini}=\frac{2\times0.04}{0.1} = \fbox{\(0.8 \text{ bar}\)}=8\times 10^4\) Pa
+        \begin{align*}
+            pV &= 8000\\ \text{Thus:}\\p &= 8\times10^3\times V^{-1}\\
+            \text{Thus:}\\
+            W & = \int^{V_{final}}_{V_{ini}} p\ \text{d}V \\& = \int^{0.04}_{0.1}8\times 10^3 \times V^{-1} \ \text{d}V\\
+            &=8\times 10^3 \times \left.\text{ln}(V)\right|^{0.04}_{0.1}\\
+            &=\fbox{\(-7330.33 \text{ J}\)}
+        \end{align*}
+         \item [c)] 
+         \(P_{ini}V_{ini}^{1.3} = P_{final}V_{final}^{1.3}\), \(P_{ini}=\frac{2\times0.04^{1.3}}{0.1^{1.3}} = \fbox{\(0.607726 \text{ bar}\)}\)\\
+         \begin{align*}
+            pV^{1.3}&= 3045.85\\ \text{Thus:}\\p &=  3045.85\times V^{-1.3}\\
+            \text{Thus:}\\
+            W&=\int_{0.04}^{0.1} 3045.85\times V^{-1.3}\ \text{d}V\\
+            &=3045.85\times -\frac{10}{3}V^{-0.3}|^{0.04}_{0.1}\\
+            &=\fbox{\(-6409.13\ \text{J}\)}
+        \end{align*}
+    \end{itemize}
+    \newpage
+    \item [2.] 
+    \begin{align*}
+        p_1V_1^n &= p_2V_2^n\\
+       \frac{5}{72}\times 4.934^n &=\frac{1}{36}\times 11.04^n\\
+        n&=1.13772\\
+        \text{Thus:}\\
+        p&=0.426878\times V^{-1.13772}\\
+        W & = \int^{11.04}_{4.934}0.426878\times V^{-1.13772} \text{d}V\\
+        &\fbox{\(=0.261199 \text{ Btu/lb}\)}
+    \end{align*}
+    \((1124.2-1136.2)+0.261199= \fbox{\(-11.7388 \text{ Btu/lb}\)}\)
+    \item [3.] \(0.434\times 6.22 = \fbox{\(2.69948\text{kW}\)}\) , \(0.434\times24\times0.1 = \fbox{\(1.0416 \text{\$}\)}\)
+    \item [4.] \(W = \int p\ \text{d}V = 4\times(0.6872-0.0581)\times 10^5=\fbox{\(4.248\text{ kJ/kg}\)}\) \\
+                \(u = 245.73-224.24-2.248 = \fbox{\(19.242 \text{ kJ/kg}\)}\)
+    \begin{figure}[h]
+        \centering
+        \includegraphics*[scale = 0.15]{figure/figure1.jpeg}
+    \end{figure}
+    \newpage
+    \item [5.] \(F_g = mg = 50\times 9.81 = 490 \text{ N}\)\\
+    \(\displaystyle P_p = F_g/A = 490/9.75\times(10^-3)=50256.4 \text{ Pa}= 0.502564\text{ bar} \)\\
+    \(\displaystyle \frac{T_1}{T_2}=\frac{P_1}{P_2} = \frac{3}{1.502564}\),  Thus, \(T_2 = 300.513 \text{ K}\)\\
+    \(c_v\approx \frac{0.764+0.718}{2}=0.741  \text{ kJ/kg\(\cdot\)K}\), \(\Delta T = 300.513-600 = -299.487 \text{ K}\)
+    \(\Delta u = \Delta T\times c_v = -299.487 \times 0.741 = -221.92 \text{ kJ/kg}\)\\
+    \(\Delta u_{air} = \Delta u\times m = -221.92\times 0.005 = \fbox{\(-1.1096 \text{ kJ}\)} \)\\
+    \begin{figure}[h]
+        \centering
+        \includegraphics*[scale = 0.15]{figure/figure_2.jpeg}
+    \end{figure}
+    \item [6.]
+    \begin{align*}
+        \varepsilon A \sigma T^4 &= E\\
+        T &= \left(\frac{E}{2\times\varepsilon \pi r^2 \sigma}\right)^{1/4}\\
+        T &= \left(\frac{150}{4\times 0.8\times \pi \times 0.25\times 5.670373\times 10^{-8}}\right)^{1/4}\\
+        T &= \fbox{254.727 K}
+    \end{align*}
+    \item [7.] \(W = 2\times 36\% = \fbox{0.72 \text{ MW}}\) , \(0.72\times4380 = \fbox{3153.6 MW/h}\), \\
+    \(3.1536\times 10^6 \times 0.08 = \fbox{252288 \$}\)
+\end{itemize}
+\end{document}
