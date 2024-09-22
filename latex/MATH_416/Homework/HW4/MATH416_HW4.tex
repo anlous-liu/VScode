@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due: Sep 25 Edit: \today}
+\title{MATH 416H HW 4}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+
+\begin{itemize}
+\item [1.]It is \(\sum_{i=1}^{m} a_ix_i \)
+\item [2.]It is $
+\begin{pmatrix}
+    yb_1\\yb_2\\\vdots\\yb_n
+\end{pmatrix}$
+\item [3.] \ 
+\begin{itemize}
+    \item [\(E_1A=\)]\(
+         \begin{bmatrix}
+        0 & 1 & 0 \\
+        1 & 0 & 0 \\
+        0 & 0 & 3
+        \end{bmatrix}
+        \begin{bmatrix}
+        a_{11} & a_{12} & a_{13} & a_{14} \\
+        a_{21} & a_{22} & a_{23} & a_{24} \\
+        a_{31} & a_{32} & a_{33} & a_{34}
+        \end{bmatrix}=
+        \begin{bmatrix}
+            a_{21} & a_{22} & a_{23} & a_{24} \\
+            a_{11} & a_{12} & a_{13} & a_{14} \\
+            3\times a_{31} & 3\times a_{32} & 3\times a_{33} & 3\times a_{34}
+        \end{bmatrix}
+        \)
+    \item [\(E_2A=\)]\(
+         \begin{bmatrix}
+        0 & 0 & 1 \\
+        0 & 1 & 0 \\
+        1 & 0 & 0
+        \end{bmatrix}
+        \begin{bmatrix}
+        a_{11} & a_{12} & a_{13} & a_{14} \\
+        a_{21} & a_{22} & a_{23} & a_{24} \\
+        a_{31} & a_{32} & a_{33} & a_{34}
+        \end{bmatrix}=
+        \begin{bmatrix}
+            a_{31} & a_{32} & a_{33} & a_{34}\\
+            a_{21} & a_{22} & a_{23} & a_{24} \\
+            a_{11} & a_{12} & a_{13} & a_{14} \\
+        \end{bmatrix}
+        \)
+    \item [\(E_3A=\)]\(
+            \begin{bmatrix}
+           1 & 0 & 0 \\
+           0 & 1 & -5 \\
+           0 & 0 & 1
+           \end{bmatrix}
+           \begin{bmatrix}
+           a_{11} & a_{12} & a_{13} & a_{14} \\
+           a_{21} & a_{22} & a_{23} & a_{24} \\
+           a_{31} & a_{32} & a_{33} & a_{34}
+           \end{bmatrix}=
+           \begin{bmatrix}
+            a_{11} & a_{12} & a_{13} & a_{14} \\
+            a_{21}-5a_{31}& a_{22}-5a_{32}& a_{23}-5a_{33}& a_{24}-5a_{34}\\
+            a_{31} & a_{32} & a_{33} & a_{34}
+           \end{bmatrix}
+           \)
+\end{itemize}
+\item [4.]
+\begin{itemize}
+    \item [a)]\(\iota(w)= w,\ \iota(v)=v,\ \iota(w)+\iota(v)=w+v=\iota(w+v)\)\\
+                \(\lambda\iota(v)=\lambda\cdot v = \iota(\lambda v)\). Thus, the inclusion map is linear.
+    \item [b)]
+    \begin{itemize}
+        \item [i:] 
+    \end{itemize}
+\end{itemize}
+\item [5.]
+\begin{itemize}
+    \item [a)] \
+    \begin{itemize}
+        \item [forward:] Suppose \(\exists w_1,w'_1\in W_1,\ w_2,w'_2,\in W_2\), that \(v = w_1+w_2=w'_1+w'_2\). Thus:
+        \begin{align*}
+            w_1-w'_1&=w'_2-w_2\\
+            w_1-w'_1\in W_1\ &\  w'_2-w_2\in W_2\\
+            \text{as }W_1\cap W_2 = \{\overrightarrow{0}\}\\
+            w_1-w'_1=w'_2-w_2&=\overrightarrow{0}\\
+            w_1=w'_1\ &\ w_2=w'_2
+        \end{align*}
+        Thus, if \(V=W_1\oplus W_2\), \(\forall v\in V\), exists a unique \(w_1,w_2\) that \(v = w_1+w_2\)
+        \item [backward:] If \(\forall v \in V\), \(\exists w_1\in W_1,\ w_2\in W_2\) that \(v=w_1+w_2\), \(V = W_1+W_2\) by definition. Suppose that \(W_1\cap W_2 \neq \{\overrightarrow{0}\}\), 
+        then \(\exists w\in W_1,W_2\). Thus, forsome \(v\in W_1\), or \(v = w_1+\overrightarrow{0}\),  Thus define \(k = w_1-w\), Therefore \(\exists v = w_1-w+w\), where \(w\neq \overrightarrow{0}\). However, there are only one set of \(w_1,w_2\) that \(v=w_1+w_2\), Therefroe, \(W_1\cap W_2 = \overrightarrow{0}\)
+    \end{itemize}
+    \item [b)]
+\end{itemize}
+\item [6.]\(\forall v\in V, T(S(v)) = v\), Thus, \(T\) is Surjective, Thus, \(R(T)=dim(V)\), Thus \(N(T)=\{\overrightarrow{0}\}\)
+Suppose \(T\) is not injective, then \(\exists v,w \in V\) that \(v\neq w\) that \(T(v)=T(w)\), then \(T(v)-T(w)=\overrightarrow{0}=T(v-w)\), which raises a contradiction. Thus, \(T\) is a bijection. Thus \(T\) is invertable.
+As \(T\) is invertable, \(\exists T^{-1}\) that \(T\circ T^{-1} = \text{id}_V\). Therefore, \(T^{-1} = S\). Thus, \(S\circ T = T^{-1}\circ T = \text{id}_V\)
+\item [7.] Take a random set of \(a_1,\cdots,a_k,\cdots\in \mathbb{N}, S(a_1,a_2,\cdots,a_k,\cdots)=(0,a_1,a_2,\cdots,a_k,\cdots)\),
+            \(T(0,a_1,a_2,\cdots,a_k,\cdots)=(a_1,a_2,\cdots,a_k,\cdots)\). Thus, \(T\circ S = \text{id}_V\)
+\item [8.] \(\forall x_i\in\mathbb{R},\ v=(x_1,\cdots,x_n) P(v) = (x_1,0,\cdots,0) \), and \(P(P(v)) = P(x_1,0,\cdots,0) = (x_1,0,\cdots,0) = P(v)\)
+Thus, \(P\circ P = P\)\\
+\(N(P) = (0,x_2,\cdots,x_n),\ R(P) = (x_1,0,\cdots,0)\), \(\mathbb{R}^n = N(P)+R(P) = (x_1,x_2,\cdots,x_n)\). Also, as \(R(P)\cap N(P) = (0,0,\cdots,0)=\overrightarrow{0}\). Thus, \(\mathbb R ^n = N(P)\oplus R(P)\)
+\end{itemize}
+\end{document}
