@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{esint}
+
+
+\date{Due: Sep 25 Edit: \today}
+\title{NPRE 321 HW 1}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.]
+    \begin{itemize}
+        \item [i:] \(\displaystyle\lambda_D = \sqrt{\frac{\varepsilon_0kT}{ne^2}}=\sqrt{\frac{8.854\times10^{-12}\times3\times11604\times 1.38\times 10^{-23}}{10^{17}\times (1.62\times 10^-19)^2}}=\fbox{\(4.071\times 10^{-5}\) m}\)
+        \item [ii:] \(\displaystyle\frac{4}{3}\pi\lambda_D^3 = \frac{4}{3}\times 3.1415\times(4.071\times 10^{-5})^3=2.826\times 10^{-13}\text{ m}^3\)\\
+        \(nV = 10^{17}\times 2.826\times 10^{-13} = \fbox{\(28263.272\)}\)
+    \end{itemize}
+    \item [2.] 
+        \begin{itemize}
+            \item [i:] setting \(\left\{\begin{matrix}
+                \rho = 10^{20} \text{ m}^{-3}\\
+                T    = 10^3 \text{ eV}
+            \end{matrix}\right.\) As environment in magnectic fusion experiment, while setting it to hydrogen plasma.\\
+            \(\lambda_D = 7430\sqrt{\frac{T}{n}} = 2.35 \times 10^{-5} \text{ m}\)\\
+            \(\omega_e = \sqrt{\frac{n_ee^2}{\varepsilon_0m_e}} = 5.64\times 10^{11}\)\\
+            \(\omega_i = \sqrt{\frac{n_ie^2}{\varepsilon_0m_i}} = 1.31627\times 10^{10}\)
+            \item [ii:] setting \(\left\{\begin{matrix}
+                \rho = 10^{25} \text{ m}^{-3}\\
+                T    = 10^5 \text{ eV}
+            \end{matrix}\right.\) As environment in magnectic fusion reactors, while setting it to hydrogen plasma.\\
+            \(\lambda_D = 7430\sqrt{\frac{T}{n}} = 7.43 \times 10^{-7} \text{ m}\)\\
+            \(\omega_e = \sqrt{\frac{n_ee^2}{\varepsilon_0m_e}} = 1.78\times 10^{14}\)\\
+            \(\omega_i = \sqrt{\frac{n_ie^2}{\varepsilon_0m_i}} = 4.1624\times 10^{12}\)
+            \item [iii:] setting \(\left\{\begin{matrix}
+                \rho = 10^{7} \text{ m}^{-3}\\
+                T    = 10 \text{ eV}
+            \end{matrix}\right.\) As environment in solar wind, while setting it to hydrogen plasma.\\
+            \(\lambda_D = 7430\sqrt{\frac{T}{n}} = 7.43 \text{ m}\)\\
+            \(\omega_e = \sqrt{\frac{n_ee^2}{\varepsilon_0m_e}} = 1.78\times 10^{5}\)\\
+            \(\omega_i = \sqrt{\frac{n_ie^2}{\varepsilon_0m_i}} = 4.16\times 10^{3}\)
+        \end{itemize}
+    \item [3.]
+    \begin{align*}
+        \oint B dl &= \mu_0 \sum I\\
+        B\times 2\pi r &= \mu_0 N I\\
+        B &= \frac{\mu_0 N I}{ 2\pi r}\\
+    \end{align*}
+    \item [4.]
+    \begin{itemize}
+        \item [i:]  \(1\times10^4 \times e \times 1 = \fbox{\(1.602\times10^{-15}\) J}\)
+        \item [ii:] \(10^4 \times 11604 = \fbox{\(1.16\times10^8\) K}\)
+        \item [iii:]\(v = \sqrt{\frac{8KT}{\pi m}} = \fbox{\(6.69\times 10^7\) m/s}\)
+    \end{itemize}
+    \item [5.]\
+    \begin{itemize}
+        \item [i:] \(v_i = \sqrt{\frac{8KT_i}{\pi m_i}}= \sqrt{\frac{8\times1.38\times10^{-23}\times 100\times 11604}{1.008665 \times 1.673\times 10^{-27}}}=\fbox{\(2.755\times 10^5\) m/s}\)\\
+                    \(v_e = \sqrt{\frac{8KT_e}{\pi m_e}}= \sqrt{\frac{8\times1.38\times10^{-23}\times 1000\times 11604}{9.11\times 10^{-31}}}=\fbox{\(3.74998\times 10^7\) m/s}\)
+        \item [ii:]\(\omega_{e} = \sqrt{\frac{n_ee^2}{\varepsilon_0m_e}}=\sqrt{\frac{10^{17}\times (1.602\times10^{-19})^2}{8.854\times 10^{-12}\times 9.11\times10^{-31}}}=\fbox{\(1.784\times 10^{10}\)}\)\\
+                    \(\omega_{i} = \sqrt{\frac{n_ee^2}{\varepsilon_0m_i}}= \sqrt{\frac{10^{17}\times (1.602\times10^{-19})^2}{8.854\times 10^{-12}\times 1.673\times10^{-27}}}=\fbox{\(4.1624 \times 10^8\)}\)
+        \item [iii:]\(f_e = \frac{\omega_e}{2\pi} = 2.8397\times 10^9\text{ Hz} = 2839.7\text{ MHz}\)\\
+                    \(f_i = \frac{\omega_I}{2\pi} =6.6247\times 10^7 \text{ Hz} = 66.247\text{ MHz}\)
+                    Thus, it will be heating ions.
+        \item [iv:]\(f = \frac{Bq}{2\pi m} = 7.6\times 10^7=\frac{B\times1.602\times 10^{-19}}{2\pi 1.673\times10^{-27}}\), Thus, \(B = \fbox{4.98686 T}\)
+        \item [v:] \(r_i = \frac{v_i}{\omega_i} = \frac{2.755\times 10^{5}}{4.1624\times 10^8}=\fbox{\(6.6187\times 10^-4\) m}\)
+    \end{itemize}
+\end{itemize}
+\end{document}
