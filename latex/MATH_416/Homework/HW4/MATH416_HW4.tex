@@ -81,9 +81,11 @@
                 \(\lambda\iota(v)=\lambda\cdot v = \iota(\lambda v)\). Thus, the inclusion map is linear.
     \item [b)]
     \begin{itemize}
-        \item [i:] 
+        \item [i:] \(\forall u\in U\), \(T|_U(u) = w = T(u)\), \(\iota_U(u) = u\). Thus \(T(\iota_U(u)) = T(u) = w = T|_U(u)\). Thus \(T|_U = T\circ \iota_U\)
+        \\ As the composition of 2 linear maps is still linear, \(T|_U\) is linear.
     \end{itemize}
 \end{itemize}
+\newpage
 \item [5.]
 \begin{itemize}
     \item [a)] \
@@ -100,7 +102,41 @@
         \item [backward:] If \(\forall v \in V\), \(\exists w_1\in W_1,\ w_2\in W_2\) that \(v=w_1+w_2\), \(V = W_1+W_2\) by definition. Suppose that \(W_1\cap W_2 \neq \{\overrightarrow{0}\}\), 
         then \(\exists w\in W_1,W_2\). Thus, forsome \(v\in W_1\), or \(v = w_1+\overrightarrow{0}\),  Thus define \(k = w_1-w\), Therefore \(\exists v = w_1-w+w\), where \(w\neq \overrightarrow{0}\). However, there are only one set of \(w_1,w_2\) that \(v=w_1+w_2\), Therefroe, \(W_1\cap W_2 = \overrightarrow{0}\)
     \end{itemize}
-    \item [b)]
+    \item [b)] \textbf{Existence}:\\
+                \(\forall v\in V\), exists a unique set \(w_1\in W_1,\ w_2\in W_2\), that \(v = w_1+w_2\) as profed in 5.a).
+                Define:
+                \begin{align*}
+                    \forall v &= w_1+w_2\\
+                    \iota_1(v) = w_1&,\ \iota_2(v) = w_2\\
+                    \iota'_1:W_1\rightarrow V \ \iota_1' (w_1) = w_1+\overrightarrow{0}&, \ \iota'_2:W_2\rightarrow V \ \iota_2' (w_2) = w_2+\overrightarrow{0}
+                \end{align*}
+                \(\forall T_1,T_2\) define: \(T(v) = T_1\circ \iota_1(v)+T_2\circ \iota_2(v)\).\\
+                \(\forall w_1 \in W_1\): \(T|_{W_1} = T_1(w_1)+T_2(\overrightarrow{0})\), as \(T_1,\ T_2\) are linear, there is \(T_2(\overrightarrow{0})=\overrightarrow{0}\). Thus, \(T|_{W_1} = T_1\) similarly, \(T|_{W_2}=T_2\). Thus, such map exists.\\
+                \textbf{Linearity}:\\
+                \begin{align*}
+                    T(v_1+v_2) &= T(w_{11}+w_{12}+w_{21}+w_{22})\\
+                                &= T_1(w_{11}+w_{21})+T_2(w_{12}+w_{22})\\
+                                &=T_1(w_{11})+T_1(w_{21})+T_2(w_{12})+T_1(w_{22})\\
+                                &=T_1(w_{11})+T_2(w_{12})+T_1(w_{21})+T_1(w_{22})\\
+                                &=T(v_1)+T(v_2)\\
+                    T(\lambda v_1)& = T(\lambda(w_1+w_2))\\
+                                &= T(\lambda w_1+\lambda w_2)\\
+                                &=T_1(\lambda w_1)+T_2(\lambda w_2)\\
+                                &=\lambda (T_1( w_1)+T_2(w_2))\\
+                                &= \lambda T(v_1) \text{ \ \ \ \ Thus, \(T\) is linear.}
+                \end{align*}
+                
+                \textbf{Uniqueness}:\\
+                Suppose it exists such \(T'\) that \(T'|_{W_1}=T_1,\ T'|_{W_2} = T_2,\ T'\neq T\). Then \(T'(v)\neq T(v)\). 
+                However:
+                \begin{align*}
+                    T'(v) &= T'(w_1+w_2)\\
+                            &= T'(w_1)+T'(w_2)\\
+                            &= T'|_{W_1}(w_1)+T'|_{W_2}(w_2)\\
+                            &= T_1(w_1)+T_2(w_1)\\
+                            &= T(v)
+                \end{align*}
+                Thus, it is unique.
 \end{itemize}
 \item [6.]\(\forall v\in V, T(S(v)) = v\), Thus, \(T\) is Surjective, Thus, \(R(T)=dim(V)\), Thus \(N(T)=\{\overrightarrow{0}\}\)
 Suppose \(T\) is not injective, then \(\exists v,w \in V\) that \(v\neq w\) that \(T(v)=T(w)\), then \(T(v)-T(w)=\overrightarrow{0}=T(v-w)\), which raises a contradiction. Thus, \(T\) is a bijection. Thus \(T\) is invertable.
@@ -109,6 +145,6 @@ As \(T\) is invertable, \(\exists T^{-1}\) that \(T\circ T^{-1} = \text{id}_V\).
             \(T(0,a_1,a_2,\cdots,a_k,\cdots)=(a_1,a_2,\cdots,a_k,\cdots)\). Thus, \(T\circ S = \text{id}_V\)
 \item [8.] \(\forall x_i\in\mathbb{R},\ v=(x_1,\cdots,x_n) P(v) = (x_1,0,\cdots,0) \), and \(P(P(v)) = P(x_1,0,\cdots,0) = (x_1,0,\cdots,0) = P(v)\)
 Thus, \(P\circ P = P\)\\
-\(N(P) = (0,x_2,\cdots,x_n),\ R(P) = (x_1,0,\cdots,0)\), \(\mathbb{R}^n = N(P)+R(P) = (x_1,x_2,\cdots,x_n)\). Also, as \(R(P)\cap N(P) = (0,0,\cdots,0)=\overrightarrow{0}\). Thus, \(\mathbb R ^n = N(P)\oplus \)
+\(N(P) = (0,x_2,\cdots,x_n),\ R(P) = (x_1,0,\cdots,0)\), \(\mathbb{R}^n = N(P)+R(P) = (x_1,x_2,\cdots,x_n)\). Also, as \(R(P)\cap N(P) = (0,0,\cdots,0)=\overrightarrow{0}\). Thus, \(\mathbb R ^n = N(P)\oplus R(P)\)
 \end{itemize}
 \end{document}
