@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due: Sep 27  Edit: \today}
+\title{ME 200 Homework 4}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] \begin{align*}
+        \nu_1 = \nu_2 &= 0.4625 \text{ kg/m}^3\\
+        \frac{2960.9-2963.2}{0.4397-0.6173}&=12.9505\\
+        0.4397\times 12.9505+2960.9&=2961.2 \text{ kJ/kg}\\
+        Q = (2961.2 - 2553.6 )\times 1 &= \fbox{\(407.595 \text{ kJ/kg}\)}
+    \end{align*}
+
+    \item [2.]\ 
+    \begin{itemize}
+        \item [\(1\rightarrow 2\):] \[Q = mT(s_2-s_1) = 1\times (503.23+459.67)\times(1.4305-0.6927) = \fbox{\(710.428 \text{ Btu}\)}\]
+                                    \[W = 710.428-(1117-488.9)=\fbox{\(82.32 \text{Btu}\)}\]
+        \item [\(2\rightarrow 3\):] \begin{align*}
+            6.20x+(1-x)0.01748 &=0.656\\
+            x &=0.1032\\
+            u_3 = xu_g+(1-x)u_f &= 358.114 \text{ Btu/lb}\\
+            Q = m(u_3-u_2) &= \fbox{-758.886}\\
+            W = \fbox{0}
+        \end{align*}
+        \item [\(3\rightarrow 4\):]
+        \begin{align*}
+            s_3 = x_3s_g+(1-x_3)s_f &= 0.5642\\
+            6.20x_4+(1-x_4)0.01748 &=0.02501\\
+            x_4&=0.001218\\
+            s_4 = x_4s_g+(1-x_4)s_f &=0.44265\\
+            u_4 = x_4u_g +(1-x_4)u_f&=273.608\\
+            Q = mT(s_4-s_3) &= 1\times (302.96+459.67)(0.44265-0.5642)\\
+            &=\fbox{-92.6973 Btu}\\
+            W = Q-m(u_4-u_3)&=-92.6973 -273.608+358.114 = \fbox{-8.1918 Btu}
+        \end{align*}
+        \item [\(4\rightarrow 1\):] \begin{align*}
+            Q = m(u_1-u_4) & = \fbox{215.292 Btu}\\
+            w = \fbox{0 Btu}
+        \end{align*}
+        \(\displaystyle \eta = q-\frac{Q_{out}}{Q_{in}} = 1-\frac{758.886+92.6973}{710.428+215.292}=0.080085\)
+
+    \end{itemize}
+    \item [3.] \
+    \begin{itemize}
+        \item [\(1\rightarrow 2\):] Since isothermal, \(W = pv \text{ln}(\frac{v_2}{v_1}) = 5\times 10^5 \times \text{ln}(\frac{5}{1})= 804719\text { J/kg}\)\\
+        \item [\(2\rightarrow 3\):] \begin{align*}
+            T_2 = \frac{Pv}{nR}=\frac{10^5\times 5}{\frac{1}{28.97\times 10^-3}\times 8.314} = 1742.24 \text{ K}\\
+            T_3 = \frac{Pv}{nR}=\frac{10^5}{286.987}=348.448 \text{ K}\\
+            u_2 = \frac{1439.8-1392.7}{1750-1700}\times 42.24 + 1392.7 = 1432.49 \text{ kJ/kg}\\
+            u_3 = \frac{250.02-242.82}{350-340}\times 8.448 +242.82 = 248.903\text{ kJ/kg} \\
+            W = p\Delta V = 10^5 \times -4 = -4\times 10^5 \text{ J/kg}\\
+            Q = Q-W+W = (u_3-u_2)+W = -1.58359\times 10^6 \text{J/kg}\\
+        \end{align*}
+        \item [\(3\rightarrow 1\):]\begin{align*}
+            T_1 = \frac{Pv}{nR} = \frac{5\times 10^5}{286.987}=1742.24 \text{ K}\\
+            u_1 = \frac{1439.8-1392.7}{1750-1700}\times 42.24 + 1392.7 = 1432.49 \text{ kJ/kg}\\
+            Q = m(u_1-u_3) = 1432.49-248.903 = 1183.59 \text{kJ/kg}
+        \end{align*}
+    \end{itemize}
+    \[\eta = 1-\frac{Q_{out}}{Q_{in}} = \frac{1.58359\times 10^5}{1183.59\times 10^3+804719} = \fbox{0.20355}\]
+    \item [4.]\
+    \begin{itemize}
+        \item [in:] \(\frac{20\times 10\times10^{-3}}{0.1996}=1.002\) kg/s
+        \item [exit:] \(\frac{1\times 6\times 10^{-3}}{1.905\times 10^-3}=5.50206\) kg/s
+        \item [total:] 1.002-5.50206=\fbox{-4.5006 kg/s}
+    \end{itemize}
+    \item [5.]
+    \begin{itemize}
+        \item [a)] \(v = RT/p = 286.987 \times 450 / 350\times 10^3 = 0.3689 \text{ m\(^3\)/kg}\)\\
+                    \(A = \frac{mv}{V}=2.3\times0.3689/3 = 0.2829 \text{ m}^2\)
+        \item [b)] \(\Delta Q = \Delta U +\Delta E_v -\Delta W= m\Delta Tc_p+0.5m(\Delta v)^2-0\)\\
+                    \(=2.3\times (1.011\times 10^3 (300-450)+0.5\times (460^2-3^2)) = -105465= \fbox{-105.465 kW}\)
+
+    \end{itemize}
+\end{itemize}
+\end{document}
