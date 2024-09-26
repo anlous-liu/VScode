@@ -142,7 +142,8 @@
 Suppose \(T\) is not injective, then \(\exists v,w \in V\) that \(v\neq w\) that \(T(v)=T(w)\), then \(T(v)-T(w)=\overrightarrow{0}=T(v-w)\), which raises a contradiction. Thus, \(T\) is a bijection. Thus \(T\) is invertable.
 As \(T\) is invertable, \(\exists T^{-1}\) that \(T\circ T^{-1} = \text{id}_V\). Therefore, \(T^{-1} = S\). Thus, \(S\circ T = T^{-1}\circ T = \text{id}_V\)
 \item [7.] Take a random set of \(a_1,\cdots,a_k,\cdots\in \mathbb{N}, S(a_1,a_2,\cdots,a_k,\cdots)=(0,a_1,a_2,\cdots,a_k,\cdots)\),
-            \(T(0,a_1,a_2,\cdots,a_k,\cdots)=(a_1,a_2,\cdots,a_k,\cdots)\). Thus, \(T\circ S = \text{id}_V\)
+            \(T(0,a_1,a_2,\cdots,a_k,\cdots)=(a_1,a_2,\cdots,a_k,\cdots)\). Thus, \(T\circ S = \text{id}_V\). \(S\) is not a bijection as it is not a surjection. As for any \(b_1\neq 0, \ v =  (b_1,\cdots,b_n,\cdots)\in V\), \(v\notin R(S)\). For \(T\), it not injective. 
+            For example, \(T(v_1,v_2,\cdots,v_n,\cdots) =(v_2,\cdots,v_n,\cdots)=T(v_x,v_2,\cdots,v_n,\cdots)\) while \(v_1\neq v_x\)
 \item [8.] \(\forall x_i\in\mathbb{R},\ v=(x_1,\cdots,x_n) P(v) = (x_1,0,\cdots,0) \), and \(P(P(v)) = P(x_1,0,\cdots,0) = (x_1,0,\cdots,0) = P(v)\)
 Thus, \(P\circ P = P\)\\
 \(N(P) = (0,x_2,\cdots,x_n),\ R(P) = (x_1,0,\cdots,0)\), \(\mathbb{R}^n = N(P)+R(P) = (x_1,x_2,\cdots,x_n)\). Also, as \(R(P)\cap N(P) = (0,0,\cdots,0)=\overrightarrow{0}\). Thus, \(\mathbb R ^n = N(P)\oplus R(P)\)
