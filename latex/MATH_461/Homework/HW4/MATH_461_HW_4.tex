@@ -1,0 +1,163 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due: Sep 27  Edit: \today}
+\title{MATH 461 Homework 4}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [4.21]
+    \begin{itemize}
+        \item [a)]  I believe is \(E[X]\) as the chance of selecting a child on a bigger bus is larger while the probability of selecting a child on a smaller bus is also smaller. However, they are just same for \(E[Y]\)
+        \item [b)]  \(E(X) = 40\cdot\frac{40}{148}+33\cdot\frac{33}{148}+25\cdot\frac{25}{148}+50\cdot\frac{50}{148} =  \frac{2907}{74}\approx 39.2838\)\\
+                    \(E(Y) = 40\cdot\frac{1}{4}+33\cdot\frac{1}{4}+25\cdot\frac{1}{4}+50\cdot\frac{1}{4} = \frac{40+33+25+50}{4}=37\)
+                   \\ Thus \(E[X]>E[Y]\)
+    \end{itemize}
+    \item [4.23]
+    \begin{itemize}
+        \item [a)] Suppose I bought \(x\) lb of the commodity at the first week, then at second week, the expactation of the money i hold will be:
+                    \[1000-2x+2x\times\frac{1}{2} + 4x\times \frac{1}{2} = 1000+x\]
+                    Thus, The best stratagy would be apending all the money on first week.
+        \item [b)] Suppose I bought \(x\) lb of the commodity at the first week, then at second week, the expactation of the money i hold will be:
+                    \[x + \frac{1000-2x}{1}\frac{1}{2}+\frac{1000-2x}{4}\frac{1}{2} = 650 - \frac{x}{4}\]
+                    Thus, The best stratagy would be saving all the money for the second week.
+    \end{itemize}
+    \item [4.32] If a pool is negative, then it costs only one test which is:\\  \(E = 0.9^{10}\times 1 = 0.3486\)
+                  \\ The rest pools will need 11 tests which is: \\ \(E = (1-0.9^{10})\times 11 = 7.1645\).\\
+                  Thus the expacted total of tests per group is:\\ \(E_{tot}=0.3486+7.1645 = 7.5132\)
+    \newpage
+    \item [4.35] \
+    \begin{itemize}
+        \item [a)] The probability of getting 2 same color balls is \(\frac{\binom{2}{1}\binom{5}{2}}{\binom{10}{2}} = \frac{4}{9}\)\\
+                   \\The probability of getting 2 different  balls is \(1-\frac{4}{9} = \frac{5}{9}\).
+                   \\Thus, the expactation would be:\(\frac{4}{9}\times 1.1-\frac{5}{9} = \frac{-1}{15}\approx -0.067\)
+        \item [b)] Var\( = E(X^2)-(E(X))^2 = (1.1)^2\times\frac{4}{9}+1\times\frac{5}{9}-(\frac{-1}{15})^2=\frac{49}{45}\approx1.0889\)
+    \end{itemize}
+    \item [4.37] \begin{align*}
+            \text{Var}(X)&=E[X^2]-(E(X))^2 \\
+                &= 40^2\cdot\frac{40}{148}+33^2\cdot\frac{33}{148}+25^2\cdot\frac{25}{148}+50^2\cdot\frac{50}{148}-\left(\frac{2907}{5476}\right)^2\\
+               & =82.2033\\
+            \text{Var}(Y)&=E[Y^2]-(E(Y))^2 \\
+            &=40^2\cdot\frac{1}{4}+33^2\cdot\frac{1}{4}+25^2\cdot\frac{1}{4}+50^2\cdot\frac{1}{4} - 37^2\\
+            &=84.5
+    \end{align*}
+    \item [4.38] \[Var(X) = 5 = E(X^2)-(E(X))^2 = E(X^2) - 1, \text{ thus, }E(X^2) = 6\]
+    \begin{itemize}
+        \item [a)] \begin{align*}
+            E[(2+X)^2]&= \sum_x(2+x)^2p(x)\\
+            &=\sum_x (4+4x+x^2)p(x)\\
+            &=\sum_x 4p(x) + 4\cdot xp(x)+x^2p(x)\\
+            &=4+4E(X)+E(X^2)\\
+            &=4+4+6 = 14
+        \end{align*}
+        \item [b)] \begin{align*}
+            \text{Var}(4+3X)&=3^2\times \text{Var}(X)\\
+            &=9\times 5 = 45
+        \end{align*}
+    \end{itemize}
+    \item [4.40] \(\binom{5}{4}\left(\frac{1}{3}\right)^2\frac{2}{3}+\left(\frac{1}{3}\right)^5=\frac{11}{243} = 0.045267\)
+    \newpage
+    \item [4.45] \(P(\text{on}) = \frac{1}{3},\ P(\text{off}) = \frac{2}{3}\)\\
+                \begin{align*}
+                    P_{\text{on,3}}(\text{pass}) &= \binom{3}{2}\left( \frac{4}{5}\right)^2\frac{1}{5}+\left(\frac{4}{5}\right)^2\\
+                    &= \frac{112}{125}=0.896\\
+                    P_{\text{off,3}}(\text{pass})&= \binom{3}{2}\left( \frac{2}{5}\right)^2\frac{3}{5}+\left(\frac{2}{5}\right)^2\\
+                    &=\frac{44}{125}=0.352\\
+                    E(\text{pass,3})&=P_{\text{on,3}}(\text{pass})p(\text{on})+P_{\text{off,3}}(\text{pass})p(\text{off})\\
+                    &=\frac{112}{125}\times \frac{1}{3}+\frac{44}{125}\times\frac{2}{3}\\
+                    &=\frac{8}{15}\approx 0.53333\\
+                    P_{\text{on,5}}(\text{pass}) &=\binom{5}{3}\left(\frac{4}{5}\right)^3\left(\frac{1}{5}\right)^2 +\binom{5}{4}\left(\frac{4}{5}\right)^4\frac{1}{5} +\left(\frac{4}{5}\right)^5\\
+                    &=0.94208\\
+                    P_{\text{off,5}}(\text{pass}) & = \binom{5}{3}\left(\frac{2}{5}\right)^3\left(\frac{3}{5}\right)^2 +\binom{5}{4}\left(\frac{2}{5}\right)^4\frac{3}{5} +\left(\frac{2}{5}\right)^5\\
+                    &=0.31744\\
+                    E(\text{pass,5})&=P_{\text{on,5}}(\text{pass})p(\text{on})+P_{\text{off,5}}(\text{pass})p(\text{off})\\
+                    &=0.94208\times \frac{1}{3}+0.31744\times\frac{2}{3}\\
+                    &=0.525653
+                \end{align*}
+                Thus, the student should choose the 3 examer's group.
+    \item [4.48] 
+    \begin{align*}
+        P(\text{return})&= 1-\binom{10}{1} \left({0.99}\right)^9\times 0.01-(0.99)^{10}\\
+        &=0.004266\\
+        P(\text{return only one}) &= \binom{3}{1} 0.004266\times (1-0.004266)^2\\
+        &=0.1269
+    \end{align*}
+    \item [4.50]\begin{itemize}
+        \item [a)] 
+        \begin{align*}
+            p(6h) &= \binom{10}{6} p^6(1-p)^4\\
+            P(h,t,t)\cap P(6h)&=p\times (1-p)^2\binom{7}{5} p^5(1-p)^2\\
+            P(h,t,t|6h) &= \frac{P(h,t,t)\cap P(6h)}{p(6h)}\\
+            &=\frac{p\times (1-p)^2\binom{7}{5} p^5(1-p)^2}{\binom{10}{6} p^6(1-p)^4}\\
+            &=\frac{1}{10}
+        \end{align*}
+
+        \item [b)]\begin{align*}
+            p(6h) &= \binom{10}{6} p^6(1-p)^4\\
+            P(t,h,t)\cap P(6h)&=(1-p)p\times (1-p)\binom{7}{5} p^5(1-p)^2\\
+            P(t,h,t|6h) &= \frac{P(h,t,t)\cap P(6h)}{p(6h)}\\
+            &=\frac{p\times (1-p)^2\binom{7}{5} p^5(1-p)^2}{\binom{10}{6} p^6(1-p)^4}\\
+            &=\frac{1}{10}
+        \end{align*}
+    \end{itemize}
+    \item [4.55] It is a typical Poisson distribution senario. \(\lambda_1 = 3, \lambda_2 = 4.2\).\begin{align*}
+        P(\text{no err typist 1}) &= e^{-3}\frac{3^0}{0!}\\
+        &=0.049787\\
+        P(\text{no err typist 2}) &= e^{-4.2}\frac{4.2^0}{0!}\\
+        &=0.014996\\
+        P(\text{no err}) &= 0.5 \times 0.049787+0.5\times 0.014996\\
+        &=0.032391
+    \end{align*}
+    \item [4.57]\begin{itemize}
+        \item [a)] \begin{align*}
+            P(X\geqslant3) &= 1-P(X=0,1,2)\\
+            &=1-\left(e^{-3}\frac{3^0}{0!}+e^{-3}\frac{3^1}{1!}+e^{-3}\frac{3^2}{2!}\right)\\
+            &=0.57681
+        \end{align*}
+        \item [b)]\begin{align*}
+            P(X\geqslant 1) &=1-e^{-3}\\ &= 0.950213\\  
+            P(X\geqslant3|X\geqslant1) &= \frac{P(X\geqslant3)}{P(X\geqslant 1)}\\
+            &=\frac{0.57681}{0.950213}\\
+            &=0.607032
+        \end{align*}
+    \end{itemize}
+    \item [4.59] Since the question asks for a approximation, we can approximate it with Poisson distribution with \(\lambda = np = 0.5\)
+    \begin{itemize}
+        \item [a)] \begin{align*}
+            P(X\geq 1) &= 1-P(X=0)\\
+            &=1-e^{-0.5}\\
+            &=0.393469
+        \end{align*}
+        \item [b)]\begin{align*}
+            P(X=1) &= e^{-0.5}\frac{0.5^1}{1!}\\
+            &=0.303265
+        \end{align*}
+        \item [c)]\begin{align*}
+            P(X\geq 2) &= 1-P(X=0)-P(X=1)\\
+            &=1-e^{-0.5}-0.303265\\
+            &=0.090204
+        \end{align*}
+    \end{itemize}
+    \item [4.61] Use a Poisson distribution with \(\lambda = np = 1.4\).
+    \begin{align*}
+        P(X\geq2) &= 1-P(X=0)-P(X=1)\\
+        &=1-e^{-1.4}-e^{-1.4}\times \frac{1.4^1}{1!}\\
+        &=0.408167
+    \end{align*}
+    \item [4.63] We can use Poisson distribution to estimate this.
+    \begin{itemize}
+        \item [a)] use \(\lambda = np = 5\times \frac{1}{2}=2.5\), then \(P(X=0) = e^{-2.5} = 0.082085\)
+        \item [b)] \(P(X\geq 4) = 1-P(X=0,1,2,3) = 0.242424\)
+    \end{itemize}
+\end{itemize}
+
+\end{document}

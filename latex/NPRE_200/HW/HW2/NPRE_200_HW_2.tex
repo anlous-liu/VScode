@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due:Sep 27 Edit: \today}
+\title{NPRE200 HW 2}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] \(N_{H_2O} = \frac{\rho A}{m} = 0.036\times 6.023\times 10^{23} \div 18 = 1.2046\times 10^{21}\) atom/cm\(^3\)
+                \\ \(\sigma = 2\times 38 + 4.2\times 10^{-5} = 76.000042\) b\( = 7.600042 \times 10^{-23}\) cm\(^2\)\\
+                \(\Sigma = N_{H_2O}\times \sigma = 0.09155\) cm\(^{-1}\)
+                
+    \item [2.]
+    \begin{itemize}
+        \item [i:] Deuterium
+        \begin{itemize}
+            \item [Average:] \(\xi = \frac{2}{A+2/3} = 0.75 \)\\
+                                \(n = \frac{1}{\xi}\text{ln}\left(\frac{E_0}{E_n}\right) = \frac{4}{3}\text{ln}\left(\frac{1\times10^6}{1}\right) = 18.42\)
+            \item [Minimum:] \(\xi = \ln\left(\frac{E_1}{E_2}\right)= \ln\left(\left[\frac{A+1}{A-1}\right]^2\right)=2\ln\left(\frac{A+1}{A-1}\right) = 2.197\)\\
+                                \(n = \frac{1}{\xi}\ln\left(\frac{E_0}{E_n}\right) = \frac{1}{2.197}\ln\left(\frac{10^6}{1}\right)=6.28771\)
+            \item [] The average collision is significantly larger than the minimum number required.
+
+        \end{itemize}
+        
+        \item [ii:] Carbon-12
+        \begin{itemize}
+            \item [Average:] \(\xi = \frac{2}{A+2/3} = \frac{3}{19} \)\\
+                                \(n = \frac{1}{\xi}\text{ln}\left(\frac{E_0}{E_n}\right) = \frac{19}{3}\text{ln}\left(\frac{1\times10^6}{1}\right) = 87.4982\)
+            \item [Minimum:] \(\xi = \ln\left(\frac{E_1}{E_2}\right)= \ln\left(\left[\frac{A+1}{A-1}\right]^2\right)=2\ln\left(\frac{A+1}{A-1}\right) = 0.334108\)\\
+                                \(n = \frac{1}{\xi}\ln\left(\frac{E_0}{E_n}\right) = \frac{1}{0.334108}\ln\left(\frac{10^6}{1}\right)=41.3504\)
+            \item [] The average collision is significantly larger than the minimum number required.
+        \end{itemize}
+    \end{itemize}
+    \item [3.] \(\Sigma = N\sigma = \frac{\rho A}{m} \sigma = \frac{7.86\times6.023\times 10^{23}}{55.847}\times 2.56\times 10^{-24} = 0.217\) cm \(^{-1}\)
+    
+    \item [4.] \[n = \frac{1}{\xi}\ln\left(\frac{E_0}{E_n}\right)\]
+    \item [5.] Suppose there is a equal probability for a neutron to be scattered from \(E\) to \(\alpha E\), then for it to land on any \(E'\) is:
+    \[P(E\rightarrow E') = \frac{1}{E-\alpha E}\]
+    \item [6.] Atomic percent: \(\displaystyle \frac{e\times235}{(1-e)\times 238 + e\times 235} = 0.0072\), \(e =0.007291 = \frac{N_{235}}{N_{238}}\).\\
+    \begin{align*}
+        N_{235} =  \int_{t}^{t_0} {}^0N_{235}\cdot e^{-\lambda t} dt={}^0N_{235} \times e^{-\lambda_{235} (t_0-t)}\\
+        N_{238} =  \int_{t}^{t_0} {}^0N_{238}\cdot e^{-\lambda t} dt={}^0N_{238} \times e^{-\lambda_{238} (t_0-t)}
+    \end{align*}
+    Then \(\displaystyle k =  \frac{^0N_{235}e^{-\lambda_{235} \Delta t}}{^0N_{238}e^{-\lambda_{238} \Delta t}+^0N_{235}e^{-\lambda_{235} \Delta t}} = 0.007291\)\\
+    \(\displaystyle \left\{ 
+    \begin{matrix}
+        \lambda_{235} = \ln(2)/7.1\times 10^8 \times 356 \times 24\times 60\times 60 = 3.17397\times 10^{-17} \\
+        \lambda_{238} = \ln(2)/4.5\times 10^9 \times 356 \times 24\times 60\times 60 = 5.00783\times 10^{-18} \\
+        \Delta t = 2\times 10^9 \times 356 \times 24\times 60\times 60 =6.15168\times 10^{16} \text{ s}
+    \end{matrix}
+    \right.\)\\
+    Thus: \(\)
+    \begin{align*}
+        k = \frac{^0N_{235}\times 0.141915}{{}^0N_{235}\times 0.141915+ {}^0N_{238}\times 0.734867} &= 0.007291\\
+        0.007291(^0N_{235}\times 0.141915+ {}^0N_{238}\times 0.734867)&={}^0N_{235}\times 0.141915\\
+        0.14088 {}^0N_{235} & = 0.005358{}^0N_{238}\\
+        {}^0N_{235}&  =0.038032{}^0N_{238}\\
+        \frac{0.038032{}^0N_{238}}{0.038032{}^0N_{238}+{}^0N_{238}}&=0.036638
+    \end{align*}
+\end{itemize}
+\end{document}
+
+
+
