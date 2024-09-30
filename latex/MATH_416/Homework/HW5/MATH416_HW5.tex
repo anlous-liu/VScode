@@ -1,0 +1,169 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due: Oct 2 Edit: \today}
+\title{MATH 416H HW 5}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.]
+    \begin{align*}
+        \begin{pmatrix}
+            1&2&1&\bigm|&1&0&0\\
+            3&7&3&\bigm|&0&1&0\\
+            2&3&4&\bigm|&0&0&1
+        \end{pmatrix}\rightarrow&
+        \begin{pmatrix}
+            1&2&1&\bigm|&1&0&0\\
+            0&1&0&\bigm|&-3&1&0\\
+            0&-1&2&\bigm|&-2&0&1
+        \end{pmatrix}\rightarrow&
+        \\
+        \begin{pmatrix}
+            1&2&1&\bigm|&1&0&0\\
+            0&1&0&\bigm|&-3&1&0\\
+            0&0&2&\bigm|&-5&1&1
+        \end{pmatrix}\rightarrow&
+        \begin{pmatrix}
+            1&0&1&\bigm|&7&-2&0\\
+            0&1&0&\bigm|&-3&1&0\\
+            0&0&1&\bigm|&-2.5&1&1
+        \end{pmatrix}\rightarrow&
+        \\
+        \begin{pmatrix}
+            1&0&0&\bigm|&9.5&-2.5&-0.5\\
+            0&1&0&\bigm|&-3&1&0\\
+            0&0&1&\bigm|&-2.5&0.5&0.5
+        \end{pmatrix}
+    \end{align*}    
+    Thus \(A^{-1} = \begin{pmatrix}
+        \frac{19}{2}&-\frac{5}{2}&-\frac{1}{2}\\
+        -3&1&0\\
+        -\frac{5}{2}&\frac{1}{2}&\frac{1}{2}
+    \end{pmatrix}\)
+    \item [2.]
+    \begin{itemize}
+        \item [A)] As profed in class, \(\left([id]_{\mathcal{S} \mathcal{B} }\right)^{-1} = [id]_{\mathcal{B} \mathcal{S}}\). Thus:
+        \begin{align*}
+            \left([id]_{\mathcal{S} \mathcal{B} }\right)^{-1}[T]_{\mathcal{S}\mathcal{S}} [id]_{\mathcal{S} \mathcal{B}}= [id]_{\mathcal{B} \mathcal{S}}[T]_{\mathcal{S}\mathcal{S}} [id]_{\mathcal{S} \mathcal{B}}
+        \end{align*}
+        Say that \(\forall v \in \mathbb{R}^n,\ T(v)=v'\), Then \([T]_{\mathcal{B}\mathcal{B}}[v]_{\mathcal{B}\mathcal{B}} = [v']_{\mathcal{B}\mathcal{B}}\). We have:
+        \begin{align*}
+            [id]_{\mathcal{B} \mathcal{S}}[T]_{\mathcal{S}\mathcal{S}} [id]_{\mathcal{S} \mathcal{B}}[v]_{\mathcal{B}}
+            &=[id]_{\mathcal{B} \mathcal{S}}[T]_{\mathcal{S}\mathcal{S}} [v]_{\mathcal{S}}\\
+            &=[id]_{\mathcal{B} \mathcal{S}}[v']_{\mathcal{S}}\\
+            &=[v']_{\mathcal{B}}
+        \end{align*}
+        Thus, \([T]_{\mathcal{B}\mathcal{B}} = \left([id]_{\mathcal{S} \mathcal{B} }\right)^{-1}[T]_{\mathcal{S}\mathcal{S}} [id]_{\mathcal{S} \mathcal{B}}\)
+        \newpage
+        \item [b)] let \(\mathcal{S}\) be the standard basis. Then:
+        \begin{align*}
+            [T]_{\mathcal{B}\mathcal{B}} &= \left([id]_{\mathcal{S} \mathcal{B} }\right)^{-1}[T]_{\mathcal{S}\mathcal{S}} [id]_{\mathcal{S} \mathcal{B}}\\
+            &=\left(\begin{pmatrix}
+                1&1\\
+                1&2
+            \end{pmatrix}\right)^{-1}
+            \begin{pmatrix}
+                3&1\\1&-2
+            \end{pmatrix}
+            \begin{pmatrix}
+                1&1\\
+                1&2
+            \end{pmatrix}\\
+            &=\begin{pmatrix}
+                2&-1\\
+                -1&1
+            \end{pmatrix}
+            \begin{pmatrix}
+                3&1\\1&-2
+            \end{pmatrix}
+            \begin{pmatrix}
+                1&1\\
+                1&2
+            \end{pmatrix}\\
+            &=\begin{pmatrix}
+                2&-1\\
+                -1&1
+            \end{pmatrix}
+            \begin{pmatrix}
+                4&5\\-1&-3
+            \end{pmatrix}\\
+            &=\begin{pmatrix}
+                9&13\\
+                -5&-8
+            \end{pmatrix}
+        \end{align*}
+    \end{itemize}
+    \item [3.] \(\forall u\in U,\ u = \lambda_1 b_1+\cdots+\lambda_n b_n\). Then \(T(u) = T(\lambda_1 b_1+\cdots+\lambda_n b_n)\), then due to linearity, \(T(u) = \lambda_1T( b_1)+\cdots+\lambda_nT( b_n)\). Thus, the set \(\{T( b_1),\cdots,T( b_n)\}\) spans \(\{T(u)|\ \forall u\in U\}\).
+    \begin{itemize}
+        \item [i:] The set \(\{T( b_1),\cdots,T( b_n)\}\) is linearly independent, then the claim is right.
+        \item [ii:] The set is not linear independent. Meaning that \(\exists \mu_1,\cdots,\mu_n\) that \(\mu_1T(b_1)+\cdots+\mu_nT( b_n) = 0\), then do a operation that subsitutes \(T(b_n)\) with \(-(\mu_1T(b_1)+\cdots+\mu_nT( b_{n-1}))\) in \(T(u) = \lambda_1T( b_1)+\cdots+\lambda_nT( b_n)\). We can do this operation till the remaining set is linear independent which shows that the original claim was right.
+    \end{itemize}
+    Thus \(\{T( b_1),\cdots,T( b_n)\}\) do have a subset that can serve as a base for \(T(U)\).
+    \item [4.]
+    Suppose that there exists a inverse \(T^{-1}\), then: \begin{align*}
+        T^{-1}\circ T\circ T &= 0 \\
+        T&=0
+    \end{align*}
+    \(T=0\) is not invertable as it is obviously not injection, which raises a contradiction, meaning \(T\) is not invertable.
+    \item [5.]
+    \begin{itemize}
+        \item [i:] Suppose \(\exists v\in V\) that \(v\in N(P),\ v \in R(P)\), then \(P(v) = \overrightarrow{0}\) as \(v\in N(T)\), also as \(P(P(v)) = P(v)\) as stated. Due to \(P\) is linear, \(P(\overrightarrow{0}) = \overrightarrow{0}\). Thus, \(\forall w\in N(P)\). \(P(w)=\overrightarrow{0}\). \\ Thus, \(N(P)\cap R(P) = \{\overrightarrow{0}\}\)
+        \item [ii:]\begin{align*}
+            \dim (N(P)+R(P)) &= \dim(N(P))+\dim(R(P))-\dim(R(P)\cap N(P))\\
+            &=\dim(N(P))+\dim(R(P))-\dim(\{\overrightarrow{0}\})\\
+            &=\dim(N(P))+\dim(R(P))
+        \end{align*}
+        As \(R(P) = \dim(V) - N(P)\) from rank/nullity therom,\\ \(\dim(V) = \dim(R(P))+\dim(N(T))\). As null space and range are all vector spaces, then there exists sets of basis: \(\{n_i\}\) and \(\{r_i\}\) spanning \(N(P)\) and \(R(T)\) expanding such basis into \(\dim(V)\), then they must be linear independent, as the intercetion only contains \(\overrightarrow{0}\). Suppose it does not, then \(\exists \lambda_1,\cdots,\lambda_n\) that \(\sum_i \lambda_i r_i = n_i\) then exists \(n_i\in R(T)\) and vice versa.
+        Therefore, as the set of vectors \(\{r_1,\cdots,r_n,n_1,\cdots,n_i\}\) are linear independent with
+        \\ \(\dim(\text{span}(r_1,\cdots,r_n,n_1,\cdots,n_i)) = \dim(V)\) they are a sets of basis of \(V\), Thus \(V = R(P)+N(P)\), thus, it is a direct sum.
+    \end{itemize}
+    \item [6.] As \(\{b_i\}\) is a set of basis for \(V\), then \(\forall b \in V, \exists \lambda_1,\cdots,\lambda_n\) that \(b = \sum_{i=1}^n \lambda_ib_i\). 
+    Thus, for all \(T\in \text{Hom}(V,\mathbb{R})\),\\  \(T(b) = T(\sum_{i=1}^n \lambda_ib_i) = \sum_{i=1}^n\lambda_iT(b_i)\times 1 = \sum_{i=1}^n\lambda_iT(b_i)\times \ell_i(b_i) \). As \(T(b_i)\in \mathbb{R}\), set \(\mu_i = \lambda_i\times T(b_i)\), then \(T(b)=\sum_{i=1}^{n}\mu_i \ell_i(b_i)\). Thus, the set of vectors spans \(\text{Hom}(V,\mathbb{R})\)
+    Also, for \(1\leq j \leq n\) \(\sum_{i=1}^{n}\lambda_i\ell_i(b_j) = \lambda_j\). for \(\sum \lambda_i\ell_i = 0\), when running this sum through all the basis vectors, all the coefficients \((\lambda_i)\) must all equal to zero meaning that the set of \(\ell _i\) are linearly independent, thus, it is a set of basis for \(\text{Hom}(V,\mathbb{R})\)
+    \item [7.]
+    \(T_{\mathcal{BB}} = \begin{pmatrix}
+        0&1\\0&0
+    \end{pmatrix}\), \([id]_{\mathcal{BB'}} = \begin{pmatrix}
+        1&1\\1&-1
+    \end{pmatrix}\)
+    \([id]_{\mathcal{B'B}}  = \left([id]_{\mathcal{B'B}}\right)^{-1}= \begin{pmatrix}
+        \frac{1}{2}&\frac{1}{2}\\\frac{1}{2}&-\frac{1}{2}
+    \end{pmatrix}\) Thus: \[T_{B'B} = [id]_{\mathcal{B'B}}T_{\mathcal{BB}} = \begin{pmatrix}
+        \frac{1}{2}&\frac{1}{2}\\\frac{1}{2}&-\frac{1}{2}
+    \end{pmatrix}\begin{pmatrix}
+        0&1\\0&0
+    \end{pmatrix} = \begin{pmatrix}
+        0&\frac{1}{2}\\0&-\frac{1}{2}
+    \end{pmatrix}\]
+    \item [8.]
+    \begin{itemize}
+        \item [a)] \(\forall n_{k+1}\in N(T^{k+1}), T(T^k(n_{k+1})) = N(T^{k+1}) = \overrightarrow{0}\). As \(T\) is a linear map, \(T(v) = \overrightarrow{0}\) then \(v = \overrightarrow{0}\). Thus, \(T^k(n_{k+1})= \overrightarrow{0}\), Thus, \(N(T^k)\subseteqq N(T^{k+1})\).\\
+        \\ 
+        for any \(w = T^{k+1}(v)\), \(w = T\circ T^k = \underbrace{T\circ\cdots\circ T}_{k} = T^k \circ T = T^k(T(v))\)
+        Thus, \(R^{k+1}\subseteqq R^k\)
+        \item [b)]Suppose it does not exists such \(k\), then as range itself is a subspace, if they do not equal, then the \(\dim(R(T^{k+1}))\neq\dim(R(T^{k}))\), as profed in a), \(R^{k+1}\subseteqq R^k\). Thus, \(\forall k\in\mathbb{N}\), 
+        \(\dim(R(T^{k+1}))<\dim(R(T^{k}))\). According to rank/nullity, \(\dim(N(T)) = \dim(V)-\dim(R(T))\), there is no such thing as negative dimension, therefore the largest value for \(\dim(R(T))\) is \(\dim(V)\). However, According to the asumption,
+        \(\dim(R(T^{2}))<\dim(R(T))\leq \dim(V)\), \(\dim(R(T))\neq 0 \) as if it is, there does not exist such \(\dim(R(T^2))<0\) meaning the assumption is wrong. Then is needs to be at least 1.
+        \\Then \(\dim(R(T^2))<\dim(V)-1\). then through mathematical induction, setting \(\dim(R(T^k))\leq\dim(V)-(k-1)\), for same reason stated above, 
+        \(\dim(R(T^{k+1}))\leq\dim(V)-(k-1)-1\). Then for \(k = \dim(V)+1\), \(\dim(R(T^{k}))\leq \dim(V)-(\dim(V)-1) = 0\), then \(\dim(R(T^{k+1}))\) does not exist then there is a contradiction, and thus, \(\exists k \) that \(\dim(R(T^k))=\dim(R(T^{k+1}))\), as in a), 
+        \(R^{k+1}\subseteqq R^k\), then \(\exists k\) that \(R(T^{k}) = R(T^{k+1})\).
+        \item [c)] If \(\exists R(T^{k}) = R(T^{k+1})\), then \(\exists k,\ R(T^k) = R(T\circ T^k)\), Note \(r_k = R(T^k)\), then \(r_k = R(T(r^k))\).
+        \\Induction:\\
+        \(\exists k\) that \(R(T^k)=R(T^{k+1})\), suppose \(R(T^{k+s}) =R(T^{k+s+1})\), claim that \(R(T^{k+s+1}) =R(T^{k+s+2})\).
+        \\prof:\\
+        \(R(T^{k+s}) =R(T^{k+s+1})\) means that \(r_{k+s} = R(T(r_{k+s})) = r_{k+s+1}\), then
+        \(R(T^{k+s+2}) = R(T(r_{k+s+1})) = R(T(r_{k+s})) = r_{k+s+1} = R(T^{k+s+1})\).
+        Thus, by mathematical induction, the original statement was right.
+    \end{itemize}
+\end{itemize}
+\end{document}
