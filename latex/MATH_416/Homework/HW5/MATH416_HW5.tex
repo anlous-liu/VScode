@@ -128,8 +128,8 @@
         \\ \(\dim(\text{span}(r_1,\cdots,r_n,n_1,\cdots,n_i)) = \dim(V)\) they are a sets of basis of \(V\), Thus \(V = R(P)+N(P)\), thus, it is a direct sum.
     \end{itemize}
     \item [6.] As \(\{b_i\}\) is a set of basis for \(V\), then \(\forall b \in V, \exists \lambda_1,\cdots,\lambda_n\) that \(b = \sum_{i=1}^n \lambda_ib_i\). 
-    Thus, for all \(T\in \text{Hom}(V,\mathbb{R})\),\\  \(T(b) = T(\sum_{i=1}^n \lambda_ib_i) = \sum_{i=1}^n\lambda_iT(b_i)\times 1 = \sum_{i=1}^n\lambda_iT(b_i)\times \ell_i(b_i) \). As \(T(b_i)\in \mathbb{R}\), set \(\mu_i = \lambda_i\times T(b_i)\), then \(T(b)=\sum_{i=1}^{n}\mu_i \ell_i(b_i)\). Thus, the set of vectors spans \(\text{Hom}(V,\mathbb{R})\)
-    Also, for \(1\leq j \leq n\) \(\sum_{i=1}^{n}\lambda_i\ell_i(b_j) = \lambda_j\). for \(\sum \lambda_i\ell_i = 0\), when running this sum through all the basis vectors, all the coefficients \((\lambda_i)\) must all equal to zero meaning that the set of \(\ell _i\) are linearly independent, thus, it is a set of basis for \(\text{Hom}(V,\mathbb{R})\)
+    Thus, for all \(T\in \text{Hom}(V,\mathbb{R})\),\\  \(T(b) = T(\sum_{i=1}^n \lambda_ib_i) = \sum_{i=1}^n\lambda_iT(b_i)\times 1 = \sum_{i=1}^n\lambda_iT(b_i)\times \ell_i(b_i) \). As \(T(b_i)\in \mathbb{R}\), set \(\mu_i = \lambda_i\times T(b_i)\), then \(T(b)=\sum_{i=1}^{n}\mu_i \ell_i(b_i)=\sum_{i=1}^{n}\mu_i \ell_i(b)\). Thus, the set of vectors spans \(\text{Hom}(V,\mathbb{R})\)
+    Also, for \(1\leq j \leq n\) \(\sum_{i=1}^{n}\lambda_i\ell_i(b_j) = \lambda_j\),thus, when running this sum through all the basis vectors, all the coefficients \((\lambda_i)\) must all equal to zero meaning that the set of \(\ell _i\) are linearly independent, thus, it is a set of basis for \(\text{Hom}(V,\mathbb{R})\)
     \item [7.]
     \(T_{\mathcal{BB}} = \begin{pmatrix}
         0&1\\0&0
@@ -143,7 +143,7 @@
     \end{pmatrix}\begin{pmatrix}
         0&1\\0&0
     \end{pmatrix} = \begin{pmatrix}
-        0&\frac{1}{2}\\0&-\frac{1}{2}
+        0&\frac{1}{2}\\0&\frac{1}{2}
     \end{pmatrix}\]
     \item [8.]
     \begin{itemize}
