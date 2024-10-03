@@ -106,7 +106,7 @@
     \item [3.] \(\forall u\in U,\ u = \lambda_1 b_1+\cdots+\lambda_n b_n\). Then \(T(u) = T(\lambda_1 b_1+\cdots+\lambda_n b_n)\), then due to linearity, \(T(u) = \lambda_1T( b_1)+\cdots+\lambda_nT( b_n)\). Thus, the set \(\{T( b_1),\cdots,T( b_n)\}\) spans \(\{T(u)|\ \forall u\in U\}\).
     \begin{itemize}
         \item [i:] The set \(\{T( b_1),\cdots,T( b_n)\}\) is linearly independent, then the claim is right.
-        \item [ii:] The set is not linear independent. Meaning that \(\exists \mu_1,\cdots,\mu_n\) that \(\mu_1T(b_1)+\cdots+\mu_nT( b_n) = 0\), then do a operation that subsitutes \(T(b_n)\) with \(-(\mu_1T(b_1)+\cdots+\mu_nT( b_{n-1}))\) in \(T(u) = \lambda_1T( b_1)+\cdots+\lambda_nT( b_n)\). We can do this operation till the remaining set is linear independent which shows that the original claim was right.
+        \item [ii:] The set is not linear independent. Meaning that \(\exists \mu_1,\cdots,\mu_n\) not all zeros, that \(\mu_1T(b_1)+\cdots+\mu_nT( b_n) = 0\), then do a operation that subsitutes \(T(b_n)\) with \(-(\mu_1T(b_1)+\cdots+\mu_nT( b_{n-1}))\) in \(T(u) = \lambda_1T( b_1)+\cdots+\lambda_nT( b_n)\). We can do this operation till the remaining set is linear independent which shows that the original claim was right.
     \end{itemize}
     Thus \(\{T( b_1),\cdots,T( b_n)\}\) do have a subset that can serve as a base for \(T(U)\).
     \item [4.]
@@ -123,7 +123,7 @@
             &=\dim(N(P))+\dim(R(P))-\dim(\{\overrightarrow{0}\})\\
             &=\dim(N(P))+\dim(R(P))
         \end{align*}
-        As \(R(P) = \dim(V) - N(P)\) from rank/nullity therom,\\ \(\dim(V) = \dim(R(P))+\dim(N(T))\). As null space and range are all vector spaces, then there exists sets of basis: \(\{n_i\}\) and \(\{r_i\}\) spanning \(N(P)\) and \(R(T)\) expanding such basis into \(\dim(V)\), then they must be linear independent, as the intercetion only contains \(\overrightarrow{0}\). Suppose it does not, then \(\exists \lambda_1,\cdots,\lambda_n\) that \(\sum_i \lambda_i r_i = n_i\) then exists \(n_i\in R(T)\) and vice versa.
+        As \(\dim(R(P)) = \dim(V) - \dim(N(P))\) from rank/nullity therom,\\ \(\dim(V) = \dim(R(P))+\dim(N(T))\). As null space and range are all vector spaces, then there exists sets of basis: \(\{n_i\}\) and \(\{r_i\}\) spanning \(N(P)\) and \(R(T)\) expanding such basis into \(\dim(V)\), then they must be linear independent, as the intercetion only contains \(\overrightarrow{0}\). Suppose it does not, then \(\exists \lambda_1,\cdots,\lambda_n\) that \(\sum_i \lambda_i r_i = n_i\) then exists \(n_i\in R(T)\) and vice versa.
         Therefore, as the set of vectors \(\{r_1,\cdots,r_n,n_1,\cdots,n_i\}\) are linear independent with
         \\ \(\dim(\text{span}(r_1,\cdots,r_n,n_1,\cdots,n_i)) = \dim(V)\) they are a sets of basis of \(V\), Thus \(V = R(P)+N(P)\), thus, it is a direct sum.
     \end{itemize}
