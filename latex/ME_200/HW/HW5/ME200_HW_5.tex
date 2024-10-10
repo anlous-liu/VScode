@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+\date{Due: Oct 4  Edit: \today}
+\title{ME 200 Homework 5}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] 
+    \begin{align*}
+        W &= m(h_i+V_i^2/2+gz)-m(h_e+V_E^2/2+gz)\\
+        &=m((h_i-h_e)+(V_i^2-V_e^2)/2)\\
+        &=11.95((3015.4\times 10^3-2431.7\times 10^3)+((10^2-90^2)/2))\\
+        &=6.91\times 10^6\text{ W} = 691 \text{ kW}    
+    \end{align*}
+    \item [2.]
+    \begin{align*}
+        0 &= Q-W+m_i(\Delta h + \Delta V^2/2+\Delta(gz))\\
+        m &=\frac{-(Q-W)}{h_i-h_e}\\
+        m &=\frac{-20+150}{503.2-300.19}\\
+        m &=0.6403 \text{ kg/s}
+    \end{align*}
+    \item [3.]
+    \begin{align*}
+            \Delta h &= v_f (T )( p_1-p_2)\\
+            &=1.009\times 10^{-3} (-2\times 10^5)\\
+            &=-2.018\times 10^2\\
+            m&=\frac{W}{\Delta h + \Delta U}\\
+            m&=\frac{-0.52\times 10^3}{-2.018\times 10^2-15\times9.81}\\
+            m&=1.49018 \text{ kg/s}
+    \end{align*}
+    \item [4.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            h_f &= \frac{173.88-151.53}{0.08-0.07}*0.01+151.53 =162.705\\
+            h_g &= \frac{2577-2567.4}{0.08-0.06}*0.01+2567.4=2572.2\\
+            2431.6 &= x(2572.2)+(1-x)162.705\\
+            x &=0.941648
+        \end{align*}
+        Quality is 0.9416
+        \item [b)]
+        \begin{align*}
+            Q &= m_s(\Delta h_s)+ m_ac_a(\Delta T)\\
+            Q &= 1.5(162.705-2431.6)+100\times1.005\times(30)\\
+            Q &= -388.343\text{kJ/min} = -6.47 \text{kW}
+        \end{align*}
+    \end{itemize}
+    \item [5.]
+    \begin{align*}
+        \Delta h &= \Delta ke\\
+        c\Delta T+\frac{\Delta p}{\rho}&= \Delta ke\\
+        0.001\times (275-300) &= -0.025 \text{kJ/kg}
+    \end{align*}
+\end{itemize}
+\end{document}

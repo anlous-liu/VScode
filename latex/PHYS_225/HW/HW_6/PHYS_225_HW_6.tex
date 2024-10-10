@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{(BA)ue:Oct 10 Edit: \today}
+\title{PHYS 225 HW 6}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] 
+    \begin{itemize}
+        \item [a)] Suppose \(\dim(A) = n\times m,\ \dim(B)=m\times n\):
+        \begin{align*}
+            (AB)^i_j &= \sum_{k}^m A^{i}_k B^k_j\\
+            \text{Tr}(AB)& = \sum_{i,j}^n\delta^i_j(AB)^i_j = \sum_{i,j}^n\sum_{k}^m\delta^i_j A^{i}_k B^k_j = \sum_i^n (AB)^i_i = \sum_{i}^n\sum_{k}^m A^{i}_k B^k_i\\
+            (BA)^i_j&= \sum_{k}^n B^i_kA^{k}_j \\
+            \text{Tr}(BA)& = \sum_{i,j}^m\delta^i_j(BA)^i_j = \sum_{i,j}^m\sum_{k}^n\delta^i_j B^i_kA^{k}_j = \sum_i^n (BA)^i_i = \sum_i^m\sum_k^n B^i_kA_i^k\\        
+        \end{align*}
+        As \(\sum_{i}^n\sum_{k}^m A^{i}_k B^k_i =  \sum_k^n\sum_i^m A_i^kB^i_k\), thus \(\text{Tr}(AB) = \text{Tr}(BA)\)
+        \item [b)]
+        \begin{align*}
+            \text{Tr}(ABC) &= \text{Tr}((AB)C)=\text{Tr}(C(AB))=\text{Tr}(CAB)\\
+            \text{Tr}(ABC)&=\text{Tr}(A(BC))=\text{Tr}((BC)A)=\text{Tr}(BCA)\\
+            \text{Thus, } \text{Tr}(ABC)&=\text{Tr}(CAB)=\text{Tr}(BCA)
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            \text{Tr}(A_1A_2\cdots A_{n-1}A_n)&=\text{Tr}((A_1A_2\cdots A_{n-1})A_n)=\text{Tr}(A_n(A_1A_2\cdots A_{n-1}))\\
+            &=\text{Tr}(A_nA_1A_2\cdots A_{n-1})
+        \end{align*}
+    \end{itemize}
+    \newpage
+    \item [2.] \ 
+        \begin{itemize}
+            \item [Identity:] Claim: \(\exists M,N\) that \(M^TM = I\), \(NM = N\), For square matrixes, consider the Identity matrix \(I\), first, \(I^TI = I\), Thus \(I\in O(n)\).
+            \item [Inverse:] \(\forall M \in O(n)\), \(M^TM = I\), thus \(M^T\in O(n)\) and \(M^T = M^{-1}\)
+            \item [Closure:] For any \(M,N\in O(n)\) \begin{align*}
+                MN &= A\\
+                N^TM^TMN &= N^TM^TA\\
+                I&=N^TM^TA\\
+                I&= (MN)^TA\\
+                (MN)^T (MN) &= I
+            \end{align*}
+            Thus, it is closed.
+        \end{itemize}
+    \item [3.] \
+    \begin{itemize}
+        \item [Identity:] \(\exists (R(\theta),\overrightarrow{a})\) that, for any \((R(\phi),\overrightarrow{b})\), \((R(\theta),\overrightarrow{a})(R(\phi),\overrightarrow{b}) =(R(\phi),\overrightarrow{b})\), Take \(\theta=0,\overrightarrow{a} = \overrightarrow{0}\), then by not rotating and adding nothing, the transformation is not change.
+        \item [Inverse:] \(\forall (R(\phi),\overrightarrow{b})\), \((R(-\phi),-\overrightarrow{b})(R(\phi),\overrightarrow{b}) = I\)
+        \item [Closure:] \((R(\theta),\overrightarrow{a})(R(\phi),\overrightarrow{b})=(R(\phi+\theta),\overrightarrow{a}+\overrightarrow{b})\). Thus it is closed.
+    \end{itemize}
+\end{itemize}
+\end{document}
