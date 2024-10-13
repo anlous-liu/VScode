@@ -1,0 +1,148 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{multirow}
+
+
+
+\date{Due:Oct 14 Edit: \today}
+\title{PHYS 225 HW 7}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] First get the space time cordinates in ground frame and then transform them into different frames. Frist, the system is synchronized at \(E_1\). Meaning that \(E_1\) happens at \((0,0)\) in all 3 frames. Meaning that we can have build a table like this: 
+    \\
+    \begin{tabular}{c | c c | c c | c c|}
+        &\multicolumn{2}{c|}{Ground Frame}&\multicolumn{2}{c|}{Train's back Frame}&\multicolumn{2}{c|}{C's Frame}\\
+        \hline Event& $t$&$x$&$t'$&$x'$&$t_c$&$x_c$\\
+        $E_1$& 0&0&0&0&0&0\\ 
+        $E_2$& ?&?&?&?&?&0
+    \end{tabular}\\
+    \begin{align*}
+        \Delta v &= \frac{4}{5}c-\frac{3}{5}c=\frac{1}{5}c&
+        t &= \frac{L}{v} = \frac{L}{\frac{1}{5}c} = \frac{5L}{c}\\
+    \end{align*}
+    \[x = v\times t  = \frac{4}{5}c\times \frac{5L}{c} = 4L = L+\frac{3}{5}c\times\frac{5L}{c}\]
+    Thus, the space time coordinate of \(E_1\) is \( \left(\frac{5L}{c},4L\right)\). Apply lorentz transformation on this, first to solve for the event in train's frame:
+    \begin{align*}
+        \begin{bmatrix}
+            \gamma&\gamma\beta\\
+            \gamma\beta&\gamma
+        \end{bmatrix}&=
+        \begin{bmatrix}
+            \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}&\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\frac{v}{c}\\
+            \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\frac{v}{c}&\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}
+        \end{bmatrix}\\
+        &=\begin{bmatrix}
+            \frac{5}{4}&-\frac{3}{4}\\
+            -\frac{3}{4}&\frac{5}{4}
+        \end{bmatrix}\\
+        \begin{bmatrix}
+            \gamma&\gamma\beta\\
+            \gamma\beta&\gamma
+        \end{bmatrix}\begin{bmatrix}
+            ct\\x
+        \end{bmatrix}&=\begin{bmatrix}
+            \frac{5}{4}&-\frac{3}{4}\\
+            -\frac{3}{4}&\frac{5}{4}
+        \end{bmatrix}\begin{bmatrix}
+            5L\\4L
+        \end{bmatrix}\\
+        &=\begin{bmatrix}
+            \frac{13}{4}L\\\frac{5}{4}L
+        \end{bmatrix}
+    \end{align*}
+    Thus, the space time coordinate of \(E_2\) at train's back frame is \(\left(\frac{13L}{4c},\frac{5}{4}L\right)\) 
+    Now compute the coordinate in \(C\)'s frame:
+    \begin{align*}
+        \begin{bmatrix}
+            \gamma&\gamma\beta\\
+            \gamma\beta&\gamma
+        \end{bmatrix}&=
+        \begin{bmatrix}
+            \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}&\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\frac{v}{c}\\
+            \frac{1}{\sqrt{1-\frac{v^2}{c^2}}}\frac{v}{c}&\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}
+        \end{bmatrix}\\
+        &=\begin{bmatrix}
+            \frac{5}{3}&-\frac{4}{3}\\
+            -\frac{4}{3}&\frac{5}{3}
+        \end{bmatrix}\\
+        \begin{bmatrix}
+            \gamma&\gamma\beta\\
+            \gamma\beta&\gamma
+        \end{bmatrix}\begin{bmatrix}
+            ct\\x
+        \end{bmatrix}&=\begin{bmatrix}
+            \frac{5}{3}&-\frac{4}{3}\\
+            -\frac{4}{3}&\frac{5}{3}
+        \end{bmatrix}\begin{bmatrix}
+            5L\\4L
+        \end{bmatrix}\\
+        &=\begin{bmatrix}
+            3L\\0
+        \end{bmatrix}
+    \end{align*}
+    Thus, the table becomes:\\
+    \begin{tabular}{c | c c | c c | c c|}
+        &\multicolumn{2}{c|}{Ground Frame}&\multicolumn{2}{c|}{Train's back Frame}&\multicolumn{2}{c|}{C's Frame}\\
+        \hline Event& $t$&$x$&$t'$&$x'$&$t_c$&$x_c$\\
+        $E_1$& 0&0&0&0&0&0\\ 
+        $E_2$& $\frac{5L}{c}$&$4L$&$\frac{13L}{4c}$&$\frac{5}{4}L$&$\frac{3L}{c}$&0
+    \end{tabular}\\
+    Now, check for values of \(c^2(\Delta t)^2-(\Delta x)^2\)\\
+    \begin{align*}
+        c^2(\Delta t)^2-(\Delta x)^2&=c^2\left(\frac{5L}{c}\right)-\left(4L\right)^2= 9L^2\\
+        &=c^2\left(\frac{13L}{4c}\right)-\left(\frac{5}{4}L\right)^2 = \frac{13^2-5^2}{16}L^2 = 9L^2\\
+        &=c^2\left(\frac{3L}{c}\right)-0 = 9L^2
+    \end{align*}
+    \newpage
+    \item [2.]
+    \begin{itemize}
+        \item [a)]
+        Synchronize two system at \(E_1\) when the left side of pole passing left side of barn.
+        Label the space time event in barn's frame as \(S\), poles as \(S'\), coordinate of left of barn as \(B_l\), and right side as \(B_r\), for pole, it is \(P_l \) and \(P_r\).
+        \begin{table}[h]
+            \centering
+            \begin{tabular}{c c | c c | c c }
+                \multicolumn{2}{c|}{Label }&\multicolumn{2}{c|}{S}&\multicolumn{2}{c}{S'}\\ \hline
+                &&                                     t&x&t'&x' \\ \hline
+                \multirow{2}{*}{\(E_1\)}&\(B_l\)&0&0&0&0         \\
+                                        &\(P_l\)&0&0&0&0             \\\hline
+                \multirow{2}{*}{\(E_2\)}&\(B_r\)&\(t_1\)&L&\(t_2\)&L                   \\
+                                        &\(P_r\)&\(t_1\)&L&\(t_2\)&L \\
+            \end{tabular}
+        \end{table}\\
+        Now solve for \(t_1,t_2\):
+        \begin{align*}
+            \begin{bmatrix}
+                \frac{5}{4}&-\frac{3}{4}\\
+                -\frac{3}{4}&\frac{5}{4}
+            \end{bmatrix}\begin{bmatrix}
+                ct_1\\L
+            \end{bmatrix}&=\begin{bmatrix}
+                ct_2\\L
+            \end{bmatrix}\\ \left\{
+            \begin{matrix}
+                \frac{5}{4}ct_1-\frac{3}{4}L = ct_2\\
+                -\frac{3}{4}ct_1+\frac{5}{4}L = L
+            \end{matrix}\right.\\\left\{
+                \begin{matrix}
+                    t_1 = \frac{L}{3c}\\
+                    t_2 =-\frac{L}{3c}
+                \end{matrix}\right.
+        \end{align*}
+        Thus, \(\Delta t =t_1-0=\frac{L}{3c},\ \Delta x = L-0=L\)
+        \item [b)] In the red frame or double prime frame, the 2 events are all on x-axis, meaning they are happening at the same time of \(t=0\)
+        \begin{figure}[h]
+            \centering
+            \includegraphics*[scale = 0.05]{figure/phys225_hw7_fig1.jpeg}
+        \end{figure}
+    \end{itemize}
+\end{itemize}
+\end{document}

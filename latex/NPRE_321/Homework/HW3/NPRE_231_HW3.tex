@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{esint}
+
+
+\date{Due: Sep 25 Edit: \today}
+\title{NPRE 321 HW 1}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] \ 
+    \begin{figure}[h]
+        \centering
+        \includegraphics*[scale = 0.2]{figure/fig_231_hw3.jpeg}
+    \end{figure}
+    \item [2.]
+    \[B_{low} = 0 \text{ T, } B_{high} = 0.03 \text{ T}\]
+    \[\nabla B = \Delta B/r = 0.03/0.1 = 0.3 \text{T/m}\]
+    
+    \item [3.]
+    \begin{itemize}
+        \item [i:] Electrons:
+        \begin{align*}
+            \bar{v}_e &=\sqrt{\frac{8kT}{\pi m_e}}\\
+                & = \sqrt{\frac{8\cdot1.602\times 10^{-19}\cdot 10}{\pi\cdot 9.11\times10^{31}}}\\
+                &=2.116\times 10^6 \text{ m/s}
+        \end{align*}
+        \item[ii:] Ions:
+        \begin{align*}
+            \bar{v}_i &=\sqrt{\frac{8kT}{\pi m_e}}\\
+            &=\sqrt{\frac{8\cdot 1.38\cdot10^{-23}\cdot (273+27)}{\pi\cdot 47.867\cdot 1.66\cdot 10^{-27}}}\\
+            &=364.249\text{ m/s}
+        \end{align*}
+    \end{itemize}
+    \item[4.]
+    If assume that the parrallel and perpendicular velocities equals each other, then:\\
+    \[\bar{v}_{i,\bot} =\bar{v}_{i,\parallel}  = \frac{\bar{v}_{i}}{\sqrt2} = 257.563\text{ m/s}\]
+    \[\bar{v}_{e,\bot} =\bar{v}_{e,\parallel}  = \frac{\bar{v}_{e}}{\sqrt2} = 1.4962\times 10 ^6 \text{ m/s}\]
+    \item[5.] If there is no drift, then the particles just travel at the average speed along the 1/4 toridal shape:
+    \item[] \[t_i = \frac{1/4 \times 2\pi r}{v_{i,parra}} = \frac{0.5\times 0.5\times \pi}{257.563} = 3.04\times 10^{-3}\text{ s}\]
+    \[t_e = \frac{1/4 \times 2\pi r}{v_{e,parra}} = \frac{0.5\times 0.5\times \pi}{1.4962\times 10 ^6} = 5.249\times 10^{-7}\text{ s}\]
+    \item[6.]
+    \[\omega_{c,i} = \frac{qB}{2\pi m}=\frac{1.602\times 10^{-19}\times 30\times 10^{-3}}{47.867\times 1.66\times 10^{-27}\times 2\pi} = 9626.3 \text{ Hz}\]
+    \[\omega_{c,e} = \frac{qB}{2\pi m}=\frac{1.602\times 10^{-19}\times 30\times 10^{-3}}{9.11\times 10^{-31}\times 2\pi} = 8.396\times 10^{8} \text{ Hz}\]
+    \[\omega_{p,i} = \frac{1}{2\pi}\sqrt{\frac{nq^2}{\varepsilon_0m }} = \frac{1}{2\pi}\sqrt{\frac{2\times 10^{18}\times (1.602\times 10^{-19})^2}{8.854\times 10^{-12}\times 47.867\times 1.66\times 10^{-27}}} = 4.298\times 10^{7} \text{ Hz}\]
+    \[\omega_{p,e} = \frac{1}{2\pi}\sqrt{\frac{nq^2}{\varepsilon_0m }} = \frac{1}{2\pi}\sqrt{\frac{2\times 10^{18}\times (1.602\times 10^{-19})^2}{8.854\times 10^{-12}\times 9.11\times 10^{-31}}} = 1.269\times 10^{10} \text{ Hz}\]
+    \[r_{L,i} = \frac{v_{\bot}}{w_{c,i}} = \frac{257.563}{\frac{1.602\times 10^{-19}\times 30\times 10^{-3}}{47.867\times 1.66\times 10^{-27}}}=0.00425 \text{ m}\]
+    \[r_{L,e} = \frac{v_{\bot}}{w_{c,i}} = \frac{1.4962\times 10 ^6}{\frac{1.602\times 10^{-19}\times 30\times 10^{-3}}{9.11\times 10^{-31}}}=2.836\times 10^{-4}\text{ m}\]
+    \item[7.]
+    \[v_{\nabla B,i} = \pm \frac{1}{2}v_{\bot }r_L \frac{B\times \nabla B}{B^2}=0.5\times 364.249\times 0.00425 \times \frac{0.03\times 0.3}{0.03^2} = 7.740 \text{ m/s}\]
+    \[v_{\nabla B,e} = \pm \frac{1}{2}v_{\bot }r_L \frac{B\times \nabla B}{B^2}=0.5\times 1.4962\times 10 ^6\times 2.836\times 10^{-4} \times \frac{0.03\times 0.3}{0.03^2} = 2121.61 \text{ m/s}\]
+    The other method is do it by definition, taking \(v_f = \frac{1}{q}\frac{F\times B}{B^2}\) they do give similar answers.
+    \item[8.]
+    \[v_{R_c,i} = \frac{m_i v_{\parallel}^2}{qB}\frac{R\times B}{R^2} = \frac{47.867\times 1.66\times 10^{-27}\times257.563}{1.602\times 10^{-19}\times 0.03}\frac{0.5\times 0.03}{0.5^2} = 0.000256 \text{ m/s}\]
+    \[v_{R_c,e} = \frac{m_e v_{\parallel}^2}{qB}\frac{R\times B}{R^2} = \frac{9.11\times 10^{-31}\times5.249\times 10^{-7}}{1.602\times 10^{-19}\times 0.03}\frac{0.5\times 0.03}{0.5^2} = 5.969\times 10^{-18} \text{ m/s}\]
+    \[v_{R+\nabla B,i} = \frac{r_L}{R_0}v = 0.00425/0.5 \times 364.249 = 3.09612\text{ m/s}\]
+    \[v_{R+\nabla B,e} = \frac{r_L}{R_0}v = 2.836\times 10^{-4}/0.5 \times 2.116\times 10^6 = 1200.2\text{ m/s}\]
+    \item[9.]
+    \[d_i  = 3.04 \times 10^{-3} \times 3.09612 = 9.412\times 10^{-3}\]
+    \[d_e  =  5.249\times 10^{-7} \times 1200.2 = 6.3 \times 10^{-4}\]
+    As both of them are smaller than 10cm, we can confidently say that both of them will still reach the substrate.
+    \newpage
+    \item[10.]
+    At the substrate, what will happen to each of the species, and what energy will the electrons and ions reach the substrate with?
+
+\textbf{Electrons:}
+
+The electrons, being much lighter than the ions, will have much higher velocities due to their smaller mass. From the problem, we know that the substrate has a bias of -1 kV, which will accelerate the electrons towards it. The energy gained by the electrons from this potential difference is given by:
+
+\[
+E_e = e \times V
+\]
+
+where \( e = 1.602 \times 10^{-19} \, \text{C} \) and \( V = 1000 \, \text{V} \) (since 1 kV = 1000 V). Thus:
+
+\[
+E_e = 1.602 \times 10^{-19} \, \text{C} \times 1000 + 10 \, \text{V} = 1.602 \times 10^{-16} \, \text{J} = 1.01 \, \text{keV}
+\]
+
+\textbf{Ions:}
+
+The ions (titanium ions in this case), being heavier and slower than the electrons, will also experience acceleration due to the bias at the substrate. As the titanium ions are singly ionized, they too will gain energy from the electric field, calculated as:
+
+\[
+E_i = e \times V = 1.602 \times 10^{-19} \, \text{C} \times 1000 \, \text{V} = 1.602 \times 10^{-16} \, \text{J} = 1 \, \text{keV}
+\]
+
+Thus, the ions will also reach the substrate with an energy of about 1 keV.
+
+\textbf{Interactions at the Substrate:}
+
+Upon reaching the substrate, both the electrons and ions will deposit their kinetic energy into the surface. Due to their high velocity, the electrons may not penetrate deeply and will transfer energy mainly to the surface, possibly causing local heating. The ions, being much heavier, will have a stronger impact and may cause material deposition on the surface of substrate.
+
+\end{itemize}
+\end{document}

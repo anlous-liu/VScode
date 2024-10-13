@@ -1,0 +1,122 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+\date{Due: Oct 11  Edit: \today}
+\title{ME 200 Homework 6}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] 
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \eta_1 &= 1-\frac{Q}{Q_H}\\
+            Q_H &= \frac{Q}{1-\eta_1}\\
+            \eta_2 &= 1-\frac{Q_C}{Q}\\
+            Q_C &=Q-Q\eta_2\\
+            \eta_{tot} &= 1-\frac{Q_C}{Q_H}\\
+            &=1-\frac{Q-Q\eta_2}{\frac{Q}{1-\eta_1}}\\
+            &=1-Q(1-\eta_2)\times\frac{1-\eta_1}{Q}\\
+            &=1-(1-\eta_1)(1-\eta_2)\\
+            &=1-(1-\eta_1-\eta_2+\eta_1\eta_2)\\
+            &=\eta_1+\eta_2-\eta_1\eta_2
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \eta_1 &= 1-\frac{T}{T_H}\\
+            \eta_2 &= 1-\frac{T_C}{T}\\
+            \text{plug them back in a)}\\
+            \eta_{tot} &= 1-\frac{T}{T_H}+1-\frac{T_C}{T}-(1-\frac{T}{T_H})(1-\frac{T_C}{T})
+            \\ &=1-\frac{T_C}{T_H}
+        \end{align*}
+        \newpage
+        \item [c)]
+        \begin{align*}
+            \eta_1&=\eta_2\\
+            1-\frac{T}{T_H}&=1-\frac{T_C}{T}\\
+            \frac{T}{T_H}&=\frac{T_C}{T}\\
+            T^2 &=T_CT_H\\
+            T &=\sqrt{T_CT_H}
+        \end{align*}
+    \end{itemize}
+    \item [2.] It the system is reversible then:\[\eta_{\text{max}} = 1-\frac{T_C}{T_H} = 1-\frac{600}{1800} = \frac{2}{3}\]
+    \begin{itemize}
+        \item [a.] Impossible as \(\eta>\eta_{\text{max}}\):
+        \begin{align*}
+            \eta = 1-\frac{100}{500}=\frac{4}{5}>\frac{2}{3}
+        \end{align*}
+        \item [b.] Is irreversiable as:
+        \begin{align*}
+            \eta = \frac{W_{c}}{Q_H} = \frac{250}{500} =\frac{1}{2}<\frac{2}{3} 
+        \end{align*}
+        \item [c.] Impossible as \(\eta>\eta_{\text{max}}\):
+        \begin{align*}
+            Q_H = W_{c}+Q_C = 500 \text{kW}\\
+            \eta = \frac{W_c}{Q_H} = \frac{350}{500} = \frac{7}{10}>\frac{2}{3}
+        \end{align*}
+        \item [d.] Is irreversiable, as:
+        \begin{align*}
+            \eta = 1-\frac{Q_C}{Q_H} = \frac{3}{5}<\frac{2}{3}
+        \end{align*}
+    \end{itemize}
+    \item [3.]
+    \begin{align*}
+        \eta_{\text{max}} = 1-\frac{T_C}{T_H} = 1-\frac{15+273}{1100+273} = 79.024\%
+    \end{align*}
+    Thus, such device is possible and operates a nearlly reversible processes as 79\% is so close to the maximum efficiency
+    \newpage
+    \item [4.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \gamma_{\text{max}}=\frac{T_H}{T_H-T_C} = \frac{20+273}{5} = 58.6\\
+            W_{\text{min}} = \frac{Q_H}{\gamma_{\text{max}}} = \frac{3\times 10^6}{58.6} = 5.12\times10^4\text{ kJ}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \gamma_{\text{max}}=\frac{T_H}{T_H-T_C} = \frac{20+273}{10} = 29.3\\
+            W_{\text{min}} = \frac{Q_H}{\gamma_{\text{max}}} = \frac{3\times 10^6}{29.3} = 1.02\times10^5\text{ kJ}
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            \gamma_{\text{max}}=\frac{T_H}{T_H-T_C} = \frac{20+273}{15} = 19.533\\
+            W_{\text{min}} = \frac{Q_H}{\gamma_{\text{max}}} = \frac{3\times 10^6}{19.533} = 1.535\times10^5\text{ kJ}
+        \end{align*}
+    \end{itemize}
+    \item [5.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \gamma_{\text{max}} &= \frac{T_H}{T_H-T_C} = \frac{20+273}{27} = 10.851 
+            \\ W_{\text{min}} &= \frac{Q_H}{\gamma_{\text{max}}} = 24000/10.851 = 2211.6 \text{kJ/h} = 0.6143 \text{kJ/s} = 0.6143 \text{kW}\\
+            0.6143 &\times 1 \times 0.085 \times 24 = 1.25317\ \$/\text{day}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \gamma_{\text{max}} &= \frac{T_H}{T_H-T_C} = \frac{20+273}{15} = 19.533 
+            \\ W_{\text{min}} &= \frac{Q_H}{\gamma_{\text{max}}} = 24000/19.533 = 1228.67 \text{kJ/h} = 0.3413 \text{kJ/s} = 0.3413 \text{kW}\\
+            0.3413 &\times 1 \times 0.085 \times 24 = 0.6924\ \$/\text{day}
+        \end{align*}
+    \end{itemize}
+    \item [6.]
+    \begin{align*}
+        W &= \frac{Q_2}{\gamma} = \frac{Q_2}{\frac{T_d}{T_d-T_0}}\\
+        \eta &= \frac{W}{Q_s}= 1-\frac{T_d}{T_s}\\
+        Q_s &= \frac{WT_s}{T_s-T_d}\\
+        Q_1 &= Q_s-W=\frac{WT_s}{T_s-T_d}-W=\frac{WT_d}{T_s-T_d}\\
+        Q_2 &= \frac{T_dW}{T_d-T_0}\\
+        \frac{Q_1+Q_2}{Q_s}&=\frac{\frac{WT_d}{T_s-T_d}+\frac{T_dW}{T_d-T_0}}{\frac{WT_s}{T_s-T_d}}\\
+        &=\frac{\frac{T_d}{T_s-T_d}+\frac{T_d}{T_d-T_0}}{\frac{T_s}{T_s-T_d}}\\
+        &=\frac{T_d+\frac{T_d(T_s-T_d)}{T_d-T_0}}{T_s}\\
+        &=\frac{T_d(T_s-T_0)}{T_s(T_d-T_0)}
+    \end{align*}
+\end{itemize}
+\end{document}
