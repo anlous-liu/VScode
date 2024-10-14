@@ -1,0 +1,155 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due:Oct 15 Edit: \today}
+\title{NPRE200 HW 3}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] 
+    \begin{itemize}
+        \item [a)] The Not desirable ones are \(II.\) and \(III.\)
+        \item [b)] \(II.\) or 1 Mev
+        \item [c)] \(I.\) Red
+        \item [d)] \(II.\) Heavy water
+        \item [e)] \(I.\) water.
+    \end{itemize}
+    \item [2.] \
+    \begin{itemize}
+        \item [100 K] Red
+        \item [200 K] Blue
+        \item [500 K] Black
+    \end{itemize}
+    \item [3.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \sigma I N \mathcal{A} X &= 2.6\times 10^{-24}\times 5\times 10^8\times 0.080\times 10^{24}\times 0.1\times 0.05
+            \\ &=5.2\times 10^5 \text{ intertactions/s}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \frac{N_{coll}}{N}&=\frac{5.2\times 10^5\times 0.1}{5\times 10^8}\\
+            &=0.0104 = 1.04\%
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            \Sigma = \sigma N &=2.6\times 10^{-24}\times 0.080\times 10^{24}\\
+            &=0.208 \text{ cm}^{-1}
+        \end{align*}
+        \item [d)] 
+        \begin{align*}
+            \sigma I N & = 2.6\times 10^{-24}\times 0.080\times 10^{24}\\
+            &=1.04\times 10^8 \text{ intertactions/\(cm^3\cdot\)s}
+        \end{align*}
+    \end{itemize}
+    \item [4.]
+    \begin{align*}
+        P = \frac{\sigma_f}{\sigma_f+\sigma_c}&=\frac{582}{99+582}\\ &=85.46\%
+    \end{align*}
+    \item [5.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \Sigma = \sigma N &= 4.5\times 10^{-24}\times 0.048\times 10^{24}\\
+            &=0.216 \text{ cm}^{-1}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \sigma I N \mathcal{A} X &=4.5\times 10^{-24}\times4\times 10^{10}\times 0.048\times 10^{24}\times 1\times 0.1\\
+            &=8.64\times 10^8\text{ intertactions/s}
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            \sigma I N &= 4.5\times 10^{-24}\times4\times 10^{10}\times 0.048\times 10^{24}\\
+            &=8.64\times 10^9\text{ intertactions/\(cm^3\cdot\)s}
+        \end{align*}
+    \end{itemize}
+    \item [6.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            I&=nv\\
+            n&=I/v\\
+            v&=\sqrt{2\frac{KE}{m_n}}=\sqrt{2\cdot\frac{0.0253\times 1.602\times 10^{-19}}{1.674\times  10^{-27}}}\\
+            &=2200.54 \text{m/s} = 2.2\times 10^5 \text{cm/s}\\
+            n &= \frac{I}{v}\\
+            &=\frac{3\times 10^{8}}{2.2\times 10^5}\\
+            &=1363.3 \text{ neutron/cm}^3
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            R&=\phi \sigma N\\
+            &=3\times 10^8\times 0.23\times 10^{-24}\times\frac{6.023\times 10^{23}\times 0.01}{27}\\
+            &=1.53\times 10^4 \text{ atom/s}
+        \end{align*}
+        \end{itemize}
+    \item [7.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \Sigma &= N(\sigma_D+2\times \sigma_O)\\
+                    &=0.03323\times 10^{24}\cdot(2.6+1.6\times2)\times 10^{-24}\\
+                    &=0.182765 \text{ cm}^{-1}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            0.1I&=I\text{exp}(-\Sigma x)\\
+            0.1&=\text{exp}(-0.182765x)\\
+            x&= 12.598 \text{ cm}
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            P &= \frac{\sigma_D}{\sigma_D+2\cdot\sigma_O}\\
+            &=\frac{2.6}{2.6+3.2}\\
+            &=44.82\%
+        \end{align*}
+    \end{itemize}
+    \item [8.]
+    \begin{align*}
+        \frac{E_2}{E_1} &= \left(\frac{A-1}{A+1}\right)^2\\
+        &=\left(\frac{16-1}{16+1}\right)^2\\
+        &=\left(\frac{15}{17}\right)^2 = 0.7788
+    \end{align*}
+    Therefore, after collison, the energy of neutron would be:\(E_n = 0.7788\times 2 = 1.557\) Mev, and energy of \(^16O\) would be \(2-1.557 = 0.443\) Mev
+    \item [9.]
+    \begin{align*}
+        E' &= \frac{E}{(A+1)^2}\left(\cos (\vartheta)+\sqrt{A^2-\sin^2(\vartheta)}\right)^2\\
+        &=\frac{1}{(12+1)^2}\left(\cos(90)+\sqrt{12^2-\sin^2(90)}\right)^2\\
+        &=\frac{1}{169}\left(0+\sqrt{12^2-1}\right)^2\\
+        &=0.846154 \text{MeV}
+    \end{align*}
+    Thus, the energy of recoilling nucleus is \(1-0.846154=0.1538\) MeV
+    \item [10.]
+    \begin{align*}
+        \sigma(E)&=\sigma(E_0)\sqrt{\frac{E_0}{E}}\\
+        &=0.23\times \sqrt{\frac{0.0253}{100}}\\
+        &=0.003658 \text{ barn}
+    \end{align*}
+    \item [11.]
+    \begin{align*}
+       F_a &= g_a(T)\Sigma(E_0)\phi_0\\
+        &=1.15\times 7.419 \times 5\times 10^{12}\\
+        &=4.27\times 10^{13}
+    \end{align*}
+    \item [12.]
+    \begin{align*}
+        \int_{0}^{\infty}M(E)\text{d}E&=\frac{2\pi}{(\pi k  T)^{3/2}}\int_{0}^{\infty}E^{1/2}\text{exp}(-E/kT)\text{d}E\\
+        \text{let} x^2=E/kT&\text{, then: }E=kTx^2,\text{ d}E=2kTx\text{d}x \text{and} \sqrt{E}=\sqrt{kT}x\\
+        &=\frac{2\pi}{(\pi k  T)^{3/2}}\cdot 2(kT)^{3/2}\int_{0}^{\infty}x^2\cdot \text{exp}(-x^2)\text{d}x\\
+        &=\frac{4\pi}{\pi\sqrt{\pi}}\cdot\frac{\sqrt{\pi}}{4} = 1
+    \end{align*}
+\end{itemize}
+\end{document}
+
+
+
