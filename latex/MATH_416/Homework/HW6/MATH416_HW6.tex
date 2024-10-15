@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due: Oct 10 Edit: \today}
+\title{MATH 416H HW 6}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.]
+    \begin{itemize}
+        \item [a)]
+        Rank would be 3 and Nullity would be 2 as the matrix is already in reduced row-echlon form and the number of pivots is the rank and the number of none pivot column is Nullity.
+        \item [b)]
+        \begin{align*}
+            \begin{bmatrix}
+                1&2&0&1&0&\bigm|&0\\
+                0&0&1&1&0&\bigm|&0\\
+                0&0&0&0&1&\bigm|&0
+            \end{bmatrix}
+            \rightarrow
+            \left\{\begin{matrix}
+                x_1 = -2x_2-x_4\\
+                x_2 = x_2\\
+                x_3 = -x_4\\
+                x_4 = x_4\\
+                x_5 = 0
+            \end{matrix}\right.
+        \end{align*}
+        Take \(x_2=1,x_4=1\), seperatly, we have a basis consisting 2 element: \(\displaystyle \left\{\begin{pmatrix}
+        -2\\1\\0\\0\\0
+        \end{pmatrix},\begin{pmatrix}
+            -1\\0\\-1\\1\\0
+        \end{pmatrix}\right\}\)
+    \end{itemize}
+    \item [2.]
+    \begin{itemize}
+        \item [a)]Scaler Multiplication: multiplying a scaler does not change the symetric of the matrix.\\
+        \begin{align*}
+            A&=A^T\\
+            a_{ij}&=A_{ji} \quad 0\leq ij\leq n\\
+            ka_{ij}&=ka_{ji} \quad k\in F\\
+        \end{align*}
+        Vector Addition: Adding two such matrix also does not change such symetry:
+        \begin{align*}
+            A&=A^T &B&=B^T\\
+            a_{ij}&=a_{ji}&b_{ij}&=b_{ji}\\
+            a_{ij}+b_{ij}&=a_{ji}+{b_{ji}}
+        \end{align*}
+        And these operations do fullfill the 8 properties as in the question, \(M_{n,n}(F)\) is already a vector space. And \(S_n\) is close under the 2 operations, thus it is a subspace.
+        \item [b)] Notice that one possible set of basis would be:
+        \begin{align*}
+            \left\{
+            \begin{pmatrix}
+                0&1&0\\
+                1&0&0\\
+                0&0&0
+            \end{pmatrix}
+            ,
+            \begin{pmatrix}
+                0&0&1\\
+                0&0&0\\
+                1&0&0
+            \end{pmatrix}
+            ,
+            \begin{pmatrix}
+                0&0&0\\
+                0&0&1\\
+                0&1&0
+            \end{pmatrix},
+            \begin{pmatrix}
+                1&0&0\\
+                0&0&0\\
+                0&0&0
+            \end{pmatrix},
+            \begin{pmatrix}
+                0&0&0\\
+                0&1&0\\
+                0&0&0
+            \end{pmatrix},
+            \begin{pmatrix}
+                0&0&0\\
+                0&0&0\\
+                0&0&1
+            \end{pmatrix}
+            \right\}
+        \end{align*}
+    \end{itemize}
+    \item [3.] \(T\) is injective, then\(\forall w\in W,\ \exists v\in V\) such that \(w=T(v)\). By definition, 
+    \(T^*(\psi) =\psi\circ T (v) \), \(\psi\in W^*\). Consider \(T^*(\psi)(v) = 0\)
+    \begin{align*}
+        T^*(\psi)(v) &= 0\\
+        \psi(T(v))&=0 \ \forall v\in V\\
+    \end{align*}
+    As \(T(v)\) is surjective on \(W\), which means that \(\psi(w)=0,\ \forall w\in W\). Thus, \(\psi\) is a zero map, thus, \(N(T^*) = \{\overrightarrow{0}\}\). Thus, by rank/nullity, the \(T^*\) is injective.
+    \item [4.] Vector addition:
+
+
+\end{itemize}
+\end{document}
