@@ -106,6 +106,45 @@
               \(\forall \lambda\in F\), \(\lambda \ell(x)=\lambda\times 0 = 0\). Thus, it is also closed under scaler multiplication. Also, \(\ell+\ell=\ell\) as \(0+0=0\), thus, there also exists a zero element. Thus, \(U^0\) is a subspace.
     \item [5.]Consider a map: \(\pi:V\rightarrow V/U\), \(\pi(v)=v+U\). Thus, \(\forall u\in U\), \(\exists v\) that \(u=v+U\) by definition. Thus, \(\pi\) is surjective. Thus, according to 3., the dual map \(\pi^*:(V/U)^*\rightarrow V^*\) is injective. 
     Thus, \(N(\pi^*)={\overrightarrow{0}}\). In this case, profed by 4., \(\overrightarrow{0}=U^0=\{\ell\}\). Thus, accroding to the 1st isomorphism law,
-    \({(V/U)^*}/{N(\pi^*)}\rightarrow R(\pi^*)\) is isomorphic.
+    \({(V/U)^*}/{N(\pi^*)}\rightarrow R(\pi^*)\) is isomorphic.\\
+    Claim: \(R(\pi^*)=U^0\)\\
+    For any \(\psi \in R(\pi^*)\), \(\exists w^*\in (V/U)^*\) that\\
+    \(\psi=\pi^*(w^*)=w^*(\pi(v))=w^*(v+U)\). For any \(u\in U\), \(\psi = w^*(u+U)=w^*(\overrightarrow{0}+U)=0\). Thus, all \(\psi\) sends \(u\) to 0. Thus \(R(\pi^*)\subseteq U^0\). 
+    Also, for any \(u^*\in U^0\), \(\exists w^*\) that \(\pi^*(w^*)=u^*\), for example consider such map: \(\gamma(w)=0\). Thus, \(U^0\subseteq R(\pi^*)\). Thus \(U^0=R(\pi^*)\). Also, as \(\dim(N(\pi^*))=0\) due to injectivity, \((V/U)^*/N(\pi^*)=(V/U)^*\). Thus, due to first law of isomorphism, the map \((V/U)^*\rightarrow U^0\) is isomorphic.
+    \newpage
+    \item [6.] \
+    \begin{itemize}
+        \item [Subspace:] \(\forall w\in W\), \(w_1(0)+w_2(0)=0+0=0\), Thus \((w_1+w_2)\in W\).\\
+                        \(\forall \lambda \in F\), \(\lambda w(0)=\lambda \times 0 = 0\). Thus \(\lambda w \in W\)\\
+                        consider \(f(x)=0\), \(w+f=w\). Thus there exists a \(\overrightarrow{0}\).\\
+                        Thus it is a subspace.
+        \item  [Isomorphism:] Consider the map \(T:V\rightarrow \mathbb{R},T(f)=f(0)\).\\
+        Claim that \(T\) is linear:\\
+        prof: \(T(\lambda f) = \lambda f(0) = \lambda (T(f))\), \(T(g+f)=g(0)+f(0)=T(g)+T(f)\) 
+        Thus it is linear. \\
+        Claim that \(N(T) = W\):\\
+        prof: \(\forall f \in N(T)\), \(T(f)=0\) meaning that \(f(0)=0\). Thus \(N(T)=W\).\\
+        Claim that \(R(T)=\mathbb{R}\).\\
+        prof: Suppose it is not surjective, then \(\exists \lambda\in\mathbb{R}\), does not exist such \(f\) which \(T(f)=\lambda\). However, consider the map that \(f(x)=\lambda\), then \(f(0)=\lambda\), \(T(f)=\lambda\) which raises a contradiction. Thus it is surjective.\\
+        Thus, through first Isomorphism law, \(V/W\rightarrow \mathbb{R}\) is a isomorphic map, and they are isomorphic.
+    \end{itemize}
+    \item [7.]
+    \begin{itemize}
+        \item [a)]
+        \(u_1,u_2\in U\), \(T(u_1),T(u_2)\in W, \ T(u_1)+T(u_2)=T(u_1+u_2)\in W\) as \(T\) is linear and \(U\) is it self a subspace.\\
+        \(\lambda\in F\), \(\lambda T(u) \in W\) as \(T(u)\in W\) and \(W\) is a vector space that itself shall be close under scaler multiplication.
+        \item [b)]
+        According to the 2nd isomorphic law, \(U/(U\cap N(T))\) will be isomorphic with \((U+N(T))/N(T)\). Consider a new subspace of \(V\), \(U+N(T)\).
+        Thus according to the 1st isomorphic law, \((U+N(T))/N(T)\) will be isomorphic with \(R(T(U+N(T)))=R(T(U)+T(N(T)))=R(T(U)+\overrightarrow{0})\) as profed in a), \(T(U)\) is a subspace, then \(\overrightarrow{0}\in T(U)\), Thus \(R(T(U+N(T)))=T(U)\). Thus, \(T(U)\) is isomorphic with \((U+N(T))/N(T)\). Thus, \(T(U)\) is also isomorphic with \(U/(U\cap N(T))\).
+    \end{itemize}
+    \item [8.]\
+    \begin{itemize}
+        \item [well define:] If \(v_1=v_2\), then \(T(v_1)=T(v_2)\) as \(T\) is well defined, then \(\bar{T}(v_1)=\bar{T}(v_2)\). Thus, \(\bar{T}\) is well defined.
+        \item [linear:] \(T((v_1+U)+(v_2+U))=T(v_1+v_2+U)=T(v_1+v_2)=T(v_1)+T(v_2)=\bar{T}(v_1+U)+\bar{T}(v_2+U)\).\\
+                        \(\bar{T}(\lambda (v+U))=\bar{T}(\lambda v +U)=T(\lambda v)=\lambda T(v)=\lambda \bar{T}(v)\).\\
+                        
+            
+    \end{itemize}
+    Thus it is well defined and linear.
 \end{itemize}
 \end{document}
