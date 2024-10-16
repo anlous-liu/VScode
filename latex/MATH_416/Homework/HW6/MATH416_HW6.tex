@@ -55,6 +55,7 @@
             a_{ij}&=a_{ji}&b_{ij}&=b_{ji}\\
             a_{ij}+b_{ij}&=a_{ji}+{b_{ji}}
         \end{align*}
+        Consider \(a_{ij}=0,\ \forall i,j\), such matrix will be the additive identity.
         And these operations do fullfill the 8 properties as in the question, \(M_{n,n}(F)\) is already a vector space. And \(S_n\) is close under the 2 operations, thus it is a subspace.
         \item [b)] Notice that one possible set of basis would be:
         \begin{align*}
@@ -101,8 +102,10 @@
         \psi(T(v))&=0 \ \forall v\in V\\
     \end{align*}
     As \(T(v)\) is surjective on \(W\), which means that \(\psi(w)=0,\ \forall w\in W\). Thus, \(\psi\) is a zero map, thus, \(N(T^*) = \{\overrightarrow{0}\}\). Thus, by rank/nullity, the \(T^*\) is injective.
-    \item [4.] Vector addition:
-
-
+    \item [4.]\(\forall \ell\in U^0\), \(\ell_1(x)+\ell_2(x) = 0+0\). Thus, \(\exists \ell_3\) such that \(\ell_1+\ell_2=\ell_3\). Thus \(U^0\) is closed under addition.
+              \(\forall \lambda\in F\), \(\lambda \ell(x)=\lambda\times 0 = 0\). Thus, it is also closed under scaler multiplication. Also, \(\ell+\ell=\ell\) as \(0+0=0\), thus, there also exists a zero element. Thus, \(U^0\) is a subspace.
+    \item [5.]Consider a map: \(\pi:V\rightarrow V/U\), \(\pi(v)=v+U\). Thus, \(\forall u\in U\), \(\exists v\) that \(u=v+U\) by definition. Thus, \(\pi\) is surjective. Thus, according to 3., the dual map \(\pi^*:(V/U)^*\rightarrow V^*\) is injective. 
+    Thus, \(N(\pi^*)={\overrightarrow{0}}\). In this case, profed by 4., \(\overrightarrow{0}=U^0=\{\ell\}\). Thus, accroding to the 1st isomorphism law,
+    \({(V/U)^*}/{N(\pi^*)}\rightarrow R(\pi^*)\) is isomorphic.
 \end{itemize}
 \end{document}
