@@ -142,6 +142,25 @@
         \item [b)] Since there are 3 swaps, the sign is \(-1\)
     \end{itemize}
     \item [7.] It shall equal to \(1+1+1=3\)
-    \item [8.] 
+    \item [8.] \
+    \begin{itemize}
+        \item [k-linear:]
+        \begin{align*}
+            \left(T^*\alpha\right)(v_1,\cdots,v_{i1}+v_{i2},\cdots, v_k)&=\alpha(T(v_1),\cdots,T(v_{i1}+v_{i2}),\cdots,T(v_k))\\
+            &=\alpha(T(v_1),\cdots,T(v_{i1})+T(v_{i2}),\cdots,T(v_k))\\
+            &=\alpha(T(v_1),\cdots,T(v_{i1}),\cdots,T(v_k))+\alpha(T(v_1),\cdots,T(v_{i1}),\cdots,T(v_k))\\
+            &=\left(T^*\alpha\right)(v_1,\cdots,v_{i1},\cdots, v_k)+\left(T^*\alpha\right)(v_1,\cdots,v_{i2},\cdots, v_k)\\
+            \left(T^*\alpha\right)(v_1,\cdots,\lambda v_i,\cdots, v_k)&=\alpha(T(v_1),\cdots,T(\lambda v_{i}),\cdots,T(v_k))\\
+            &=\alpha(T(v_1),\cdots,\lambda T(v_{i}),\cdots,T(v_k))\\
+            &=\lambda\alpha(T(v_1),\cdots,T(v_{i}),\cdots,T(v_k))\\
+            &=\lambda \left(T^*\alpha\right)(v_1,\cdots, v_i,\cdots, v_k)
+        \end{align*}
+        \item [alternating:]
+        \begin{align*}
+            \left(T^*\alpha\right)(v_k,v_1,\cdots, v_{k-1})&=\alpha (T(v_k),T(v_1),\cdots,T(v_{k-1}))\\
+            &=-1\times \alpha (T(v_1),\cdots,T(v_{k-1}),T(v_k))\\
+            &=-1\times \left(T^*\alpha\right)(v_1,\cdots, v_k)
+        \end{align*}
+    \end{itemize}
 \end{itemize}
 \end{document}
