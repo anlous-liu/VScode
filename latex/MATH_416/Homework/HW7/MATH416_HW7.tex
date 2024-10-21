@@ -1,0 +1,140 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due: Oct 23 Edit: \today}
+\title{MATH 416H HW 7}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] First, as U is a vector space, a set of basis can be write out. \(\{u_1,\cdots,u_n\}\), 
+    also, since \(U\) is also a subset of \(V\). We can extend the basis into a basis of V: 
+    \(\{u_1,\cdots,u_n,z_1,\cdots,z_m\}\). Now consider the dual space \(V^*\) by theromes profed in class, 
+    a basis of \(V^*\) is \(\{u_1^*,\cdots,u_n^*,z_1^*,\cdots,z_m^*\}\) and, 
+    by definition, \(\{z_1^*,\cdots,z_m^*\}\subseteq U^0\) as \(\forall u \in U\), \(u=\sum_{i=1}^n\lambda_iu_i+\sum_{j=1}^{m}0\times z_i\). 
+    Thus, \(\forall u\in U\), \(z_j^*(u)=0\). Since \(U^0\) us a subset of \(V\), then a basis of \(U^0\) must also be a subset of \(V\)'s.
+    \\
+    \\
+    Suppose \(\{z_1,\cdots,z_m\}\) is not a basis for \(U^0\), then \(\exists k\) that for some \(u^{*0}\in U^0\), \(u^*0=\lambda u_k^*+\mu_1z_1^*+\cdots+\mu_mz_m^*\) However, consider \(u_k\in U\) (the one in basis). 
+    \(u^{*0}(u_k)=\lambda u_k^*(u_k)+\mu_1z_1^*(u_k)+\cdots+\mu_mz_m^*(u_k)=\lambda +0+\cdots+0\neq 0\). Thus, there is a contradiction, therefore, \(\{z_1^*,\cdots ,z_m^*\}\) is a basis of \(U^0\).
+    \begin{align*}
+        \dim(V)=m+n&&\dim(U)=n&&\dim(U^0)=m
+    \end{align*}
+    Thus, \(\dim(U^0)+\dim(U)=\dim(V)\).
+    \item [2.]
+    \begin{itemize}
+        \item [a)]\(\forall w^*\in W,\ T^*(w^*) = w^*\circ T(v)\). \(\forall w^*\in N(T^*)\), \(T^*(w^*)=\overrightarrow{0}=v^{*0},\\ v^{*0}\in V^0\), Thus, \(N(T^*)=\{w^*|\forall v\in V, w^*(T(v))=0\}\)
+        \\ or \(\{w^*|w^*\in W^*,\ \forall w \in R(T), w^*(w)=0\}\).\\ \\ 
+        \((R(T))^0=\{w^*|w^*(w)=0,\ w^*\in W^*, \ \forall w\in R(T)\}\). Therefore, \(N(T^*)=(R(T))^0\)
+        \item [b)]
+        \begin{align*}
+            N(T^*)&=(R(T))^0&(\text{by part a })\\
+            \dim(N(T^*))&=\dim(W)-\dim(R(T))&(\text{by problem 1})\\
+            \dim(W^*)-\dim(R(T^*))&=\dim(W)-\dim(R(T))&(\text{by rank nullity})\\
+            \because \dim(W)&=\dim(W^*)\\
+            \therefore \dim(R(T^*))&=\dim(R(T))
+        \end{align*}
+        \item [c)]
+        Any \(m\times n\) matrix \(A\) would be equavelent to \(T:V\rightarrow W\) where \(\dim(V)=n,\ \dim(W)=m\), and \(A^T\) would be equavelent with \(T^*:W^*\rightarrow V^*\). As profed by b), \(R(T^*)=R(T)\). Thus, they do have same rank.
+    \end{itemize}
+    \item [3.] By 2.a) if \(T^*\) is injective then \(N(T^*)={\overrightarrow{0}}=(R(T))^0\). Then by 1., we have \(\dim(R(T))=\dim(W^*)-\dim((R(T))^0)=\dim(W^*)=\dim(W)\). as \(R(T)\subseteq W\), therefore, \(R(T)=W\) Thus, the transformation is surjective.
+    \item [4.] \begin{align*}
+        (\lambda b)(v_1+v_2,\gamma w)&= \lambda b(v_1+v_2,\gamma w)\\
+        &=\lambda\gamma b(v_1,w)+\lambda\gamma b(v_2,w)\\
+        &=(\lambda\gamma b)(v_1,w)+(\lambda \gamma b)(v_2,w)&(\text{Close under scaler multi.})\\
+    (b_1+b_2)(v_1+v_2,\gamma w)&=b_1(v_1+v_2,\gamma w)+b_2(v_1+v_2,\gamma w)\\
+    &=b_1(v_1,w)+b_1(v_2,w)+b_2(v_1,w)+b_2(v_2,w)\\
+    &=b_1(v_1,w)+b_2(v_1,w)+b_1(v_2,w)+b_2(v_2,w)\\
+    &=(b_1+b_2)(v_1,w)+(b_1+b_2)(v_2,w)&(\text{Close under vector add})
+    \end{align*}
+    \begin{itemize}
+        \item [a)] 
+        \begin{align*}
+            (b_1+b_2)(v,w)&=b_1(v,w)+b_2(v+w)\\
+            &=b_2(v,w)+b_1(v+w)\\
+            &=(b_2+b_1)(v,w)&(\text{vector ddition is communitive})
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            ((b_1+b_2)+b_3)(v,w)&=(b_1+b_2)(v,w)+b_3(v,w)\\
+            &=b_1(v,w)+b_2(v+w)+b_3(v,w)\\
+            &=b_1(v,w)+(b_2+b_3)(v,w)\\
+            &=(b_1+(b_2+b_3))(v,w) &(\text{vector addition is associative})
+        \end{align*}
+        \item [c)] Consider the bilinear map \(b_0(v,w)=0\)
+        \begin{align*}
+            (b+b_0)(v,w) &=b(v,w)+b_0(v,w)\\
+            &=b(v,w)+0\\
+            &=b(v,w)&(\exists \overrightarrow{0} \text{ such that }b+\overrightarrow{0}=b)
+        \end{align*}
+        \item [d)]
+        \begin{align*}
+            (b+(-1\cdot b))(v,w)&=b(v,w)+(-1)\times b(v,w)\\
+            &=0\\
+            &=b_0& (\forall b,\ \exists-b,\ b+(-b)=0)
+        \end{align*}
+        \item [e)]
+        \begin{align*}
+            (1\cdot b)(v,w)&=1\times b(v,w)\\
+            &=b(v,w)
+        \end{align*}
+        \newpage
+        \item [f)]
+        \begin{align*}
+            \lambda((\mu \cdot b)(v,w))&=\lambda(\mu b(v,w))\\
+            &=\lambda\mu b(v,w)\\
+            &=\mu\lambda b(v,w)\\
+            &=\mu(( \lambda\cdot b)(v,w))
+        \end{align*}
+        \item [g)]
+        \begin{align*}
+            \lambda(b_1+b_2)(v,w)&=\lambda(b_1(v,w)+b_2(v,w))\\
+            &=\lambda b_1(v,w)+\lambda b_2(v,w)\\
+            &=(\lambda b_1)(v,w)+(\lambda b_2)(v,w)
+        \end{align*}
+        \item [h)]
+        \begin{align*}
+            ((\lambda+\mu)b)(v,w)&=(\lambda + \mu)b(v,w)\\
+            &=\lambda b(v,w)+\mu b(v,w)\\
+            &=(\lambda b)(v,w)+(\mu b)(v,w)
+        \end{align*}
+    \end{itemize}
+    \item [5.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            w_0^\#(v_1+v_2) &= b(v_1+v_2,w_0)\\
+            &= b(v_1,w_0)+b(v_2,w_0)\\
+            &= w_0^\#(v_1)+w_0^\#(v_2)\\
+            w_0^\#(\lambda v)&= b(\lambda v,w_0)\\
+            &= \lambda b(v,w_0)\\
+            &=\lambda w_0^\#(v)
+        \end{align*}
+        Thus it is linear.
+        \item [b)]
+        Mark the transformation by \(T\) instead of \(\#\).\\
+        \begin{align*}
+            T(\lambda w_0)&=b(v,\lambda w_0)\\
+            &=\lambda b(v,w_0)\\
+            &=\lambda T(w_0)\\
+            T(w_1+w_2)&=b(v,w_1+w_2)\\
+            &=b(v,w_1)+b(v,w_2)\\
+            &=T(w_1)+T(w_2)
+        \end{align*}
+        Thus, it is linear.
+        \item [c)]
+        \(\forall w\in N(\#)\), \(\#(w)=0\) which is \(\forall v\in V\), \(w^\#(v)=0\) which is \(\forall v \in V\), \(b(v,w)=0\). Therefore, it is correct.
+        \item [d)]
+        As proved in c) \(N(\#)=\{w_0\in W|b(w^*,w_0)=0 \text{ for all } w^*\in W^*\}\). For any \(w_0\) we can write a bsis of \(W\) containing \(w_0\). Thus, the dual vector space would also have a basis containing \(w_0^*\).
+        Suppose it exists some \(w_0\neq 0\) that \(\forall w^*\in W^*\), \(b(w^*,w_0)=0\), consider \(w_0^*\in W^*\), \(b(w_0^*,w_0)=w_0^*(w_0)=1\neq 0\). Thus there is a contradiction. Therefore, \(N(\#)=\{0\}\). Thus, the map is injective.
+    \end{itemize}
+\end{itemize}
+\end{document}
