@@ -1,0 +1,116 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{esint}
+
+
+\date{Due: Sep 25 Edit: \today}
+\title{NPRE 321 HW 1}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] 
+    \begin{itemize}
+        \item [a)]
+        \begin{itemize}
+            \item [i.] \[D+T\rightarrow n+{}^4\text{He}\]
+            \item [ii.] By searching online, \(E_{{}^4He}=28.3\) MeV, \(E_D = 2.2\) MeV, \(E_{T}=8.482\) MeV. Then 
+            \[28.3-(2.2+8.482)= 17.618 \text{MeV}\]
+            \item [iii.] It will be around 17.6 MeV
+        \end{itemize}
+        \item [b)]
+        \[D+T\rightarrow n+{}^4\text{He}\]
+        \begin{align*}
+            m_b = m_D+m_T&=(2.014+3.016)\times1.66\times 10^{-27}\\
+            &=8.35\times 10^{-27} \text{ kg}\\
+            E_b &=m_b\times c^2\\
+            &=8.35\times 10^{-27} \times \left(2.998\times 10^8\right)^2\\
+            &=7.505\times 10^{-10} \text{ J}\\
+            m_a = m_{{}^4\text{He}}+m_n&=(4.0026+1.0087)\times 1.66\times 10^{-27}\\
+            &=8.3187\times 10^{-27} \text{ kg}\\
+            E_a &= m_a\times c^2\\
+            &=7.47685\times 10^{-10} \text{ J}\\
+            \Delta E = E_a-E_b &= (7.47685-7.505)\times 10^{-10}\\
+            &=-2.8142\times 10^{-12} \text{ J}\\
+            &=-2.8142\times 10^{-12}\times 6.242\times 10^{12}\\
+            &=17.5683 \text{ MeV}
+        \end{align*}
+        \newpage
+        \item [c)]
+        \begin{align*}
+            E &= K\frac{Q_1Q_2}{r}\\
+            &=9\times 10^9\times \frac{\left(1.602\times 10^{-19}\right)^2}{(1.80+2.13)\times 0.5 \times 10^{-15}}
+            \\ &=1.17545\times 10^{-13} \text{ J}\\
+            &=6.242\times 10^{18}\times 1.17545\times 10^{-13}\\
+            &=733715.89 \text{ eV}\\
+            &=733715.89\times 11604\\
+            &=8.514\times 10^9 \text{ K}
+        \end{align*}
+        I belive this temperature do make some sense, as we do need high temperature for fussion and it is not so hot making it impossible to reach.
+        \item [d)]
+        \[D+D\rightarrow {}^3\text{He}+n\]
+        \[D+D\rightarrow T+p\]
+        \begin{align*}
+            m_b &=(2.014\times 2)\\
+            &=4.0282 \text { u}\\
+            m_{a1} &= (3.016+1.00866)\\
+            &=4.024 \text{ u}\\
+            m_{a2} &=(3.016+1.0072)\\
+            &=4.0222 \text{ u}\\
+            \Delta m &= 4.02397-4.0282\\
+            &=-0.004231\\
+            \Delta E &= \Delta mc^2\\
+            &=0.004231\times 1.66\times 10^{-27}\times (2.998\times 10^8)^2\\
+            &=6.31269\times 10^{-13} \text{ J}\\
+            &=3.94038 \text{ MeV}
+        \end{align*}
+    \end{itemize}
+    \newpage
+    \item [2.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \sigma_i &= \pi\times (r_{Ar,i}+r_{Ar})^2\\
+            &=\pi((285+97)\times 10^{-12})^2\\
+            &=4.58434\times 10^{-19} \text{m}^2\\
+            n &=\frac{p}{k_bT}\\
+            &=\frac{133.322\times 5\times10^{-3}}{1.38\times 10^{-23}\times(25+273)}\\
+            &=1.62098\times 10^{20} \text{m}^{-3}\\
+            \lambda_{0e}&=\frac{1}{\sigma_e n}\\
+            &=\frac{1}{5\times 10^{-19}\times 1.62098\times 10^{20}}\\
+            &=0.012338 \text{ m}\\
+            \lambda_{0i}&=\frac{1}{\sigma n}\\
+            &=\frac{1}{4.58434\times 10^{-19}\times1.62098\times 10^{20} }\\
+            &=0.013457 \text{ m}
+        \end{align*}
+        Does seems like, there will be average less than 4 collisions in the container which is not so sufficient for a plasma to form.
+        \item [b)]
+        \begin{align*}
+            \omega_c&=\frac{qB}{m}\\
+            &=\frac{1.602\times 10^{-19}\times50\times 10^{-3}}{2\pi\times 9.11\times 10^{-31}}\\
+            &=1.39928\times 10^9 \text{ Hz}\\
+            v_{\bot }&=\sqrt{\frac{2E}{m}}\\
+            &=\sqrt{\frac{2k_bT}{m}}\\
+            &=1.027\times 10^6 \text{m/s}\\
+            r_L&=\frac{v_{\bot}}{\omega_c}\\
+            &=\frac{1.027\times 10^6}{1.39928\times 10^9}\\
+            &=7.339\times 10^{-4} \text{ m}
+        \end{align*}
+        Yes, there will be average over 60 collisions per electron in the chamber.
+        \item[c)]
+        \begin{align*}
+            E &= qdV\\
+            &= 1.602\times 10^{-19}\times 0.005 \times 500\\
+            &=4.005\times 10^{-19}\text{ J}\\
+            &=4.005\times 10^{-19}\times 6.242\times 10^{18}\\
+            &=2.49992 \text{ eV}
+        \end{align*}
+    \end{itemize}
+\end{itemize}
+\end{document}
