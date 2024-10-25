@@ -1,0 +1,162 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due: Oct 25 Edit: \today}
+\title{MATH 461 Homework 7}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [5.37]
+    \begin{itemize}
+        \item [a)]
+        \[P(x<-\frac{1}{2})+P(x>\frac{1}{2})=\frac{1}{4}+\frac{1}{4}=\frac{1}{2}\]
+        \item [b)] \(f(x)=\frac{1}{1-(-1)}=\frac{1}{2}\)
+        \begin{align*}
+            P(|x|\leq y)&=P(-y\leq x \leq y)\\
+            &=\int_{y}^{-y}\frac{1}{2}\text{d}x\\
+            &=y\\
+            \frac{\text{d}}{\text{d}y}P(|x|\leq y)&=1\\
+        \end{align*}
+    \end{itemize}
+    \item [5.39]
+    \begin{align*}
+        f(x)&=1e^{-1\times x}\\
+        &=e^{-x}\\
+        P(X\leq x)&=\int_{0}^{x}e^{-s}\text{d}s\\
+        &=\left.(-e^{-s})\right|^{x}_{0}\\
+        &=-e^{-x}-(-e^0)\\
+        &=1-e^{-x}\\
+        P(\log{X}<y)&=P(e^{\log(X)}\leq e^y)\\
+        &=P(X\leq e^y)\\
+        &=1-e^{-e^{y}}\\
+        \frac{\text{d}}{\text{d}y} P(X\leq e^y)&=\frac{\text{d}}{\text{d}y} (1-e^{-e^{y}})\\
+        &=(e^y)(e^{-e^y})
+    \end{align*}
+    \newpage
+    \item [5.40]
+    \begin{align*}
+        f(x)&=\frac{1}{1-0}=1\\
+        P(e^X\leq y)&= P(X\leq \log (y))\\
+        &=\int_{0}^{\log(y)} 1 \text{ d}x\\
+        &=\log(y)\\
+        \frac{\text{d}}{\text{d}y} \log(y)&= \frac{1}{y} (1<y<e)
+    \end{align*}
+    \item [5.41]
+    \begin{align*}
+        f(\theta)&=\frac{1}{\frac{\pi}{2}+\frac{\pi}{2}}\\
+        &=\frac{1}{\pi}\\
+        \int_{-\frac{\pi}{2}}^{\theta} \frac{1}{\pi} \text{d} x&=\frac{1}{\pi}\left.(x)\right|^{\theta}_{-\frac{\pi}{2}}\\
+        &=\frac{\theta+\frac{\pi}{2}}{\pi}\\
+        P(A\sin(\theta)\leq r)&=P(\sin(\theta)\leq \frac{r}{A})\\
+        (\text{for} |r|<A) &= P(\theta \leq sin^{-1}(\frac{r}{A}))\\
+        \frac{\text{d}}{\text{d}r}\frac{sin^{-1}(\frac{r}{A})+\frac{\pi}{2}}{\pi}&=\frac{1}{\pi}\left(\frac{1}{\sqrt{1-\frac{r^2}{A^2}}}\times \frac{1}{A}\right)\\
+        &=\frac{1}{\pi\sqrt{A^2-r^2}} (-A<r<A)
+    \end{align*}
+    \item [6.2]
+    \begin{itemize}
+        \item [a)]\begin{align*}
+            \left\{\begin{matrix}
+                \frac{\binom{5}{2}}{\binom{13}{2}} & (\text{Both balls are white})\\
+                \frac{\binom{5}{1}\binom{8}{1}}{\binom{13}{2}}& (\text{\(X_1\) White, \(X_2\) red})\\
+                \frac{\binom{8}{1}\binom{5}{1}}{\binom{13}{2}}& (\text{\(X_1\) red, \(X_2\) white})\\
+                \frac{\binom{8}{2}}{\binom{13}{2}}& (\text{Both red})
+            \end{matrix}\right.
+        \end{align*}
+        \item [b)]\begin{align*}
+            \left\{\begin{matrix}
+                \frac{\binom{5}{3}}{\binom{13}{3}} & (\text{all balls are white})\\
+                \frac{\binom{5}{2}\binom{8}{1}}{\binom{13}{3}}& (\text{1 red 2 white})\\
+                \frac{\binom{8}{2}\binom{5}{1}}{\binom{13}{3}}& (\text{2 red 1 white})\\
+                \frac{\binom{8}{3}}{\binom{13}{3}}& (\text{all red})
+            \end{matrix}\right.
+        \end{align*}
+    \end{itemize}
+    \item [6.7]
+    \begin{align*}
+        P(X_1=x_1,X_2=x_2)&=P(X_1=x_1)P(X_2=x_2)\\
+        &=p(1-p)^{x_1}\times p(1-p)^{x_2}\\
+        &=p^2(1-p)^{x_1+x_2}
+    \end{align*}
+    \item [6.8]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            1&=\iint R^2 f dxdy\\
+            &=\int_{0}^{\infty}(\int_{-y}^{y}c(y^2-x^2)e^{-y}dx)dy\\
+            &=\frac{4c}{3}\int_{0}^{\infty} y^3e^{-y} dy\\
+            &=\frac{4c}{3}\times 6c\\
+            c&=\frac{1}{8}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            f_X(x)&=\int_{x}^{\infty}\frac{1}{8}(y^2-x^2)e^{-y}dy\\
+            &=\frac{1}{8}\left(\int_{x}^{\infty}y^2e^{-y}dy-\int_{x}^{\infty}x^2e^{-y}dy\right)\\
+            &=\frac{1}{8}\left(x^2e^{-x}+2xe^{-x}+2e^{-x}-x^2e^{-x}\right)\\
+            &=\frac{1}{4}e^{-|x|}(1+|x|)\\
+            f_Y(y) &=\frac{1}{8}\int_{-y}^{y}(y^2-x^2)e^{-y} dx\\
+            &=\frac{1}{8}\frac{4}{3}y^3e^{-y}\\
+            &=\frac{1}{6}y^3e^{-y}
+        \end{align*}
+        \item[c)]
+        \begin{align*}
+            E(X) &= \int_{-\infty}^{\infty}x f(x) dx \\
+            &=\int_{-\infty}^{\infty}x \frac{1}{4}e^{-|x|}(1+|x|)dx\\
+            &=0
+        \end{align*}
+    \end{itemize}
+    \item [6.9]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \int_{0}^{1}\int_{0}^{2}\left(\frac{6}{7}\left(x^2+\left(\frac{xy}{2}\right)\right)\right)dydx &=\frac{6}{7} \int_{0}^{1}\int_{0}^{2}\left(x^2+\left(\frac{xy}{2}\right)\right)dydx\\
+            &=\frac{6}{7}\int_{1}^{0}\left.x^2y+\frac{xy^2}{2}\right|^{y=2}_{y=0}dx\\
+            &=\frac{6}{7}\int_{1}^{0}2x^2+\frac{4x}{4}dx\\
+            &=\frac{6}{7}\frac{7}{6}\\
+            &=1
+        \end{align*} Thus, it is a density function.
+        \item [b)]
+        \begin{align*}
+            \int_{0}^{2}\frac{6}{7}\left(x^2+\frac{xy}{2}\right) dy&=\frac{6}{7}\left(x^2y+\frac{xy^2}{2}\right)|^{2}_{0}\\
+            &=\frac{6}{7}(2x^2+x)
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            \int_{0}^{1}\int_{0}^{x}\frac{6}{7}\left(x^2+\frac{xy}{2}\right) dydx&=\int_{0}^{1}\frac{6}{7}(x^3+\frac{x^3}{4}) dx\\
+            &=\frac{6}{7}\left(\frac{1^4}{4}+\frac{1^4}{16}\right)\\
+            &=\frac{15}{56}
+        \end{align*}
+        \item [d)]
+        \begin{align*}
+            \int_{0}^{0.5}\int_{0.5}^{2}\frac{6}{7}\left(x^2+\frac{xy}{2}\right) dydx = \frac{69}{80}
+        \end{align*}
+        \item [e)]
+        \[\int_{0}^{1}x\frac{6}{7}(2x^2+x) dx = \frac{5}{6}\]
+        \item [f)]
+        \begin{align*}
+            \int_{0}^{1}\frac{6}{7}(2x^2+x) dx &= \frac{6}{7}(\frac{1}{3}+\frac{y}{4})\\
+            \int_{0}^{2}y \frac{6}{7}(\frac{1}{3}+\frac{y}{4}) dy &= \frac{8}{7}
+        \end{align*}
+    \end{itemize}
+    \item [6.10]
+    \begin{itemize}
+        \item [a)] \(e^{-(x+y)}=e^{-x}e^{-y}\) Thus, \(f_X(x)=e^{-x},f_Y(y)=e^{-y}\)
+        \begin{align*}
+            \int_{0}^{\infty}\int_{x}^{\infty}e^{-x}e^{-y} dx dy &=\frac{1}{2}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \int_{a}^{\infty} e^{-x} dx &=1-e^{-a}
+        \end{align*}
+    \end{itemize}
+\end{itemize}
+
+\end{document}

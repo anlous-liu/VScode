@@ -1,0 +1,123 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+\date{Due: Oct 25 Edit: \today}
+\title{ME 200 Homework 8}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] 
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            s_1 &= 8.2570\\
+            u_1 &= 2430.1\\
+            T_2 &=\frac{500-440}{8.3251-8.1538}\times (8.2570-8.1538) +440\\
+            &=476.147 \ {}^\circ C\\
+            u_2 &=\frac{3130-3030.6}{8.3251-8.1538}\times (8.2570-8.1538)+3030.6\\
+            &=3090.48\\
+            \Delta u &= u_2-u_1\\
+            &=660.384 \text{ kJ/kg}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            s_1 &= 0.8\times 8.9501 + 0.2\times 0.1212 = 7.18432\\
+            h_1 &= 0.8\times 2574.3 + 0.2 \times 167.57 = 2092.95\\
+            T_2 &= \frac{320-280}{7.1962-7.0465}\times (7.18432-7.0465)+280\\
+            &=316.826\ {}^\circ C\\
+            h_2 &= \frac{3093.9-3008.2}{7.1962-7.0465}\times (7.18432-7.0465)+3008.2\\
+            &=3087.1\\
+            \Delta h &= u_2-u_1\\
+            &=3087.1-2092.95\\
+            &=994.149 \text{ kJ/kg}
+        \end{align*}
+    \end{itemize}
+    \newpage
+    \item[2.]
+    \begin{align*}
+        u_1 &= 6229\\
+        s^\circ_1 &= 197.732\\
+        u_2 &= 7689\\
+        s^\circ_2 &=203.842\\
+    \end{align*}
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            Q &= W-n(u_2-u_1)\\
+            &= -300 + 0.1(7689-6229)\\
+            &=-154 \text{ kJ}
+        \end{align*}
+        \item[b)]
+        \begin{align*}
+            \Delta s &=n\left((s^\circ_2-s^\circ_1)-R \ln\left(\frac{P_2}{P_1}\right)\right)\\
+            &=0.1\left((203.842-197.723)-8.314 \ln \left(\frac{500}{150}\right)\right)\\
+            &=-0.389\ \text {kJ/K}
+        \end{align*}
+        \includegraphics*[scale = 0.25]{figure/fig1_ME200.jpeg}
+    \end{itemize}
+    \newpage
+    \item [3.]
+    \begin{align*}
+        s_1  &= s_f = 1.9426\\
+        u_1  &= u_f = 674.79\\
+        Q  &= mT(s_2-s_1)\\
+        2700&=2\times (160+273)(s_2-1.9426)\\
+        s_2 &= 5.0604\\
+        \text{for \(T_2\) = 160:}\\
+        P_2 &=\fbox{6.1823 bar}\\
+        5.0604 &= 1.9426+ x(4.8066)\\
+        x&=0.649\\
+        u_2 &= u_f+x u_{fg}\\
+        &= 674.79 + 0.649\times 1893.0\\
+        &=1903.347
+        \Delta U = m(u_2-u_1)\\
+        &=2(1903.347-674.79)\\
+        &=2457.114\\
+        W &= Q-\Delta U\\
+        &=2700-2457.114\\
+        &=\fbox{242.886 kJ}\\
+    \end{align*}
+    \item[4.] 
+    \begin{align*}
+        h_3 &= h_f+x_3(h_g-h_f)\\
+        &=583.77+0.9\times (1634.23-583.77)\\
+        &=1529.18\\
+        s_3 &= 2.2706+0.9(5.5213-2.2706)\\
+        &=5.196 = s_2\\
+        h_2 &= 1244\\
+        h_4 &=h_f = 583.77\\
+        s_4 &=s_f = 2.2706\\
+        s_1 &= s_4 = 2.2706\\
+        s_1&= s_f+x_1(s_g-s_f)\\
+        x_1 &=0.237\\
+        h_1 &=h_f+x_1(h_g-h_f)\\
+        &=206.76+0.237(1566.47-206.76)\\
+        &=529.17\\
+        W_n&=nm((h_3-h_2)-(h_4-h_1))\\
+        &=50\times 0.1 \times ((1529.18-1244)-(583.77-529.17))\\
+        &=1152.9 \text{ kJ}
+    \end{align*}
+    \item[5.]
+    \begin{align*}
+        p_1 &= 1 \text{bar}\\
+        u_1 &= 2537.3\\
+        s_1 &=7.4668\\
+        p_2 &= 100 \text{bar}\\
+        s_2=s_1 &=7.4668\\
+        u_2 &=(7.4668-7.2670)\frac{3515.1-3434.7}{7.2670-7.1687}+3512.1\\
+        &= 3675.52\\
+        T_2 &= (7.4668-7.2670)\frac{740-700}{7.2670-7.1687}+740\\
+        &=821.302\ ^\circ C\\
+        W/m &=(u_1-u_2)\\
+        &=-1142.7 \text{kJ/kg}
+    \end{align*}
+\end{itemize}     
+\end{document}
