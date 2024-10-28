@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due:Oct 27 Edit: \today}
+\title{NPRE200 HW 4}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] Using \(\Sigma_f(E)=\frac{E_0}{E}\Sigma_f(E),\ \phi(E)=\frac{1}{(kT)^2}E\exp(-E/kT)\)
+    \begin{align*}
+        \bar{\Sigma}_f&=\frac{R_f}{\phi}\\
+        &=\frac{\int_{0}^{\infty}\Sigma(E)\varphi(E)\text{ dE}}{\int_{0}^{\infty}\varphi(E)\text{ dE}}\\
+        &=\frac{\int_{0}^{\infty}\frac{E_0}{E}\Sigma_f(E_0)\frac{1}{(kT)^2}E\exp(-E/kT)}{{\int_{0}^{\infty}\varphi(E)\text{ dE}}}\\
+        &=\frac{\int_{0}^{\infty}E_0\Sigma_f(E_0)\frac{1}{(kT)^2}\exp(-E/kT)}{\int_{0}^{\infty}E\frac{1}{(kT)^2}\exp(-E/kT)}\\
+        &=E_0\Sigma_f{E_0}\frac{\int_{0}^{\infty}\exp(-E/kT)\text{ d}E}{\int_{0}^{\infty}E\exp(-E/kT)\text{ d}E}\\
+        \because \int_{0}^{\infty} x\exp(-x)\text{ dx}=1\\
+        \int_{0}^{\infty}E/kT \exp(-E/kT) \text{ d}E&=1\\
+        \int_{0}^{\infty}E \exp(-E/kT) \text{ d}E&=(kT)^2\\
+        \int_{0}^{\infty}\exp(-E/kT)\text{ d}E&=kT\\
+        \bar{\Sigma}_f&=\frac{E_0\Sigma_f(E_0)}{kT}\\
+        \sigma_f &=\frac{\bar{\Sigma}_f}{N} =\frac{R_f}{\phi N}
+    \end{align*}
+    \item [2.]
+    \begin{align*}
+        \bar{\Sigma}_f&=\frac{R_f}{\phi}\\
+        &=\frac{\int_{0}^{\infty}\Sigma(E)\varphi(E)\text{ dE}}{\int_{0}^{\infty}\varphi(E)\text{ dE}}\\
+        &=\frac{\int_{0}^{\infty}\frac{E_0}{E}\Sigma_f(E_0)\frac{1}{(kT)^2}E\exp(-E/kT)}{{\int_{0}^{\infty}\varphi(E)\text{ dE}}}\\
+        &=\frac{\int_{0}^{\infty}E_0\Sigma_f(E_0)\frac{1}{(kT)^2}\exp(-E/kT)}{\int_{0}^{\infty}E\frac{1}{(kT)^2}\exp(-E/kT)}\\
+        &=E_0\Sigma_f{E_0}\frac{\int_{0}^{\infty}\exp(-E/kT)\text{ d}E}{\int_{0}^{\infty}E\exp(-E/kT)\text{ d}E}\\
+        \because \int_{0}^{\infty} x\exp(-x)\text{ dx}=1\\
+        \int_{0}^{\infty}E/kT \exp(-E/kT) \text{ d}E&=1\\
+        \int_{0}^{\infty}E \exp(-E/kT) \text{ d}E&=(kT)^2\\
+        \int_{0}^{\infty}\exp(-E/kT)\text{ d}E&=kT\\
+        \bar{\Sigma}_f&=\frac{E_0\Sigma_f(E_0)}{kT}\\
+    \end{align*}
+    \item [3.]
+    \[\Sigma_t(E)\phi(E)=\int \Sigma_s(E'\rightarrow E)\phi(E')\text{d}E' + \chi(E)s_f'''\]
+    \item [4.]
+    \begin{itemize}
+        \item [a)]
+        \[q(E)=-\int_{E}^{\infty}\Sigma_a{E'}\varphi(E')\text{ d}E'+\int_{E}^{\infty}\chi(E')dE's_f''',\ E>1.0\text{ eV}\]
+        \item [b)]
+        Assume that in the intermidiate range, \(\int_{0}^{\infty}\chi(E)\text{ d}E=1\) as the production of neutron by fission is in significant,
+        \[q(E)=-\int^\infty_E \Sigma_a(E')\varphi(E')\text{ d}E'+ s_f'''\]
+    \end{itemize}
+    \newpage
+    \item [5.]Assuming that we are at energy below where all the neutrons are formed by fission.
+    \begin{align*}
+        \Sigma_s(E)\varphi(E)&=\int p(E'\rightarrow E)\Sigma_s(E')\varphi(E')\text{ d}E'+\chi(E)s_f'''\\
+        &=\int p(E'\rightarrow E)\Sigma_s(E')\varphi(E')\text{ d}E'\\
+        &=\int _E^{E/\alpha}\frac{1}{(1-\alpha)E'}\Sigma_s(E')\varphi(E')\text{ d}E'\\
+    \end{align*}
+    \item [6.]Suppose it holds:
+    \begin{align*}
+        C/E &=\int_{E}^{E/\alpha}\frac{1}{(1-\alpha)E'}\cdot \frac{C}{E'}\text{ d}E'\\
+        &=\frac{C}{(1-\alpha)}\int_{E}^{E/\alpha}\frac{1}{E'^2} \text{ d}E'\\
+        &=\frac{C}{(1-\alpha)}\left.-\frac{1}{E'}\right|^{E/\alpha}_{E}\\
+        &=\frac{C}{E}
+    \end{align*}
+    \item [7.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \varphi_M(E)&=\frac{1}{(kT)^2}E\exp(-E/kT)\\
+            \bar{\sigma}_{aT}&=\int \sigma_a(E)\varphi(E)\text{ d}E\\
+            \bar{\sigma}_{aT}&=\int \sqrt{E-0/E}\ \sigma_a(E_0)\frac{1}{(kT)^2}E\exp(-E/kT)\text{ d}E\\
+            &=\frac{\sqrt{\pi}}{2}\sqrt{\frac{E_0}{kT}}\\
+            \because E_0 = kT_0\\
+            &=0.8862(T_0/T)^{1/2}\sigma_a(E_0)\\
+            \therefore \bar{\sigma}_a(T)&=(T_0/T)^{1/2}\sigma_a(T_0)
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \bar{\sigma}_{aT}(T)&=(T_0/T)^{1/2}\sigma_a(T_0)\\
+            &=\sqrt{293.6/573}\times0.5896\\
+            &= 0.422\text{ barn}
+        \end{align*}
+    \end{itemize}
+\end{itemize}
+\end{document}
+
+
+
