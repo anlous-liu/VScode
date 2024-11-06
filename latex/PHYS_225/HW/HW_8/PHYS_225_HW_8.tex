@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{multirow}
+
+
+
+\date{Due:Oct 31 Edit: \today}
+\title{PHYS 225 HW 8}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \Delta E &= F\Delta x\\
+            (\Delta E)^2 &= F^2(\Delta x)^2\\
+            E^2 &= m^2c^4+p^2c^2\\
+            F^2(\Delta x)^2 &=m^2c^4+p^2c^2\\
+            p^2c^2 &=F^2(\Delta x)^2-m^2c^4\\
+            p^2 &=\frac{F^2(\Delta x)^2-m^2c^4}{c^2}\\
+            t&= p/\frac{\text{d}p}{\text{d}t}\\
+            t &= p/F\\
+            t &=\sqrt{\frac{F^2(\Delta x)^2-m^2c^4}{F^2c^2}}\\
+        \end{align*}
+        \begin{itemize}
+            \item [relativistic:] when \(x\rightarrow \infty\), \(t\rightarrow\infty\), meaning that it would take infinity amount of time to go to infinitly away, meaning that 
+            \item [non-relativistic:]when \(x\ll mc^2/F\), \(t = \sqrt{\frac{m^2c^4-F^2(\Delta x)^2}{F^2c^2}}\) which is finite and reasonable as er cahn push something to a close distance in finite amount of time.
+        \end{itemize}
+        \item [b)]
+        \begin{align*}
+            F^2x_m^2 &=m^2c^4+p^2c^2\\
+            x_m^2&=\frac{m^2c^4}{F^2}+\frac{p^2c^2}{F^2}\\
+            x_m^2&=\frac{m^2c^4}{F^2}+t^2c^2\\
+            x_m &= \sqrt{\frac{m^2c^4}{F^2}+t^2c^2}\\
+            x_p&=tc\\
+            x_m &= tc\times \frac{1}{tc}\sqrt{\frac{m^2c^4}{F^2}+t^2c^2} \\
+            &=tc\sqrt{\frac{m^2c^4}{t^2c^2F^2}+1}\\
+            &\approx tc(1+\frac{m^2c^4}{2t^2c^2F^2})\\ 
+            &=tc+\frac{m^2c^4}{2tcF^2}\\
+            \Delta x &=\frac{m^2c^4}{2tcF^2}
+        \end{align*}
+    \end{itemize}
+    \item [2.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            E_{ini}&=E_{final}\\
+            M^2c^4 &=M^2c^4+p^2c^2+dm^2c^4+p'^2c^2\\
+            p &=\gamma_u MU\\
+            p' &= \gamma_w dm w\\
+            p+p'&=0\\
+            \frac{MdU}{\sqrt{1-U^2/c^2}}+\frac{dm w}{\sqrt{1-w^2/c^2}}&=0\\
+            dU &=\frac{dm}{M} \frac{\sqrt{1-U^2/c^2}}{\sqrt{1-w^2/c^2}}\\
+            \frac{M}{dm}&=\frac{\sqrt{1-U^2/c^2}}{dU \sqrt{1-w^2/c^2}}\\
+            \frac{dm}{M}&=\frac{dU \sqrt{1-w^2/c^2}}{\sqrt{1-U^2/c^2}}\\
+            \frac{dm}{M}&=-\frac{dU }{w\sqrt{1-U^2/c^2}}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \frac{dM}{M} &= -\frac{dU}{w\left(1 - \frac{U^2}{c^2}\right)}\\
+            \frac{dM}{M} &= -\frac{dU}{w} \cdot \frac{1}{1 - \frac{U^2}{c^2}}\\
+            \int_{M_0}^{M(U)} \frac{dM}{M} &= -\int_0^U \frac{dU}{w} \cdot \frac{1}{1 - \frac{U^2}{c^2}}\\
+            \ln\left(\frac{M(U)}{M_0}\right) &= -\frac{1}{w} \int_0^U \frac{dU}{1 - \frac{U^2}{c^2}}\\
+            z &= \frac{U}{c}\\
+            -\frac{1}{w} \int_0^U \frac{dU}{1 - \frac{U^2}{c^2}} &= -\frac{1}{w} \int_0^z \frac{c \cdot dz}{1 - z^2} \\ &= -\frac{c}{w} \int_0^z \frac{dz}{1 - z^2}\\
+            -\frac{c}{w} \left[\frac{1}{2} \ln\left|\frac{1 + z}{1 - z}\right|\right]_0^z &= -\frac{c}{w} \left[\frac{1}{2} \ln\left|\frac{1 + \frac{U}{c}}{1 - \frac{U}{c}}\right|\right]_0^U\\
+            \ln\left(\frac{M(U)}{M_0}\right) &= -\frac{c}{2w} \ln\left|\frac{1 + \frac{U}{c}}{1 - \frac{U}{c}}\right|\\
+            &=\ln\left[\left(\frac{1 + \frac{U}{c}}{1 - \frac{U}{c}}\right)^{-\frac{c}{2w}}\right]
+            M(U) &= M_0 \left(\frac{1 + \frac{U}{c}}{1 - \frac{U}{c}}\right)^{-\frac{c}{2w}}
+        \end{align*}
+    \end{itemize}
+\end{itemize}
+\end{document}
