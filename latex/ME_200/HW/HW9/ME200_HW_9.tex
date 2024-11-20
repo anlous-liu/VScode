@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+\date{Due: Nov 1 Edit: \today}
+\title{ME 200 Homework 9}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] 
+    \begin{align*}
+        Q&=m(u_2-u_1)+W\\
+        &=1(458.8-496.7)+42.4\\
+        &=4.5 \text{kJ}\\
+        \sigma &= m(s_2-s_1)-\frac{Q}{T}\\
+        &=0.0264 \text{kJ/K}\\
+        0.0264&>0
+    \end{align*}
+    It is possible that it is correct.
+    \item [2.]
+    \begin{itemize}
+        \item [a)] \begin{align*}
+            W_{electric}&=W_{output}+Q\\
+            W_{electric}&=IV\\
+            &=2990 \text{kW}\\
+            W_{output}&=T\omega\\
+            &=16700\times \frac{2\pi \cdot 1800}{60}\\
+            &=3147.87 \text{kW}\\
+            Q&=-hA(T_b-T_0)\\
+            &=-\frac{3520(T_b-298)}{1000} \text{kW}\\
+            W_{electric}&=W_{output}+Q\\
+            2990&=3147.87-3520(T_b-290)/10^3\\
+            T_b &= 342.85
+        \end{align*}
+        \item [b)] \begin{align*}
+        \sigma &= \frac{Q}{T}\\
+                &=hA(T_b-T_0)/T_b\\
+                &=\frac{110\times 32(342.85-298)}{342.85}\\
+                &=0.4604 \text{kW/K}
+        \end{align*}
+    \end{itemize}
+    \item [3.]
+    \begin{align*}
+        m_L &=\frac{P_LV_L}{RT_L}\\
+        &=0.9526 \text{lb}\\
+        m_R &=\frac{P_RV_R}{RT_R}\\
+        &=2.0455 \text{lb}\\
+        M_{tot}&=m_L+m_R\\
+        &=2.99814\\
+        \Delta U &=0\\
+        U_2&=U_1\\
+        U_2 &= \frac{m_Lu_L+m_rU_r}{m_tot}\\
+        &=\frac{0.9526\times 85.20+2.04554\times 115.67}{2.99814}\\
+        &=103.94\\
+        \text{by checking the table:}\\
+        T_2&=149.3 \quad ^{\circ}F
+    \end{align*}
+    \\
+    \begin{align*}
+        P_2&= \frac{m_{tot}RT_2}{v_{tot}}\\
+        &=\left((2.99814\times \frac{1545}{28.97}\times 609.3)\div(12+10)\right)\times \frac{1}{144}\\
+        &=30.76 \text{lbf/in}^2
+    \end{align*}
+    \\
+    \begin{align*}
+        s_2-s_L&=s^\circ(T_2)-s^\circ(T_L)-R\ln(\frac{P_2}{P_L})\\
+        &=(0.662973-0.58233)-\frac{1545}{98.97}\times \frac{1}{778}\ln(\frac{30.75}{14.7})\\
+        &=-0.00319199\\
+        s_2-s_R&=s^\circ(T_2)-s^\circ(T_R)-R\ln(\frac{P_2}{P_R})\\
+        &=0.01403387\\
+        \Delta s &= m_L\delta s_L+m_R\Delta s_R\\
+        &=0.0256 \text{Btu/}^\circ F
+    \end{align*}
+    \item [4.]
+    \begin{align*}
+        E_{in}-E_{out}&=\Delta E_{sys}\\
+        Q_c+W_c-Q_H&=0\\
+        Q_c+3.2-15&=0\\
+        Q_c &=11.8 \text{kW}\\
+        s^{\circ}_{in}-s^{\circ}_{out}+s^{\circ}_{gen}=\Delta s^{\circ}_{sys}
+        \frac{Q_c}{T_{out}}-\frac{Q_H}{T_{in}}+s^{\circ}_{gen}&=0\\
+        s^{\circ}_{gen}&=0.003436>0
+    \end{align*}
+    Thus it is valid.
+    \item [5.]
+        \begin{align*}
+            \frac{T_2}{T_1}&=\left(\frac{P_2}{P_1}\right)^{\frac{\gamma-1}{\gamma}}\\
+            \text{for air, it is 1.4}\\
+            T_2&=674.78 \text{K}\\
+            mh_1&=mh_2+W\\
+            h&=c_pT\\
+            c_pT_1&=c_pT_2+W\\
+            W&=c_pT_1-c_pT_2\\
+            &=527.8461 \text{ kJ/kg}
+        \end{align*}
+\end{itemize}     
+\end{document}

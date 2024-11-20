@@ -1,0 +1,169 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due: Nov 20 Edit: \today}
+\title{MATH 416H HW 10}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.]
+    \begin{align*}
+        \det(\bar A)_{ij} &=\sum_{\sigma\in S_n}(\text{sign}(\sigma))\bar a_{\sigma(1)1}\cdots \bar a_{\sigma(n)n}\\
+        &= \sum_{\sigma\in S_n}(\text{sign}(\sigma))\overline{a_{\sigma(1)1}\cdots a_{\sigma(n)n}}\\
+        &=\sum_{\sigma\in S_n}\overline{(\text{sign}(\sigma))a_{\sigma(1)1}\cdots a_{\sigma(n)n}}\\
+        &=\overline{\sum_{\sigma\in S_n}(\text{sign}(\sigma))a_{\sigma(1)1}\cdots a_{\sigma(n)n}}\\
+        &=\overline{\text{det}(A)}
+    \end{align*}
+    \item [2.] 
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            b^\#((1,0)^T) &= b((1,0)^T,(x,y)^T)\\
+            &=x-0y = e_1^* 
+        \end{align*}
+        Which is \(\forall v \in \mathbb{R}^2, v=\mu_1e_1+\mu_2e_2\)
+        \begin{align*}
+            b^\#((0,1)^T)(v)&=\mu_1b^\#(e_1)(e_1)+\mu_2b^\#(e_1)(e_2)\\
+            &=\mu_1b^\#(e_1)(e_1)\\
+            &=\mu_1(1-0)\\
+            &=\mu_1
+        \end{align*}
+        There fore, by definition, it is \(e_1^*\). similarly:
+        \begin{align*}
+            b^\#((0,1)^T) &= b((0,1)^T,(x,y)^T)\\
+            &=0x-y = -e_2^* 
+        \end{align*}
+        \begin{align*}
+            b^\#((0,1)^T)(v)&=\mu_1b^\#(e_2)(e_1)+\mu_2b^\#(e_2)(e_2)\\
+            &=-\mu_2b^\#(e_2)(e_2)\\
+            &=-\mu_2(1)\\
+            &=-\mu_2
+        \end{align*}
+        Thus, as \(\{e_1,e_2\}\) is a set of standard basis, the \(\{e^*_1,e^*_2\}\) is the dual basis and there is a isomorphism.
+        \item [b)]
+        \begin{align*}
+            v&=(1,1)^T\\
+            b((1,1)^T,(1,1)^T)&=1-1=0\\
+            v'&=(1,0)\\
+            b(v',v')&=1-0=1>0\\
+            v''&=(0,1)\\
+            b(v'',v'')&=0-1=-1<0
+        \end{align*}
+    \end{itemize}
+    \item [3.]
+    \begin{itemize}
+        \item [a)] As it is spaned by 3 vectors and they are linear independent,\\  
+                    \(\dim(E)=3\), consider \(f_1(x)=\frac{1}{\sqrt{2}}\), then we have:
+                    \begin{align*}
+                        \langle f_1,f_1\rangle&=\int_{-1}^1\frac{1^2}{\sqrt{2}^2} \text{d} t\\
+                        &=\frac{1}{2}-\left(-\frac{1}{2}\right)\\
+                        &=1
+                    \end{align*}
+                    to find orthongonal vectors to \(f_1\), \(\langle f_1,f_2\rangle=0\) should hold. Which is:
+                    \begin{align*}
+                        \int_{-1}^{1} \frac{1}{\sqrt{2}} f_2(t) \text{d}t &=0\\
+                        \text{Consider }f_2(t)=\frac{\sqrt{3}}{\sqrt{2}}t\\
+                        \text{Then }\int_{-1}^{1} \frac{1}{\sqrt{2}} f_2(t) \text{d}t &= \int_{-1}^{1} \frac{1}{\sqrt{2}} \frac{\sqrt{3}}{\sqrt{2}}t \text{d}t\\
+                        &=0\\
+                        \langle f_2(t),f_2(t) \rangle &=\int_{-1}^{1}\frac{3}{2}t^2 \text{d} t\\
+                        &=\left.\frac{1}{2}t^3 \right|^1_{-1}\\
+                        &=\frac{1}{2}-\left(-\frac{1}{2}\right)\\
+                        &=1
+                    \end{align*}
+                    Set \(f_3 = a+bt+ct^2\), for some \(a,b,c\in \mathbb{R}\) then, for \(f_1\):
+                    \begin{align*}
+                        &\quad\int_{-1}^{1}\frac{1}{\sqrt{2}}a+\frac{1}{\sqrt{2}}bt+\frac{1}{\sqrt{2}}ct^2 \text{d}t=0\\
+                        &\Rightarrow \int_{-1}^{1}\frac{1}{\sqrt{2}}a \text{d}t + \int_{-1}^{1}\frac{1}{\sqrt{2}}bt \text{d}t +\int_{-1}^{1}\frac{1}{\sqrt{2}}ct^2 \text{d}t = 0\\
+                        &\Rightarrow \sqrt{2}a+0+\frac{\sqrt{2}}{3}c=0\\
+                        &\Rightarrow c=-3a
+                    \end{align*}
+                    For \(f_2\):
+                    \begin{align*}
+                        &\quad\int_{-1}^{1}\sqrt{\frac{3}{2}}at+\sqrt{\frac{3}{2}}bt^2+\sqrt{\frac{3}{2}}ct^3 \text{d}t\\
+                        &\Rightarrow 0+\frac{\sqrt{6}}{3}b+0=0\\
+                        &\Rightarrow b=0
+                    \end{align*}
+                    For itself:
+                    \begin{align*}
+                        &\quad \int_{-1}^{1}(a-3at^2)^2\text{d}t=1\\
+                        &\Rightarrow \int_{-1}^{1}a^2-6a^2t^2+9a^2t^4\text{d}t=1\\
+                        &\Rightarrow 2a^2-4a^2+\frac{18}{5}a^2=1\\
+                        &\Rightarrow \frac{8}{5}a^2 = 1\\
+                        &\Rightarrow a=\sqrt{\frac{5}{8}}
+                    \end{align*}
+                    Therefore, \(f_3(t)=\sqrt{\frac{5}{8}}-3\cdot\sqrt{\frac{5}{8}}t^2\)\\
+                    Therefore, \(\{f_1,f_2,f_3\}\) where:
+                    \begin{align*}
+                        f_1(t) &= \frac{1}{\sqrt{2}}\\
+                        f_2(t) &= \sqrt{\frac{3}{2}}t\\
+                        f_3(t) &= \sqrt{\frac{5}{8}}-3\cdot\sqrt{\frac{5}{8}}t^2
+                    \end{align*}
+                    is a set of orthonormal basis.
+        \item [b)] define \(f'(t)\) as the projection, then:
+        \begin{align*}
+            f' &=f_1 \langle f_1,f'\rangle+f_2 \langle f_2,f'\rangle+f_3 \langle f_3,f'\rangle\\
+            f_1 \langle f_1,f'\rangle&=\int_{-1}^{1}\frac{1}{\sqrt{2}}|t|\text{d}t\\
+            &=\frac{1}{\sqrt{2}}\left(\int_{0}^{1}\frac{1}{\sqrt{2}}t\text{d}t-\int_{-1}^{0}\frac{1}{\sqrt{2}}t\text{d}t\right)\\
+            &=\frac{1}{\sqrt{2}}\left(\frac{1}{2\sqrt{2}}+\frac{1}{2\sqrt{2}}\right)\\
+            &=\frac{1}{2}\\
+            f_2 \langle f_2,f'\rangle&=\sqrt{\frac{3}{2}}t\left(\int_{-1}^{1}\sqrt{\frac{3}{2}}t|t|\text{d}t\right)\\
+            &=\sqrt{\frac{3}{2}}t\left(\int_{0}^{1}\sqrt{\frac{3}{2}}t^2\text{d}t-\int_{-1}^{0}\sqrt{\frac{3}{2}}t^2\text{d}t\right)\\
+            &=0\\
+            f_3 \langle f_3,f'\rangle&=\left(\sqrt{\frac{5}{8}}-3\cdot\sqrt{\frac{5}{8}}t^2\right)\left(\int_{-1}^{1}\left(\sqrt{\frac{5}{8}}-3\cdot\sqrt{\frac{5}{8}}t^2\right)|t|\text{dt}\right)\\
+            &=\left(\sqrt{\frac{5}{8}}-3\cdot\sqrt{\frac{5}{8}}t^2\right)\left(\int_{0}^{1}\left(\sqrt{\frac{5}{8}}-3\cdot\sqrt{\frac{5}{8}}t^2\right)t\text{dt}-\int_{-1}^{0}\left(\sqrt{\frac{5}{8}}-3\cdot\sqrt{\frac{5}{8}}t^2\right)t\text{dt}\right)\\
+            &=\left(\sqrt{\frac{5}{8}}-3\cdot\sqrt{\frac{5}{8}}t^2\right)\left(-\frac{\sqrt{10}}{8}\right)\\
+            &=-\frac{5}{16}+\frac{15}{16}t^2\\
+            f'&=\frac{3}{16}+\frac{15}{16}t^2
+        \end{align*}
+    \end{itemize}
+    \item [4.]
+    \begin{itemize}
+        \item [a)] Note that \(\dim(V)=j,\dim(E)=i,0<i<j\). Say that \(\{b_1,\cdots,b_j\}\) is a set of orthonormal basis for \(V\) and \(b_1,\cdots,b_i\) is a set of orthonormal basis for \(E\), and \(P_E\) as \(f_E(v)\). Then, \(\forall v \in V\), \(v=\mu_1b_1+\cdots+\mu_jb_j\). 
+         and \(f_E(v)= \mu_1b_1+\cdots+\mu_ib_i\). Therefore, by definition of eigenvalue and eigenvector, there are 2 eigenvalues and \(j\) eigenvectors.
+        \begin{align*}
+            \lambda_1 = 1 \text{ with } \{b_1,\cdots,b_i\} \text{ as eigenvectors}\\
+            \lambda_2 = 0 \text{ with } \{b_{j-i},\cdots,b_j\} \text{ as eigenvectors}\\
+        \end{align*}
+        \item [b)]
+            in the coordinate system discribed above, the matrix would be \(j\times j\) with only values on its main diagonal and first \(i\) rows of its main diagonal will be 1 and rest will be zeros. Therefore, \(\text{Tr}(P_E)=i=\dim(E)\)
+    \end{itemize}
+    \item [5.] Decompose that \(v_\parallel,w_\parallel \in R(P)\), \(v_{\bot},w_{\bot}\in N(P)\) and \(v = v_\parallel+v_\bot, w = w_\parallel+w_\bot\). Then:
+    \begin{align*}
+        \langle P(v),w\rangle &= \langle v_\parallel,w_\parallel+w_\bot\rangle\\
+        &=\langle v_\parallel,w_\parallel\rangle + \langle v_\parallel,w_\bot\rangle\\
+        &=\langle v_\parallel,w_\parallel\rangle + 0\\
+        \langle w,P(v)\rangle &= \langle v_\parallel+v_\bot,w_\parallel\rangle\\
+        &=\langle v_\parallel,w_\parallel\rangle
+    \end{align*}
+    Therefore, the claim is true.
+    \item [6.]\(\forall A,B\in U(n)\)
+    \begin{align*}
+        (AB)(AB)^* &= ABB^*A^*\\
+        &=AIA^*\\
+        &=I
+    \end{align*}
+    Therefore, \(\forall A,B\in U(n), AB\in U(n)\)\\
+    \(I \in U(n)\) as \(II^*=I\)\\
+    For \(A \in U(n)\),\(A^{-1}=A^*\) and \((A^*)^*A^* = AA^*=I\) Thus \(A^*=A^{-1}\in U(n)\) Thus, it is a group.
+    \item [7.] \(\forall A,B\in O(n)\), \((AB)(AB)^T = ABB^TA^T=AIA^T=I\) Thus, \(\forall A,B\in O(n), AB\in O(n)\), Also, \(II^T=I\), \(I\in O(n)\). \(\forall A\in O(n)\), \(A^TA=I\) and \(A^T(A^T)^T=A^TA=I\), therefore \(A^{-1}\in O(n)\)
+    Thus, \(O(n)\) is a group.
+    \item [8.]
+    \begin{align*}
+        \rho(\sigma)_{ij} &= \delta^j_{\sigma(i)} \\
+        (\rho(\sigma)^T)_{ij}&=\delta^i_{\sigma(j)}\\
+        (\rho(\sigma)\rho(\sigma)^T)_{ij}&=\sum_{k=1}  \delta^k_{\sigma(i)}\delta^i_{\sigma(k)}\\
+        &=\delta^k_k\\
+        &=I
+    \end{align*}
+    Therefore, they are orthongonal.
+\end{itemize}
+\end{document}

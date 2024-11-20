@@ -30,47 +30,74 @@
             \begin{align*}
                 f(x,y,z)&=x^2+y^2+z^2\\
                 f(r,\theta,z)&=r^2+z^2\\
-                \nabla f &=\left(2r,0,2z\right)
+                \nabla f &=\left(\frac{\partial f}{\partial r},\frac{1}{r}\frac{\partial f}{\partial \theta},\frac{\partial f}{\partial z}\right)\\
+                \nabla f &=\left(2r,0,2z\right) = 2r\hat{r}+2z\hat{z}\\
+                &=2 \sqrt{x^2+y^2} \times \frac{x\hat{x}+y\hat{y}}{\sqrt{x^2+y^2}}+2z\hat z\\
+                &=2x\hat x+2y\hat y+2z\hat z
             \end{align*}
             \item [Spherical:]
             \begin{align*}
                 f(x,y,z)&=x^2+y^2+z^2\\
                 f(\rho,\theta,\phi)&=\rho^2\\
-                \nabla f&=\left(2\rho,0,0\right)
+                \nabla f &=\left(\frac{\partial f}{\partial r},\frac{1}{r}\frac{\partial f}{\partial \theta},\frac{1}{r\sin(\phi)}\frac{\partial f}{\partial \phi}\right)\\
+                \nabla f&=\left(2\rho,0,0\right) = 2\rho \hat \rho\\
+                &=2\sqrt{x^2+y^2+z^2}\times \frac{x\hat{x}+y\hat{y}+z\hat z}{\sqrt{x^2+y^2+z^2}}\\
+                &=2x\hat x+2y\hat y+2z\hat z
             \end{align*}
-        \end{itemize}
+
+
+
+
+
+        \end{itemize}\newpage
         \item [b)]  \(f(x,y,z)=\sin(z)\)
         \begin{itemize}
             \item [Cartesian:] 
             \begin{align*}
                 f(x,y,z)&=\sin(z)\\
-                \nabla f&=\left(0,0,\cos(z)\right)
+                \nabla f&=\left(0,0,\cos(z)\right)\\
+                &=\cos(z)\hat z
             \end{align*}
             \item [Cylindrical:]
             \begin{align*}
                 f(x,y,z)&=\sin(z)\\
                 f(r,\theta,z)&=\sin(z)\\
-                \nabla f&=\left(0,0,\cos(z)\right)
+                \nabla f&=\left(0,0,\cos(z)\right) = \cos(z)\hat z
             \end{align*}
             \item [Spherical:]
             \begin{align*}
                 f(x,y,z)&=\sin(z)\\
                 f(\rho,\theta,\phi)&=\sin(\rho\times \cos(\theta))\\
-                \nabla f&=\left(\cos(\theta)\cos(\rho\cos(\theta)),-\cos(\rho\times \cos(\theta))\rho\times \sin(\theta),0\right)
+                \nabla f&=\left(\cos(\rho \cos(\theta))\cos(\theta),-\cos(\rho \cos(\theta))\sin(\theta),0\right)\\
+                &=\cos(\rho \cos(\theta))\cos(\theta) \hat{r}-\cos(\rho \cos(\theta))\sin(\phi)\hat{\theta}\\
+                &=\cos(z)\times \frac{z}{\sqrt{x^2+y^2+z^2}} \times \frac{x\hat{x}+y\hat{y}+z\hat z}{\sqrt{x^2+y^2+z^2}}\\
+                &-\cos(z)\frac{\sqrt{x^2+y^2}}{\sqrt{x^2+y^2+z^2}}\times \frac{(x\hat x +y\hat y)z-(x^2+y^2)\hat z}{\sqrt{x^2+y^2+z^2}\sqrt{x^2+y^2}}\\
+                &=\cos(z)\frac{1}{x^2+y^2+z^2}\left((x\hat{x}+y\hat{y}+z\hat z)z-(x\hat x +y\hat y)z+(x^2+y^2)\hat z\right)\\
+                &=\cos(z)\frac{1}{x^2+y^2+z^2}\left((x^2+y^2+z^2)\hat z\right)\\
+                &=\cos(z)\hat z
             \end{align*}
         \end{itemize}
+
+
+
+        \newpage
         \item [c)] \(f(x,y,z)=x+y+z\)
         \begin{itemize}
             \item [Cartesian:] 
             \begin{align*}
                 f(x,y,z)&=x+y+z\\
-                \nabla f &=(1,1,1)
+                \nabla f &=(1,1,1)\\
+                &= \hat x+\hat y + \hat z
             \end{align*}
             \item [Cylindrical:]
             \begin{align*}
                 f(x,y,z)&=x+y+z\\
                 f(r,\theta,z)&=r\cos(\theta)+r\sin(\theta)+z\\
-                \nabla f &=\left(\cos(\theta)+\sin(\theta),r\cos(\theta)-r\sin(\theta),1\right)
+                \nabla f &=\left(\cos(\theta)+\sin(\theta),\cos(\theta)-\sin(\theta),1\right)\\
+                &=(\cos(\theta)+\sin(\theta))\hat{\rho}+(\cos(\theta)-\sin(\theta))\hat{\theta}+\hat{z}\\
+                &=\left(\frac{x+y}{\sqrt{x^2+y^2}}\right)\frac{x\hat{x}+y\hat{y}}{\sqrt{x^2+y^2}}+\left(\frac{x-y}{\sqrt{x^2+y^2}}\right)\times\frac{-y\hat{x}+x\hat{y}}{\sqrt{x^2+y^2}}+\hat{z}\\
+                &=\frac{(x^2+xy)\hat x+(xy+y^2)\hat y}{x^2+y^2}+\frac{(y^2-xy)\hat x+(x^2-xy)\hat y}{x^2+y^2}+\hat z\\
+                &=\hat x + \hat y + \hat z
             \end{align*}
             \item [Spherical:]
             \begin{align*}
@@ -78,9 +105,25 @@
                 f(\rho,\theta,\phi) &=\rho\sin(\theta)\cos(\phi)+\rho\sin(\theta)\sin(\phi)+\rho\cos(\theta)\\
                 \nabla f &=\begin{bmatrix}
                     \sin(\theta)\cos(\phi)+\sin(\theta)\sin(\phi)+\cos(\theta)\\
-                    \rho\cos(\theta)\cos(\phi)+\rho\cos(\theta)\sin(\phi)-\rho\sin(\theta)\\
-                    -\rho\sin(\theta)\sin(\phi)+\rho\sin(\theta)\cos(\phi)
-                \end{bmatrix}
+                    \cos(\theta)\cos(\phi)+\cos(\theta)\sin(\phi)-\sin(\theta)\\
+                    -\sin(\phi)+\cos(\phi)
+                \end{bmatrix}\\
+                &=\left(\frac{\sqrt{x^2+y^2}}{\sqrt{x^2+y^2+z^2}}\times \frac{x}{\sqrt{x^2+y^2}}+\frac{\sqrt{x^2+y^2}}{\sqrt{x^2+y^2+z^2}}\times \frac{y}{\sqrt{x^2+y^2}}+\frac{z}{\sqrt{x^2+y^2+z^2}}\right) \hat \rho\\
+                &+\left(\frac{z}{\sqrt{x^2+y^2+z^2}}\times \frac{x}{\sqrt{x^2+y^2}}+\frac{z}{\sqrt{x^2+y^2+z^2}}\times \frac{y}{\sqrt{x^2+y^2}}-\frac{\sqrt{x^2+y^2}}{\sqrt{x^2+y^2+z^2}}\right) \hat \theta\\
+                &+\left(\frac{x-y}{\sqrt{x^2+y^2}}\right)\hat{\phi}\\
+                &=\left(\frac{x+y+z}{\sqrt{x^2+y^2+z^2}}\right)\frac{x\hat{x}+y\hat{y}+z\hat z}{\sqrt{x^2+y^2+z^2}}\\
+                &+\left(\frac{zx+zy-x^2-y^2}{\sqrt{x^2+y^2+z^2}\sqrt{x^2+y^2}}\right)\frac{(x\hat x +y\hat y)z-(x^2+y^2)\hat z}{\sqrt{x^2+y^2+z^2}\sqrt{x^2+y^2}}\\
+                &+\left(\frac{x-y}{\sqrt{x^2+y^2}}\right)\frac{-y\hat x+x\hat y}{\sqrt{x^2+y^2}}\\
+                &=\frac{(x^2+y^2)(x+y+z)(x\hat{x}+y\hat{y}+z\hat z)}{(x^2+y^2+z^2)(x^2+y^2)}\\
+                &+\frac{(zx+zy-x^2-y^2)(zx\hat x+zy \hat y-(x^2+y^2)\hat z)}{(x^2+y^2+z^2)(x^2+y^2)}\\
+                &+\frac{(x-y)(x^2+y^2+z^2)(-y\hat x+x\hat y)}{(x^2+y^2+z^2)(x^2+y^2)}\\
+                &=\frac{x(x^2+y^2)(x+y+z)+zx(zx+zy-x^2-y^2)-y(x-y)(x^2+y^2+z^2)}{(x^2+y^2+z^2)(x^2+y^2)}\hat{x}\\
+                &+\frac{y(x^2+y^2)(x+y+z)+zy(zx+zy-x^2-y^2)+x(x-y)(x^2+y^2+z^2)}{(x^2+y^2+z^2)(x^2+y^2)}\hat{y}\\
+                &+\frac{z(x^2+y^2)(x+y+z)-(x^2+y^2)(zx+zy-x^2-y^2)}{(x^2+y^2+z^2)(x^2+y^2)}\hat{z}\\
+                &=\frac{x^4+y^4+2x^2y^2+z^2x^2+z^2y^2}{(x^2+y^2+z^2)(x^2+y^2)}\hat{x}\\               
+                &+\frac{x^4+y^4+2x^2y^2+z^2x^2+z^2y^2}{(x^2+y^2+z^2)(x^2+y^2)}\hat{y}\\
+                &+\frac{zx+zy+z^2-zx-zy+x^2+y^2}{x^2+y^2+z^2}\hat z\\
+                &=\hat x+\hat{y}+\hat z
             \end{align*}
         \end{itemize}
         \item [2.]
@@ -94,21 +137,69 @@
                 \item [Cylindrical:]
                 \begin{align*}
                     v&=x\hat{x}+y\hat{y}+z\hat{z}\\
-                    v&=x\hat{\rho}+y\hat{\theta}+z\hat{z}
+                    v&=\rho \cos(\theta)(\cos(\theta)\hat\rho-\sin(\theta)\hat\theta)+\rho \sin(\theta)(\sin(\theta)\hat\rho+\cos(\theta)\hat\theta)+z\hat z\\
+                    &=\rho \hat\rho+0\hat\theta+z\hat z\\
+                    \nabla v &=\frac{1}{\rho}\frac{\partial}{\partial \rho}\rho A_\rho+\frac{1}{\rho}\frac{\partial}{\partial \theta}A_\theta+\frac{\partial}{\partial z}A_z\\
+                    &=2+0+1=3
                 \end{align*}
                 \item [Spherical:]
+                \begin{align*}
+                    v&=x\hat{x}+y\hat{y}+z\hat{z}\\
+                    &=\rho \sin(\theta)\cos(\phi)\hat x+\rho \sin(\theta)\sin(\phi)\hat y+\rho\cos(\theta)\hat{z}\\
+                    &=\rho\sin^2(\theta)\cos^2(\phi)\hat \rho+\rho\sin(\theta)\cos(\theta)\cos^2(\phi)\hat\theta-\rho\sin(\theta)\cos(\phi)\sin(\phi)\hat\phi\\
+                    &+\rho \sin^2(\theta)\sin^2(\phi)\hat \rho+\rho\cos(\theta)\sin(\theta)\sin^2(\phi)\hat\theta+\rho \sin(\theta)\sin(\phi)\cos(\phi)\hat\phi\\
+                    &+\rho\cos^2(\theta)\hat\rho-\rho\cos(\theta)\sin(\theta)\hat\theta\\
+                    &=\rho(\cos^2(\theta)+\sin^2(\theta)(\cos^2(\theta)+\sin^2(\theta)))\hat{\rho}\\
+                    &+\rho\sin(\theta)\cos(\theta)(\cos^2(\phi)+\sin^2(\phi)-1)\hat\theta\\
+                    &+\rho\sin(\theta)(\sin(\phi)\cos(\phi)-\sin(\phi)\cos(\phi))\\
+                    &=\rho\hat\rho+0\hat\theta+0\hat\phi\\
+                    \nabla v&=\frac{1}{\rho^2}\frac{\partial}{\partial \rho}\rho^2 A_\rho+\frac{1}{\rho\sin(\theta)}\frac{\partial}{\partial \theta}(A_\theta\sin(\theta))+\frac{1}{\rho\sin(\theta)}\frac{\partial}{\partial \phi}A_\phi\\
+                    &=3+0+0=3
+                \end{align*}
             \end{itemize}
+            \newpage
             \item [b)] \(v = \hat{\rho}\)
             \begin{itemize}
                 \item [Cartesian:]
+                \begin{align*}
+                    v&=\frac{x\hat x+y\hat y}{\sqrt{x^2+y^2}}\\
+                    &=\frac{x}{\sqrt{x^2+y^2}}\hat x+\frac{y}{\sqrt{x^2+y^2}}\hat y\\
+                    \nabla v &= \frac{y^2}{(x^2+y^2)^\frac{3}{2}}+\frac{x^2}{(x^2+y^2)^\frac{3}{2}}\\
+                    &=\frac{1}{\sqrt{x^2+y^2}}
+                \end{align*}
                 \item [Cylindrical:]
+                \begin{align*}
+                    v&=1\hat\rho+0\hat\theta+0\hat z\\
+                    \nabla v &= \frac{1}{\rho}=\frac{1}{\sqrt{x^2+y^2}}
+                \end{align*}
             \end{itemize}
             \item [c)] \(v = \hat{\theta}\)
             \begin{itemize}
                 \item [Cartesian:]
+                \begin{align*}
+                    v &= \frac{(x\hat x +y\hat y)z-(x^2+y^2)\hat z}{\sqrt{x^2+y^2+z^2}\sqrt{x^2+y^2}}\\
+                    &=\frac{xz}{\sqrt{x^2+y^2+z^2}\sqrt{x^2+y^2}}\hat x+\frac{yz}{\sqrt{x^2+y^2+z^2}\sqrt{x^2+y^2}}\hat y-\frac{(x^2+y^2)}{\sqrt{x^2+y^2+z^2}\sqrt{x^2+y^2}}\hat z\\
+                    \nabla v&= -\frac{z(x^4-y^4-z^2y^2)}{(x^2+y^2+z^2)^{\frac{3}{2}}(x^2+y^2)^{\frac{3}{2}}}-\frac{z(y^4-x^4-z^2x^2)}{(x^2+y^2+z^2)^{\frac{3}{2}}(x^2+y^2)^{\frac{3}{2}}}+\frac{z^2x(x^2+y^2)}{(x^2+y^2+z^2)^{\frac{3}{2}}(x^2+y^2)^{\frac{3}{2}}}\\
+                    &=\frac{z}{\sqrt{x^2+y^2+z^2}\sqrt{x^2+y^2}}
+                \end{align*}
                 \item [Spherical:]
+                \begin{align*}
+                    v &= \hat \theta\\
+                    \nabla v &= \frac{\cos(\theta)}{r\sin(\theta)}\\
+                    &=\frac{\frac{z}{\sqrt{x^2+y^2+z^2}}}{\sqrt{x^2+y^2+z^2}\frac{\sqrt{x^2+y^2}}{\sqrt{x^2+y^2+z^2}}}\\
+                    &=\frac{z}{\sqrt{x^2+y^2+z^2}\sqrt{x^2+y^2}}
+                \end{align*}
             \end{itemize}
         \end{itemize}
     \end{itemize}
+    \newpage
+    \item [3.]
+    \begin{align*}
+        \partial_iv^i &=(R^j_i \partial_j')((R^{-1})^i_kv'^k)\\
+        &=\partial_j'(R^j_i )(R^{-1})^i_kv'^k\\
+        &=\delta^j_k\partial'_jv'^k\\
+        &=\partial'_jv'^j
+    \end{align*}
+    Thus the divergence is invarianced
 \end{itemize}
 \end{document}

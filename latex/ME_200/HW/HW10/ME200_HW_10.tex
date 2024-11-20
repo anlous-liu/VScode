@@ -1,0 +1,123 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+\date{Due: Nov 8 Edit: \today}
+\title{ME 200 Homework 10}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] 
+    \begin{align*}
+        m_1+m_2&=80\\
+        m_1 &=80-m_2\\
+        m_1h_1+m_2h_2&=m_3h_3\\
+        m_1(150-86)+(80-m_1)(2552.2)&=80(561.47)\\
+        m_1 &= 66.32 \text{kg/s}\\
+        m_2 &= 13.68\\
+        s_{in}-s_{out}+s_{gen}&=\Delta s_{sys}\\
+        m_1s_1+m_2s_2-m_3s_3+s_{gen}&=0\\
+        s_{gen}&=9.5102 \text{kw/k}
+    \end{align*}
+    \item [2.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            m &=\rho_1A_1V_1\\
+            &=\frac{P_1}{RT_1}A_1V_1\\
+            &=\frac{200}{0.287\times 325}\\
+            &=0.5 \text{kg/s}\\
+            m(h_1+v_1^2/2)&=m(h_2+v_2^2/2)\\
+            v_2&=256.072 \text{m/s}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            s_{gen}&=m(s^\circ_2-s^\circ_1-R(\ln(P_2/P_1)))\\
+            &=0.14385 \text{kW/K}
+        \end{align*}
+    \end{itemize}
+    \item [3.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            Q+W+m((h_1-h_2)+\frac{v_1^2-v_2^2}{2}+g(z_1-z_2))&=0\\
+            Q&=-10.85-0.11667(241.30-324.01)\\
+            &=-1.20047 \text{ kW}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            s_{gen}&=\frac{Q}{T}+m(s_2-s_1)\\
+            &=\frac{1.20047}{323}+0.11667(1.0707-0.9253)\\
+            &=0.0206 \text{kW/K}
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            s_{gen}&=\frac{Q}{T}+m(s_2-s_1)\\
+            &=\frac{1.20047}{300}+0.11667(1.0707-0.9253)\\
+            &=0.0209 \text{kW/K}
+        \end{align*}
+    \end{itemize}
+    \item [4.]
+    \begin{align*}
+        h_2&=h_f+xh_{fg}\\
+        &=2392.54\\
+        s_2&=s_f+xs_{gf}\\
+        &=7.5488
+    \end{align*}
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            m &=\frac{Q_1}{v_1}=0.36/0.38378=9.38 \text{kg/s}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            w(h_2-h_1)&=9.38(3625.8-2392.54)\\
+            &=11.568 \text{MW}
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            s_{gen}&=m(h_2-h_1)\\
+            &=9.38(7.5488-6.9045)\\
+            &=6.0435 \text{ kW/K}
+        \end{align*}
+        \item [d)]
+        \begin{align*}
+            s_1=s_2&=6.9045\\
+            s_2&=s_g+xs_{gf}\\
+            x&=0.8341\\
+            h_2 &= 2187.10\\
+            \eta &=\frac{w}{m(h_2-h-2)}\\
+            &=11567.98/13495.01\\
+            &=85.72\%
+        \end{align*}
+    \end{itemize}
+    \item [5.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            w_{in}&=(h_2-h_1)/m = 197.6 \text{ kJ/kg}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            s_{gen}&=\Delta S = \frac{1}{m}(s^\circ_2-s^\circ_1-R\ln(P_2/P_1))\\
+            &=0.06 \text{ kJ/kg\(\cdot\) K}
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            s^\circ_2-s^\circ_1-R\ln(P_2/P_1)&=0\\
+            s^\circ_2-213.915-8.314\ln (10)&=0\\
+            s^\circ_2&=233.06\\
+            h_{2s}&=166.174\\
+            \eta &= \frac{h_{2s}-h_1}{h_2-h_1}\\
+            &=84.95 \%
+        \end{align*}
+    \end{itemize}
+\end{itemize}     
+\end{document}

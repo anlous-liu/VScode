@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+\date{Due: Nov 18 Edit: \today}
+\title{ME 200 Homework 11}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] 
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            P&=m[(h_1-h_2)-(h_3-h_4)]\\
+            &=595.54 \text{ kW}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \eta_R &= \frac{P}{Q}\\
+            &=\frac{P}{m(h_1-h_4)}\\
+            &=25.81\%\\
+            \eta_C &= \frac{P}{m(h_1-h_4)}\\
+            &=29.92\%\\
+            P_C &=m[(h_1-h_2)-(h'_4-h'_3)]\\
+            &=470.1 \text{ kW}
+        \end{align*}
+        Carnot cycle efficiency has been improved, But the power output has been decreased.
+    \end{itemize}
+    \item [2.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            0&=\dot Q+\dot m(h_4-h_1)\\
+            \frac{\dot Q}{\dot m}&=(h_1-h_4)\\
+            &=3155.5 \text{ kJ/kg}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \eta &= \frac{\dot W_t+\dot W_p}{\dot Q}\\
+            &=\frac{\dot m(h_1-h_2)+\dot m(h_3-h_4)}{\dot Q}\\
+            &=32.8\%
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            0&=\dot Q+\dot m(h_1-h_3)\\
+            \frac{\dot Q}{\dot m}&=(h_3-h_2)\\
+            &=-2120.6 \text{ kJ/kg}
+        \end{align*}
+    \end{itemize}
+    \item [3.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \dot{ E}_{in}+\dot{E}_{out}&=0\\
+            \dot{m}(h_2-h_3)&=\dot{m}c_p\Delta T\\
+            \dot{m}&=2.4996 \text{kg/s}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \eta &=\frac{W_T-W_p}{Q}\\
+            &=\frac{(h_1-h_2)-(h_4-h_3)}{h_1-h_4}\\
+            &=31.03\%
+        \end{align*}
+    \end{itemize}
+    \item [4.]
+    \begin{align*}
+        W_{t}&=\dot{m}[(h_1-h_2)+(h_3-h_4)]\\
+        &=1580.28 \text{ kW}\\
+        W_p&=\dot m (h_6-h_5)\\
+        &=18.85 \text{kW}\\
+        W_{net}&=W_{t}-W_{p}\\
+        &=1561.43 \text{kW}\\
+        Q_{in}&=\dot{m}(h_1-h_6)+(h_3-h_2)\\
+        &=4496.88 \text{ kW}\\
+        \eta_{thermal}&=\frac{W_n}{Q_{in}}\\
+        &=34.72\%
+    \end{align*}
+    \item [5.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            q_s &=h_3-h_2\\
+            &=3320.58-697.203\\
+            &=2623.377 \text{ kJ/kg}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \dot Q &=\dot W +KE+Pe+\Delta H\\
+            0&=\Delta \dot H\\
+            \dot{m}_1(h_2-h_b)&=\dot m_2(h_a-h_c)\\
+            f&=\frac{\dot m_2}{\dot m_1}=\frac{h_2-h_b}{b_a-h_c}\\
+            &=0.2696
+            \eta &=\frac{W}{\dot q}\\
+            &=\frac{(h_3-h_a)+(1-f)(h_a-h_4)-(h_b-h_1)}{h_3-h_2}\\
+            &=42.69\%
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            \dot Q&=(\dot m_1-\dot m_2)(h_4-h_1)+\dot m(h_d-h_1)\\
+            \frac{\dot Q}{\dot m_1}&=1503.58 \text{ kJ/kg}
+        \end{align*}
+    \end{itemize}
+\end{itemize}     
+\end{document}

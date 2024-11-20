@@ -1,0 +1,133 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due: Nov 1 Edit: \today}
+\title{MATH 461 Homework 8}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [6.48]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            P(\min(X_1,X_2,X_3,X_4,X_5)\leq a)&=1-P(\min(X_1,X_2,X_3,X_4,X_5)>a)\\
+            &=1-(e^{-(a\lambda)})^5
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            P(\max(X_1,X_2,X_3,X_4,X_5)\leq a)&=1-P(X_1\leq a,X_2\leq a,X_3\leq a,X_4\leq a,X_5\leq a)\\
+            &=(e^{-(a\lambda)})^5
+        \end{align*}
+    \end{itemize}
+    \item [7.5]
+    \begin{align*}
+        E(|x|+|y|)&=E(|x|)+E(|y|)\\
+        &=\int_{-1.5}^{1.5}\frac{|x|}{3}dx+\int_{-1.5}^{1.5}\frac{|y|}{3}dy\\
+        &=1.5
+    \end{align*}
+    \item [7.6] \[\frac{1}{6}\times(1+2+3+4+5+6)=\frac{7}{2}\]
+    \item [7.7]
+    \begin{itemize}
+        \item [a)]
+        \[0.3\times0.3=0.09\]
+        \[10\times 0.09 = 0.9\]
+        \item [b)]
+        \[10\times (1-0.3)^2=4.9\]
+        \item [c)]
+        \[2\times (0.3\times 0.7)\times 10 = 4.2\]
+    \end{itemize}
+    \item [7.8]
+    By noteing in the way, the total table occupied will be: \(\sum X_i\), 
+    \begin{align*}
+        E[X_i] = (1-p)^{i-1}\\
+        E = \sum_{i=1}^{n}(1-p)^{i-1}
+    \end{align*}
+    \item [7.11]
+    any change over will have a probability of \(2p(1-p)\) as they are landing are different sides. And there are total of \(n-1\) slots that are possible for flips, then the total probability is \((n-1)2p(1-p)\)
+    \item [7.18]
+    \(52\times \frac{1}{13}=4\)
+    \item [7.19]
+    \begin{itemize}
+        \item [a)]Probability of chatching \(j\) before getting type 1 is \((1-p_1)^jp_1\), then the \(E((1-p_1)^jp_1)=\sum_{j=0}^{\infty}j(1-p_1)^jp_1=p_1\frac{1-p_1}{p_1^2}=\frac{1-p_1}{p_1}\)
+        \item [b)]It will \(\sum_{j=2}^{n}\frac{p_j}{p_j+p_1}\)
+    \end{itemize}
+    \item [7.21]
+    \begin{itemize}
+        \item [a)]\[365\times \binom{100}{3}\left(\frac{1}{365}\right)^3\left(\frac{364}{365}\right)^{97}\]
+        \item [b)]\[365 \times \left(1-\left(\frac{364}{365}\right)^{100}\right)\]
+    \end{itemize}
+    \item [7.30]
+    \begin{align*}
+        E\left[\left(X-Y\right)^2\right]&=E\left[X^2-2XY+Y^2\right]\\
+        &=E\left[X^2\right]-2E\left[X\right]E\left[Y\right]+E[Y^2]\\
+        &=(\sigma^2+\mu^2)-2\mu\mu+(\sigma^2+\mu^2)\\
+        &=\sigma^2
+    \end{align*}
+    \item [7.31]
+    \begin{align*}
+        \text{var}(X) &= E[X^2]-(E[X])^2\\
+        &=10\times \frac{1}{6}(1+4+9+16+25+36)-10\times( \frac{1}{6}(1+2+3+4+5+6))^2\\
+        &=\frac{175}{6}
+    \end{align*}
+    \item [7.33]
+    \begin{itemize}
+        \item [a)]    
+        \begin{align*}
+            E\left[(2+X)^2\right]&= E[4+4X+X^2]\\
+            &=4+(5+1)+4\\
+            &=14
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \text{var}(4+3X)&=3^2\text{var}(X)\\
+            &=9\times 5\\
+            &=45
+        \end{align*}
+    \end{itemize}
+    \item [7.38]
+    \begin{align*}
+        E(XY)&=\int_{0}^{\infty}\int_{0}^{x}xy\frac{2}{x}e^{-2x}dydx\\
+        &=\frac{1}{4}\\
+        E(X)&=\int_{0}^{\infty}\int_{0}^{x}x\frac{2}{x}e^{-2x}dydx\\
+        &=\frac{1}{2}\\
+        E(Y)&=\int_{0}^{\infty}\int_{0}^{x}y\frac{2}{x}e^{-2x}dydx\\
+        &=\frac{1}{4}\\
+        \text{cov}(X,Y)&=E(XY)-E(X)E(Y)=\frac{1}{4}-\frac{1}{2}\frac{1}{4}\\
+        &=\frac{1}{8}
+    \end{align*}
+    \item [7.39]
+    \begin{align*}
+        j=0: \text{cov}(Y_n,Y_{n})&=\sigma^3\\
+        j=1: \text{cov}(Y_n,Y_{n+1})&=\sigma^2\\
+        j=2: \text{cov}(Y_n,Y_{n+2})&=\sigma\\
+        j\geq 3: \text{cov}(Y_n,Y_{n+j})&=0
+    \end{align*}
+    \item [7.41]The assumptions made are 
+    follows Hyper geometric distribution with m=30,n=20,N=100.
+    \begin{align*}
+        \mu &=0.3\times 20\\
+        &=6\\
+        \text{var}(X)&=\frac{mn}{N} \left[ \frac{(n-1)(m-1)}{N-1} + 1 - \frac{mn}{N} \right] \\
+        &= \frac{30 \times 20}{100} \left[ \frac{(20 - 1)(30 - 1)}{100 - 1} + 1 - \frac{30 \times 20}{100} \right] \\
+        &= \frac{600}{100} \left[ \frac{19 \times 29}{99} + 1 - \frac{600}{100} \right] \\
+        &= \frac{600}{100} \left[ \frac{551}{99} + 1 - \frac{600}{100} \right] \\
+        &= \frac{600}{100} \left[ \frac{56}{99} \right] \\
+        &= \frac{112}{33}
+    \end{align*}
+    \item [7.42]
+    \begin{align*}
+        E(X)&=\frac{10}{19}
+        \text{var}&=\frac{3240}{6137}
+    \end{align*}
+\end{itemize}
+
+\end{document}
