@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due: Dec 4 Edit: \today}
+\title{MATH 416H HW 11}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] Consider the base: \(\left\{\frac{1}{0!}x^0,\frac{1}{1!}x^1,\frac{1}{2!}x^2\cdots,\frac{1}{n!}x^n\right\}\),\\
+    Then, 
+    \(A=[T]_{\mathcal{B} \mathcal{B} }=\begin{bmatrix}
+        0&1&0&\cdots&0&0\\
+        0&0&1&\cdots&0&0\\
+        0&0&0&\cdots&0&0\\
+        \vdots&\vdots&\vdots&\ddots&\vdots&\vdots\\
+        0&0&0&\cdots&0&1\\
+        0&0&0&\cdots&0&0\\
+    \end{bmatrix}\)\\
+    Which is in jordan normal form
+    \item [2.] Notice that \(\begin{pmatrix}
+        1&3\\3&1
+    \end{pmatrix}\) is diagonalizable. Therefore, \(USDS^{-1}U^{-1}\) is a diagonal matrix. Then, diagonalize \(\begin{pmatrix}
+        1&3\\3&1
+    \end{pmatrix}\). There is \(\lambda_1=4,\lambda_2=-2\) and \(v_1=\left(s,-s\right)^T,v_2=\left(s,s\right)^T\) Then the equation becomes:
+    \begin{align*}
+        U\begin{bmatrix}
+            s&s\\s&-s
+        \end{bmatrix}
+        &\begin{bmatrix}
+            1&3\\3&1
+        \end{bmatrix}
+        \begin{bmatrix}
+            \frac{1}{2s}&\frac{1}{2s}\\
+            \frac{1}{2s}&-\frac{1}{2s}
+        \end{bmatrix}
+        U^*
+    \end{align*}
+    Consider the specific case where \(US=I,U^*S^{-1}=I\) while setting the imaginary part to zero, we have \(UU=I,US=I,US^{-1}=I\), then \(S=S^{-1}\), we have \(        \begin{bmatrix}
+        \frac{1}{2s}&\frac{1}{2s}\\
+        \frac{1}{2s}&-\frac{1}{2s}
+    \end{bmatrix}=\begin{bmatrix}
+        s&s\\s&-s
+    \end{bmatrix}\), then \(s=\frac{\sqrt{2}}{2}\), then \( U=S^{-1}=\begin{bmatrix}
+        \frac{\sqrt{2}}{2}&\frac{\sqrt{2}}{2}\\
+        \frac{\sqrt{2}}{2}&-\frac{\sqrt{2}}{2}
+    \end{bmatrix}=U^* \).
+    \item [3.]
+    \item [4.]
+    \item [5.]
+    \item [6.]
+    \item [7.]
+    \item [8.]
+\end{itemize}
+\end{document}

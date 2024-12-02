@@ -1,0 +1,180 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{multirow}
+
+
+
+\date{Due:Nov 14 Edit: \today}
+\title{PHYS 225 HW 10}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            V&=\left(\gamma,\gamma v_x,\gamma v_y, \gamma v_z\right)
+        \end{align*}
+        For \(V\cdot V\) in rest frame, considering \(c=1\), we have \(v_x=v_y=v_z=0\), then:
+        \begin{align*}
+            V\cdot V &=\gamma^2-(0+0+0)\\
+            &=\frac{1}{1-0}=1
+        \end{align*} 
+        For \(V\cdot V\) in the frame where the particle only moves in the x direction, \(v_x=|v|,v_y=v_z=0\), Then:
+        \begin{align*}
+            V\cdot V&=\gamma^2-(\gamma^2v_x^2+0+0)\\
+            &=\frac{1}{1-v^2}-\frac{v^2}{1-v^2}\\
+            &=\frac{1-v^2}{1-v^2}=1
+        \end{align*}
+        Therefore it is indeed in variant.
+        \item [b)]
+        \begin{align*}
+            A&=\left(\gamma^4va,\gamma^4vav_x+\gamma^2a_x,\gamma^4vav_y+\gamma^2a_y,\gamma^4vav_z+\gamma^2a_z\right)
+        \end{align*}
+        First consider a rest frame with \(v=0\) and \(a=a_x\), then:
+        \begin{align*}
+            A\cdot A &=\gamma^8v^2a^2-(\gamma^4va\mathbf{v}+\gamma^2\mathbf{a})\cdot (\gamma^4va\mathbf{v}+\gamma^2\mathbf{a})\\
+            &=0-(\gamma^4a_x^2)\\
+            &=-a^2_x
+        \end{align*}
+        Now, consider a frame where \(v'=v'_x\), now calculate the respect acceleration, \(a'_x =\frac{a_x}{\gamma^3}\), now:
+        \begin{align*}
+            A\cdot A &=\gamma^8v^2a^2-(\gamma^4va\mathbf{v}+\gamma^2\mathbf{a})\cdot (\gamma^4va\mathbf{v}+\gamma^2\mathbf{a})\\
+            &=\gamma^8v'^2\left(\frac{a}{\gamma^3}\right)^2-\left(\frac{a_x}{\gamma}\left(v^2+1\right)\right)^2\\
+            &=\gamma^2v_x^2a_x^2-\left(\frac{a^2(\gamma^2v^2+1)^2}{\gamma^2}\right)\\
+            &=\gamma^2v^2a^2-\left(\frac{a^2\left(\frac{1+v^2}{1-v^2}\right)^2}{\gamma^2}\right)\\
+            &=\frac{\gamma^4v^2a^2-a^2\left(\frac{1+v^2}{1-v^2}\right)^2}{\gamma^2}\\
+            &=a^2\frac{\gamma^4v^2-\left(\frac{1+v^2}{1-v^2}\right)^2}{\gamma^2}\\
+            &=a^2\frac{\left(\gamma^2v-\left(\frac{1+v^2}{1-v^2}\right)\right)\left(\gamma^2v+\left(\frac{1+v^2}{1-v^2}\right)\right)}{\gamma^2}\\
+            &=-a^2(1+v^2+v^4)
+        \end{align*}
+        which is a bit different from the one in rest fram.
+        \item [c)]
+        \begin{align*}
+            F&=m\left(\gamma^4va_F,\gamma^4a_x,\gamma^4a_y,\gamma^4a_z\right)\\
+            V&=\left(\gamma,\gamma v_x,\gamma v_y, \gamma v_z\right)
+        \end{align*}
+        in the rest frame, with \(v_z=\frac{1}{2}\), \(F=(0,f_x,0,0)\), \(V=(0,0,0,1)\), \(V\cdot F=f_x\), Now, transform everything into a moving frame by multipling \(\Lambda \), We have,
+        \(V\cdot F=\gamma^2f_x\) which is also different.
+        \item [d)] in rest frame, whith \(\mathbf{F}=f_x\), then \(F\cdot dx=f_xdx\), and in a transforming frame, \(F'dx'=\gamma^2f_xdx\)
+    \end{itemize}
+    \item [2.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            E_{k,ball}&=3m\\
+            E_{ball}&=3mc^2+mc^2=4mc^2\\
+            E_{ball}^2&=p^2c^2+m^2c^4\\
+            16m^2c^4 &=p^2c^2+m^2c^4\\
+            p^2c^2+m^2c^4-16m^2c^4&=0\\
+            p^2&=\frac{16m^2c^4-m^2c^4}{c^2}\\
+            p_{ball}&=\sqrt{15}mc\\
+            p'_{x,ball}&=p\cdot\cos(\theta)=\left(\sqrt{15}mc\right)\cos(\theta)\\
+            p'_{y,ball}&=p\cdot\sin(\theta)=\left(\sqrt{15}mc\right)\sin(\theta)
+        \end{align*}
+        Transform momentum into \(S\) frame.
+        \begin{align*}
+            \Lambda &=\begin{bmatrix}
+                \gamma&\gamma\beta&0&0\\
+                \gamma\beta&\gamma&0&0\\
+                0&0&1&0\\
+                0&0&0&1\\
+            \end{bmatrix}\\
+            \mathbf{P}c&=\Lambda P'\\
+            &=\begin{bmatrix}
+                \gamma&\gamma\beta&0&0\\
+                \gamma\beta&\gamma&0&0\\
+                0&0&1&0\\
+                0&0&0&1\\
+            \end{bmatrix}
+            \begin{bmatrix}
+                16m^2c^4\\
+                \left(\sqrt{15}mc\right)\cos(\theta)c\\
+                \left(\sqrt{15}mc\right)\sin(\theta)c\\
+                0
+            \end{bmatrix}\\
+            &=\begin{bmatrix}
+                \gamma\left(4mc^2+\beta\left(\sqrt{15}mc^2\right)\cos(\theta)\right)\\
+                \gamma\left(\beta4mc^2+\left(\sqrt{15}mc^2\right)\cos(\theta)\right)\\
+                \left(\sqrt{15}mc^2\right)\sin(\theta)\\
+                0
+            \end{bmatrix}\\
+            p_{x,ball}&=\gamma\left(\beta4mc+\left(\sqrt{15}mc\right)\cos(\theta)\right)\\
+            p_{y,ball}&=\left(\sqrt{15}mc\right)\sin(\theta)\\
+        \end{align*}
+        Now get the velocity of the ball in the rest frame or \(S\) frame.\\
+        \begin{align*}
+            p_{x,ball}&=\gamma mv\\
+            \frac{p}{m}&=\frac{v}{\sqrt{1-\frac{v^2}{c^2}}}\\
+            \frac{p^2}{m^2}&=\frac{v^2}{1-\frac{v^2}{c^2}}\\
+            v^2&=\frac{\left(\frac{p}{m}\right)^2}{1+\left(\frac{p}{mc}\right)^2}\\
+            v_{x,ball}&=\frac{\gamma\left(4\beta c+\left(\sqrt{15}c\right)\cos(\theta)\right)}{\sqrt{1+\gamma\left(4\beta+\left(\sqrt{15}\right)\cos(\theta)\right)}}\\
+            v_{y,ball}&=\frac{\left(\sqrt{15}c\right)\sin(\theta)}{\sqrt{1+\left(\sqrt{15}\right)\sin(\theta)}}
+        \end{align*}
+        for some \(t\), the snow ball hits \((0,0)\), thus:
+        \begin{align*}
+            v_xt&=4\\
+            v_yt&=1\\
+            \frac{v_x}{v_y}&=4\\
+            \frac{\frac{\gamma\left(4\beta c+\left(\sqrt{15}c\right)\cos(\theta)\right)}{\sqrt{1+\gamma\left(4\beta+\left(\sqrt{15}\right)\cos(\theta)\right)}}}{\frac{\left(\sqrt{15}c\right)\sin(\theta)}{\sqrt{1+\left(\sqrt{15}\right)\sin(\theta)}}}&=4\\
+            \frac{\gamma\left(4\beta c+\left(\sqrt{15}c\right)\cos(\theta)\right)}{\sqrt{1+\gamma\left(4\beta+\left(\sqrt{15}\right)\cos(\theta)\right)}}\times \frac{\sqrt{1+\left(\sqrt{15}\right)\sin(\theta)}}{\left(\sqrt{15}c\right)\sin(\theta)}&=4\\
+            \gamma=\frac{1}{\sqrt{1-\beta^2}}&=\frac{1}{\sqrt{0.51}}\\
+            \beta&=0.7
+        \end{align*}
+        plug back into the equation, we get: 
+        \(\cos(\theta)=0.97998 \text{ or } -0.047908\)
+        \item [b)]
+        \begin{align*}
+            p&=\sqrt{p_x^2+p_y^2}\\
+            p^2&=\left(\gamma\beta4mc+\left(\sqrt{15}mc\right)\cos(\theta)\right)^2+\left(15m^2c^2\right)\sin^2(\theta)\\
+            p&=\sqrt{m^2c^2(30+8\beta\gamma(\sqrt{15}\cos(\theta)+2))}\\
+            v&=\frac{pc^2}{E}\\
+            &=\frac{pc^2}{4mc^2}\\
+            &=\frac{\sqrt{30+8\beta\gamma(\sqrt{15}\cos(\theta)+2)}}{4c}\\
+            t&=L/v\\
+            &=\frac{\sqrt{16+1}c}{\frac{\sqrt{30+8\beta\gamma(\sqrt{15}\cos(\theta)+2)}}{4c}}\\
+            &=\frac{4\sqrt{17}c^2}{\sqrt{30+8\beta\gamma(\sqrt{15}\cos(\theta)+2)}}\\
+            &=1.7\times 10^{17} \text{ or } 2.2319 \times 10^{17} \textsl{ s}
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            \tau&=\frac{t}{\gamma_{ball}}=\frac{tp}{mv}\\
+            &=6.12\times 10^{-34} s
+        \end{align*}
+        \item [d)]
+        \begin{align*}
+            p' &= \sqrt{15}mc\\
+            p &=\sqrt{m^2c^2(30+8\beta\gamma(\sqrt{15}\cos(\theta)+2))}\\
+        \end{align*}
+    \end{itemize}
+    \item [3.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \frac{f_{\text{obs}}}{f_{\text{emit}}}&=\sqrt{\frac{1+\beta}{1-\beta}}\\
+            \frac{550}{700}&=\sqrt{\frac{1+\beta}{1-\beta}}\\
+            \beta &=-\frac{12}{37}\\
+            v&=\frac{12}{37}c=9.72\times 10^7\text{ m/s}
+        \end{align*}
+        
+        \item [b)]
+        \begin{align*}
+            v&=4\times 10^4 \text{km/hr}\\
+            &=4\times 10^4 \times 10^3 \div60^2 \text{ m/s}\\
+            &=1.11\times 10^4 \text{m/s}\\
+            &=3.707\times 10^{-5} c\\
+            \beta &=3.707\times 10^{-5}\\
+            \frac{f_{obs}}{f_{emit}}&=\sqrt{\frac{1+\beta}{1-\beta}}\\
+            f_{obs}&=700.026 \text{ nm}
+        \end{align*}
+        A taylor expansion would be appropriate due to the significantly small value of \(\beta\).
+    \end{itemize}
+\end{itemize}
+\end{document}

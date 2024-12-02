@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due:Nov 22 Edit: \today}
+\title{NPRE200 HW 5}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \frac{\text{d}n}{\text{d}t}&=S+P-A+R\\
+            &=S+(\nu-1)\Sigma_f\phi-\Sigma_c\phi+D\nabla^2\phi
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \frac{\text{d}n}{\text{d}t}&=S+P-A+R\\
+            &=S+(\eta-1)\Sigma_a\phi+D\nabla^2\phi
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            \frac{\text{d}n}{\text{d}t}&=S+P-A+R=0\\
+            0&=S+(\eta-1)\Sigma_a\phi+D\nabla^2\phi
+        \end{align*}
+        \item [d)]
+        \begin{align*}
+            \frac{\text{d}n}{\text{d}t}&=S+P-A+R=0\\
+            0&=S-\Sigma_a\phi+D\nabla^2\phi
+        \end{align*}
+    \end{itemize}
+    \item [2.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \frac{\text{d}n}{\text{d}t}&=S-\Sigma_a\phi+D\nabla^2\phi=0\\
+            0&=S-\Sigma_a\phi+D\nabla^2\phi\\
+            -D\nabla^2\phi&=S-\Sigma_a\phi\\
+            -\nabla^2\phi+\frac{\Sigma_a}{D}\phi&=\frac{S}{D}\\
+            -\nabla^2\phi+\frac{1}{L^2}\phi&=\frac{S}{D}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \nabla^2\phi-\frac{1}{L^2}\phi&=0\\
+            \nabla^2=\frac{\text{d}^2}{\text{d}x^2}\\
+            \frac{\text{d}^2\phi}{\text{d}x^2}-\frac{1}{L^2}\phi&=0\\
+            \phi&=Ae^{xp}+Ce^{-xp}\\
+            \phi(x)&=Ae^{\frac{x}{L}}+Ce^{-\frac{x}{L}}\\
+            \phi(0)&=\phi_0\\
+            \phi(\infty)&=0\\
+            0&=Ae^{xp}+Ce^{-xp}\\
+            0&=A\cdot\infty+C\cdot 0\\
+            A&=0\\
+            \phi_0&=Ae^{xp}+Ce^{-xp}\\
+            \phi_0&=C\cdot 1\\
+            C&=\phi_0\\
+            \phi(x)&=\phi_0e^{-\frac{x}{L}}
+        \end{align*}
+    \end{itemize}
+    \item [3.]
+    \begin{align*}
+        \frac{\text{d}^2\phi}{\text{d}x^2}-\frac{1}{L^2}\phi&=-\frac{S}{D}\\
+        \phi_g(x)=Ae^{\frac{x}{L}}+Ce^{-\frac{x}{L}}\\
+        \text{Take a particular solution }\phi_{pi}\\
+        \frac{\text{d}^2\phi}{\text{d}x^2}p^2\phi&=Q\\
+        \phi_{pi}&=\frac{Q}{p^2}\\
+        &=\frac{S/D}{1/L^2}\\
+        &=\frac{L^2}{D}\cdot S \\
+        &= \frac{1}{D/L^2}\cdot S\\
+        &= \frac{S}{\Sigma_a}
+        \phi(x)=Ae^{\frac{x}{L}}+Ce^{-\frac{x}{L}}+\frac{S}{\Sigma_a}
+    \end{align*}
+    \newpage
+    \item [4.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \phi&=\phi_0e^{-\frac{x}{L}}\\
+            J_x(x)&=J^+_x(x)-J^-_x(x)\\
+            J^{\pm }_x(x)&=\frac{1}{4}\phi(x)\mp \frac{1}{2}D\frac{\text{d}}{\text{d}x}\phi(x)\\
+            J^{\pm }_x(0)&=\frac{1}{4}\phi(0)\mp \frac{1}{2}D\frac{\text{d}}{\text{d}x}\phi(x)\\
+            &=\frac{1}{4}\phi_0\mp\frac{1}{2}D\left.\left[\frac{\text{d}}{\text{d}x}\phi_0e^{-\frac{x}{L}}\right]\right|_{x=0}\\
+            &=\frac{1}{4}\phi_0\pm\frac{1}{2}\frac{D}{L}\phi_0\\
+            \phi_0&=J^+_x(0)\left(\frac{1}{4}+\frac{D}{2L}\right)^{-1}\\
+            \phi&=\phi_0e^{-\frac{x}{L}}\\
+            \phi&=J^+_x(0)\left(\frac{1}{4}+\frac{D}{2L}\right)^{-1}e^{-\frac{x}{L}}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \alpha &=\frac{J_x^-(0)}{J^+_x(0)}\\
+            &=\frac{\frac{1}{4}+\frac{D}{2L}}{\frac{1}{4}-\frac{D}{2L}}\\
+            &=\frac{L-2D}{L+2D}
+        \end{align*}
+    \end{itemize}
+\end{itemize}
+\end{document}
+
+
+

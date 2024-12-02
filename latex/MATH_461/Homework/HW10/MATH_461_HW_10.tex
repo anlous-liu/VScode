@@ -1,0 +1,89 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due: Nov 22 Edit: \today}
+\title{MATH 461 Homework 10}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [7.50]
+    \begin{align*}
+        \int_{0}^{\infty}x^2\cdot \frac{e^{-\frac{x}{y}}e^{-y}}{ye^{-y}}\text{ d}x
+        &=\frac{1}{ y}2y^3\\
+        &=2y^2
+    \end{align*}
+    \item [7.51]
+    \begin{align*}
+        f(x|y)&=\frac{f(x,y)}{f_Y(y)}=\frac{e^{-y}}{y}\frac{1}{e^{-y}}=\frac{1}{y}
+        E(X^3|Y=y)&=\int_{0}^{y}x^3\frac{1}{y}=\frac{y^3}{4}
+    \end{align*}
+    \item [7.56]
+    \begin{align*}
+        E(X)=\sum_{n=0}^{\infty}E(X|N=n)P(N=n)\\
+        &=\sum_{n=0}^{\infty}NE(I_1)P(N=n)\\
+        &=\sum_{n=0}^{\infty}N(1-\left(\frac{N_1}{N}^n\right))\frac{10^n}{n!}e^{-10}\\
+        &=N-Ne^{-\frac{10}{N}}
+    \end{align*}
+    \item [7.57]
+    \begin{align*}
+        \text{Cov}(N,X)=E(NX)-E(N)E(X)=0\\
+        E(NX)=E(N)E(X)=5\times 2.5=12.5
+    \end{align*}
+    \item [7.75]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            M_X(t)&=e^{2e^t-2}\\
+            M_Y(t)&=\left(\frac{3}{4}e^t+\frac{1}{4}\right)^{10}\\
+            P(X+Y=2)&=P(X=0,Y=2)+P(X=1,Y=1)+P(X=2,Y=0)\\
+            &=e^{-2}(0.000386)+2e^{-2}(0.0000286)+\frac{2^2e^{-2}}{2!}(9.537\times 10^{-7})\\
+            &=6.024\times 10^{-5}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            P(XY=0)&=P(X=0)+P(Y=0)-P(X=Y=0)\\
+            &=e^{-2}+9.5367\times 10^{-7}-\left(e^{-2}\left(9.5367\times 10^{-7}\right)\right)\\
+            &=0.1353
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            E(XY)&=E(X)E(Y)\\
+            &=\lambda\cdot np\\
+            &=15
+        \end{align*}
+    \end{itemize}
+    \item [8.1]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            P(X>18)\leq \frac{E(X)}{18}=\frac{16}{18}=\frac{8}{9}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            P(X>254)\leq \frac{E(X)}{25}=\frac{16}{25}
+        \end{align*}
+    \end{itemize}
+    \item [8.2]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \sigma^2=\text{Var}(X)=9\\
+            P(|X_16|\geq 6)\leq \frac{\sigma^2}{6^2}=\frac{1}{4}\\
+            P(10\leq X\leq22)=1-P(|X_16|\geq 6)\geq \frac{3}{4}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            P(X>16+2)\leq \frac{\sigma^2}{\sigma^2+2^2}=\frac{9}{9+4}=\frac{9}{13}
+        \end{align*}
+    \end{itemize}
+\end{itemize}
+\end{document}

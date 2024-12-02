@@ -1,0 +1,184 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+\date{Due: Nov 22 Edit: \today}
+\title{ME 200 Homework 12}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] 
+    \begin{align*}
+        \dot m&=\frac{P_1\dot V}{RT_1}\\
+        &=5.81
+    \end{align*}
+    \begin{itemize}
+        \item [a)]
+        \begin{itemize}
+            \item [6:]
+            \begin{align*}
+                \frac{T_2}{T_1}&=r_p^{\frac{\gamma-1}{\gamma}}\\
+                T_2&=500.55 \text{ K}\\
+                \frac{T_3}{T_4}&=r_p^{\frac{\gamma-1}{\gamma}}\\
+                T_4&=839.07\text{ K}\\
+                \eta &= 1-\frac{1}{r_p^{\frac{\gamma-1}{\gamma}}}\\
+                &=40.06\%
+            \end{align*}
+            \item [8:]
+            \begin{align*}
+                \frac{T_2}{T_1}&=r_p^{\frac{\gamma-1}{\gamma}}\\
+                T_2&=543.43 \text{ K}\\
+                \frac{T_3}{T_4}&=r_p^{\frac{\gamma-1}{\gamma}}\\
+                T_4&=772.86\text{ K}\\
+                \eta &= 1-\frac{1}{r_p^{\frac{\gamma-1}{\gamma}}}\\
+                &=44.79\%
+            \end{align*}
+            \item [12:]
+            \begin{align*}
+                \frac{T_2}{T_1}&=r_p^{\frac{\gamma-1}{\gamma}}\\
+                T_2&=610.18 \text{ K}\\
+                \frac{T_3}{T_4}&=r_p^{\frac{\gamma-1}{\gamma}}\\
+                T_4&=688.32\text{ K}\\
+                \eta &= 1-\frac{1}{r_p^{\frac{\gamma-1}{\gamma}}}\\
+                &=50.83\%
+            \end{align*}
+        \end{itemize}
+        \item [b)]
+        \begin{itemize}
+            \item [6:]
+            \begin{align*}
+                r_b &=\frac{\dot mC_p(T_2-T_1)}{\dot mC_p(T_3-T_4)}\\
+                &=0.357
+            \end{align*}
+            \item [8:]
+            \begin{align*}
+                r_b &=\frac{\dot mC_p(T_2-T_1)}{\dot mC_p(T_3-T_4)}\\
+                &=0.388
+            \end{align*}
+            \item [12:]
+            \begin{align*}
+                r_b &=\frac{\dot mC_p(T_2-T_1)}{\dot mC_p(T_3-T_4)}\\
+                &=0.436
+            \end{align*}
+        \end{itemize}
+        \item [c)]
+        \begin{itemize}
+            \item [6:]
+            \begin{align*}
+                W_{net}&=mC_p(T_3-T_2-T_4+T_1)\\
+                &=2104.28 \text{kW}
+            \end{align*}
+            \item [8:]
+            \begin{align*}
+                W_{net}&=mC_p(T_3-T_2-T_4+T_1)\\
+                &=2240.5 \text{kW}
+            \end{align*}
+            \item [12:]
+            \begin{align*}
+                W_{net}&=mC_p(T_3-T_2-T_4+T_1)\\
+                &=2344.38 \text{kW}
+            \end{align*}
+        \end{itemize}
+    \end{itemize}
+    \newpage
+    \item [2.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            W_t&=\dot m(h_3-h_4)=82753.993 \text{kW}\\
+            W_c&=\dot m(h_2-h_1)=25355.488 \text{kW}\\
+            W_{net}&=W_t-W_c=57.4\text{MW}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            Q_{in}&=m(h_3-h_2)=59.7312(2377.7-704.6232)=99934.9\text{ kW}
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            \eta &=\frac{P}{Q_{in}}\\
+            &=57.44\%
+        \end{align*}
+    \end{itemize}
+    \item [3.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            P&=\dot m(h_3-h_4-h_2+h_1)\\
+            10\times 10^3&=\dot m(463.5)\\
+            \dot m&=21.575 \text{kg/s}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            Q_s&=\dot m(h_3-h_x)\\
+            &=21.575\times (1574-800)\\
+            &=16699 \text{ kW}
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            \eta &=\frac{P_{net}}{Q_s}\\
+            &=\frac{10^4}{16699}\\
+            &=0.598837\%
+        \end{align*}
+    \end{itemize}
+    \item [4.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            W_{t1}/\dot m&=h_1-h_2=365.68 \text{kJ/kg}\\
+            W_{t2}/\dot m&=h_3-h_4=1277.79-906.85=370.94
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \frac{\dot Q}{\dot m}&=h_3-h_2=(1277.79-912.11)=365.7\text{ kJ/kg}
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            P_{ta}&=\frac{p_a}{p_1}p_{t1}\\
+            P_{ta}&=19.833,\ \Rightarrow h_1 = 638.58 \text{ kJ/kg}\\
+            \frac{\dot w}{\dot m}&=(h_1-h_a)\\
+            &=639.21 \text{ kJ/kg}\\
+            p_{increm}&=\frac{365.68+370.94-639.2}{639.2}\\
+            &=15.2\%
+        \end{align*}
+    \end{itemize}
+    \item [5.]
+    \begin{itemize}
+        \item [d)]
+        \begin{align*}
+            Q_{in}&=u_3-u_2\\
+            u_3&=u_2+Q_{in}\\
+            &=1903.06\\
+            u_3&=1903.06\\
+            v_{r3}&=1.9192\\
+            T_3=2231.5 \text{ K}
+        \end{align*}
+        \item [a)]
+        \begin{align*}
+            Q_{out}&=u_4-u_1\\
+            &=892.95-214.07\\
+            &=678.88\text{kJ/kg}\\
+            W_{net,out}&=Q_{in}-Q_{out}\\
+            &=721.12 \text{kJ/kg}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \eta&=\frac{W_{net,out}}{p_1}\\
+            &=51.51\%
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            v_1&=\frac{RT_1}{P_1}\\
+            &=0.861 \text{ m}^3/kg\\
+            \bar P&=\frac{W_{net,out}}{v_1-v_2}\\
+            &=9.492 \text{bar}
+        \end{align*}
+    \end{itemize}
+\end{itemize}     
+\end{document}
