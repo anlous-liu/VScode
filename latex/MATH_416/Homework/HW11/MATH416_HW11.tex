@@ -14,6 +14,7 @@
 
 \begin{document}
 \maketitle
+Note that \(A^i_j,A_{ij}\) all means that the \(i\)th row and \(j\)th collumn of the matrix \(A\)
 \begin{itemize}
     \item [1.] Consider the base: \(\left\{\frac{1}{0!}x^0,\frac{1}{1!}x^1,\frac{1}{2!}x^2\cdots,\frac{1}{n!}x^n\right\}\),\\
     Then, 
@@ -100,21 +101,78 @@
         \item [a)]\
         \begin{itemize}
             \item [Forward:]
-            \item [Backward:]
+            \begin{align*}
+                A^*&=-A\\
+                -A^*&=A\\
+                -\sqrt{-1}A^*&=\sqrt{-1}A\\
+                -iA^*&=iA\\
+                (iA)^*&=-iA^*
+            \end{align*}
+            Therefore, if \(A\) is skew-Hermitian then \(A^*=-A\)
+            \item [Backward:] If \(\sqrt{-1}A\) is Hermitian, then:
+            \begin{align*}
+                (iA)^*&=iA\\
+                iA &=-iA^*\\
+                A&=-A^*
+            \end{align*}
         \end{itemize}
-        \item [b)]
-        \item [c)]
+        \item [b)]For any Hermitian matrix \(H\), forall eigenvalues \(\lambda_i\) of \(H\), \(\lambda_i\in \mathbb{R}\). As \(iA\) is Hermitian, 
+        \(\exists U,\ iA=U\Lambda U^*\) where \(\Lambda\) only have real diagonal entries. Then \(A=U(\frac{1}{i}\Lambda )U^*\). \(\forall r\in \mathbb{R}, \frac{r}{i}=-ri\) which is purely imaginary (if include r=0)
+        therefore \(\left(\frac{1}{i}\Lambda\right)\) have only pure imaginary (including zero) diagonal entries.
+        Also, as \(U\) is unitary and \(UU^*=I\), \(A=U\left(\frac{1}{i}\Lambda\right)U^{-1}\) which means that \(\left(\frac{1}{i}\Lambda\right)\) is the matrix containing all of its eigenvalues which means that they are all purely imaginary.
+        \item [c)]Using lemma 31.4 profed in class, as \(iA\) is herimitan, then \(iA=U\Lambda U^*\) and \(A=U\left(\frac{1}{i}\Lambda\right)U^*\) which is unitary equavalent to the diagonal matrix \(-i\Lambda\) meaning that it includes all eigenvectors of A.
     \end{itemize}
     \item [7.]
     \begin{itemize}
         \item [a)]
+        \begin{align*}
+            [B,A]&=AB-BA\\
+            &=-(BA-AB)\\
+            &=-[A,B]
+        \end{align*}
         \item [b)]
+        \begin{align*}
+            -[A,B]&=[B,A]\\
+            &=BA-AB\\
+            &=(-B)(-A)-(-A)(-B)\\
+            &=B^*A^*-A^*B^*\\
+            [A,B]^*&=\left(AB-BA\right)^*\\
+            &=(AB)^*-(BA)^*\\
+            &=B^*A^*-A^*B^*\\
+            &=-[A,B]
+        \end{align*}
+        Therefore it is also skew-hermitian.
         \item [c)]
+        \begin{align*}
+            [A,B]&=AB-BA\\
+            &=A^*B^*-B^*A^*\\
+            &=A^*B^*-(AB)^*\\
+            [A,B]^*&=B^*A^*-A^*B^*\\
+            &=(AB)^*-A^*B^*\\
+            &=-[A,B]
+        \end{align*}
+        Therefore, in general \([A,B]\) is not hermitian. And is when \((AB)^*=A^*B^*\)
     \end{itemize}
     \item [8.]
     \begin{itemize}
-        \item [a)]
-        \item [b)]
+        \item [a)] Since A is Hermitian, note \([T]_{\mathcal{EE}}=A\), then \(A=U\Lambda U^*\) where \(U\in U(n)\) and thus \(U^*=U^{-1}\), since \(Av_i = \lambda_i\), As \(\Lambda\) is the diagonal matrix with eigenvalues entries. Then on eigenvector basis \(\mathcal{B}\), \(\Lambda v_i=\lambda_iv_i\). Thus, \([T]_{\mathcal{BB}}=\Lambda\).
+        \(A=[\text{id}]_{\mathcal{EB}}[T]_{\mathcal{BB}}[\text{id}]_{\mathcal{BE}}=U\Lambda U^{-1}\) Therefore, \(U=[v_1,v_2,\cdots,v_n]\) (collumns would be the eigenvectors of \(A\)). Claim that 
+        \(\sum v_jv_j^*=UU^*=I\). Note the \(k\)'s entry of \(v_i\) as \(v_i(k)\)
+        \begin{align*}
+            (UU^*)_{ij}&=\sum_{k=1}^{n}U^{i}_{k}U^{*k}_j\\
+            &=\sum_{k=1}^{n}v_k(i)v^*_k(j)\\
+            &=\sum_{j=1}^{n}v_jv_j^*
+        \end{align*}
+        \item [b)] As stated above, we have \(A=U\Lambda U^*\)
+        \begin{align*}
+            (\Lambda U^*)_{ij}&=\sum_{k=1}^{n}\Lambda^i_k U^{*k}_j\\
+            &=\sum_{k=1}^{n}\delta^i_k\lambda_iU^{*k}_j\\
+            \left(U(\Lambda U^*)\right)_{ij}&=\sum_{\ell=1}^{n} U^i_\ell(\Lambda U^*)^\ell_j\\
+            &=\sum_{\ell=1}^{n}\left(U^i_\ell\sum_{k=1}^{n}\delta^\ell_k\lambda_\ell U^{*k}_j\right)\\
+            &=\sum_{\ell=1}^{n}\left(U^i_\ell\lambda_\ell U^{*\ell}_j\right)\\
+            &=A
+        \end{align*}
+        Therefore,  \(A=\sum_{j=1}^{n}\lambda_jv_jv_j^*\)
     \end{itemize}
 \end{itemize}
 \end{document}
