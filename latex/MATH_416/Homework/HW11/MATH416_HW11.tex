@@ -54,10 +54,67 @@
         \frac{\sqrt{2}}{2}&-\frac{\sqrt{2}}{2}
     \end{bmatrix}=U^* \).
     \item [3.]
-    \item [4.]
-    \item [5.]
+    \begin{itemize}
+        \item [a)] Since the standard basis of \(\mathbb{C}^n\) is orthornomal, \(\langle e_i,e_j\rangle=\delta^i_j\) and \(\varphi e_i=b_i\), then
+        We have \(\langle \varphi (e_i),\varphi (e_j)\rangle=\langle b_i,b_j\rangle = \delta^i_j = \langle e_i,e_j\rangle\). Thus the map is unitary.
+        \item [b)]
+        The transformation that sents \(\{e_1,e_2,\cdots,e_n\}\) into \(\mathcal{B}'\) is Unitary with similar prof done in a). And for a Unitary map we can write out a matrix, note \(\varphi=[\varphi]=\mathcal{T}\) that \([\varphi]=\mathcal{T}\) is the matrix representation.
+        Then its inverse would be \(\mathcal{T}^*\) which is also unitary as:\\
+         \(\mathcal{T}^*\left(\mathcal{T}^*\right)^*=\mathcal{T}^*\mathcal{T}=I\). Then consider \(\varphi'\circ \varphi\) (\(\varphi' = \mathcal{T}'\)):
+        \begin{align*}
+            \varphi'\circ \varphi &=\mathcal{T}'\mathcal{T}=T\\
+            TT^*&=\mathcal{T}'\mathcal{T}(\mathcal{T}'\mathcal{T})^*\\
+            &=\mathcal{T}'\mathcal{T}\mathcal{T}^*\mathcal{T}'^*\\
+            &=I
+        \end{align*}
+        Therefore, \(\varphi'\circ\varphi\) is unitary. And such transformation transforms from \(\mathcal{B}\) to \(\mathcal{B}'\). Which is \([\text{id}_V]_{\mathcal{B,B'}}\)
+    \end{itemize}
+    \item [4.] \
+    \begin{itemize}
+        \item [Forward:] For any Hermitian matrix A that is positive definite, forall \(v\in V\) \(\langle v,Av \rangle>0\) then for all eigenvectors \(v_i\) There is:
+        \begin{align*}
+            Av_i&=\lambda_iv_i\\
+            \langle v_i,Av_i \rangle&=\langle v_i,\lambda_iv_i \rangle\\
+            &=\overline{\lambda_i}\langle v_i,v_i \rangle\\
+            &=\overline{\lambda_i}||v_i||^2
+        \end{align*}
+        For any non-zero vector \(v_i\), \(||v_i||^2>0\), then for \(\langle v_i,Av_i \rangle>0\), \(\overline{\lambda_i}||v_i||^2>0\)  Thus \(\lambda_i>0\) also as it is a hermitian matrix, all of its eigenvalues are real.
+        \item [Backward:] Assume tha \(\forall \lambda_i >0\). According to the spectual therome, \(\forall A,\ \exists U\) that is unitary that \(UAU^*=D\) which is the diagonal matrix with all of \(A\)'s eigenvalues on its main diagonal. Then we have:
+        \begin{align*}
+            \langle v,Av \rangle&=\langle Uv,UAv \rangle\\
+            &=\langle UU^*v,UAU^*v \rangle\\
+            &=\langle Iv,Dv \rangle
+        \end{align*} 
+        Consider a set of orthornomal basis of \(V\), \(\{b_1,\cdots,b_n\}\). \(v=\sum \mu_ib_i\), \(\mu_i\in \mathbb{C}\), then \(\displaystyle Dv=\sum_{i=1}^{n}\lambda_i\mu_ib_i\), Thus:
+        \begin{align*}
+            \langle v,Dv \rangle&= \sum_{i=1}^{n} \mu_i\overline{\lambda_i\mu_i}||b_i||^2\\
+            &=\sum_{i=1}^{n}\lambda_i||\mu_i||^2||b_i||^2
+        \end{align*}
+        since \(||\mu_i||^2>0\), \(||b_i||^2>0\) and \(\forall \lambda_i>0\)(and real as it is from a hermitian matrix), \(\sum_{i=1}^{n}\lambda_i||\mu_i||^2||b_i||^2>0\) Therefore the matrix is positive definite.
+    \end{itemize}
+    \item [5.] Since \(A\) is hermitian, then \(\exists U,D\) that \(A=UDU^*\) where \(U\) is unitary and \(D\) is diagonal with entries equaling to eigenvalues. Therefore, as \(A\) is positve definite, all entries of \(D\) would be positve real numbers.\\
+    then write the matrix as \(D_{ij}=\delta_{ij}\lambda_i\), then \(\exists D'\)  that \(D'_{ij}=\delta_{ij}\sqrt{\lambda_i}\), then \(D'D'=\Gamma\), and \(\Gamma_{ij}=\sum_{k=1}^{n} \delta_{ik}\sqrt{\lambda_{k}}\delta_{kj}\sqrt{\lambda_{k}}=\delta_{ij}\lambda_i=D\), Therefore:
+    \(A=UD'D'U^*\) As \(D'\) only have real positve entries in its main diagonal, \(D'^*=D'\), then take \(S=D'U^*\), then \(S^*=(D'U^*)^*=UD'^*=UD'\), Thus, \(S^*S=UD'D'U^*=A\)
     \item [6.]
+    \begin{itemize}
+        \item [a)]\
+        \begin{itemize}
+            \item [Forward:]
+            \item [Backward:]
+        \end{itemize}
+        \item [b)]
+        \item [c)]
+    \end{itemize}
     \item [7.]
+    \begin{itemize}
+        \item [a)]
+        \item [b)]
+        \item [c)]
+    \end{itemize}
     \item [8.]
+    \begin{itemize}
+        \item [a)]
+        \item [b)]
+    \end{itemize}
 \end{itemize}
 \end{document}
