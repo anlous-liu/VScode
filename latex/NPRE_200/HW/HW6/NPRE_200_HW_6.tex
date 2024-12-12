@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due:Dec 4 Edit: \today}
+\title{NPRE200 HW 6}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [A.]
+    \begin{itemize}
+        \item [1)]
+        \begin{align*}
+            \frac{\text{d} n}{\text{d} t}&=S+(\eta-1)\Sigma_a\phi+D\nabla^2\phi
+        \end{align*}
+        As we are using a non-multiplying material, we have \(\eta=0\), then:
+        \begin{align*}
+            \frac{\text{d} n}{\text{d} t}&=S-\Sigma_a\phi+D\nabla^2\phi
+        \end{align*}
+        Solving for a steady state, we have: \(\frac{\text{d} n}{\text{d} t}=0\)
+        \begin{align*}
+            0&=S-\Sigma_a\phi+D\nabla^2\phi\\
+            \Sigma_a\phi-D\nabla^2\phi&=S\\
+            D\nabla^2\phi-\Sigma_a\phi&=-S\\
+            \nabla^2\phi-\frac{\Sigma_a}{D}\phi&=\frac{S}{D}=\frac{J}{D}\\
+            \nabla^2\phi-\frac{1}{L^2}\phi&=\frac{J}{D}\\
+            \phi(x)&=C_1e^{\frac{x}{L}}+C_2e^{-\frac{x}{L}}-\frac{JL^2}{D}\\
+            &=A\sinh(\frac{x}{L})+B\cosh(\frac{x}{L})-\frac{JL^2}{D}
+        \end{align*}
+        Apply initial conditions that \(\phi(a)=0\) and \(\phi(0)=J\)
+        \begin{align*}
+            J&=-D\nabla \phi(0)\\
+            J&=-D\left(\frac{A}{L}\cosh\left(\frac{0}{L}\right)+\frac{B}{L}\sinh\left(\frac{0}{L}\right)\right)\\
+            J&=\frac{-DA}{L}+0\\
+            A&=-\frac{JL}{D}\\
+            \phi(a)&=0\\
+            0&=A\sinh\left(\frac{a}{L}\right)+B\cosh\left(\frac{a}{L}\right)-\frac{JL^2}{D}\\
+            \frac{JL^2}{D}&=-\frac{JL}{D}\sinh\left(\frac{a}{L}\right)+B\cosh\left(\frac{a}{L}\right)\\
+            B\cosh\left(\frac{a}{L}\right)&=\frac{JL^2}{D}+\frac{JL}{D}\sinh\left(\frac{a}{L}\right)\\
+            B&=\frac{JL}{D}\left(\frac{L}{\cosh\left(\frac{a}{L}\right)}+\frac{\sinh\left(\frac{a }{L}\right)}{\cosh\left(\frac{a}{L}\right)}\right)\\
+            \phi(x)&=A\sinh(\frac{x}{L})+B\cosh(\frac{x}{L})-\frac{JL^2}{D}\\
+            &=-\frac{JL}{D}\sinh(\frac{x}{L})+\frac{JL}{D}\left(\frac{L}{\cosh\left(\frac{a}{L}\right)}+\frac{\sinh\left(\frac{a }{L}\right)}{\cosh\left(\frac{a}{L}\right)}\right)\cosh\left(\frac{x}{L}\right)-\frac{JL^2}{D}\\
+            &=\frac{4J\sinh\left(\frac{a-x}{L}\right)}{\sinh\left(\frac{a}{L}\right)+2\frac{D}{L}\cosh\left(\frac{a}{L}\right)}
+        \end{align*}
+        \item [2)]
+        \begin{align*}
+            J_x&=-D\phi'(a)\\
+            &=\frac{4DJ\cosh\left(\frac{a-x}{L}\right)}{\frac{1}{L}\sinh\left(\frac{a}{L}\right)+2\frac{D}{L^2}\cosh\left(\frac{a}{L}\right)}\\
+            \frac{J_x(a)}{J}&=\frac{4D\cosh\left(\frac{a-a}{L}\right)}{\frac{1}{L}\sinh\left(\frac{a}{L}\right)+2\frac{D}{L^2}\cosh\left(\frac{a}{L}\right)}\\
+            &=\frac{4D}{\frac{1}{L}\sinh\left(\frac{a}{L}\right)+2\frac{D}{L^2}\cosh\left(\frac{a}{L}\right)}\\
+        \end{align*}
+    \end{itemize}
+    \item [B.]
+    \begin{itemize}
+        \item [3)]
+        \begin{align*}
+            \nabla^2&=\frac{1}{r^2}\frac{\text{d}}{\text{d}r}r^2\frac{\text{d}}{\text{d}r}\\
+            \phi(r)&=\frac{1}{r}\Psi(r)\\
+            \nabla^2 \phi-\frac{1}{L^2}\phi&=0\\
+            \frac{d\Psi}{dr^2}-\frac{1}{L^2}\Psi(r)&=0\\
+            \Psi(r)&=Ae^{r/L}+Ce^{-r/L}\\
+            \phi(r)&=\frac{A}{r}e^{r/L}+\frac{C}{r}e^{-r/L}\\
+            \phi(\infty)&=0\\
+            A&=0\\
+            P&=\lim_{r\rightarrow 0}\left[-4\pi r^2D\frac{d}{dr}\phi(r)\right]\\
+            \phi'(r)&=\frac{d}{dr}\left[\frac{C}{r}e^{-r/L}\right]\\
+            -4\pi r^2D\phi'(r)&=-4\pi r^2D(-e^{r/L}\times C(\frac{1}{r^2}+\frac{1}{rL}))\\
+            P&=4\pi DCe^{-0/L}+4\pi\frac{0}{L}DCe^{0/L}\\
+            &=4\pi DC\\
+            C&=\frac{P}{4\pi D}\\
+            \phi(r)&= \frac{P}{4\pi Dr}e^{-r/L}
+        \end{align*}
+    \end{itemize}
+\end{itemize}
+\end{document}
+
+
+

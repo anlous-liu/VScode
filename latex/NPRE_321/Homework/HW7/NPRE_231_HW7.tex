@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{esint}
+
+
+\date{Due: Dec 4 Edit: \today}
+\title{NPRE 321 HW 7}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            r&=n_Dn_D\langle\sigma v \rangle_{DD}\\
+            \rho_{DD}&=n_Dn_D\langle\sigma v \rangle_{DD}E_{DD}\\
+            n_D&=n\\
+            \rho_{DD}&=\frac{1}{2}n^2\langle\sigma v \rangle_{DD}E_{DD}\\
+            P_{DD}&=\frac{1}{2}n^2\langle\sigma v \rangle_{DD}E_{DD} V
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            W&=3(n_iT_i+n_eT_e)V\\
+            T_e&=T_i\\
+            n_e&=n_i\\
+            W&=\frac{3}{2}2nTV\\
+            W&=3nTV\\
+            P&=\frac{1}{2}n^2\langle\sigma v \rangle_{DD}E_{DD} V\\
+            P&\geq P_{\text{loss}}\\
+            \tau_E&\geq\frac{W}{P_{\text{loss}}}\\
+            \tau_E&\geq\frac{3nTV}{\frac{1}{2}n^2\langle\sigma v \rangle_{DD}E_{DD} V}\\
+            \tau_E&\geq\frac{6T}{n\langle\sigma v \rangle_{DD}E_{DD}}\equiv L\\
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            nT\tau_E&\geqslant\frac{6T^2}{\langle\sigma v \rangle_{DD}E}\\
+            \langle\sigma v \rangle_{DD}&=7.6\times 10^{-24}\\
+            nT\tau_E&\geqslant\frac{6\times 25^2}{7.6\times 10^{-24}\times 4.851\times 10^3}\\
+            &\geqslant1.01\times 10^{26}\text{ m}^{-3}\text{eVs}
+        \end{align*}
+        \item [d)]
+        \begin{align*}
+            P_{DD}&=\frac{1}{2}n^2\langle\sigma v \rangle_{DD}E_{DD} V\\
+            V&=\pi a^2\times 2\pi r\\
+            &=0.32 \text{m}^3\\
+            P&=\frac{1}{2}(5\times 10^{22})^2\times 7.6\times 10^{-24}\times 4.851\times 10^6 \times 1.602\times 10^{-19}\times 0.32\\
+            &=2.4\times 10^{9} \text{W}\\
+            \tau_E&=\frac{1.01\times 10^{23}}{5\times 10^{22}\times 23}\\
+            &=87.8\times 10^{-3}
+        \end{align*}
+    \end{itemize}
+    \item [2.]
+    \begin{align*}
+        \Delta\phi &=\frac{-\omega}{2cn_c}\int n_edl\\
+        &=\frac{-\omega}{2cn_c}n_el\\
+        n_e&=-\frac{2cn_c\Delta \phi}{\omega l}\\
+        n_c&=\frac{\omega^2m_e\epsilon_0}{e^2}\\
+        &=1.24\times 10^{20}\\
+        n_e&=-1.03\times 10^{19}
+    \end{align*}
+    \item [3.]
+    \begin{align*}
+        I&=\frac{VRC}{NA\mu_0}\\
+        &=98788 \text{ A}\\
+        \Lambda &= 12\pi n_e\lambda^3_D\\
+        &=1.55\times 10^8\\
+        \lambda_D&=\left(\frac{\epsilon_0k_bT_e}{n_ee^2}\right)^{\frac{1}{2}}\\
+        &=7.43\times 10^{-5} \text{ m}\\
+        \eta&=5.25\times 10^{-5}\times \frac{18.86}{1000^{\frac{3}{2}}}\\
+        &=3.131\times 10^{-8}\\
+        R&=\eta\frac{L}{A}\\
+        A&=\pi a^2 = 7.07\times 10^{-2}\\
+        L&=2\pi R_0=4.52 \text{ m}\\
+        R&=2\times 10^{-6} \ \Omega\\
+        P&=I^2R\\
+        &=19.52\text{ kW}
+    \end{align*}
+    \item [4.]
+    Obviously Helium got removed from the plasma which, reasonablely thinking, is done by using the liquid lithium to "dissove" Helium and as a result, the temperature goes up which profs that Helium is a kind of "ashes" that should be removed, and lithium do evaporated into the plasma and i assume that lithium is only running in somewhere between 200-350 s
+    \item [5.]
+    I still beleive that some day menkind should use something other than boiling water or thermal engine to generate electricity, plasma someday may be able to be the medium which directly powers generators and do not need extra steps to convert it into electricity.
+\end{itemize}
+\end{document}

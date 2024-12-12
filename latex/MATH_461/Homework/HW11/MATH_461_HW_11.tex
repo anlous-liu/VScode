@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+
+\date{Due: Dec 6 Edit: \today}
+\title{MATH 461 Homework 11}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [8.4]
+    \begin{align*}
+        \mu&=\lambda=1\\
+        P\left\{\sum_{i=1}^{20}X_i\geq 15\right\}&\leq\frac{E(\sum X_i)}{15}=\frac{20}{15}=\frac{4}{3}\\
+        P\left\{\sum_{i=1}^{20} X_i \geq 15\right\} &= P\left\{\sum_{i=1}^{20} X_i - 20 \geq 15 - 20\right\}P\left\{\sum_{i=1}^{20} X_i \geq 15\right\}\\
+        &=P\left\{Z\geq -1.18\right\}\\
+        &=0.86
+    \end{align*}
+    \item [8.5]
+    \begin{align*}
+        \mu &=\frac{0.5-0.5}{2}=0\\
+        \sigma^2&=\frac{(-0.5-0.5)^2}{12}=\frac{1}{12}\\
+        P\left\{\left|\sum_{i=1}^{50} X_i\right| > 3\right\} &= 2 \times P\left\{\sum_{i=1}^{50} X_i > 3\right\}P\left\{\left|\sum_{i=1}^{50} X_i\right| > 3\right\} \\
+        &= 2 \times P\left\{\frac{\sum_{i=1}^{50} X_i - 50(0)}{\sqrt{50 \times \frac{1}{12}}} > \frac{3 - 50(0)}{\sqrt{50 \times \frac{1}{12}}}\right\}\\
+        &= 2 \times P\left\{Z > 1.47\right\} \quad P\left\{\left|\sum_{i=1}^{50} X_i\right| > 3\right\}\\
+        &= 2 \times 0.0708 = 0.1416
+    \end{align*}
+    \item [8.7]
+    \begin{align*}
+        P(S_{100}>525)=0.3085 \text{ by central limit therome}
+    \end{align*}
+    \item [8.8]
+    \begin{align*}
+        p &= 0.6915    
+    \end{align*}
+    \item [8.15]
+    \begin{align*}
+        p &= 0.0000884 \approx 0
+    \end{align*}
+\end{itemize}
+\end{document}

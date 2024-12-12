@@ -1,0 +1,162 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage[font=small, labelfont={sf,bf}, margin=1cm]{caption}
+\usepackage{tabularx}
+\usepackage{amssymb}
+
+
+\date{Due: Dec 5 Edit: \today}
+\title{ME 200 Homework 13}
+\author{James Liu}
+
+\begin{document}
+\maketitle
+\begin{itemize}
+    \item [1.] 
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \frac{P_2}{P_1}&=\left(\frac{V_1}{V_2}\right)^k=r^k\\
+            \frac{7.2\times 10^3}{95}&=r^{1.4}\\
+            r&=22
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \frac{T_2}{T_1}&=r^{k-1}\\
+            \frac{T_2}{300}&=22^{1.4-1}\\
+            T_2&=1032.98 \text{K}\\
+            r_c&=\frac{T_3}{T_2}\\
+            &=\frac{2150}{1032.98}\\
+            &=2.08
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            \eta &= 1-\frac{1}{r^{k-1}}\left[\frac{r_c^k-1}{k(r_c-1)}\right]\\
+            &=65.66\%
+        \end{align*}
+        \item [d)]
+        \begin{align*}
+            \text{mep}&=\frac{W_{net}}{\Delta \ V}\\
+            Q_s&=C_p(T_3-T_2)=1122.605\\
+            Q_r&=C_v(T_4-T_1)=385.523\\
+            v_1&=\frac{RT_1}{P_1}=\frac{0.287\times 300}{95}=0.9063\\
+            v_2&=\frac{v_1}{r}=0.0412\\
+            \text{mep}&=\frac{1122.605-385.523}{0.9063-0.0412}\\
+            &=852.02 \text{ kPa}
+        \end{align*}
+    \end{itemize}
+    \item [2.]
+    \begin{align*}
+        r&=\frac{V_1}{V_2}=15\\
+        W_{cyc}&=Q_{in}-Q_{out}\\
+        &=Q_{23}-Q_{41}\\
+        &=m[(h_3-h_2)-(u_4-u_1)]\\
+        &=(6.6205\times 10^{-3})[(2281.697-869.629)-(885.329-214.07)]\\
+        &=4.9045 \text{kJ/cycle}
+        \eta &=\frac{W_{cycle}}{Q_{in}}\\
+        &=1-\frac{u_4-u_1}{h_3-h_2}\\
+        &=52.46\%
+    \end{align*}
+    \item [3.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            W&=\dot{m}(h_2-h_1)\\
+            &=0.1167\times (275.05-246.38)\\
+            &=3.34 \text{kW}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            Q_{evap}&=\dot{m}(h_1-h_4)\\
+            &=0.1167(246.38-95.47)\\
+            &=17.63\text{ kW}\\
+            \frac{17.63}{3.517}&=5.01 \text{ tone}
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            \text{COP}&=\frac{Q_{evap}}{W_{comp}}=5.28
+        \end{align*}
+    \end{itemize}
+    \item [4.]\
+    \begin{itemize}
+        \item [134a]
+        \begin{itemize}
+            \item [a)]
+            \begin{align*}
+                p_{evaporator}&=p_1=14.718 \text{ lbf/in}^2\\
+                p_{condensor}&=p_2=161.04 \text{ lbf/in}^2
+            \end{align*}
+            \item [b)]
+            \begin{align*}
+                \dot{m}&=\frac{Q_{in}}{h_1-h_4}\\
+                &=\frac{900}{106.37-44.23}\div 60\\
+                &=0.241 \text{ lb/min}
+            \end{align*}
+            \item [c)]
+            \begin{align*}
+                W_{comp}&=\dot m (h_2-h_1)\\
+                &=0.241(137.68-106.37)\times \frac{60}{2545}\\
+                &=0.178  \ hp
+            \end{align*}
+            \item [d)]
+            \begin{align*}
+                \beta &= \frac{h_1-h_4}{h_2-h_1}\\
+                &=\frac{106.37-44.23}{137.68-106.37}\\
+                &=1.985
+            \end{align*}
+        \end{itemize}
+        \item [propane]
+        \begin{itemize}
+            \item [a)]
+            \begin{align*}
+                p_{evaporator}&=p_1=28.65 \text{ lbf/in}^2\\
+                p_{condensor}&=p_2=214.3 \text{ lbf/in}^2
+            \end{align*}
+            \item [b)]
+            \begin{align*}
+                \dot{m}&=\frac{Q_{in}}{h_1-h_4}\\
+                &=\frac{900}{202.2-84.56}\div 60\\
+                &=0.1275 \text{ lb/min}
+            \end{align*}
+            \item [c)]
+            \begin{align*}
+                W_{comp}&=\dot m (h_2-h_1)\\
+                &=0.1275(264-202.2)\times \frac{60}{2545}\\
+                &=0.186 \ hp
+            \end{align*}
+            \item [d)]
+            \begin{align*}
+                \beta &= \frac{h_1-h_4}{h_2-h_1}\\
+                &=\frac{202.2-84.56}{264-202.2}\\
+                &=1.9
+            \end{align*}
+        \end{itemize}
+    \end{itemize}
+    \item [5.]
+    \begin{itemize}
+        \item [a)]
+        \begin{align*}
+            \dot m&= \frac{\dot Q_{out}}{h_2-h_3}\\
+            &=\frac{20}{276.2-93.42}\\
+            &=0.1094 \text{ kg/s}
+        \end{align*}
+        \item [b)]
+        \begin{align*}
+            \dot{W}_{comp}&=\dot m(h_2-h_1)\\
+            &=0.1094(276.2-241.30)\\
+            &=3.818 \text{ kW}\\           
+        \end{align*}
+        \item [c)]
+        \begin{align*}
+            \eta &=\frac{\dot Q_{out}}{\dot W_{comp}}\\
+            &=\frac{20}{3.818}\\
+            &=5.238\\
+            \eta_{carnot}&=\frac{T_{H}}{T_{H}-T_{C}}\\
+            &=\frac{21+273}{21-0}\\
+            &=14
+        \end{align*}
+    \end{itemize}
+\end{itemize}     
+\end{document}
